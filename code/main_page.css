@@ -1,3 +1,6 @@
+*{padding:0; margin:0;}
+img {display:block;}
+
 @font-face {
   font-family:'yg-jalnan';
   src:local("Jalnan");
@@ -8,34 +11,26 @@
 
 body {
   position: relative;
-  background-image: url(../assets/main/main.png);                                                               
-  height: 100vh;
+  background-image: url(../assets/main/main.png);
+  background-repeat:no-repeat;                                                      
+  max-height: 100vh;
   background-size: cover;
 }
-
-.main {
-    position: absolute; 
-    max-width: 1920px;
-    object-fit: contain;
-    z-index:2;
- }
  
 .logo_main {
-    width: 245px;
-    height: 90px;
+    width: 185px;
     display: block;
     object-fit: contain;
-    z-index: 1;
-    margin-top: 53px;
-    margin-left: 200px;
+    margin-top: 40px;
+    margin-left: 150px;
   }
 
-
 h1 {
-    margin-left: 200px;
-    margin-top:  207px;
+    margin-left: 150px;
+    margin-top: 155px;
+    margin-bottom: 15px;
     font-family: yg-jalnan;
-    font-size: 85px;
+    font-size: 64px;
     line-height: 1.18;
     letter-spacing: normal;
     text-align: left;
@@ -43,10 +38,9 @@ h1 {
   }
 
 h2{
-    margin-left: 200px;
-    margin-top: 25px;
+    margin-left: 150px;
     font-family: Noto Sans Kr;
-    font-size: 35px;
+    font-size: 26px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -57,16 +51,22 @@ h2{
   }
 
 #go_button {
-    width: 251px;
-    height: 63px;
-    margin-left: 200px;
-    margin-top: 106px;
-    z-index: 1;
+    display: inline-block;
+    width: 188px;
+    height: 47px;
     outline: none;
     border: none;
+    margin-left: 150px;
+    margin-top: 80px;
 	  background: url(../assets/main/button.png);
+    background-repeat:no-repeat;   
+    background-size: cover;                                                   
     cursor: pointer;
 }
+
 #go_button:hover{
-	background:url(../assets/main/hover_button.png);
+	  background: url(../assets/main/hover_button.png);
+    background-repeat:no-repeat;   
+    background-size: cover;                                                   
+ 
 }
