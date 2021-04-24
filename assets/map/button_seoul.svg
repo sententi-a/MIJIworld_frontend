@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="169" height="59" viewBox="0 0 169 59">
+    <defs>
+        <filter id="28mu0t75wa" width="169" height="59" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dx="2" dy="2"/>
+            <feGaussianBlur result="blur" stdDeviation="1.5"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g>
+        <g filter="url(#28mu0t75wa)" transform="translate(-213.5 -192.5) translate(213.5 192.5)">
+            <rect width="160" height="50" fill="#82c0f6" rx="25" transform="translate(2.5 2.5)"/>
+        </g>
+        <text fill="#fff" font-family="NotoSansCJKkr-Black, Noto Sans CJK KR" font-size="30px" font-weight="800" transform="translate(-213.5 -192.5) translate(236 198)">
+            <tspan x="-58.635" y="35">국내 지도</tspan>
+        </text>
+    </g>
+</svg>
