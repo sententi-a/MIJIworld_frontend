@@ -1,0 +1,73 @@
+/*seoulmap css*/
+
+/*reset*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    max-width: 1920px;
+    opacity: 0.6;
+    background-color: #efeffc;
+}
+
+.logo {
+    width: 196px;
+    height: 96px;
+    display: block;
+    object-fit: contain;
+    margin-top: 39px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seoulmap {
+    position: relative;
+    width: 1640px;
+    height: 860px;
+    display: block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    object-fit: contain;
+}
+
+.sidebar {
+    background-color: #ffffff;
+    position: absolute;
+    width: 495.5px;
+    height: 860px;
+    top: 0;
+    left: 1180px;
+    opacity: 1;
+    z-index: 2;
+}
+
+button.dongdaemun {
+    position: absolute;
+    top: 400px;
+    left: 782px;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+button.button_world {
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    width: 160px;
+    height: 50px;
+    object-fit: contain;
+}
+
+button.button_seoul {
+    position: absolute;
+    top: 35px;
+    left: 230px;
+    width: 160px;
+    height: 50px;
+    object-fit: contain;
+}
