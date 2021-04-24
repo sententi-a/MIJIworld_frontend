@@ -16,14 +16,22 @@
 
         <div class="seoulmap">
             <img src="../assets/map/seoul_map.png" class="seoulmap" />
+
+            <!--attribute 추가 해야됨 : onclick="location.href='세계지도.html'""-->
             <button class="button_world" type="button">
-                <img src="../assets/map/button_world.svg" class="button_world" />
-            </button>
-            <button class="button_seoul" type="button">
-                <img src="../assets/map/button_seoul.svg" class="button_seoul" />
+                <img src="../assets/map/button_world.png" class="button_world" />
             </button>
 
+            <button class="button_seoul" onClick="location.reload();" type="button">
+                <img src="../assets/map/button_seoul.png" class="button_seoul" />
+            </button>
+
+            <!--동대문 버튼-->
             <button class="dongdaemun" type="button"><img src="../assets/pin/yellow.png" class="pin_yellow" /></button>
+            <!--동작구 버튼-->
+            <button class="dongjakgu" type="button"><img src="../assets/pin/purple.png" class="pin_purple" /></button>
+            <!--용산구 버튼-->
+            <button class="yongsangu" type="button"><img src="../assets/pin/pink.png" class="pin_pink" /></button>
             <div class="sidebar" id="sidebar">
                 <p>사이드바 영역</p>
             </div>
