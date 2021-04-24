@@ -49,6 +49,8 @@ button.dongdaemun {
     position: absolute;
     top: 400px;
     left: 782px;
+    background-color: transparent;
+    border: none;
     width: 50px;
     height: 50px;
     object-fit: contain;
@@ -58,16 +60,30 @@ button.button_world {
     position: absolute;
     top: 35px;
     left: 40px;
+    background-color: transparent;
+    border: none;
     width: 160px;
     height: 50px;
     object-fit: contain;
+}
+
+button.button_world img {
+    max-width: 100%;
+    height: auto;
 }
 
 button.button_seoul {
     position: absolute;
     top: 35px;
     left: 230px;
+    background-color: transparent;
+    border: none;
     width: 160px;
     height: 50px;
     object-fit: contain;
+}
+
+button.button_seoul img {
+    max-width: 100%;
+    height: auto;
 }
