@@ -27,14 +27,52 @@
             </button>
 
             <!--동대문 버튼-->
-            <button class="dongdaemun" type="button"><img src="../assets/pin/yellow.png" class="pin_yellow" /></button>
+            <button class="dongdaemun" type="button" onclick="button_click();"><img src="../assets/pin/yellow.png" class="pin_yellow" /></button>
+
+            <div class="sidebar" id="sidebar">
+                <button class="exit" type="button" onclick="button_exit();"><img src="../assets/icon/exit.png" /></button>
+                <div class="top_box">
+                    <p class="region_name">동대문</p>
+                    <p class="region_description">세계음식 총집합!</p>
+                </div>
+                <div class="restaurant">
+                    <div class="samarkant">
+                        <p class="name">사마르칸트</p>
+                        <p class="description">우즈베키스탄 전통 음식</p>
+                        <img src="../assets/restaurant/samarkant/menu2.png" class="menu1_image" />
+                        <p class="address">중구 마른내로 159-21</p>
+                        <p class="time">매일 10:00 - 22:00</p>
+                    </div>
+                    <div class="ulanbatar">
+                        <p class="name">울란바타르</p>
+                        <p class="description">몽골 음식 전문점</p>
+                        <img src="" class="menu2_image" />
+                        <p class="address">중구 을지로44길 12</p>
+                        <p class="time">평일 9:30 - 17:30</p>
+                    </div>
+                    <div class="imperia">
+                        <p class="name">임페리아</p>
+                        <p class="description">러시아 베이커리</p>
+                        <img src="" class="menu3_image" />
+                        <p class="address">중구 마른내로 159-1</p>
+                        <p class="time">매일 10:00 - 23:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function button_click() {
+                    document.getElementById("sidebar").style.opacity = "1";
+                }
+                function button_exit() {
+                    document.getElementById("sidebar").style.opacity = "0";
+                }
+            </script>
+
             <!--동작구 버튼-->
             <button class="dongjakgu" type="button"><img src="../assets/pin/purple.png" class="pin_purple" /></button>
             <!--용산구 버튼-->
             <button class="yongsangu" type="button"><img src="../assets/pin/pink.png" class="pin_pink" /></button>
-            <div class="sidebar" id="sidebar">
-                <p>사이드바 영역</p>
-            </div>
         </div>
     </body>
 </html>

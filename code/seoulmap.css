@@ -34,15 +34,103 @@ body {
     object-fit: contain;
 }
 
-.sidebar {
+#sidebar {
     background-color: #ffffff;
     position: absolute;
     width: 495.5px;
     height: 860px;
     top: 0;
     left: 1180px;
-    opacity: 1;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.2s;
+}
+
+.sidebar {
+    position: relative;
+    font-family: Noto Sans KR;
+}
+
+.sidebar .top_box {
+    position: absolute;
+    background-color: #eeeefb;
+    width: 495.5px;
+    height: 170px;
+    top: 0;
+    left: 0;
     z-index: 2;
+}
+
+.restaurant {
+    position: absolute;
+    top: 170px;
+    width: 495.5px;
+    height: 690px;
+}
+
+.region_name {
+    margin-top: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #8d8deb;
+    line-height: 1.48;
+}
+
+.region_description {
+    margin-top: 1.5px;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    color: #7e7e7e;
+    line-height: 1.5;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #7e7e7e;
+    text-align: center;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.45;
+    color: #979797;
+    text-align: center;
+}
+
+.address,
+.time {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.48;
+    color: #7e7e7e;
+}
+
+.menu1_image {
+    display: inline-block;
+    margin-left: 35px;
+    width: 130px;
+    height: 104px;
+    object-fit: contain;
+}
+
+button.exit {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    z-index: 5;
 }
 
 button.button_world {
