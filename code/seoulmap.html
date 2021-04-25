@@ -9,13 +9,11 @@
     </head>
     <body>
         <header>
-            <div class="logo">
-                <img src="../assets/logo/logo.png" class="logo" />
-            </div>
+            <img src="../assets/logo/logo.png" class="logo" />
         </header>
 
         <div class="seoulmap">
-            <img src="../assets/map/seoul_map.png" class="seoulmap" />
+            <img src="../assets/map/seoul_map.png" class="seoulmap-image" />
 
             <button class="button_world" type="button" onclick="location.href='worldmap.html'">
                 <img src="../assets/map/button_world.png" class="button_world" />
@@ -29,30 +27,34 @@
             <button class="dongdaemun" type="button" onclick="button_click();"><img src="../assets/pin/yellow.png" class="pin_yellow" /></button>
 
             <div class="sidebar" id="sidebar">
-                <button class="exit" type="button" onclick="button_exit();"><img src="../assets/icon/exit.png" /></button>
+                <button class="exit" type="button" onclick="button_exit();"><img src="../assets/icon/exit_icon.svg" /></button>
+
                 <div class="top_box">
                     <p class="region_name">동대문</p>
                     <p class="region_description">세계음식 총집합!</p>
                 </div>
+
                 <div class="restaurant">
-                    <div class="samarkant">
+                    <div class="restaurant-1">
                         <p class="name">사마르칸트</p>
                         <p class="description">우즈베키스탄 전통 음식</p>
-                        <img src="../assets/restaurant/samarkant/menu2.png" class="menu1_image" />
+                        <img src="../assets/restaurant/samarkant/menu2.png" class="menu_image" />
                         <p class="address">중구 마른내로 159-21</p>
                         <p class="time">매일 10:00 - 22:00</p>
                     </div>
-                    <div class="ulanbatar">
+
+                    <div class="restaurant-2">
                         <p class="name">울란바타르</p>
                         <p class="description">몽골 음식 전문점</p>
-                        <img src="" class="menu2_image" />
+                        <img src="" class="menu_image" />
                         <p class="address">중구 을지로44길 12</p>
                         <p class="time">평일 9:30 - 17:30</p>
                     </div>
-                    <div class="imperia">
+
+                    <div class="restaurant-3">
                         <p class="name">임페리아</p>
                         <p class="description">러시아 베이커리</p>
-                        <img src="" class="menu3_image" />
+                        <img src="" class="menu_image" />
                         <p class="address">중구 마른내로 159-1</p>
                         <p class="time">매일 10:00 - 23:00</p>
                     </div>
