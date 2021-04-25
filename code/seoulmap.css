@@ -73,7 +73,7 @@ button.button_seoul img {
     background-color: #ffffff;
     position: absolute;
     width: 30%;
-    height: 99.8%;
+    height: 99.5%;
     top: 0;
     left: 71%;
     opacity: 0;
@@ -117,63 +117,112 @@ button.exit img {
 
 .restaurant {
     position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
     top: 20%;
     width: 100%;
     height: 80%;
 }
 
-/*
+.restaurant-1 {
+    width: 100%;
+    height: 30%;
+    border-bottom: 1px #7e7e7e solid;
+    padding-bottom: 5%;
+}
+
+.restaurant-2 {
+    width: 100%;
+    height: 30%;
+    border-bottom: 1px #7e7e7e solid;
+    padding-bottom: 5%;
+}
+
+.restaurant-3 {
+    width: 100%;
+    height: 30%;
+    border-bottom: 1px #7e7e7e solid;
+    padding-bottom: 5%;
+}
+
+.restaurant-4 {
+    width: 100%;
+    height: 30%;
+    border-bottom: 1px #7e7e7e solid;
+    padding-bottom: 5%;
+}
+
 .region_name {
-    margin-top: 35px;
-    font-size: 40px;
+    margin-top: 5%;
+    font-size: 2vw;
     font-weight: bold;
     text-align: center;
     color: #8d8deb;
-    line-height: 1.48;
 }
 
 .region_description {
-    margin-top: 1.5px;
-    font-size: 30px;
+    margin-top: 0.5%;
+    font-size: 1.5vw;
     font-weight: normal;
     text-align: center;
     color: #7e7e7e;
-    line-height: 1.5;
 }
 
 .name {
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 1.5;
-    color: #7e7e7e;
     text-align: center;
+    margin-top: 5%;
+}
+.name a {
+    text-decoration-line: none;
+    font-size: 1.7vw;
+    font-weight: 500;
+    color: rgb(68, 68, 68);
+}
+
+.name a:hover {
+    color: black;
 }
 
 .description {
-    font-size: 20px;
+    font-size: 1.1vw;
     font-weight: 300;
-    line-height: 1.45;
     color: #979797;
     text-align: center;
 }
 
-.address,
-.time {
-    display: inline-block;
-    font-size: 25px;
+.information {
+    margin: 4% 4% 4% 6%;
+    display: grid;
+    grid-template-areas:
+        "menu_image address"
+        "menu_image time";
+    grid-template-columns: 1.1fr 1.9fr;
+}
+
+.address {
+    font-size: 1.4vw;
     font-weight: 300;
-    line-height: 1.48;
     color: #7e7e7e;
+    grid-area: address;
+    justify-self: start;
+    align-self: center;
+}
+
+.time {
+    font-size: 1.4vw;
+    font-weight: 300;
+    color: #7e7e7e;
+    grid-area: time;
+    justify-self: start;
+    align-self: center;
 }
 
 .menu_image {
-    display: inline-block;
-    margin-left: 35px;
-    width: 130px;
-    height: 104px;
+    grid-area: menu_image;
+    place-self: center;
+    width: 80%;
     object-fit: contain;
 }
-*/
 
 button.junggu {
     position: absolute;
