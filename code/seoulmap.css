@@ -1,6 +1,8 @@
 /*seoulmap css*/
 
+
 /*reset*/
+
 * {
     padding: 0;
     margin: 0;
@@ -13,13 +15,13 @@ body {
 }
 
 .logo {
-    width: 196px;
-    height: 96px;
-    display: block;
-    object-fit: contain;
-    margin-top: 39px;
+    width: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
+    object-fit: contain;
+    display: block;
 }
 
 .seoulmap {
@@ -135,15 +137,14 @@ button.exit {
 
 button.button_world {
     position: absolute;
-    top: 35px;
-    left: 40px;
+    top: 4%;
+    left: 2.5%;
+    width: 10%;
+    object-fit: contain;
     background-color: transparent;
     border: 0;
     outline: 0;
     cursor: pointer;
-    width: 160px;
-    height: 50px;
-    object-fit: contain;
 }
 
 button.button_world img {
@@ -153,16 +154,12 @@ button.button_world img {
 
 button.button_seoul {
     position: absolute;
-    top: 35px;
-    left: 230px;
-    background-color: transparent;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-    cursor: pointer;
-    width: 160px;
-    height: 50px;
+    top: 4%;
+    left: 14%;
+    width: 10%;
     object-fit: contain;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 button.button_seoul img {
