@@ -160,6 +160,8 @@ button.button_seoul {
     object-fit: contain;
     background-color: transparent;
     cursor: pointer;
+    border: 0;
+    outline: 0;
 }
 
 button.button_seoul img {
