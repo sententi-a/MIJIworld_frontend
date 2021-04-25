@@ -262,7 +262,7 @@ details > p {
 /*ticket : hidden, auto scroll*/
 #ticket {
 	width:100%;
-	height:560px;
+	height:580px;
 	display:flex;
 	flex-direction:column;
 	justify-content:center;
