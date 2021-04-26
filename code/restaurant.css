@@ -37,11 +37,18 @@ header h1 img {
 	top:20px;
 	outline:none;
 	border:none;
-	background:url(../assets/icon/exit.png);
+	background:url(../assets/icon/exit1.png);
 	background-repeat:no-repeat;
 	background-size:32px;
 	cursor:pointer;
 }
+
+#exit_button:hover {
+	background:url(../assets/icon/exit2.png);
+	background-size:32px;
+	background-repeat:no-repeat;
+}
+
 	/*국가명*/
 header #country {
 	font-family:yg-jalnan;
