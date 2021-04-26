@@ -100,7 +100,9 @@ button.button_seoul img {
     position: absolute;
     top: 0.1%;
     left: 83%;
-    background-color: transparent;
+    background: url(../assets/icon/exit_icon1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
     width: 20%;
     outline: 0;
     border: 0;
