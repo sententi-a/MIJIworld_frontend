@@ -8,9 +8,8 @@
 }
 
 body {
-    max-width: 1920px;
-    opacity: 0.6;
-    background-color: #efeffc;
+    background-image: url("../assets/map/seoulmap_background.png");
+    background-size: auto;
 }
 
 .logo {
@@ -38,7 +37,7 @@ body {
 button.button_world {
     position: absolute;
     top: 4%;
-    left: 2.5%;
+    left: 0%;
     width: 10%;
     object-fit: contain;
     background-color: transparent;
@@ -55,7 +54,7 @@ button.button_world img {
 button.button_seoul {
     position: absolute;
     top: 4%;
-    left: 14%;
+    left: 11%;
     width: 10%;
     object-fit: contain;
     background-color: transparent;

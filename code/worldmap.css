@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'yg-jalnan';
+    font-family: "yg-jalnan";
     src: local("Jalnan");
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -12,9 +12,8 @@
 }
 
 body {
-    max-width: 1920px;
-    opacity: 0.6;
-    background-color: #efeffc;
+    background-image: url("../assets/map/worldmap_background.png");
+    background-size: auto;
 }
 
 .logo {
@@ -43,7 +42,7 @@ body {
 .button-world {
     position: absolute;
     top: 4%;
-    left: 2.5%;
+    left: 0%;
     width: 10%;
     object-fit: contain;
     background-color: transparent;
@@ -53,7 +52,7 @@ body {
 .button-seoul {
     position: absolute;
     top: 4%;
-    left: 14%;
+    left: 11%;
     width: 10%;
     object-fit: contain;
     background-color: transparent;
@@ -102,7 +101,7 @@ body {
 }
 
 .world-map .pin .content {
-    font-family: 'yg-jalnan';
+    font-family: "yg-jalnan";
     filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     -webkit-transition: opacity 0.25s ease-in-out;
@@ -199,7 +198,6 @@ body {
 a:visited {
     color: #000000;
 }
-
 
 /*
 

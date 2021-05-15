@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Miji World</title>
+        <meta charset="UTF-8" />
+        <link type="text/css" rel="stylesheet" href="worldmap.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    </head>
 
-<head>
-    <title>Miji World</title>
-    <meta charset="UTF-8" />
-    <link type="text/css" rel="stylesheet" href="worldmap.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
-</head>
+    <body>
+        <header>
+            <a href="main_page.html"><img src="../assets/logo/logo.png" class="logo" /></a>
+        </header>
 
-<body>
-    <header>
-        <a href="main_page.html"><img src="../assets/logo/logo.png" class="logo" /></a>
-    </header>
+        <div class="world-map">
+            <img src="../assets/map/world_map.png" class="world-map-image" />
+            <img src="../assets/icon/button_world_clicked.png" class="button-world" />
+            <a href="seoulmap.html">
+                <img
+                    src="../assets/icon/button_seoul_normal.png"
+                    class="button-seoul"
+                    onmouseover="this.src='../assets/icon/button_seoul_hover.png'"
+                    onmouseout="this.src='../assets/icon/button_seoul_normal.png'"
+                />
+            </a>
 
-    <div class="world-map">
-        <img src="../assets/map/world_map.png" class="world-map-image" />
-        <img src="../assets/icon/button_world_clicked.png" class="button-world" />
-        <a href="seoulmap.html">
-            <img src="../assets/icon/button_seoul_normal.png" class="button-seoul" />
-        </a>
-
-        <!--Asia-->
-        <button class="pin" style="top: 44%; left: 30%">
+            <!--Asia-->
+            <button class="pin" style="top: 44%; left: 30%">
                 <img src="../assets/pin/sky.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: skyblue">우즈베키스탄</div>
@@ -33,7 +37,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 53%; left: 31%">
+            <button class="pin" style="top: 53%; left: 31%">
                 <img src="../assets/pin/green.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: green">파키스탄</div>
@@ -44,7 +48,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 63%; left: 39.5%">
+            <button class="pin" style="top: 63%; left: 39.5%">
                 <img src="../assets/pin/blue.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: blue">말레이시아</div>
@@ -55,7 +59,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 62%; left: 34.5%">
+            <button class="pin" style="top: 62%; left: 34.5%">
                 <img src="../assets/pin/orange.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: orange">스리랑카</div>
@@ -66,7 +70,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 65%; left: 40%">
+            <button class="pin" style="top: 65%; left: 40%">
                 <img src="../assets/pin/red.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: red">싱가포르</div>
@@ -77,7 +81,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 58%; left: 41%">
+            <button class="pin" style="top: 58%; left: 41%">
                 <img src="../assets/pin/blue.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: blue">라오스</div>
@@ -88,7 +92,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 60%; left: 41%">
+            <button class="pin" style="top: 60%; left: 41%">
                 <img src="../assets/pin/red.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: red">캄보디아</div>
@@ -99,7 +103,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 41%; left: 38%">
+            <button class="pin" style="top: 41%; left: 38%">
                 <img src="../assets/pin/red.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: red">몽골</div>
@@ -110,7 +114,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 51%; left: 24%">
+            <button class="pin" style="top: 51%; left: 24%">
                 <img src="../assets/pin/green.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: green">요르단</div>
@@ -121,8 +125,8 @@
                 </div>
             </button>
 
-        <!--America-->
-        <button class="pin" style="top: 68%; left: 83%">
+            <!--America-->
+            <button class="pin" style="top: 68%; left: 83%">
                 <img src="../assets/pin/green.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: green">브라질</div>
@@ -133,7 +137,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 81%; left: 82%">
+            <button class="pin" style="top: 81%; left: 82%">
                 <img src="../assets/pin/sky.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: blue">아르헨티나</div>
@@ -144,7 +148,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 46%; left: 75%">
+            <button class="pin" style="top: 46%; left: 75%">
                 <img src="../assets/pin/blue.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: blue">미국</div>
@@ -155,8 +159,8 @@
                 </div>
             </button>
 
-        <!--Europe-->
-        <button class="pin" style="top: 41%; left: 18%">
+            <!--Europe-->
+            <button class="pin" style="top: 41%; left: 18%">
                 <img src="../assets/pin/red.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: red">체코</div>
@@ -167,7 +171,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 45%; left: 21%">
+            <button class="pin" style="top: 45%; left: 21%">
                 <img src="../assets/pin/blue.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: blue">그리스</div>
@@ -178,7 +182,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 34%; left: 18%">
+            <button class="pin" style="top: 34%; left: 18%">
                 <img src="../assets/pin/yellow.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: orange">스웨덴</div>
@@ -189,7 +193,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 42%; left: 15%">
+            <button class="pin" style="top: 42%; left: 15%">
                 <img src="../assets/pin/blue.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: blue">프랑스</div>
@@ -200,8 +204,8 @@
                 </div>
             </button>
 
-        <!--Africa-->
-        <button class="pin" style="top: 50%; left: 13%">
+            <!--Africa-->
+            <button class="pin" style="top: 50%; left: 13%">
                 <img src="../assets/pin/red.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: red">모로코</div>
@@ -212,7 +216,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 49%; left: 17%">
+            <button class="pin" style="top: 49%; left: 17%">
                 <img src="../assets/pin/red.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: red">튀니지</div>
@@ -223,7 +227,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 52%; left: 22%">
+            <button class="pin" style="top: 52%; left: 22%">
                 <img src="../assets/pin/red.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: red">이집트</div>
@@ -234,7 +238,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 61%; left: 16%">
+            <button class="pin" style="top: 61%; left: 16%">
                 <img src="../assets/pin/green.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: green">나이지리아</div>
@@ -245,7 +249,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 62%; left: 14%">
+            <button class="pin" style="top: 62%; left: 14%">
                 <img src="../assets/pin/yellow.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: orange">가나</div>
@@ -256,7 +260,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 80%; left: 20%">
+            <button class="pin" style="top: 80%; left: 20%">
                 <img src="../assets/pin/green.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: green">남아프리카 공화국</div>
@@ -267,7 +271,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 67%; left: 24%">
+            <button class="pin" style="top: 67%; left: 24%">
                 <img src="../assets/pin/red.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: red">케냐</div>
@@ -278,7 +282,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 62%; left: 25%">
+            <button class="pin" style="top: 62%; left: 25%">
                 <img src="../assets/pin/blue.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: blue">에티오피아</div>
@@ -289,7 +293,7 @@
                 </div>
             </button>
 
-        <button class="pin" style="top: 59%; left: 11%">
+            <button class="pin" style="top: 59%; left: 11%">
                 <img src="../assets/pin/red.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: red">감비아</div>
@@ -299,7 +303,6 @@
                     </a>
                 </div>
             </button>
-    </div>
-</body>
-
+        </div>
+    </body>
 </html>
