@@ -10,6 +10,7 @@
 body {
     background-image: url("../assets/map/seoulmap_background.png");
     background-size: auto;
+    /*min-width: 1000px;*/
 }
 
 .logo {
@@ -70,8 +71,8 @@ button.button_seoul img {
 
 #sidebar {
     background-color: #ffffff;
-    position: absolute;
-    width: 28%;
+    position: fixed;
+    width: 400px;
     height: 100%;
     top: 0;
     right: 0%;
