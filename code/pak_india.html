@@ -33,6 +33,12 @@
 				<h2> 팍 인디아 </h2>
 				<a href="#target"><button id="ticket_button"> </button> </a>
 			</div>
+			<div id = "rtbutton">
+				<input id = "totalrating" style="background:url(../assets/icon/star5.png);	background-repeat:no-repeat;background-size:150px;"
+				 onclick="if(this.parentNode.getElementsByTagName('div')[0].style.display != ''){this.parentNode.getElementsByTagName('div')[0].style.display = '';this.value = '';}else{this.parentNode.getElementsByTagName('div')[0].style.display = 'none'; this.value = '';}" type="button" />
+    <div id = "partrating" style="display: none;"> #맛 <img src="../assets/icon/star3.png"/> #분위기 <img src="../assets/icon/star5.png"/>  #친절 <img src="../assets/icon/star3.png"/> </div>
+
+			</div>
 			<p> <strong> 영업시간 </strong> | 매일 11:00 - 20:30 </p>
 			<details>
 				<summary> <strong> 주소 </strong> | 서울 용산구  우사단로10길 51 </summary>
@@ -78,22 +84,67 @@
 					<h3>머튼 비리야니</h3>
 					<h4> 향이 이국적이고 약간 매콤한<br>양고기 볶음밥</h4>
 					<h5> 12,000원 </h5>
+					<h6> #밥 #양고기 </h6>
 				</li>
 				<li>
 					<h3>치킨 카라히</h3>
 					<h4> 매콤하고 자작한 커리에 적신 <br>쫄깃쫄깃한 치킨 바베큐</h4>
 					<h5> 14,000원 </h5>
+					<h6> #밥 #닭고기 </h6>
 				</li>
 				<li>
 					<h3>빨락 빠니르</h3>
 					<h4> 감자와 치즈가 들어가 담백한<br>시금치 커리</h4>
 					<h5> 13,000원 </h5>
+					<h6> #밥 #치즈 #시금치 </h6>
 				</li>
 			</ul>
 		</div>
-
-		<!--content5 : expression-->
+		<!--content5 : slide-->
 		<div id="content5">
+			<div class="slidebox">
+				<input type="radio" name="slide" id="slide01" checked>
+				<input type="radio" name="slide" id="slide02">
+				<input type="radio" name="slide" id="slide03">
+				<input type="radio" name="slide" id="slide04">
+				<ul class="slidelist">
+					<li class="slideitem">
+						<a><img src="../assets/restaurant/pak_india/slide01.png"></a>
+					</li>
+					<li class="slideitem">
+						<a><img src="../assets/restaurant/pak_india/slide02.png"></a>
+					</li>
+					<li class="slideitem">
+						<a><img src="../assets/restaurant/pak_india/slide01.png"></a>
+					</li>
+					<li class="slideitem">
+						<a><img src="../assets/restaurant/pak_india/slide02.png"></a>
+					</li>
+
+				</ul>
+				<div class="slide-control">
+					<div class="control01">
+						<label for="slide04" class="prev"></label>
+						<label for="slide02" class="next"></label>
+					</div>
+					<div class="control02">
+						<label for="slide01" class="prev"></label>
+						<label for="slide03" class="next"></label>
+					</div>
+					<div class="control03">
+						<label for="slide02" class="prev"></label>
+						<label for="slide04" class="next"></label>
+					</div>
+					<div class="control04">
+						<label for="slide03" class="prev"></label>
+						<label for="slide01" class="next"></label>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--content6 : expression-->
+		<div id="content6">
 			<p>
 			 میں اس کھانے سے لطف اندوز ہوں گے
 			</p>
