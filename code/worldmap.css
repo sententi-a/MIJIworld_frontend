@@ -32,7 +32,7 @@ body {
     display: block;
     object-fit: contain;
     /*border: 5px dashed #f7a239;*/
-    width: 80%;
+    width: 100%;
 }
 
 .world-map-image {
@@ -41,8 +41,8 @@ body {
 
 .button-world {
     position: absolute;
-    top: 4%;
-    left: 0%;
+    top: 1%;
+    left: 5%;
     width: 10%;
     object-fit: contain;
     background-color: transparent;
@@ -51,8 +51,8 @@ body {
 
 .button-seoul {
     position: absolute;
-    top: 4%;
-    left: 11%;
+    top: 1%;
+    left: 16%;
     width: 10%;
     object-fit: contain;
     background-color: transparent;

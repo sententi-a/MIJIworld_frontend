@@ -27,7 +27,7 @@ body {
     margin: 0 auto;
     display: block;
     object-fit: contain;
-    width: 80%;
+    width: 100%;
 }
 
 .seoulmap-image {
@@ -36,8 +36,8 @@ body {
 
 button.button_world {
     position: absolute;
-    top: 4%;
-    left: 0%;
+    top: 1%;
+    left: 5%;
     width: 10%;
     object-fit: contain;
     background-color: transparent;
@@ -53,8 +53,8 @@ button.button_world img {
 
 button.button_seoul {
     position: absolute;
-    top: 4%;
-    left: 11%;
+    top: 1%;
+    left: 16%;
     width: 10%;
     object-fit: contain;
     background-color: transparent;
@@ -71,13 +71,13 @@ button.button_seoul img {
 #sidebar {
     background-color: #ffffff;
     position: absolute;
-    width: 30%;
-    height: 99.5%;
+    width: 28%;
+    height: 100%;
     top: 0;
-    left: 71%;
+    right: 0%;
     opacity: 0;
     z-index: 1;
-    transition: all 0.2s;
+    transition: all 0.5s;
 }
 
 .sidebar {
@@ -97,7 +97,7 @@ button.button_seoul img {
 
 .sidebar button.exit {
     position: absolute;
-    top: 0.1%;
+    top: 2%;
     left: 83%;
     background-color: transparent;
     width: 20%;
@@ -124,8 +124,8 @@ button.exit img {
 }
 
 .region_name {
-    margin-top: 5%;
-    font-size: 2vw;
+    margin-top: 8%;
+    font-size: 2.5vw;
     font-weight: bold;
     text-align: center;
     color: #8d8deb;
@@ -151,7 +151,7 @@ button.exit img {
 }
 
 .name a:hover {
-    color: black;
+    color: #8d8deb;
 }
 
 .description {
