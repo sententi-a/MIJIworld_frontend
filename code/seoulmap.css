@@ -14,13 +14,15 @@ body {
 }
 
 .logo {
+    text-align: center;
+}
+
+.logo img {
     width: 120px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    object-fit: contain;
-    display: block;
+    /*object-fit: contain;
+    display: block;*/
 }
 
 .seoulmap {
@@ -32,14 +34,16 @@ body {
 }
 
 .seoulmap-image {
-    width: 100%;
+    padding-left: 8%;
+    padding-top: 5%;
+    width: 80%;
 }
 
 button.button_world {
     position: absolute;
     top: 1%;
     left: 5%;
-    width: 10%;
+    width: 9%;
     object-fit: contain;
     background-color: transparent;
     border: 0;
@@ -55,8 +59,8 @@ button.button_world img {
 button.button_seoul {
     position: absolute;
     top: 1%;
-    left: 16%;
-    width: 10%;
+    left: 15%;
+    width: 9%;
     object-fit: contain;
     background-color: transparent;
     cursor: pointer;
@@ -71,8 +75,8 @@ button.button_seoul img {
 
 #sidebar {
     background-color: #ffffff;
-    position: fixed;
-    width: 400px;
+    position: absolute;
+    width: 27%;
     height: 100%;
     top: 0;
     right: 0%;
@@ -125,7 +129,7 @@ button.exit img {
 }
 
 .region_name {
-    margin-top: 8%;
+    margin-top: 7%;
     font-size: 2.5vw;
     font-weight: bold;
     text-align: center;

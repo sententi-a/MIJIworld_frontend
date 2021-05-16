@@ -17,13 +17,15 @@ body {
 }
 
 .logo {
+    text-align: center;
+}
+
+.logo img {
     width: 120px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    object-fit: contain;
-    display: block;
+    /*object-fit: contain;
+    display: block;*/
 }
 
 .world-map {
@@ -43,7 +45,7 @@ body {
     position: absolute;
     top: 1%;
     left: 5%;
-    width: 10%;
+    width: 9%;
     object-fit: contain;
     background-color: transparent;
     cursor: pointer;
@@ -52,8 +54,8 @@ body {
 .button-seoul {
     position: absolute;
     top: 1%;
-    left: 16%;
-    width: 10%;
+    left: 15%;
+    width: 9%;
     object-fit: contain;
     background-color: transparent;
     cursor: pointer;
