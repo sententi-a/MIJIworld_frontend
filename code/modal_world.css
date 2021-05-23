@@ -1,3 +1,7 @@
+*{padding:0; margin:0;}
+img {display:block;}
+ul{list-style:none;}
+
 @font-face {
     font-family: 'yg-jalnan';
     src: local("Jalnan");
@@ -5,13 +9,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-* {
-    padding: 0;
-    margin: 0;
-}
-
-
 
 /*header*/
 .header {
@@ -109,6 +106,10 @@ details > summary {
 details > summary strong{
     font-weight:500;
 }
+details > summary:hover{
+    color:#0055FF;
+    }
+
 details[open] > summary ~ * {
     animation: reveal 0.5s;
 }
@@ -132,13 +133,13 @@ details > p {
     color:#68b5f8;
 }
 #map {
-  width:600px;
-  height:300px;
-  border:0;
-  display:block;
-  padding-bottom:50px;
-}
-
+    width:600px;
+    height:300px;
+    border:0;
+    display:block;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    margin-bottom:50px;
+  }  
 
 /*ticket : hidden, auto scroll*/
 #ticket {
@@ -304,7 +305,6 @@ details > p {
 
 body {
     max-width: 1920px;
-    opacity: 0.6;
     background-color: #efeffc;
 }
 
