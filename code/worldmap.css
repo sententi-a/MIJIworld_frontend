@@ -35,6 +35,7 @@ body {
     object-fit: contain;
     /*border: 5px dashed #f7a239;*/
     width: 100%;
+    min-width: 800px;
 }
 
 .world-map-image {
