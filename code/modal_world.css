@@ -203,15 +203,6 @@ ul {
 }
 
 
-#map {
-    width: 600px;
-    height: 300px;
-    border: 0;
-    display: block;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    margin: auto;
-}
-
 #map,
 #toggle {
     display: none;
@@ -275,8 +266,7 @@ details>p {
 
 /*content2 : restaurant description*/
 #content2 {
-    width: 100%;
-    height: 80px;
+    width: inherit;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -287,7 +277,6 @@ details>p {
 
 /*레스토랑 상세 설명*/
 #content2 p {
-    width: 1200px;
     margin-top: 20px;
     font-family: Noto Sans KR;
     font-weight: 300;
@@ -307,7 +296,7 @@ details>p {
 
 /*content3 : menu image*/
 #content3 {
-    width: 100%;
+    width: inherit;
     height: 213.75px;
     margin: auto;
     display: flex;
@@ -336,7 +325,7 @@ details>p {
 
 /*content4 : menu description*/
 #content4 {
-    width: 100%;
+    width: inherit;
     height: 168px;
     display: flex;
     flex-direction: column;
@@ -395,7 +384,7 @@ details>p {
 
 /*content5 : expression*/
 #content5 {
-    width: 100%;
+    width: inherit;
     height: 120px;
     display: flex;
     flex-direction: column;
@@ -406,7 +395,7 @@ details>p {
 
 #content5 p {
     padding-top: 10px;
-    width: 1000px;
+
     font-family: Noto Sans KR;
     font-weight: normal;
     font-size: 22px;
@@ -422,7 +411,7 @@ details>p {
 
 /*ticket : hidden, auto scroll*/
 #ticket {
-    width: 100%;
+    width: inherit;
     height: 580px;
     display: flex;
     flex-direction: column;
@@ -434,7 +423,7 @@ details>p {
 
 /*Eat the World, Meet the World!*/
 #ticket p {
-    width: 1200px;
+    width: inherit;
     font-family: yg-jalnan;
     font-size: 36px;
     margin-top: -200px;
