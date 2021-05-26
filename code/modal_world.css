@@ -19,41 +19,23 @@ ul {
     font-style: normal;
 }
 
-.modal {
+#modal {
     z-index: 100;
     position: absolute;
     margin: auto;
     margin-top: 13vh;
     background: #fff;
     border: 1px solid #666;
-    width: 90vw;
-    height: 80vh;
+    width: 73vw;
+    height: 76vh;
     overflow-y: auto;
     border-radius: 6px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     position: relative;
 }
 
-.modal h2 {
+#modal h2 {
     margin-top: 0;
-}
-
-.modal .close {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 20px;
-    right: 20px;
-    opacity: 0.8;
-    transition: all 200ms;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #777;
-}
-
-.modal .close:hover {
-    opacity: 1;
 }
 
 
@@ -108,27 +90,27 @@ ul {
 
 
 /*header*/
-.modal .header {
+.header {
     width: inherit;
     height: 120px;
     position: fixed;
     z-index: 999;
 }
 
-.modal .header h1 {
+.header h1 {
     padding-top: 17px;
     text-align: center;
 }
 
 /*국기 이미지*/
-.modal .header h1 img {
+.header h1 img {
     width: 80px;
     height: 53.6px;
     margin: auto;
 }
 
 /*국가명*/
-.modal .header #country {
+.header #country {
     font-family: yg-jalnan;
     font-size: 20px;
     letter-spacing: 0.6px;
@@ -225,7 +207,7 @@ details>summary strong {
 }
 
 details>summary:hover {
-    color: #0055FF;
+    color: #8d8def;
 }
 
 details[open]>summary~* {
@@ -412,7 +394,7 @@ details>p {
 /*ticket : hidden, auto scroll*/
 #ticket {
     width: inherit;
-    height: 580px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
