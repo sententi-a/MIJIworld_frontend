@@ -153,7 +153,7 @@
 			</ul>
 
 		</div>
-
+        <!--content6 : expression-->
 		<div id="content6">
 			<h6>
 			잘 먹었습니다!
@@ -162,7 +162,7 @@
 				해피홈 레스토랑 평점 보기
 			</p>
 		</div>
-		<!--content6 : expression-->
+		
 
 		<!--ticket : hide & auto scroll-->
 
@@ -191,6 +191,55 @@
 				</ul>
 
 			</div>
+		</div>
+
+	
+		<div id ="ticket_title">
+			<h1>Eat the World, Meet the World!</h1>
+			<p>나만의 여행 티켓 만들기</p>
+		</div>
+
+		<div id ="ticket">
+			<div id ="box">
+				<!--모든 티켓은 2x 이상으로 해야 화질이 깨지지 않아요!-->
+				<img src ="../assets/restaurant/pak_india/ticket@2x.png">
+				<div id = "input">
+					<div id = "date">
+						<ul>
+							<li>
+								<h1>날짜</h1>
+								<input type="text"  required minlength="2" maxlength="8" >
+							</li>
+							
+						</ul>
+						
+					</div>
+					<div id = "others">
+						<ul>
+							<li>
+								<h1>이름</h1>
+								<input type="text"  required minlength="2" maxlength="8" >
+							</li>
+							<li>
+								<h1>동행인</h1>
+								<input type="text" required minlength="2" maxlength="8">
+							</li>
+							<li>
+								<h1>찜한 메뉴</h1>
+								<input type="text" required minlength="2" maxlength="8" size="10">
+							</li>
+							<li>
+								<h1>특이사항</h1>
+								<input type="text" required minlength="2" maxlength="8" size="10">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id ="submit_area">
+					<button onclick="history.back()" id="submit_button"> <!--발권하기-->
+				</div>
+			</div>
+
 		</div>
 
 	</body>
