@@ -73,7 +73,7 @@ header #country {
 	justify-content:center;
 	align-items:center;
 	font-family: Noto Sans KR;
-	font-size:20px;
+	font-size:19px;
 	font-weight:normal;
 	color:#707070;
 }
@@ -84,9 +84,9 @@ header #country {
     /*레스토랑 이름*/
 #content1 h2 {
 	display:inline-block;
-	font-size:56.25px;
-	font-weight:bold;
-	margin-top:20px;
+	font-size:45px;
+	font-weight:700;
+	margin-top:15px;
 	margin-left:100px;
 }
 	/*티켓 버튼*/
@@ -127,7 +127,7 @@ details > summary strong{
     font-weight:500;
 }
 details > summary:hover{
-    color:#0055FF;
+    color:#8D8DEB;
     }
 
 
@@ -151,7 +151,7 @@ details > p {
     font-size:26.25px;
     font-weight:bold;
     text-align:center;
-    color:#68b5f8;
+    color:#8D8DEB;
 }
 
 #map {
@@ -174,17 +174,16 @@ details > p {
 	justify-content:center;
 	align-items:center;
 	text-align:center;
-	padding-top:5px;
-	padding-bottom:9px;
 }
 	/*레스토랑 상세 설명*/
 #content2 p {
 	width:1200px;
 	font-family:Noto Sans KR;
 	font-weight:300;
-	font-size:20px;
+	font-size:19px;
+  padding-top:10px;
 	line-height:1.4;
-	color:#707070;
+	color:#979797;
 }
 
 /*mainslide*/
@@ -232,7 +231,7 @@ details > p {
 #content4 {
   margin-top:30px;
 	width:100%;
-	height:381.75px;
+	height:335px;
 	display:flex;
 	flex-direction:column;
 	align-items:center;
@@ -240,52 +239,62 @@ details > p {
 #content4 ul{display:flex;}
 	/*메뉴 설명 박스*/
 #content4 li  {
-	padding-top:8px;
+	/* padding-top:5px; */
 	text-align:center;
-	width:220px;
-	height:280px;
+	width:240px;
+	height:290px;
 	border:solid 2px #ececec;
-	border-radius:20px;
-	margin-left:67px;
+	border-radius:10px;
+	margin-left:40px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
-#content4 img {width:150px; height:120px; margin-left:35px; margin-bottom:8px;}
+#content4 img {width:150px; height:120px; margin-left:19%; margin-top : 10px;  margin-bottom:8px;}
 #content4 li:first-child{margin-left:0;}
 	/*메뉴 이름*/
 #content4 li h3 {
 	display:block;
 	font-family:Noto Sans KR;
-	font-size:22px;
-	font-weight:600;
+	font-size:20px;
+	font-weight:500;
 	color:#616161;
 }
 	/*메뉴 상세설명*/
 #content4 li h4 {
 	display:block;
-	margin-top:3px;
+	margin-top:2px;
 	font-family:Noto Sans KR;
-	font-size:16px;
+	font-size:18px;
 	font-weight:300;
 	color:#616161;
 }
 	/*메뉴 가격*/
 #content4 li h5 {
 	display:block;
-	margin-top:3px;
-	font-family:Noto Sans KR;
-	font-size:20px;
-	font-weight:normal;
-	color:#616161;
-}
- /*메뉴 태그*/
-#content4 li h6 {
-	display:block;
-	margin-top:3px;
+	margin-top:1px;
 	font-family:Noto Sans KR;
 	font-size:18px;
 	font-weight:normal;
-	color:#6d7efd;
+	color:#616161;
 }
+
+ /*메뉴 태그*/
+#content4 li h6 {
+	display:block;
+	padding-top:5px;
+	font-family:Noto Sans KR;
+	font-size:18px;
+	font-weight:500;
+	color:#8d8deb;
+}
+
+#content4 li h6 span {
+  padding-left:5px;
+  padding-right:5px;
+  margin-right:5px;
+}
+#content4 li h6 span:first-child{padding-right:0;}
+#content4 li h6 span:last-child{margin-right:0;}
+
 
 /*슬라이드*/
 #content5 {
@@ -319,26 +328,27 @@ details > p {
 #slide02:checked ~ .slide-control .control02 {display:block;}
 #slide03:checked ~ .slide-control .control03 {display:block;}
 #slide04:checked ~ .slide-control .control04 {display:block;}
-/*content5 : expression*/
+/*content6 : expression*/
 #content6 {
-  padding-top: 10px;
+  /* padding-top: 20px; */
 	width:100%;
-	height:80px;
+	height:95px;
 	display:flex;
 	flex-direction:column;
 	align-items:center;
 	text-align:center;
 }
 #content6 h6 {
+  padding-top: 20px;
 	font-size:20px;
-	font-weight:500;
-	color:#858585;
+	font-weight:normal;
+	color:#707070;
 }
 #content6 p {
 	width:1000px;
 	font-family:Noto Sans KR;
 	font-weight:normal;
-	font-size:30px;
+	font-size:25px;
 	color:#707070;
 }
 
@@ -369,42 +379,95 @@ details > p {
   	width:738px;
   	height:361.5px;
 }
- /*후기*/
+ /*평점 보기*/
 #content7 {
+  margin-top:9px;
 	width:100%;
-	height:381.75px;
+	height:270px;
 	display:flex;
 	flex-direction:column;
 	justify-content:center;
 	align-items:center;
 }
-#rating_box{
-    width: 700px;
-    height: 280px;
-    padding: 21px 40px 24px 36px;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    background-color: #fcfcfc;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
+
+#content7 ul{
+  display:flex;
+}
+	/*평점보기 박스*/
+#content7 li  {
+	/* padding-top:5px; */
+	text-align:center;
+  background-color:#fcfcfc;
+	width:240px;
+	height:240px;
+	border-radius:10px;
+	margin-left:35px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+#content7 li:first-child{margin-left:0;}
+
+/*네이버지도/카카오맵/구글맵*/
+#content7 li p {
+  padding-top:8px;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color: #777777;
 }
 
-#rated_score{
-  width:200px;
-  height:240px;
-  padding-right: 30px;
+/*평점보기 내부 박스*/
+.rate_box{
+  width: 200px;
+  height: 180px;
+  /* padding: 8px 45px 10px; */
+  border-radius:10px;
+  margin-left:20px;
+  margin-top : 8px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  flex-direction:row;
+  align-items:center;
+}
+
+/*지도 검색엔진 아이콘*/
+#content7 li .rate_box img {
+  display:block;
+  width:80px; 
+  height:80px; 
+  margin-left:29%; 
+  margin-top : 8px;  
+  padding-top : 8px;
+}
+
+/*평점 (숫자)*/
+#content7 li .rate_box h3 {
+  display:block;
+  font-family: Jalnan;
+  font-size: 25px;
+  font-weight: normal;
+  text-align:center;
+  color: #616161;
+  padding-top:4px;
+}
+/*n명의 후기*/
+#content7 li .rate_box h4 {
+  display:block;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
   color:#707070;
-  font-family:Noto Sans KR;
+}
+/*별점*/
+#content7 li .rate_box h5 {
+  display:block;
+  margin-top:-4px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color:#ff9797;
 }
 
-#rated_score hr {
-  width:180px;
-  border: solid 1px #d4d4d4;
-  margin-top: 7px ;
-}
-#rated_score p {
-  font-size: 17px;
-}
 #point {
   font-family:yg-Jalnan;
   font-size:30px;
@@ -414,132 +477,4 @@ details > p {
   font-size:25px;
   color: #8d8deb;
   text-align:center;
-}
-#rated_score ul {
-  padding-top:20px;
-  display:flex;
-  flex-direction:column;
-}
-#rated_score li {
-  padding-top: 15px;
-  font-size: 18px;
-  display:flex;
-  flex-direction:row;
-  color:#7e7e7e;
-}
-#rated_score li:first-child {
-  padding-top:0px;
-}
-#rated_score li span {
-  margin-left:10px;
-  margin-top:3px;
-  width:100px;
-  height:20px;
-  background: url("../assets/icon/review_circle_bin.png");
-  background-size:100px 20px;
-  background-repeat:no-repeat;
-  overflow:hidden;
-}
-#rated_score li span img {
-  width:100px;
-  height:20px;
-}
-
-#rating_user{
-  position:relative;
-  background-color:#ffffff;
-  width:480px;
-  height:255px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
-  border-radius: 20px;
-  font-family:Noto sans kr;
-  color:#7e7e7e;
-}
-#rating_user p{
-  padding-top:10px;
-  font-size:18px;
-  line-height:30px;
-  text-align:center;
-  font-weight:500;
-  margin-bottom:5px;
-}
-#rating_user ul{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-#rating_user li{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  color:#979797;
-}
-#rating_user li span {
-  width:400px;
-  height:30px;
-  background:url("../assets/icon/rating_back.png");
-  background-size: 400px;
-  background-repeat:no-repeat;
-}
-
-#rating_user li div {
-margin-top:8.25px;
-width: 20px;
-height: 20px;
-border-radius: 20px;
-position: relative;
-left: 190px;
-top: -5px;
-background: url("../assets/icon/circle.png");
-background-size: 20px 20px;
-cursor: pointer;
-}
-#submit-div{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-#submit{
-  border:none;
-  margin-top:10px;
-  width: 150px;
-  height: 25px;
-  align-items:center;
-  background:url("../assets/icon/submit_button.png");
-  background-size:150px 25px;
-  cursor:pointer;
-}
-#submit:hover{
-  width: 140px;
-  height: 23px;
-  margin-top:11.5px;
-  background-size:140px 23px;
-}
-
-#rating_fin{
-  position:relative;
-  background:white;
-  bottom:240px;
-  width:470px;
-  height:250px;
-  border-radius: 20px;
-  text-align:center;
-  display: none;
-  vertical-align:bottom;
-}
-#rating_fin p{
-  padding-bottom:0px;
-  color:#707070;
-  font-family:Noto Sans KR;
-  font-size:18px;
-}
-#fin_circle {
-  position: relative;
-  left: 210px;
-  bottom: 120px;
-  width: 51.2px;
-  height: 51.2px;
-  border-radius: 50%;
-  background:url("../assets/icon/check_mark.png");
-  background-size:51.2px 51.2px;
 }
