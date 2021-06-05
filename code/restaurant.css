@@ -1,4 +1,4 @@
-/*samarkant css*/
+/*restaurant css*/
 
 /*reset*/
 *{padding:0; margin:0;}
@@ -186,50 +186,9 @@ details > p {
 	color:#979797;
 }
 
-/*mainslide*/
-#mainslide {
-  height:400px;
-  position:relative;
-  overflow:hidden;
-}
-.mainslide_list{width:400%;height:100%;transition:1s;}
-.mainslide_list:after{content:"";display:block;clear:both;}
-.mainslide_item{
-  float:left;
-  width:25%;
-  height:100%;
-}
-[name="mainslide"] {
-  display:none;
-}
-
-#mainslide .mainslide_control label{
-    display:inline-block;
-    vertical-align:middle;
-    width:10px;
-    height:10px;
-    border:2px
-    solid #666;
-    background:#fff;
-    transition:0.3s;
-    border-radius:50%;
-    cursor:pointer;
-  }
-.mainslide_control{
-    text-align:center;
-    position:absolute;
-    top:0px;
-    left:0;
-    width:100%;
-    text-align:center;
-  }
-#mainslide1:checked~ul{margin-left:0%;}
-#mainslide2:checked~ul{margin-left:-100%;}
-#mainslide1:checked~ .mainslide_control>label:nth-child(1){background:#666;}
-#mainslide2:checked~ .mainslide_control>label:nth-child(2){background:#666;}
-/*content4 : menu description*/
+/*content4 : menu */
 #content4 {
-  margin-top:30px;
+  margin-top:20px;
 	width:100%;
 	height:335px;
 	display:flex;
@@ -298,24 +257,26 @@ details > p {
 
 /*슬라이드*/
 #content5 {
+  width:100%;
+  height:335px;
   display:flex;
   justify-content:center;
-  align-items:center;
   text-align:center;
   margin-top:10px;
   
 }
 /*현재 사진의 가로 세로 비율에 따라 세로크기가 결정되고 있습니다.*/
 /*현재 슬라이드 사진은 가로세로 6:4, 가로 600px입니다. 700px을 넘어가면 상관없는데 700px보다 작으면 슬라이드가 작아집니다.*/
-.slidebox {width:600px; height: 350px; margin:30px 0 0 0 ;position:relative;box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.16); }
+.slidebox {width:500px; height: 275px; margin:10px 0 0 0 ;position:relative;box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.16); }
 .slidebox .slidelist {position:relative;white-space:nowrap;font-size:0;overflow:hidden;}
 .slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;background-color:#fff;width:100%;transition:all 1s;}
 .slidebox .slidelist .slideitem > a {display:inline-block;width:auto;position:relative;}
-.slidebox .slidelist .slideitem > a img {width:600px; height: 350px; object-fit:fill;}
+.slidebox .slidelist .slideitem > a img {padding-top:-10px;width:500px; height: 275px; object-fit:fill;}
+
 
 .slidebox .slide-control [class*="control"] label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:25px;border-radius:50%;cursor:pointer;}
-.slidebox .slide-control [class*="control"] label.prev {left:-80px;background:#aeaeae url('../assets/icon/left-arrow.png') center center / 100% no-repeat;}
-.slidebox .slide-control [class*="control"] label.next {right:-80px;background:#aeaeae url('../assets/icon/right-arrow.png') center center / 100% no-repeat;}
+.slidebox .slide-control [class*="control"] label.prev {left:-80px;background: url('../assets/icon/left_arrow@2x.png') center center / 80% no-repeat;}
+.slidebox .slide-control [class*="control"] label.next {right:-80px;background: url('../assets/icon/right_arrow@2x.png') center center / 80% no-repeat;}
 .slide-control {position:absolute;top:0;left:0;z-index:10;width:100%;height:100%;}
 
 [name="slide"] {display:none;}
@@ -352,6 +313,7 @@ details > p {
 	font-weight:normal;
 	font-size:25px;
 	color:#707070;
+  
 }
 
 
@@ -375,7 +337,7 @@ details > p {
 	width:240px;
 	height:240px;
 	border-radius:10px;
-	margin-left:35px;
+	margin-left:40px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 #content7 li:first-child{margin-left:0;}
@@ -471,7 +433,7 @@ details > p {
   font-weight: normal;
   text-align: center;
   color: #707070;
-  
+  margin-top:-5px;
   padding-bottom:6.4px;
   
 }
@@ -499,12 +461,6 @@ details > p {
 #ticket img {
   width: 93%;
   padding-top:17.1px;
-  /* height: 208.4px; */
-	/* overflow:hidden;
-  	margin-left:auto;
-  	margin-right:auto;
-  	width:738px;
-  	height:361.5px; */
 }
 
 /*입력 영역*/
