@@ -533,7 +533,7 @@ details > p {
 }
 
 #others input:focus, textarea:focus {
-  box-shadow: 0 0 5px #0088ff;
+  box-shadow: 0 0 5px #8d8deb;
   
 }
 
