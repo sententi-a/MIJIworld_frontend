@@ -8,6 +8,20 @@
 		<!--font-->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+		<script>
+			$(document).ready(function () {
+				$input = $("#select_date");
+				$input.datepicker({
+					format: 'dd MM yyyy'
+				});
+				$input.data('datepicker').hide = function () {};
+				$input.datepicker('show');
+			});
+		</script>
+
 		<title>팍 인디아</title>
 	</head>
 
@@ -153,6 +167,8 @@
 			</ul>
 
 		</div>
+
+
         <!--content6 : expression-->
 		<div id="content6">
 			<h6>
@@ -196,7 +212,7 @@
 	
 		<div id ="ticket_title">
 			<h1>Eat the World, Meet the World!</h1>
-			<p>나만의 여행 티켓 만들기</p>
+			<h2>나만의 여행 티켓 만들기</h2>
 		</div>
 
 		<div id ="ticket">
@@ -208,7 +224,7 @@
 						<ul>
 							<li>
 								<h1>날짜</h1>
-								<input type="text"  required minlength="2" maxlength="8" >
+								<input id="select_date">
 							</li>
 							
 						</ul>
@@ -236,11 +252,10 @@
 					</div>
 				</div>
 				<div id ="submit_area">
-					<button onclick="history.back()" id="submit_button"> <!--발권하기-->
+					<button id="submit_button"> <!--발권하기--></button>
 				</div>
 			</div>
 
 		</div>
-
 	</body>
 </html>
