@@ -1,3 +1,420 @@
-// Place all the styles related to the Map controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@font-face {
+    font-family: "yg-jalnan";
+    src: local("Jalnan");
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("../assets/map/worldmap_background.png");
+    background-size: auto;
+}
+
+.logo {
+    text-align: center;
+    img {
+        width: 120px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.world-map {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    min-width: 800px;
+    .pin {
+        position: absolute;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        width: 0%;
+        height: 0%;
+        z-index: 1;
+        object-fit: contain;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out;
+        -webkit-transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
+        transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
+        -moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+        -o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+        transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+        .content {
+            font-family: "yg-jalnan";
+            filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            opacity: 0;
+            -webkit-transition: opacity 0.25s ease-in-out;
+            -moz-transition: opacity 0.25s ease-in-out;
+            -o-transition: opacity 0.25s ease-in-out;
+            transition: opacity 0.25s ease-in-out;
+            width: 100%;
+            height: 100%;
+            left: 50%;
+            overflow: overlay;
+            .country {
+                font-size: 200%;
+                margin-top: 5%;
+            }
+        }
+        &:active {
+            .pin-img {
+                filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                opacity: 0;
+                -webkit-transition: opacity 0.25s ease-in-out;
+                -moz-transition: opacity 0.25s ease-in-out;
+                -o-transition: opacity 0.25s ease-in-out;
+                transition: opacity 0.25s ease-in-out;
+            }
+            margin: 0;
+            padding: 0;
+            background: rgba(255,
+            255,
+            255,
+            0.5);
+            filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            opacity: 1;
+            width: 300px;
+            height: 140px;
+            color: #000000;
+            z-index: 3;
+            -webkit-transition: opacity 0.25s ease-in-out,
+            width 0.25s ease-in-out,
+            height 0.25s ease-in-out;
+            -moz-transition: opacity 0.25s ease-in-out,
+            width 0.25s ease-in-out,
+            height 0.25s ease-in-out;
+            -o-transition: opacity 0.25s ease-in-out,
+            width 0.25s ease-in-out,
+            height 0.25s ease-in-out;
+            transition: opacity 0.25s ease-in-out,
+            width 0.25s ease-in-out,
+            height 0.25s ease-in-out;
+            .content {
+                filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                opacity: 1;
+                -webkit-transition: opacity 0.25s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
+                -webkit-transition-delay: 0.25s, 0.25s, 0.25s;
+                transition-delay: 0.25s, 0.25s, 0.25s;
+                -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+                -o-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+                transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+                overflow: hidden;
+            }
+        }
+        &:focus {
+            .pin-img {
+                filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                opacity: 0;
+                -webkit-transition: opacity 0.25s ease-in-out;
+                -moz-transition: opacity 0.25s ease-in-out;
+                -o-transition: opacity 0.25s ease-in-out;
+                transition: opacity 0.25s ease-in-out;
+            }
+            margin: 0;
+            padding: 0;
+            background: rgba(255,
+            255,
+            255,
+            0.5);
+            filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            opacity: 1;
+            width: 300px;
+            height: 140px;
+            color: #000000;
+            z-index: 3;
+            -webkit-transition: opacity 0.25s ease-in-out,
+            width 0.25s ease-in-out,
+            height 0.25s ease-in-out;
+            -moz-transition: opacity 0.25s ease-in-out,
+            width 0.25s ease-in-out,
+            height 0.25s ease-in-out;
+            -o-transition: opacity 0.25s ease-in-out,
+            width 0.25s ease-in-out,
+            height 0.25s ease-in-out;
+            transition: opacity 0.25s ease-in-out,
+            width 0.25s ease-in-out,
+            height 0.25s ease-in-out;
+            .content {
+                filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                opacity: 1;
+                -webkit-transition: opacity 0.25s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
+                -webkit-transition-delay: 0.25s, 0.25s, 0.25s;
+                transition-delay: 0.25s, 0.25s, 0.25s;
+                -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+                -o-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+                transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+                overflow: hidden;
+            }
+        }
+    }
+    .pin-img {
+        position: absolute;
+        width: 30px;
+        bottom: 80%;
+        left: 45%;
+        right: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 2;
+        -webkit-transition: opacity 0.25s ease-in-out;
+        -moz-transition: opacity 0.25s ease-in-out;
+        -o-transition: opacity 0.25s ease-in-out;
+        transition: opacity 0.25s ease-in-out;
+    }
+    .content {
+        .restaurant {
+            background: rgba(255, 255, 255);
+            background: rgba(255, 255, 255);
+            width: 200px;
+            width: 200px;
+            height: 60px;
+            height: 60px;
+            object-fit: contain;
+            object-fit: contain;
+            -webkit-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            -o-border-radius: 10px;
+            border-radius: 10px;
+            border-radius: 10px;
+            margin: 5px auto;
+            margin: 5px auto;
+            padding: 0;
+            padding: 0;
+            padding-left: 10px;
+            padding-left: 10px;
+            display: flex;
+            display: flex;
+            .res-img {
+                height: 90%;
+                height: 90%;
+                margin-top: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-bottom: auto;
+                z-index: 4;
+                z-index: 4;
+                float: left;
+                float: left;
+            }
+            .res-name {
+                font-size: 140%;
+                font-size: 140%;
+                margin-top: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-bottom: auto;
+                margin-left: auto;
+                margin-left: auto;
+                margin-right: auto;
+                margin-right: auto;
+                z-index: 4;
+                z-index: 4;
+                float: left;
+                float: left;
+            }
+        }
+    }
+}
+
+.world-map-image {
+    width: 100%;
+}
+
+.button-world {
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 9%;
+    object-fit: contain;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button-seoul {
+    position: absolute;
+    top: 1%;
+    left: 15%;
+    width: 9%;
+    object-fit: contain;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+a {
+    &:visited {
+        color: #000000;
+    }
+}
+
+
+/*
+div,
+img,
+footer {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+p {
+    font-size: 12pt;
+    margin-bottom: 12pt;
+}
+strong {
+    font-weight: 900;
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    color: #e5e5e5;
+}
+a {
+    -webkit-transition: color 0.25s ease-in-out;
+    -moz-transition: color 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #dff3fd;
+}
+a:visited {
+    color: #dff3fd;
+}
+li.active a,
+a:hover,
+a:active {
+    color: #e5e5e5;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.centered-y {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.distribution-map {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.distribution-map>img {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.distribution-map .map-point {
+    cursor: pointer;
+    outline: none;
+    z-index: 0;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.8;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out;
+    -webkit-transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
+    -moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+    -o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+    transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+    background: rgba(26, 26, 26, 0.85);
+    border: 2.5px solid #7fcff7;
+}
+.distribution-map .map-point .content {
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    overflow: overlay;
+}
+.distribution-map .map-point:active,
+.distribution-map .map-point:focus {
+    margin: 0;
+    padding: 0;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    width: 300px;
+    height: 220px;
+    color: #e5e5e5;
+    z-index: 1;
+    -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+}
+.distribution-map .map-point:active .content,
+.distribution-map .map-point:focus .content {
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -webkit-transition: opacity 0.25s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
+    -webkit-transition-delay: 0.25s, 0.25s, 0.25s;
+    -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+    -o-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+    transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+    overflow: hidden;
+}
+.distribution-map .map-point:active .content a:hover,
+.distribution-map .map-point:active .content a:active,
+.distribution-map .map-point:focus .content a:hover,
+.distribution-map .map-point:focus .content a:active {
+    color: #afe1fa;
+}
+*/
