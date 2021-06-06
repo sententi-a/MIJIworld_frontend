@@ -1,0 +1,2 @@
+class Restinfo < ApplicationRecord
+end

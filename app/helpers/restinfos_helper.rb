@@ -1,0 +1,2 @@
+module RestinfosHelper
+end
