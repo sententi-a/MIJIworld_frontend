@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Miji World</title>
+        <meta charset="UTF-8" />
+        <link type="text/css" rel="stylesheet" href="worldmap.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="logo">
+            <a href="main_page.html"><img src="../assets/logo/logo.png" /></a>
+        </div>
+
+        <div class="world-map">
+            <img src="../assets/map/world_map.png" class="world-map-image" />
+            <img src="../assets/icon/button_world_clicked.png" class="button-world" />
+            <a href="seoulmap.html">
+                <img
+                    src="../assets/icon/button_seoul_normal.png"
+                    class="button-seoul"
+                    onmouseover="this.src='../assets/icon/button_seoul_hover.png'"
+                    onmouseout="this.src='../assets/icon/button_seoul_normal.png'"
+                />
+            </a>
+
+            <button class="pin" style="top: 44%; left: 30%">
+                <img src="../assets/pin/sky.png" class="pin-img" />
+                <div class="content">
+                    <div class="country" style="color: skyblue">우즈베키스탄</div>
+                    <a href="samarkant.html" class="restaurant">
+                        <img src="../assets/restaurant/samarkant/samarkant_menu2.png" class="res-img" />
+                        <div class="res-name">사마르칸트</div>
+                    </a>
+                </div>
+            </button>
+        </div>
+    </body>
+</html>
