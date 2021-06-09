@@ -10,6 +10,7 @@
     padding: 0;
     margin: 0;
 }
+
 #modal {
     z-index: 100;
     position: absolute;
@@ -24,6 +25,7 @@
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     position: relative;
 }
+
 .overlay {
     z-index: 99;
     width: 100vw;
@@ -221,8 +223,8 @@ body {
     }
     .content {
         .restaurant {
-            background: rgba(255, 255, 255);
-            background: rgba(255, 255, 255);
+            background: rgba(255, 255, 255, 1);
+            background: rgba(255, 255, 255, 1);
             width: 200px;
             width: 200px;
             height: 60px;
