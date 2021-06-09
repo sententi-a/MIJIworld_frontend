@@ -6,20 +6,54 @@
         <link type="text/css" rel="stylesheet" href="worldmap.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
-    </head>
+    		<link href="jqueryui/jquery-ui.min.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="jqueryui/jquery-ui.min.js"></script>
+
+		<style>
+			.ui-datepicker{ font-size: 16px; width: 240px; margin-left: 45px; margin-top: 10px;}
+			.ui-datepicker select.ui-datepicker-month{ width:30%; font-size: 11px; }
+			.ui-datepicker select.ui-datepicker-year{ width:40%; font-size: 11px; }
+		</style>
+
+		<script>
+
+			$(document).ready(function () {
+				$('#datepicker').datepicker ({
+					dateFormat: 'yy.mm.dd',
+					prevText: '이전 달',
+					nextText: '다음 달',
+					monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+					monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+					dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+					dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+					dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+					showMonthAfterYear: true,
+					yearSuffix: '년',
+					onSelect: onDateChange
+				});
+				function onDateChange(dateText, inst){
+					$("#select_date").val(dateText);
+				}
+			});
+				
+			
+			// });
+		</script>
+	
+	</head>
 
     <body>
         <div class="logo">
             <a href="main_page.html"><img src="/assets/logo/logo.png" /></a>
         </div>
 
-    <div id="modal1" class="overlay"> <!-- id modal1을 어떻게 동적으로 바꿀 것인가!-->
-        <a class="cancel" href=""></a>
-        <div id="modal">
-            <!-- 음식점 페이지 파셜 들어갈 자리-->
-
+        <div id="modal1" class="overlay"> <!-- id modal1을 어떻게 동적으로 바꿀 것인가!-->
+            <a class="cancel" href=""></a>
+            <div id="modal">
+                <!-- 음식점 페이지 파셜 들어갈 자리-->
+            </div>
         </div>
-    </div>
 
         <div class="world-map">
             <img src="../assets/map/world_map.png" class="world-map-image" />
@@ -38,7 +72,7 @@
                 <img src="../assets/pin/sky.png" class="pin-img" />
                 <div class="content">
                     <div class="country" style="color: skyblue">우즈베키스탄</div>
-                    <a href="samarkant.html" class="restaurant">
+                    <a href="#modal1" class="restaurant">
                         <img src="../assets/restaurant/samarkant/samarkant_menu2.png" class="res-img" />
                         <div class="res-name">사마르칸트</div>
                     </a>
@@ -58,5 +92,6 @@
                 </button>
             <% end %>
         </div>
+        
     </body>
 </html>
