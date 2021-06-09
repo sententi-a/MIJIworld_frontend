@@ -21,6 +21,7 @@ ul {
   font-style: normal;
 
 }
+
 #modal {
   z-index: 100;
   position: absolute;
@@ -806,10 +807,19 @@ textarea:focus {
   background-size: 32px;
   cursor: pointer;
 
-    &:hover {
-      background: url(../assets/icon/exit2.png);
-      background-size: 32px;
-      background-repeat: no-repeat;
+body {
+    background-image: url(/assets/map/worldmap_background.png) !important;
+    background-size: auto;
+}
+
+.logo {
+    text-align: center;
+    img {
+        text-align: center;
+        width: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
     }
 }
 
@@ -821,7 +831,7 @@ textarea:focus {
     margin: 0 auto;
     display: block;
     object-fit: contain;
-    width: 100%;
+    width: 80%;
     min-width: 800px;
     .pin {
         position: absolute;
@@ -910,7 +920,7 @@ textarea:focus {
                 overflow: hidden;
             }
         }
-        &:focus {
+        &:hover {
             .pin-img {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
                 opacity: 0;
@@ -1032,26 +1042,6 @@ textarea:focus {
 
 .world-map-image {
     width: 100%;
-}
-
-.button-world {
-    position: absolute;
-    top: 1%;
-    left: 5%;
-    width: 9%;
-    object-fit: contain;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.button-seoul {
-    position: absolute;
-    top: 1%;
-    left: 15%;
-    width: 9%;
-    object-fit: contain;
-    background-color: transparent;
-    cursor: pointer;
 }
 
 a {
