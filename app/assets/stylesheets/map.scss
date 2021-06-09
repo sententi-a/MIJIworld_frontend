@@ -54,16 +54,18 @@
 }
 
 body {
-    background-image: url("/assets/map/worldmap_background.png");
+    background-image: url(/assets/map/worldmap_background.png) !important;
     background-size: auto;
 }
 
 .logo {
     text-align: center;
     img {
+        text-align: center;
         width: 120px;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 20px;
-        margin-bottom: 20px;
     }
 }
 
@@ -72,7 +74,7 @@ body {
     margin: 0 auto;
     display: block;
     object-fit: contain;
-    width: 100%;
+    width: 80%;
     min-width: 800px;
     .pin {
         position: absolute;
@@ -161,7 +163,7 @@ body {
                 overflow: hidden;
             }
         }
-        &:focus {
+        &:hover {
             .pin-img {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
                 opacity: 0;
@@ -283,26 +285,6 @@ body {
 
 .world-map-image {
     width: 100%;
-}
-
-.button-world {
-    position: absolute;
-    top: 1%;
-    left: 5%;
-    width: 9%;
-    object-fit: contain;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.button-seoul {
-    position: absolute;
-    top: 1%;
-    left: 15%;
-    width: 9%;
-    object-fit: contain;
-    background-color: transparent;
-    cursor: pointer;
 }
 
 a {
