@@ -1,0 +1,266 @@
+ <% a = @restinfos.find_by_restname('sa') %>
+ <!-- a.flag = 한글나라이름 /  a.eatsay2 = 한글식당이름-->
+            <div class="header" style="background-color:<%= a.header %>;">
+                <h1>
+                    <img src="../assets/flag/<%=a.restname%>.png" />
+                </h1>
+                <div id="country" style="color:<%=a.font%>"><%=a.flag%></div>
+                <button onclick="scrollToTop()" id="exit_button"></button>
+                <script>
+                    function scrollToTop(){
+                        history.back() 
+                        var elmnt = document.getElementById("modal");
+                        elmnt.scrollTop = -10000
+                    }
+                </script>
+
+            </div>
+
+
+
+            <!--여백-->
+            <div id="content0">
+            </div>
+
+            <!--content1: restaurant name, information-->
+            <div id="content1">
+                <div id="title">
+                    <h2> <%=a.eatsay2%> </h2>
+                    <button id="ticket_button" onclick = "scrollToTicket()"> </button>
+                    <script>
+                        function scrollToTicket(){
+                            var elmnt = document.getElementById("modal");
+                            elmnt.scrollTop = 10000
+                        }
+                    </script>
+                </div>
+                <p> <strong> 영업시간 </strong> | <%=a.openwhen%> </p>
+                <details>
+                    <summary> <strong> 주소 </strong> | <%=a.address%></summary>
+                    <p> 구글 지도 길찾기 </p>
+                    <iframe id="map"
+                        src="<%=a.mapurl%>"></iframe>
+                </details>
+
+
+
+
+                <!--content2: restaurant description-->
+                <div id="content2">
+                  <p>
+                   <%=a.restexp1%><br><%=a.restexp2%>
+                  </p>
+                </div>
+            
+                <div id="content6">
+                  <h6>
+                  잘 먹겠습니다!
+                  </h6>
+                  <p>
+                   <%=a.eatsay1%>
+                  </p>
+                </div>
+            
+                <div id="content4">
+                  <ul>
+                    <li>
+                      <img src="../assets/restaurant/<%=a.restname%>/menu1.png"/>
+                      <h3><%=a.namemenu1%></h3>
+                      <h4> <%=a.menu1exp1%><br><%=a.menu1exp2%></h4>
+                      <h5> <%=a.menu1price%>원 </h5>
+                      <!-- <h6> <span style = "background-color:#efeffc; border-radius:20px">#밥 </span>
+                         <span style = "background-color:#fff3f3; border-radius:20px; color:#ff9191">#양고기 </span>
+                      </h6> -->
+                    </li>
+                    <li>
+                      <img src="../assets/restaurant/<%=a.restname%>/menu2.png"/>
+                      <h3><%=a.namemenu2%></h3>
+                      <h4> <%=a.menu2exp1%><br><%=a.menu2exp2%></h4>
+                      <h5> <%=a.menu2price%>원 </h5>
+                      <!-- <h6> <span style = "background-color:#efeffc; border-radius:20px">#밥 </span>
+                        <span style = "background-color:#fff3f3; border-radius:20px; color:#ff9191">#닭고기 </span>
+                      </h6> -->
+                    </li>
+                    <li>
+                      <img class="menu" src="../assets/restaurant/<%=a.restname%>/menu3.png"/>
+                      <h3><%=a.namemenu3%></h3>
+                      <h4> <%=a.menu3exp1%><br><%=a.menu3exp2%></h4>
+                      <h5> <%=a.menu3price%>원 </h5>
+                      <!-- <h6> <span style = "background-color:#efeffc; border-radius:20px">#밥 </span>
+                        <span style = "background-color:#fff3f3; border-radius:20px; color:#ff9191">#치즈 </span>
+                        <span style = "background-color:#ecfbed; border-radius:20px; color:#1ac057">#시금치 </span>
+            
+                      </h6> -->
+                    </li>
+                  </ul>
+                </div>
+            
+                <!--content4 : menu description-->
+            
+                    
+            
+            
+                <!--content5 : slide-->
+                    
+                      <div id="content5">
+                        <div class="slidebox">
+                          <input type="radio" name="slide" id="slide01" checked >
+                          <input type="radio" name="slide" id="slide02">
+                          <input type="radio" name="slide" id="slide03">
+                          <input type="radio" name="slide" id="slide04">
+                          <ul class="slidelist">
+                            <li class="slideitem">
+                              <a><img src="../assets/restaurant/<%=a.restname%>/slide01.png"></a>
+                            </li>
+                            <li class="slideitem">
+                              <a><img src="../assets/restaurant/<%=a.restname%>/slide02.png"></a>
+                            </li>
+                            <li class="slideitem">
+                              <a><img src="../assets/restaurant/<%=a.restname%>/slide01.png"></a>
+                            </li>
+                            <li class="slideitem">
+                              <a><img src="../assets/restaurant/<%=a.restname%>/slide02.png"></a>
+                            </li>
+            
+                          </ul>
+            
+                          <div class="slide-control">
+                            <div class="control01">
+                              <label for="slide04" class="prev"></label>
+                              <label for="slide02" class="next"></label>
+                            </div>
+                            <div class="control02">
+                              <label for="slide01" class="prev"></label>
+                              <label for="slide03" class="next"></label>
+                            </div>
+                            <div class="control03">
+                              <label for="slide02" class="prev"></label>
+                              <label for="slide04" class="next"></label>
+                            </div>
+                            <div class="control04">
+                              <label for="slide03" class="prev"></label>
+                              <label for="slide01" class="next"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                
+                
+            
+            
+                    <!--content6 : expression-->
+                <div id="content6">
+                  <h6>
+                  잘 먹었습니다!
+                  </h6>
+                  <p>
+                    <%= a.eatsay %> 평점 보기
+                  </p>
+                </div>
+                
+            
+                <!--ticket : hide & auto scroll-->
+            
+             		<div id="content7">
+            
+            				<ul>
+            					<li>
+            						<p>네이버 지도</p>
+            						<div class ="rate_box">
+            							<img src ="../assets/icon/navermap.png">
+            							<h3><%= a.ratingnaver %></h3>
+            							<h4>(<%= a.ratersnaver %>명의 후기)</h4>
+            							<div class="my-rating-7" data-rating="<%= a.ratingnaver %>"></div>
+            							<script>
+            								$(".my-rating-7").starRating({
+            									totalStars: 5,
+            									starShape: 'rounded',
+            									starSize: 19,
+            									emptyColor: 'lightgray',
+            									activeColor: '#ff9797',
+            									useGradient: false,
+            									readOnly: true
+            								});
+            							</script>
+            						</div>
+            
+            
+            					</li>
+            					<li>
+            						<p>카카오맵</p>
+            						<div class ="rate_box">
+            							<img src ="../assets/icon/kakaomap.png">
+            							<h3><%= a.ratingkakao %></h3>
+            							<h4>(<%= a.raterskakao %>명의 후기)</h4>
+            							<div class="my-rating-7" data-rating="<%= a.ratingkakao %>"></div>
+            							<script>
+            								$(".my-rating-7").starRating({
+            									totalStars: 5,
+            									starShape: 'rounded',
+            									starSize: 19,
+            									emptyColor: 'lightgray',
+            									activeColor: '#ff9797',
+            									useGradient: false,
+            									readOnly: true
+            								});
+            							</script>
+            
+            
+            						</div>
+            					</li>
+            
+            				</ul>
+            				
+            		</div>
+            
+              
+                <div id ="ticket_title">
+                  <h1>Eat the World, Meet the World!</h1>
+                  <h2>나만의 여행 티켓 만들기</h2>
+                </div>
+            
+                <div id ="ticket">
+                  <div id ="box">
+                    <!--모든 티켓은 2x 이상으로 해야 화질이 깨지지 않아요!-->
+                    <img src ="../assets/restaurant/<%= a.restname %>/ticket@2x.png">
+                    <div id = "input">
+                      <div id = "date">
+                        <ul>
+                          <li>
+                            <h1>날짜</h1>
+                            <span id ="datevalue"></span>
+                            <input type = "text" id="select_date" readonly/>
+                            <div id ="datepicker"></div>
+                            
+                          </li>
+                          
+                        </ul>
+                        
+                      </div>
+                      <div id = "others">
+                        <ul>
+                          <li>
+                            <h1>이름</h1>
+                            <input type="text"  required minlength="2" maxlength="8" >
+                          </li>
+                          <li>
+                            <h1>동행인</h1>
+                            <input type="text" required minlength="0" maxlength="8">
+                          </li>
+                          <li>
+                            <h1>찜한 메뉴</h1>
+                            <input type="text" required minlength="0" maxlength="8" size="10">
+                          </li>
+                          <li>
+                            <h1>특이사항</h1>
+                            <input type="text" required minlength="0" maxlength="8" size="10">
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div id ="submit_area">
+                      <button id="submit_button"> <!--발권하기--></button>
+                    </div>
+                  </div>
+            
+                </div>
