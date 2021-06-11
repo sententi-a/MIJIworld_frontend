@@ -877,7 +877,7 @@ body {
             left: 50%;
             overflow: overlay;
             .country {
-                font-size: 200%;
+                font-size: 150%;
                 margin-top: 5%;
             }
         }
@@ -943,8 +943,8 @@ body {
             0.5);
             filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
             opacity: 1;
-            width: 300px;
-            height: 140px;
+            width: 240px;
+            height: 110px;
             color: #000000;
             z-index: 3;
             -webkit-transition: opacity 0.25s ease-in-out,
@@ -989,58 +989,38 @@ body {
     .content {
         .restaurant {
             background: rgba(255, 255, 255, 1);
-            background: rgba(255, 255, 255, 1);
-            width: 200px;
-            width: 200px;
-            height: 60px;
-            height: 60px;
-            object-fit: contain;
+            width: 160px;
+            height: 50px;
             object-fit: contain;
             -webkit-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
             -moz-border-radius: 10px;
             -ms-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
             -o-border-radius: 10px;
             border-radius: 10px;
-            border-radius: 10px;
-            margin: 5px auto;
             margin: 5px auto;
             padding: 0;
-            padding: 0;
             padding-left: 10px;
-            padding-left: 10px;
-            display: flex;
             display: flex;
             .res-img {
                 height: 90%;
-                height: 90%;
-                margin-top: auto;
                 margin-top: auto;
                 margin-bottom: auto;
-                margin-bottom: auto;
                 z-index: 4;
-                z-index: 4;
-                float: left;
                 float: left;
             }
             .res-name {
-                font-size: 140%;
-                font-size: 140%;
-                margin-top: auto;
+                font-family: Noto Sans KR;
+                font-style: bold;
+                font-size: 120%;
                 margin-top: auto;
                 margin-bottom: auto;
-                margin-bottom: auto;
-                margin-left: auto;
                 margin-left: auto;
                 margin-right: auto;
-                margin-right: auto;
-                z-index: 4;
                 z-index: 4;
                 float: left;
-                float: left;
+                &:hover {
+                    color: blue;
+                }
             }
         }
     }
