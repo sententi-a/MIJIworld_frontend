@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link type="text/css" rel="stylesheet" href="listpage.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+        <title>List Page</title>
+        <!--필터 스크롤 따라오는 기능-->
+        <script type="text/javascript">
+            var stmnLEFT = 14; // 오른쪽 여백
+            var stmnGAP1 = 0; // 위쪽 여백
+            var stmnGAP2 = 180; // 스크롤시 브라우저 위쪽과 떨어지는 거리
+            var stmnBASE = 150; // 스크롤 시작위치
+            var stmnActivateSpeed = 15; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+            var stmnScrollSpeed = 25; //스크롤 속도 (클수록 느림)
+            var stmnTimer;
+
+            function RefreshStaticMenu() {
+                var stmnStartPoint, stmnEndPoint;
+                stmnStartPoint = parseInt(document.getElementById("STATICMENU").style.top, 10);
+                stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2;
+                if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1;
+                if (stmnStartPoint != stmnEndPoint) {
+                    stmnScrollAmount = Math.ceil(Math.abs(stmnEndPoint - stmnStartPoint) / 15);
+                    document.getElementById("STATICMENU").style.top =
+                        parseInt(document.getElementById("STATICMENU").style.top, 10) + (stmnEndPoint < stmnStartPoint ? -stmnScrollAmount : stmnScrollAmount) + "px";
+                    stmnRefreshTimer = stmnScrollSpeed;
+                }
+                stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed);
+            }
+            function InitializeStaticMenu() {
+                document.getElementById("STATICMENU").style.left = stmnLEFT + "vw"; //처음에 왼쪽에 위치
+                document.getElementById("STATICMENU").style.top = document.body.scrollTop + stmnBASE + "px";
+                RefreshStaticMenu();
+            }
+        </script>
+        <!--음식점 대륙별 토글(접었다 폈다) 기능-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+
+    <body onload="InitializeStaticMenu();">
+        <!--header 영역(지도 보기, 위로 스크롤)-->
+        <div class="header">
+            <img src="scroll_up.png" onmouseover="this.src='scroll_up_hover.png'" onmouseout="this.src='scroll_up.png'" />
+            <p>지도 보기</p>
+        </div>
+        <!--main 영역(filter, list(section(section_head, section_content)))-->
+        <div class="main">
+            <div id="STATICMENU" class="filter">
+                <!--필터 자바스크립트로 구현하면서 수정해야 함-->
+                <div class="part">
+                    <p>지역</p>
+                    <div class="button">동작구</div>
+                    <div class="button">마포구</div>
+                    <div class="button">서대문구</div>
+                    <div class="button">서초구</div>
+                    <div class="button">용산구</div>
+                    <div class="button">종로구</div>
+                    <div class="button">중구</div>
+                    <div class="button">의정부시</div>
+                    <div class="button">평택시</div>
+                </div>
+                <div class="part">
+                    <p>가격대</p>
+                    <div class="button">만원미만</div>
+                    <div class="button">1만원대</div>
+                    <div class="button">2만원대</div>
+                    <div class="button">3만원대</div>
+                </div>
+                <div class="part">
+                    <p>종류</p>
+                    <div class="button">식사</div>
+                    <div class="button">카페</div>
+                </div>
+            </div>
+
+            <div class="list">
+                <div class="section">
+                    <div class="section_head">
+                        <!--대륙 이름 옆에 숫자 구현해야 됨-->
+                        <button><img src="globe.png" />아프리카(0)</button>
+                    </div>
+                    <div class="section_content">
+                        <div class="card">
+                            <div class="title">
+                                <!--DB에서 가져오기-->
+                                <div class="flag"><img src="ethiopia.png" /></div>
+                                <div class="country">에티오피아</div>
+                            </div>
+                            <div class="content">
+                                <!--DB에서 가져오기-->
+                                <div class="food"><img src="image.png" /></div>
+                                <div class="restaurant">야마레치 에티오피아</div>
+                                <div class="address_time">
+                                    <img class="address" src="address.png" />
+                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
+                                    <img class="time" src="clock.png" />
+                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                <div class="flag"><img src="ethiopia.png" /></div>
+                                <div class="country">에티오피아</div>
+                            </div>
+                            <div class="content">
+                                <div class="food"><img src="image.png" /></div>
+                                <div class="restaurant">야마레치 에티오피아</div>
+                                <div class="address_time">
+                                    <img class="address" src="address.png" />
+                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
+                                    <img class="time" src="clock.png" />
+                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                <div class="flag"><img src="ethiopia.png" /></div>
+                                <div class="country">에티오피아</div>
+                            </div>
+                            <div class="content">
+                                <div class="food"><img src="image.png" /></div>
+                                <div class="restaurant">야마레치 에티오피아</div>
+                                <div class="address_time">
+                                    <img class="address" src="address.png" />
+                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
+                                    <img class="time" src="clock.png" />
+                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                <div class="flag"><img src="ethiopia.png" /></div>
+                                <div class="country">에티오피아</div>
+                            </div>
+                            <div class="content">
+                                <div class="food"><img src="image.png" /></div>
+                                <div class="restaurant">야마레치 에티오피아</div>
+                                <div class="address_time">
+                                    <img class="address" src="address.png" />
+                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
+                                    <img class="time" src="clock.png" />
+                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                <div class="flag"><img src="ethiopia.png" /></div>
+                                <div class="country">에티오피아</div>
+                            </div>
+                            <div class="content">
+                                <div class="food"><img src="image.png" /></div>
+                                <div class="restaurant">야마레치 에티오피아</div>
+                                <div class="address_time">
+                                    <img class="address" src="address.png" />
+                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
+                                    <img class="time" src="clock.png" />
+                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section_head">
+                        <button><img src="globe.png" />아시아(0)</button>
+                    </div>
+                    <div class="section_content">
+                        <div class="card">
+                            <div class="title">
+                                <div class="flag"><img src="ethiopia.png" /></div>
+                                <div class="country">에티오피아</div>
+                            </div>
+                            <div class="content">
+                                <div class="food"><img src="image.png" /></div>
+                                <div class="restaurant">야마레치 에티오피아</div>
+                                <div class="address_time">
+                                    <img class="address" src="address.png" />
+                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
+                                    <img class="time" src="clock.png" />
+                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                <div class="flag"><img src="ethiopia.png" /></div>
+                                <div class="country">에티오피아</div>
+                            </div>
+                            <div class="content">
+                                <div class="food"><img src="image.png" /></div>
+                                <div class="restaurant">야마레치 에티오피아</div>
+                                <div class="address_time">
+                                    <img class="address" src="address.png" />
+                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
+                                    <img class="time" src="clock.png" />
+                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                <div class="flag"><img src="ethiopia.png" /></div>
+                                <div class="country">에티오피아</div>
+                            </div>
+                            <div class="content">
+                                <div class="food"><img src="image.png" /></div>
+                                <div class="restaurant">야마레치 에티오피아</div>
+                                <div class="address_time">
+                                    <img class="address" src="address.png" />
+                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
+                                    <img class="time" src="clock.png" />
+                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section_head">
+                        <button><img src="globe.png" />유럽/아메리카(0)</button>
+                    </div>
+                    <div class="section_content">
+                        <div class="card">
+                            <div class="title">
+                                <div class="flag"><img src="ethiopia.png" /></div>
+                                <div class="country">에티오피아</div>
+                            </div>
+                            <div class="content">
+                                <div class="food"><img src="image.png" /></div>
+                                <div class="restaurant">야마레치 에티오피아</div>
+                                <div class="address_time">
+                                    <img class="address" src="address.png" />
+                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
+                                    <img class="time" src="clock.png" />
+                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--대륙별 음식점 목록 토글 기능-->
+                <script>
+                    $(document).ready(function () {
+                        $(".section_content").hide();
+                        //처음 화면에서 음식점 카드 숨기기
+                        $(".section_head").click(function () {
+                            $(this).next(".section_content").slideToggle(500);
+                        });
+                        //클릭 -> 토글 기능
+                    });
+                </script>
+            </div>
+        </div>
+        <!--footer 영역, 여백을 위해 만듦-->
+        <div class="footer"></div>
+    </body>
+</html>
