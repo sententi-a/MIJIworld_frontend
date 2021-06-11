@@ -1,4 +1,4 @@
-$modwid: 65vw;
+$modwid: 70vw;
 * {
     padding: 0;
     margin: 0;
@@ -24,7 +24,7 @@ ul {
     z-index: 100;
     margin: auto;
     position: fixed;
-    left: 17.5vw;
+    left: 15vw;
     margin-top: 11vh;
     background: #fff;
     border: 1px solid #666;
@@ -485,7 +485,7 @@ details {
         color: #707070;
     }
     p {
-        width: 1000px;
+        width: 100%;
         font-family: Noto Sans KR;
         font-weight: normal;
         font-size: 24px;

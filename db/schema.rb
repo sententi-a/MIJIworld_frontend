@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_06_171126) do
+ActiveRecord::Schema.define(version: 2021_06_10_193534) do
 
   create_table "pins", force: :cascade do |t|
     t.float "pos_x"
@@ -55,6 +55,16 @@ ActiveRecord::Schema.define(version: 2021_06_06_171126) do
     t.text "kakaourl"
     t.text "naverurl"
     t.text "googleurl"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.text "datepick"
+    t.text "name"
+    t.text "with"
+    t.text "menu"
+    t.text "anything"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

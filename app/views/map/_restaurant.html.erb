@@ -212,17 +212,23 @@
 		</div>
 
 		<div id ="ticket">
+		    <form action="/ticket" method="post">
+		    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
 			<div id ="box">
 				<!--모든 티켓은 2x 이상으로 해야 화질이 깨지지 않아요!-->
+				
 				<img src ="../assets/restaurant/pak_india/ticket@2x.png">
 				<div id = "input">
+				   
 					<div id = "date">
+					    
 					    
 						<ul>
 							<li>
 								<h1>날짜</h1>
 								<span id ="datevalue"></span>
-								<input type = "text" id="select_date" readonly/>
+								<input type = "text" name="datepick" id="select_date" readonly/>
 								<div id ="datepicker"></div>
 
 							</li>
@@ -231,31 +237,35 @@
 
 					</div>
 					<div id = "others">
+					
 						<ul>
 							<li>
 								<h1>이름</h1>
-								<input type="text"  required minlength="2" maxlength="8" >
+								<input type="text" name="name" required minlength="2" maxlength="8" >
 							</li>
 							<li>
 								<h1>동행인</h1>
-								<input type="text" required minlength="0" maxlength="8">
+								<input type="text" name="with" required minlength="0" maxlength="8">
 							</li>
 							<li>
 								<h1>찜한 메뉴</h1>
-								<input type="text" required minlength="0" maxlength="8" size="10">
+								<input type="text" name="menu" required minlength="0" maxlength="8" size="10">
 							</li>
 							<li>
 								<h1>특이사항</h1>
-								<input type="text" required minlength="0" maxlength="8" size="10">
+								<input type="text" name="anything"required minlength="0" maxlength="8" size="10">
 							</li>
 						</ul>
 					</div>
 				</div>
 				<div id ="submit_area">
-					<button id="submit_button"> <!--발권하기--></button>
+					<button type="submit" id="submit_button"> <!--발권하기--></button>
 				</div>
-			</div>
+				
+	    	</div>
+	    	</form>
 		</div>
 
 		<div id = "bottom">
+			
 		</div>
