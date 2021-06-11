@@ -72,18 +72,7 @@
                 </div>
             </button>
 
-            <% @pins.each do |pin| %>
-                <button class="pin" style="top: <%= pin.pos_y %>%; left: <%= pin.pos_x %>%">
-                    <img src="../assets/pin/<%= pin.pin_image %>.png" class="pin-img" />
-                    <div class="content">
-                        <div class="country" style="color: skyblue">우즈베키스탄</div>
-                        <a href="samarkant.html" class="restaurant"> <!-- href 부분을 #modal 1 으로 바꾸면 된다! 동적으로 어떻게 할 것인가!-->
-                            <img src="../assets/restaurant/samarkant/samarkant_menu2.png" class="res-img" />
-                            <div class="res-name">사마르칸트</div>
-                        </a>
-                    </div>
-                </button>
-            <% end %>
+
         </div>
         
     </body>
