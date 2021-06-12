@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_10_193534) do
+ActiveRecord::Schema.define(version: 2021_06_12_060348) do
 
   create_table "pins", force: :cascade do |t|
     t.float "pos_x"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2021_06_10_193534) do
     t.string "pin_image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "restinfo_id", null: false
+    t.index ["restinfo_id"], name: "index_pins_on_restinfo_id"
   end
 
   create_table "restinfos", force: :cascade do |t|
@@ -69,4 +71,5 @@ ActiveRecord::Schema.define(version: 2021_06_10_193534) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "pins", "restinfos"
 end
