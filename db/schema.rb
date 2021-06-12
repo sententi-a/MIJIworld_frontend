@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_12_060348) do
+ActiveRecord::Schema.define(version: 2021_06_12_090826) do
 
   create_table "pins", force: :cascade do |t|
     t.float "pos_x"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2021_06_12_060348) do
     t.text "restexp2"
     t.text "mapurl"
     t.string "eatsay1"
-    t.string "eatsay2"
+    t.string "rest_kor"
     t.string "namemenu1"
     t.string "namemenu2"
     t.string "namemenu3"
