@@ -773,7 +773,9 @@ textarea:focus {
 #ticketname {
     visibility: hidden;
 }
-.overlay {
+
+@for $i from 1 through 25{
+#modal#{$i} {
     z-index: 99;
     width: 100%;
     height: 100%;
@@ -789,18 +791,18 @@ textarea:focus {
     opacity: 0;
 }
 
-.overlay .cancel {
+#modal#{$i} .cancel {
     position: absolute;
     width: 100%;
     height: 100%;
     cursor: default;
 }
 
-.overlay:target {
+#modal#{$i}:target {
     visibility: visible;
     opacity: 1;
 }
-
+}
 #exit_button {
     z-index: 10000;
     width: 32px;
