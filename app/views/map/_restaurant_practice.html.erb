@@ -1,16 +1,16 @@
 <!-- a.flag = 한글나라이름 /  a.rest_kor = 한글식당이름-->
-<% @restinfos.each do |restinfo| %>
+<% @restinfos.each do |a| %>
 
-  <div id="modal<%=@restinfo.num %>" class="overlay">
-  <a class="cancel" href=""></a>
-    <div class="modal">
+  <div id="modal<%= a.restname %>" class="overlay">
+    <a class="cancel" href=""></a>
+    <div id="modal">
 
             <div class="header" style="background-color:<%= a.header %>;">
                 <h1>
                     <img src="../assets/images/restaurant/<%=a.restname%>/flag.png" />
                 </h1>
-                <div class="country" style="color:<%=a.font%>"><%=a.flag%></div>
-                <button onclick="scrollToTop()" class="exit_button"></button>
+                <div id="country" style="color:<%=a.font%>"><%=a.flag%></div>
+                <button onclick="scrollToTop()" id="exit_button"></button>
                 <script>
                     function scrollToTop(){
                         history.back()
@@ -121,10 +121,10 @@
                               <a><img src="../assets/images/restaurant/<%=a.restname%>/slide02.png"></a>
                             </li>
                             <li class="slideitem">
-                              <a><img src="../assets/images/restaurant/<%=a.restname%>/slide01.png"></a>
+                              <a><img src="../assets/images/restaurant/<%=a.restname%>/slide03.png"></a>
                             </li>
                             <li class="slideitem">
-                              <a><img src="../assets/images/restaurant/<%=a.restname%>/slide02.png"></a>
+                              <a><img src="../assets/images/restaurant/<%=a.restname%>/slide04.png"></a>
                             </li>
 
                           </ul>
@@ -271,3 +271,4 @@
                 </div>
                 </div>
                 </div>
+                <% end %>
