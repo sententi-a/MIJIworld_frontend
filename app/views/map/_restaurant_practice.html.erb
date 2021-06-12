@@ -2,7 +2,7 @@
  <!-- a.flag = 한글나라이름 /  a.eatsay2 = 한글식당이름-->
             <div class="header" style="background-color:<%= a.header %>;">
                 <h1>
-                    <img src="../assets/flag/<%=a.restname%>.png" />
+                    <img src="../assets/images/restaurant/<%=a.restname%>/flag.png" />
                 </h1>
                 <div id="country" style="color:<%=a.font%>"><%=a.flag%></div>
                 <button onclick="scrollToTop()" id="exit_button"></button>
@@ -64,7 +64,7 @@
                 <div id="content4">
                   <ul>
                     <li>
-                      <img src="../assets/restaurant/<%=a.restname%>/menu1.png"/>
+                      <img src="../assets/images/restaurant/<%=a.restname%>/menu1.png"/>
                       <h3><%=a.namemenu1%></h3>
                       <h4> <%=a.menu1exp1%><br><%=a.menu1exp2%></h4>
                       <h5> <%=a.menu1price%>원 </h5>
@@ -73,7 +73,7 @@
                       </h6> -->
                     </li>
                     <li>
-                      <img src="../assets/restaurant/<%=a.restname%>/menu2.png"/>
+                      <img src="../assets/images/restaurant/<%=a.restname%>/menu2.png"/>
                       <h3><%=a.namemenu2%></h3>
                       <h4> <%=a.menu2exp1%><br><%=a.menu2exp2%></h4>
                       <h5> <%=a.menu2price%>원 </h5>
@@ -82,7 +82,7 @@
                       </h6> -->
                     </li>
                     <li>
-                      <img class="menu" src="../assets/restaurant/<%=a.restname%>/menu3.png"/>
+                      <img class="menu" src="../assets/images/restaurant/<%=a.restname%>/menu3.png"/>
                       <h3><%=a.namemenu3%></h3>
                       <h4> <%=a.menu3exp1%><br><%=a.menu3exp2%></h4>
                       <h5> <%=a.menu3price%>원 </h5>
@@ -110,16 +110,16 @@
                           <input type="radio" name="slide" id="slide04">
                           <ul class="slidelist">
                             <li class="slideitem">
-                              <a><img src="../assets/restaurant/<%=a.restname%>/slide01.png"></a>
+                              <a><img src="../assets/images/restaurant/<%=a.restname%>/slide01.png"></a>
                             </li>
                             <li class="slideitem">
-                              <a><img src="../assets/restaurant/<%=a.restname%>/slide02.png"></a>
+                              <a><img src="../assets/images/restaurant/<%=a.restname%>/slide02.png"></a>
                             </li>
                             <li class="slideitem">
-                              <a><img src="../assets/restaurant/<%=a.restname%>/slide01.png"></a>
+                              <a><img src="../assets/images/restaurant/<%=a.restname%>/slide01.png"></a>
                             </li>
                             <li class="slideitem">
-                              <a><img src="../assets/restaurant/<%=a.restname%>/slide02.png"></a>
+                              <a><img src="../assets/images/restaurant/<%=a.restname%>/slide02.png"></a>
                             </li>
             
                           </ul>
@@ -167,7 +167,7 @@
             					<li>
             						<p>네이버 지도</p>
             						<div class ="rate_box">
-            							<img src ="../assets/icon/navermap.png">
+            							<img src ="../assets/images/icon/navermap.png">
             							<h3><%= a.ratingnaver %></h3>
             							<h4>(<%= a.ratersnaver %>명의 후기)</h4>
             							<div class="my-rating-7" data-rating="<%= a.ratingnaver %>"></div>
@@ -189,7 +189,7 @@
             					<li>
             						<p>카카오맵</p>
             						<div class ="rate_box">
-            							<img src ="../assets/icon/kakaomap.png">
+            							<img src ="../assets/images/icon/kakaomap.png">
             							<h3><%= a.ratingkakao %></h3>
             							<h4>(<%= a.raterskakao %>명의 후기)</h4>
             							<div class="my-rating-7" data-rating="<%= a.ratingkakao %>"></div>
@@ -222,7 +222,7 @@
                 <div id ="ticket">
                   <div id ="box">
                     <!--모든 티켓은 2x 이상으로 해야 화질이 깨지지 않아요!-->
-                    <img src ="../assets/restaurant/<%= a.restname %>/ticket@2x.png">
+                    <img src ="../assets/images/restaurant/<%= a.restname %>/ticket@2x.png">
                     <div id = "input">
                       <div id = "date">
                         <ul>
