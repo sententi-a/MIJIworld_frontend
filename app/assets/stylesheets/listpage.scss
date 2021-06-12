@@ -19,7 +19,7 @@ body {
     color: #707070;
 }
 
-.header {
+.list_header {
     /* 지도 보기 상단 고정 */
     z-index: 99;
     position: fixed;
@@ -33,11 +33,11 @@ body {
     margin-bottom: 50pt;
 }
 
-.header img {
+.list_header img {
     display: inline-block;
 }
 
-.header img:hover {
+.list_header img:hover {
     /* 화살표 이미지 호버 효과 */
     cursor: pointer;
 }
