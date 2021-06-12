@@ -213,11 +213,6 @@ body {
     padding-right: 5px;
 }
 
-.country {
-    /* 국가 이름 컬러값 -> DB에서 가져오기 */
-    color: #0c3f6d;
-}
-
 .content {
     /* content는 food, restaurant, address_time으로 이루어져 있음 */
     align-self: start; /* 카드 속의 카드 위로 정렬 */

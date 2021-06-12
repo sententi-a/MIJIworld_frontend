@@ -86,7 +86,7 @@
                             <div class="title">
                                 <!--DB에서 가져오기-->
                                 <div class="flag"><img src="ethiopia.png" /></div>
-                                <div class="country">에티오피아</div>
+                                <div class="country" style="color: #0c3f6d">에티오피아</div>
                             </div>
                             <div class="content">
                                 <!--DB에서 가져오기-->
@@ -247,8 +247,8 @@
                 <!--대륙별 음식점 목록 토글 기능-->
                 <script>
                     $(document).ready(function () {
-                        $(".section_content").hide();
-                        //처음 화면에서 음식점 카드 숨기기
+                        $(".section_content").show();
+                        //처음 화면에서 음식점 카드 항상 보이게
                         $(".section_head").click(function () {
                             $(this).next(".section_content").slideToggle(500);
                         });
