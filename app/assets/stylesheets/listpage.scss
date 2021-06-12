@@ -94,6 +94,12 @@ body {
 }
 
 .button {
+    /* 버튼 초기 설정 reset */
+    border: none;
+    padding: 0;
+    background: transparent;
+    /* font설정을 부모 요소로부터 받아옴 */
+    font: inherit;
     width: 90px; /* 버튼 너비 */
     height: 25px; /* 버튼 높이 */
     opacity: 0.7; /* 투명도 */
@@ -110,6 +116,16 @@ body {
     background-color: #8d8debce;
     color: #ffffff;
     cursor: default;
+}
+
+.button:active {
+    background-color: #7f7fddec;
+    box-shadow: rgba(0, 0, 0, 0.178);
+}
+
+.button:is-checked {
+    background-color: #8d8debe3;
+    color: #ffffff;
 }
 
 .list {
