@@ -1,13 +1,13 @@
-class MapController < ApplicationController 
+class MapController < ApplicationController
     def worldmap
         @pins = Pin.all
         @restinfos = Restinfo.all
         #@restid = params[:restid]
     end
-    
-    def ticket 
+
+    def ticket
         @ticket = Ticket.new(ticket_params)
-        
+
         temp_img = MiniMagick::Image.open('ticket@2x.png')
         img_width = temp_img[:width]
         temp_img.combine_options do |c|
@@ -37,7 +37,7 @@ class MapController < ApplicationController
             c.write("practice.png")
         end
         send_file 'practice.png'
-        
+
     end
 
     def show_modal
@@ -46,11 +46,11 @@ class MapController < ApplicationController
 
     def show_modal_test
         logger.debug "got restid: #{params[:restid]}"
-        
+
     end
 
-private 
+private
     def ticket_params
-        params.require(:ticket).permit(:datepick, :name, :with, :menu, :anything)
+        params.require(:ticket).permit(:datepick, :name, :with, :menu, :anything, :ticketid)
     end
 end
