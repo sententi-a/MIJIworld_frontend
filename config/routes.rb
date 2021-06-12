@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root 'start#mainpage'
   get "/map", to: "map#worldmap"
   post "/ticket" => "map#ticket"
+  get '/list', to: 'list#listpage'
 end
