@@ -412,13 +412,13 @@ details {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 1000000;
+        z-index: 10;
         width: 100%;
         height: 100%;
     }
     .slide-control [class*="control"] label {
         position: absolute;
-        z-index: 1000000;
+        z-index: 10;
         top: 50%;
         transform: translateY(-50%);
         padding: 25px;
@@ -436,36 +436,16 @@ details {
 }
 
 
-
-[name="slide"] {
+@for $i from 1 through 26{
+[name="slide#{$i}"] {
     display: none;
 }
-@for $i from 1 through 25{
-#slide01#{$i}:checked~.slidelist .slideitem {
-    left: 0;
 }
 
-#slide02#{$i}:checked~.slidelist .slideitem {
-    left: -100%;
-}
+@import "slide";
 
-#slide03#{$i}:checked~.slidelist .slideitem {
-    left: -200%;
-}
-
-#slide04#{$i}:checked~.slidelist .slideitem {
-    left: -300%;
-}
-}
 .slide-control [class*="control"] {
     display: none;
-}
-
-#slide01:checked~.slide-control .control01,
-#slide02:checked~.slide-control .control02,
-#slide03:checked~.slide-control .control03,
-#slide04:checked~.slide-control .control04 {
-    display: block;
 }
 
 

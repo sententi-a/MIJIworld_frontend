@@ -108,10 +108,10 @@
 
             <div id="content5">
               <div class="slidebox">
-              <input type="radio" name="slide" id="slide01<%= a.googleurl %>" checked >
-              <input type="radio" name="slide" id="slide02<%= a.googleurl %>">
-              <input type="radio" name="slide" id="slide03<%= a.googleurl %>">
-              <input type="radio" name="slide" id="slide04<%= a.googleurl %>">
+              <input type="radio" name="slide<%= a.googleurl %>" id="slide01<%= a.googleurl %>" checked >
+              <input type="radio" name="slide<%= a.googleurl %>" id="slide02<%= a.googleurl %>">
+              <input type="radio" name="slide<%= a.googleurl %>" id="slide03<%= a.googleurl %>">
+              <input type="radio" name="slide<%= a.googleurl %>" id="slide04<%= a.googleurl %>">
               <ul class="slidelist">
                 <li class="slideitem">
                 <a><img src="../assets/restaurant/<%=a.restname%>/slide01.png"></a>
@@ -120,30 +120,30 @@
                 <a><img src="../assets/restaurant/<%=a.restname%>/slide02.png"></a>
                 </li>
                 <li class="slideitem">
-                <a><img src="../assets/restaurant/<%=a.restname%>/slide03.png"></a>
+                <a><img src="../assets/restaurant/<%=a.restname%>/slide01.png"></a>
                 </li>
                 <li class="slideitem">
-                <a><img src="../assets/restaurant/<%=a.restname%>/slide04.png"></a>
+                <a><img src="../assets/restaurant/<%=a.restname%>/slide02.png"></a>
                 </li>
 
               </ul>
 
               <div class="slide-control">
                 <div class="control01">
-                <label for="slide04" class="prev"></label>
-                <label for="slide02" class="next"></label>
+                <label for="slide04<%= a.googleurl %>" class="prev"></label>
+                <label for="slide02<%= a.googleurl %>" class="next"></label>
                 </div>
                 <div class="control02">
-                <label for="slide01" class="prev"></label>
-                <label for="slide03" class="next"></label>
+                <label for="slide01<%= a.googleurl %>" class="prev"></label>
+                <label for="slide03<%= a.googleurl %>" class="next"></label>
                 </div>
                 <div class="control03">
-                <label for="slide02" class="prev"></label>
-                <label for="slide04" class="next"></label>
+                <label for="slide02<%= a.googleurl %>" class="prev"></label>
+                <label for="slide04<%= a.googleurl %>" class="next"></label>
                 </div>
                 <div class="control04">
-                <label for="slide03" class="prev"></label>
-                <label for="slide01" class="next"></label>
+                <label for="slide03<%= a.googleurl %>" class="prev"></label>
+                <label for="slide01<%= a.googleurl %>" class="next"></label>
                 </div>
               </div>
               </div>
