@@ -755,7 +755,7 @@ textarea:focus {
     visibility: hidden;
 }
 
-@for $i from 1 through 25{
+@for $i from 1 through 26{
 #modal#{$i} {
     z-index: 99;
     width: 100%;
