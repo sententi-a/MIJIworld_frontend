@@ -87,18 +87,18 @@
                                 <div class="card">
                                     <div class="title">
                                         <!--DB에서 가져오기-->
-                                        <div class="flag"><img src="..assets/restaurant/#{}/flag.png".<%restinfo.restname%> /></div>
-                                        <div class="country" style="color: #{}".<% restinfo.font%>><% restinfo.flag%></div>
+                                        <div class="flag"><img src="..assets/restaurant/#{}/flag.png".<%=restinfo.restname%> /></div>
+                                        <div class="country" style="color: #{}".<%= restinfo.font%>><%= restinfo.flag%></div>
                                     </div>
                                     <div class="content">
                                         <!--DB에서 가져오기-->
-                                        <div class="food"><img src="..assets/restaurant/#{}/menu1.png".<%restinfo.restname%> /></div>
-                                        <div class="restaurant"><%restinfo.rest_kor%></div>
+                                        <div class="food"><img src="..assets/restaurant/#{}/menu1.png".<%=restinfo.restname%> /></div>
+                                        <div class="restaurant"><%= restinfo.rest_kor %></div>
                                         <div class="address_time">
                                             <img class="address" src="address.png" />
-                                            <h4 class="address_h4"><%restinfo.address%></h4>
+                                            <h4 class="address_h4"><%=restinfo.address%></h4>
                                             <img class="time" src="clock.png" />
-                                            <h4 class="time_h4"><%restinfo.open%></h4>
+                                            <h4 class="time_h4"><%=restinfo.openwhen%></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -152,18 +152,18 @@
                                 <div class="card">
                                     <div class="title">
                                         <!--DB에서 가져오기-->
-                                        <div class="flag"><img src="..assets/restaurant/#{}/flag.png".<%restinfo.restname%> /></div>
-                                        <div class="country" style="color: #{}".<% restinfo.font%>><% restinfo.flag%></div>
+                                        <div class="flag"><img src="..assets/restaurant/#{}/flag.png".<%=restinfo.restname%> /></div>
+                                        <div class="country" style="color: #{}".<%= restinfo.font%>><%= restinfo.flag%></div>
                                     </div>
                                     <div class="content">
                                         <!--DB에서 가져오기-->
-                                        <div class="food"><img src="..assets/restaurant/#{}/menu1.png".<%restinfo.restname%> /></div>
-                                        <div class="restaurant"><%restinfo.rest_kor%></div>
+                                        <div class="food"><img src="..assets/restaurant/#{}/menu1.png".<%=restinfo.restname%> /></div>
+                                        <div class="restaurant"><%=restinfo.rest_kor%></div>
                                         <div class="address_time">
                                             <img class="address" src="address.png" />
-                                            <h4 class="address_h4"><%restinfo.address%></h4>
+                                            <h4 class="address_h4"><%=restinfo.address%></h4>
                                             <img class="time" src="clock.png" />
-                                            <h4 class="time_h4"><%restinfo.open%></h4>
+                                            <h4 class="time_h4"><%=restinfo.openwhen%></h4>
                                         </div>
                                     </div>
                                 </div> 
@@ -213,22 +213,22 @@
                     </div>
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
-                            <% if restinfo.continent == '유럽' or restinfo.content == '아메리카' %>
+                            <% if restinfo.continent == '유럽' or restinfo.continent == '아메리카' %>
                                 <div class="card">
                                     <div class="title">
                                         <!--DB에서 가져오기-->
-                                        <div class="flag"><img src="..assets/restaurant/#{}/flag.png".<%restinfo.restname%> /></div>
-                                        <div class="country" style="color: #{}".<% restinfo.font%>><% restinfo.flag%></div>
+                                        <div class="flag"><img src="..assets/restaurant/#{}/flag.png".<%=restinfo.restname%> /></div>
+                                        <div class="country" style="color: #{}".<%= restinfo.font%>><%= restinfo.flag%></div>
                                     </div>
                                     <div class="content">
                                         <!--DB에서 가져오기-->
                                         <div class="food"><img src="..assets/restaurant/#{}/menu1.png".<%restinfo.restname%> /></div>
-                                        <div class="restaurant"><%restinfo.rest_kor%></div>
+                                        <div class="restaurant"><%=restinfo.rest_kor%></div>
                                         <div class="address_time">
                                             <img class="address" src="address.png" />
-                                            <h4 class="address_h4"><%restinfo.address%></h4>
+                                            <h4 class="address_h4"><%=restinfo.address%></h4>
                                             <img class="time" src="clock.png" />
-                                            <h4 class="time_h4"><%restinfo.open%></h4>
+                                            <h4 class="time_h4"><%=restinfo.openwhen%></h4>
                                         </div>
                                     </div>
                                 </div> 
