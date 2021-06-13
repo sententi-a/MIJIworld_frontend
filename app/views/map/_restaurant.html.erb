@@ -3,7 +3,7 @@
   <div id="modal<%= a.googleurl %>" class="overlay">
     <a class="cancel" href=""></a>
     <div id="modal">
-  
+
         <div class="header" style="background-color:<%= a.header %>;">
           <h1>
             <img src="../assets/images/restaurant/<%= a.restname %>/flag.png" />
@@ -17,15 +17,15 @@
               elmnt.scrollTop = -10000
             }
           </script>
-  
+
         </div>
-  
-  
-  
+
+
+
         <!--여백-->
         <div class="content0">
         </div>
-  
+
         <!--content1: restaurant name, information-->
         <div id="content1">
           <div id="title">
@@ -45,17 +45,17 @@
             <iframe id="map"
               src="<%=a.mapurl%>"></iframe>
           </details>
-  
-  
-  
-  
+
+
+
+
           <!--content2: restaurant description-->
           <div id="content2">
           <p>
            <%=a.restexp1%><br><%=a.restexp2%>
           </p>
           </div>
-  
+
           <div id="content6">
           <h6>
           잘 먹겠습니다!
@@ -64,7 +64,7 @@
            <%=a.eatsay1%>
           </p>
           </div>
-  
+
           <div id="content4">
           <ul>
             <li>
@@ -93,19 +93,19 @@
             <!-- <h6> <span style = "background-color:#efeffc; border-radius:20px">#밥 </span>
               <span style = "background-color:#fff3f3; border-radius:20px; color:#ff9191">#치즈 </span>
               <span style = "background-color:#ecfbed; border-radius:20px; color:#1ac057">#시금치 </span>
-  
+
             </h6> -->
             </li>
           </ul>
           </div>
-  
+
           <!--content4 : menu description-->
-  
-  
-  
-  
+
+
+
+
           <!--content5 : slide-->
-  
+
             <div id="content5">
               <div class="slidebox">
               <input type="radio" name="slide" id="slide01" checked >
@@ -125,9 +125,9 @@
                 <li class="slideitem">
                 <a><img src="../assets/images/restaurant/<%=a.restname%>/slide04.png"></a>
                 </li>
-  
+
               </ul>
-  
+
               <div class="slide-control">
                 <div class="control01">
                 <label for="slide04" class="prev"></label>
@@ -148,10 +148,10 @@
               </div>
               </div>
             </div>
-  
-  
-  
-  
+
+
+
+
             <!--content6 : expression-->
           <div id="content6">
           <h6>
@@ -161,12 +161,12 @@
             <%= a.rest_kor %> 평점 보기
           </p>
           </div>
-  
-  
+
+
           <!--ticket : hide & auto scroll-->
-  
+
              <div id="content7">
-  
+
                 <ul>
                   <li>
                     <p>네이버 지도</p>
@@ -187,8 +187,8 @@
                         });
                       </script>
                     </div>
-  
-  
+
+
                   </li>
                   <li>
                     <p>카카오맵</p>
@@ -208,48 +208,48 @@
                           readOnly: true
                         });
                       </script>
-  
-  
+
+
                     </div>
                   </li>
-  
+
                 </ul>
-  
+
             </div>
-  
-  
+
+
           <div id ="ticket_title">
           <h1>Eat the World, Meet the World!</h1>
           <h2>나만의 여행 티켓 만들기</h2>
           </div>
-  
+
           <div id ="ticket">
           <form action="/ticket" method="post">
           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         <input type = "text" name = "ticket[ticketid]" value = "0" id="ticketname">
         <div id ="box">
           <!--모든 티켓은 2x 이상으로 해야 화질이 깨지지 않아요!-->
-          
+
           <img src ="../assets/restaurant/pak_india/ticket@2x.png">
           <div id = "input">
-             
+
             <div id = "date">
-                
-                
+
+
               <ul>
                 <li>
                   <h1>날짜</h1>
                   <span id ="datevalue"></span>
                   <input type = "text" name="ticket[datepick]" id="select_date" readonly/>
                   <div id ="datepicker"></div>
-  
+
                 </li>
-  
+
               </ul>
-  
+
             </div>
             <div id = "others">
-            
+
               <ul>
                 <li>
                   <h1>이름</h1>
@@ -273,17 +273,17 @@
           <div id ="submit_area">
             <button type="submit" id="submit_button"> <!--발권하기--></button>
           </div>
-          
+
           </div>
           </form>
       </div>
-  
+
       <div id = "bottom">
-        
+
       </div>
           </div>
           </div>
-          
-  
+
+
               </div>
               <% end %>
