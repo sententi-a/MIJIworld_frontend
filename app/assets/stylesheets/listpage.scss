@@ -11,8 +11,8 @@ html {
     overflow-y: scroll; /* 스크롤바 항상 보이게 */
 }
 
-body #listpage {
-    background: url("/assets/list/bg.png") no-repeat center center fixed; /* 배경 이미지 화면맞춤 */
+body {
+    background: url("/assets/list/bg.png") no-repeat center center fixed !important; /* 배경 이미지 화면맞춤 */
     background-size: cover;
     font-family: Noto Sans KR; /* 디폴트 글씨체 */
     font-weight: normal;
