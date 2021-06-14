@@ -20,7 +20,8 @@ ul {
     font-style: normal;
 }
 
-#modal {
+@for $i from 1 through 26{
+#modalsmall#{$i} {
     z-index: 100;
     margin: auto;
     position: fixed;
@@ -37,6 +38,8 @@ ul {
         margin-top: 0;
     }
 }
+}
+
 
 .header {
     display:flex;
@@ -67,8 +70,8 @@ ul {
 
 
 /*나가기 버튼*/
-
-#exit_button {
+@for $i from 1 through 26{
+#exit_button#{$i} {
     width: 32px;
     height: 32px;
     position: absolute;
@@ -85,6 +88,7 @@ ul {
         background-size: 32px;
         background-repeat: no-repeat;
     }
+}
 }
 
 
@@ -132,8 +136,8 @@ ul {
 
 
 /*티켓 버튼*/
-
-#ticket_button {
+@for $i from 1 through 26{
+#ticket_button#{$i} {
     display: inline-block;
     margin-left: 5px;
     width: 80px;
@@ -149,6 +153,7 @@ ul {
         background-repeat: no-repeat;
         background-size: 80px;
     }
+}
 }
 
 
