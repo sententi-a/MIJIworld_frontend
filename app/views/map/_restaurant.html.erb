@@ -226,7 +226,7 @@
           <div id ="ticket">
           <form action="/ticket" method="post">
           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <input type = "text" name = "ticket[ticketid]" value = "0" id="ticketname">
+        <input type = "text" name = "ticket[ticketid]" value = "<%=a.restname%>" id="ticketname">
         <div id ="box">
           <!--모든 티켓은 2x 이상으로 해야 화질이 깨지지 않아요!-->
 

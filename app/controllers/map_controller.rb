@@ -7,8 +7,8 @@ class MapController < ApplicationController
 
     def ticket
         @ticket = Ticket.new(ticket_params)
-
-        temp_img = MiniMagick::Image.open('ticket@2x.png')
+        sibal = @ticket.ticketid
+        temp_img = MiniMagick::Image.open(Rails.root.join('app', 'assets', 'images', 'restaurant', sibal,'ticket@2x.png'))
         img_width = temp_img[:width]
         temp_img.combine_options do |c|
 
