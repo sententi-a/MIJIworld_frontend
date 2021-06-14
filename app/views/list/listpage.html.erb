@@ -47,31 +47,61 @@
         </div>
         <!--main 영역(filter, list(section(section_head, section_content)))-->
         <div class="main">
-            <div id="STATICMENU" class="filter">
+            <div id="STATICMENU" class="filters">
                 <!--필터 자바스크립트로 구현하면서 수정해야 함-->
-                <div class="part">
+                <div class="location_filter">
                     <p>지역</p>
-                    <button class="button">동작구</button>
-                    <button class="button">마포구</button>
-                    <button class="button">서대문구</button>
-                    <button class="button">서초구</button>
-                    <button class="button">용산구</button>
-                    <button class="button">종로구</button>
-                    <button class="button">중구</button>
-                    <button class="button">의정부시</button>
-                    <button class="button">평택시</button>
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="dongjak" onClick="changeClass" />동작구 </span></label
+                    >
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="mapo" />마포구 </span></label
+                    >
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="seodae" />서대문구 </span></label
+                    >
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="seocho" />서초구 </span></label
+                    >
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="yongsan" />용산구 </span></label
+                    >
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="jongno" />종로구 </span></label
+                    >
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="jung" />중구 </span></label
+                    >
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="jeongbu" />의정부시 </span></label
+                    >
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="pyeongtaek" />평택시 </span></label
+                    >
                 </div>
-                <div class="part">
+                <div class="price_filter">
                     <p>가격대</p>
-                    <button class="button">만원미만</button>
-                    <button class="button">1만원대</button>
-                    <button class="button">2만원대</button>
-                    <button class="button">3만원대</button>
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="price" value="under10" />만원미만 </span></label
+                    >
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="price" value="10" />1만원대 </span></label
+                    >
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="price" value="20" />2만원대 </span></label
+                    >
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="price" value="30" />3만원대 </span></label
+                    >
                 </div>
-                <div class="part">
+                <div class="type_filter">
                     <p>종류</p>
-                    <button class="button">식사</button>
-                    <button class="button">카페</button>
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="type" value="restaurant" />식사 </span></label
+                    >
+                    <label
+                        ><span class="space"><input id="checkbox" type="checkbox" name="type" value="cafe" />카페 </span></label
+                    >
                 </div>
             </div>
 
@@ -84,7 +114,7 @@
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
                             <% if restinfo.continent == '아프리카' %>
-                                <div class="card">
+                                <div class="card" data-location="dongjak" data-price="under10" data-type="restaurant">
                                     <div class="title">
                                         <!--DB에서 가져오기-->
                                         <div class="flag"><img src="..assets/restaurant/#{}/flag.png".<%=restinfo.restname%> /></div>
@@ -104,7 +134,7 @@
                                 </div>
                             <% end%>
                         <% end%>
-                        <div class="card">
+                        <div class="card" data-location="mapo" data-price="20" data-type="restaurant">
                             <div class="title">
                                 <!--DB에서 가져오기-->
                                 <div class="flag"><img src="ethiopia.png" /></div>
@@ -122,7 +152,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card" data-location="seodae" data-price="30" data-type="restaurant">
                             <div class="title">
                                 <!--DB에서 가져오기-->
                                 <div class="flag"><img src="ethiopia.png" /></div>
@@ -149,7 +179,7 @@
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
                             <% if restinfo.continent == '아시아' %>
-                                <div class="card">
+                                <div class="card" data-location="mapo" data-price="under10" data-type="restaurant">
                                     <div class="title">
                                         <!--DB에서 가져오기-->
                                         <div class="flag"><img src="..assets/restaurant/#{}/flag.png".<%=restinfo.restname%> /></div>
@@ -169,7 +199,7 @@
                                 </div> 
                             <% end %>
                         <%end %>
-                        <div class="card">
+                        <div class="card" data-location="dongjak" data-price="20" data-type="restaurant">
                             <div class="title">
                                 <!--DB에서 가져오기-->
                                 <div class="flag"><img src="ethiopia.png" /></div>
@@ -187,7 +217,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card" data-location="mapo" data-price="20" data-type="restaurant">
                             <div class="title">
                                 <!--DB에서 가져오기-->
                                 <div class="flag"><img src="ethiopia.png" /></div>
@@ -214,7 +244,7 @@
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
                             <% if restinfo.continent == '유럽' or restinfo.continent == '아메리카' %>
-                                <div class="card">
+                                <div class="card" data-location="mapo" data-price="20" data-type="cafe">
                                     <div class="title">
                                         <!--DB에서 가져오기-->
                                         <div class="flag"><img src="..assets/restaurant/#{}/flag.png".<%=restinfo.restname%> /></div>
@@ -234,7 +264,7 @@
                                 </div> 
                             <% end %>
                         <%end %>
-                        <div class="card">
+                        <div class="card" data-location="mapo" data-price="under10" data-type="cafe">
                             <div class="title">
                                 <!--DB에서 가져오기-->
                                 <div class="flag"><img src="ethiopia.png" /></div>
@@ -252,7 +282,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card" data-location="mapo" data-price="under10" data-type="cafe">
                             <div class="title">
                                 <!--DB에서 가져오기-->
                                 <div class="flag"><img src="ethiopia.png" /></div>
@@ -283,6 +313,7 @@
                         //클릭 -> 토글 기능
                     });
                 </script>
+                <script language="JavaScript" type="text/javascript" src="listpage.js"></script>
             </div>
         </div>
         <!--footer 영역, 여백을 위해 만듦-->
