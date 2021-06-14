@@ -41,8 +41,7 @@
     <body onload="InitializeStaticMenu();" id="list_body">
         <!--header 영역(지도 보기, 위로 스크롤)-->
         <div class="list_header">
-            <img src="/assets/icon/scroll_up.png" onmouseover="this.src='/assets/icon/scroll_up_hover.png'" onmouseout="this.src='/assets/icon/scroll_up.png'" />
-            <p>지도 보기</p>
+            <%= link_to image_tag("/assets/icon/scroll_up.png"), "/map" %>
         </div>
 
 
