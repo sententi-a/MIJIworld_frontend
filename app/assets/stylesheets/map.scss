@@ -20,29 +20,28 @@ ul {
     font-style: normal;
 }
 
-@for $i from 1 through 26{
-#modalsmall#{$i} {
-    z-index: 100;
-    margin: auto;
-    position: fixed;
-    left: 15vw;
-    margin-top: 10vh;
-    background: #fff;
-    border: 1px solid #666;
-    width: $modwid;
-    height: 85vh;
-    overflow-y: auto;
-    border-radius: 6px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    h2 {
-        margin-top: 0;
+@for $i from 1 through 26 {
+    #modalsmall#{$i} {
+        z-index: 100;
+        margin: auto;
+        position: fixed;
+        left: 15vw;
+        margin-top: 10vh;
+        background: #fff;
+        border: 1px solid #666;
+        width: $modwid;
+        height: 85vh;
+        overflow-y: auto;
+        border-radius: 6px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        h2 {
+            margin-top: 0;
+        }
     }
 }
-}
-
 
 .header {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -51,11 +50,11 @@ ul {
     height: 11vh;
     position: fixed;
     z-index: 999;
-        img {
-            margin-right: 1.5vh;
-            width: 80px;
-            height: 53.6px;
-        }
+    img {
+        margin-right: 1.5vh;
+        width: 80px;
+        height: 53.6px;
+    }
     #country {
         padding-right: 5vw;
         font-family: yg-jalnan;
@@ -70,25 +69,26 @@ ul {
 
 
 /*나가기 버튼*/
-@for $i from 1 through 26{
-#exit_button#{$i} {
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    right: 40px;
-    top: 20px;
-    outline: none;
-    border: none;
-    background: url(../assets/icon/exit1.png);
-    background-repeat: no-repeat;
-    background-size: 32px;
-    cursor: pointer;
-    &:hover {
-        background: url(../assets/icon/exit2.png);
-        background-size: 32px;
+
+@for $i from 1 through 26 {
+    #exit_button#{$i} {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        right: 40px;
+        top: 20px;
+        outline: none;
+        border: none;
+        background: url(../assets/icon/exit1.png);
         background-repeat: no-repeat;
+        background-size: 32px;
+        cursor: pointer;
+        &:hover {
+            background: url(../assets/icon/exit2.png);
+            background-size: 32px;
+            background-repeat: no-repeat;
+        }
     }
-}
 }
 
 
@@ -136,24 +136,25 @@ ul {
 
 
 /*티켓 버튼*/
-@for $i from 1 through 26{
-#ticket_button#{$i} {
-    display: inline-block;
-    margin-left: 5px;
-    width: 80px;
-    height: 46px;
-    outline: none;
-    border: none;
-    background: url(../assets/icon/ticket_button1.png);
-    background-repeat: no-repeat;
-    background-size: 80px;
-    cursor: pointer;
-    &:hover {
-        background: url(../assets/icon/ticket_button2.png);
+
+@for $i from 1 through 26 {
+    #ticket_button#{$i} {
+        display: inline-block;
+        margin-left: 5px;
+        width: 80px;
+        height: 46px;
+        outline: none;
+        border: none;
+        background: url(../assets/icon/ticket_button1.png);
         background-repeat: no-repeat;
         background-size: 80px;
+        cursor: pointer;
+        &:hover {
+            background: url(../assets/icon/ticket_button2.png);
+            background-repeat: no-repeat;
+            background-size: 80px;
+        }
     }
-}
 }
 
 
@@ -439,15 +440,13 @@ details {
     }
 }
 
-
-@for $i from 1 through 26{
-[name="slide#{$i}"] {
-    display: none;
-}
+@for $i from 1 through 26 {
+    [name="slide#{$i}"] {
+        display: none;
+    }
 }
 
 @import "slide";
-
 .slide-control [class*="control"] {
     display: none;
 }
@@ -574,25 +573,22 @@ details {
 // .my-rating-7 {
 //     margin-top: 5px;
 // }
-
-
-
 .rate_box span {
-    width:100px;
-    height:30px;
-    display:inline-block;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
     background: url("../assets/icon/star_bin.png");
-    background-size:100px 30px;
-    background-repeat:no-repeat;
-    overflow:hidden;
-
+    background-size: 100px 30px;
+    background-repeat: no-repeat;
+    overflow: hidden;
     img {
-        width:100px;
-        height:30px;
-        display:inline;
+        width: 100px;
+        height: 30px;
+        display: inline;
     }
-  }
-   
+}
+
+
 /*Eat the World, Meet the World!*/
 
 #ticket_title {
@@ -717,7 +713,7 @@ details {
         float: left;
     }
     input {
-        margin-top:15px;
+        margin-top: 15px;
         width: 70%;
         /* 원하는 너비 설정 */
         height: 10px;
@@ -779,35 +775,34 @@ textarea:focus {
     visibility: hidden;
 }
 
-@for $i from 1 through 26{
-#modal#{$i} {
-    z-index: 99;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    margin: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
-    transition: opacity 200ms;
-    visibility: hidden;
-    opacity: 0;
+@for $i from 1 through 26 {
+    #modal#{$i} {
+        z-index: 99;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        transition: opacity 200ms;
+        visibility: hidden;
+        opacity: 0;
+    }
+    #modal#{$i} .cancel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: default;
+    }
+    #modal#{$i}:target {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
-#modal#{$i} .cancel {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    cursor: default;
-}
-
-#modal#{$i}:target {
-    visibility: visible;
-    opacity: 1;
-}
-}
 #exit_button {
     z-index: 10000;
     width: 32px;
@@ -874,7 +869,7 @@ textarea:focus {
         -moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
         -o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
         transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
-        .content {
+        .pin-content {
             font-family: "yg-jalnan";
             filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
             opacity: 0;
@@ -924,7 +919,7 @@ textarea:focus {
             transition: opacity 0.25s ease-in-out,
             width 0.25s ease-in-out,
             height 0.25s ease-in-out;
-            .content {
+            .pin-content {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
                 opacity: 1;
                 -webkit-transition: opacity 0.25s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
@@ -969,7 +964,7 @@ textarea:focus {
             transition: opacity 0.25s ease-in-out,
             width 0.25s ease-in-out,
             height 0.25s ease-in-out;
-            .content {
+            .pin-content {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
                 opacity: 1;
                 -webkit-transition: opacity 0.25s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
@@ -996,7 +991,7 @@ textarea:focus {
         -o-transition: opacity 0.25s ease-in-out;
         transition: opacity 0.25s ease-in-out;
     }
-    .content {
+    .pin-content {
         .restaurant {
             background: rgba(255, 255, 255, 1);
             width: 160px;

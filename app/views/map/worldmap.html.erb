@@ -60,7 +60,7 @@
 
             <button class="pin" style="top: 34%; left: 30%">
                 <img src="../assets/pin/sky.png" class="pin-img" />
-                <div class="content">
+                <div class="pin-content">
                     <div class="country" style="color: skyblue">우즈베키스탄</div>
                     <a href="#modal1" class="restaurant">
                         <img src="../assets/restaurant/samarkant/samarkant_menu2.png" class="res-img" />
@@ -71,7 +71,7 @@
             <!-- stylesheet test -->
             <button class="pin" style="top: 50%; left: 50%">
                 <img src="../assets/pin/sky.png" class="pin-img" />
-                <div class="content">
+                <div class="pin-content">
                     <div class="country" style="color: skyblue">우즈베키스탄</div>
                     <a href="#modal3" class="restaurant">
                         <img src="../assets/restaurant/samarkant/samarkant_menu2.png" class="res-img" />
@@ -85,7 +85,7 @@
                 <% rest = Restinfo.find(pin.restinfo_id) %>
                 <button class="pin" style="top: <%= pin.pos_x %>%; left: <%= pin.pos_y %>%">
                 <img src="../assets/pin/<%= pin.pin_image %>.png" class="pin-img" />
-                <div class="content">
+                <div class="pin-content">
                     <div class="country" style="color: <%= rest.font %>">우즈베키스탄</div>
                     <%= link_to( map_path(anchor: "modal1", restid: pin.restinfo_id), class: "restaurant", data: { turbolinks: false } ) do %>
                         <img src="../assets/restaurant/samarkant/samarkant_menu2.png" class="res-img" />
