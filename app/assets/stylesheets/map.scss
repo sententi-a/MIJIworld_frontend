@@ -25,11 +25,11 @@ ul {
     margin: auto;
     position: fixed;
     left: 15vw;
-    margin-top: 11vh;
+    margin-top: 10vh;
     background: #fff;
     border: 1px solid #666;
     width: $modwid;
-    height: 76vh;
+    height: 85vh;
     overflow-y: auto;
     border-radius: 6px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
@@ -104,7 +104,7 @@ ul {
     justify-content: center;
     align-items: center;
     font-family: Noto Sans KR;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     color: #707070;
     #title {
@@ -113,7 +113,7 @@ ul {
     }
     h2 {
         display: inline-block;
-        font-size: 45px;
+        font-size: 40px;
         font-weight: 700;
         margin-top: 15px;
         margin-left: 100px;
@@ -184,7 +184,7 @@ details {
     }
     >p {
         padding-top: 20px;
-        font-size: 26.25px;
+        font-size: 20px;
         font-weight: bold;
         text-align: center;
         color: #8d8deb;
@@ -206,8 +206,8 @@ details {
 /*구글 지도 길찾기*/
 
 #map {
-    width: 600px;
-    height: 300px;
+    width: 540px;
+    height: 270px;
     border: 0;
     display: block;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -231,7 +231,7 @@ details {
         width: 100%;
         font-family: Noto Sans KR;
         font-weight: 300;
-        font-size: 19px;
+        font-size: 16px;
         padding-top: 10px;
         line-height: 1.4;
         color: #979797;
@@ -271,7 +271,7 @@ details {
 #content4 {
     margin-top: 20px;
     width: 100%;
-    height: 335px;
+    height: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -282,16 +282,16 @@ details {
         /* padding-top:5px; */
         text-align: center;
         width: 240px;
-        height: 270px;
+        height: 230px;
         border: solid 2px #ececec;
         border-radius: 10px;
         margin-left: 40px;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     }
     img {
-        width: 150px;
-        height: 120px;
-        margin-left: 19%;
+        width: 120px;
+        height: 96px;
+        margin-left: 25%;
         margin-top: 15px;
         margin-bottom: 8px;
     }
@@ -302,7 +302,7 @@ details {
         h3 {
             display: block;
             font-family: Noto Sans KR;
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 500;
             color: #616161;
         }
@@ -310,7 +310,7 @@ details {
             display: block;
             margin-top: 2px;
             font-family: Noto Sans KR;
-            font-size: 18px;
+            font-size: 14px;
             font-weight: 300;
             color: #616161;
         }
@@ -318,7 +318,7 @@ details {
             display: block;
             margin-top: 7px;
             font-family: Noto Sans KR;
-            font-size: 18px;
+            font-size: 15px;
             font-weight: normal;
             color: #616161;
         }
@@ -326,7 +326,7 @@ details {
             display: block;
             padding-top: 5px;
             font-family: Noto Sans KR;
-            font-size: 18px;
+            font-size: 15px;
             font-weight: 500;
             color: #8d8deb;
             span {
@@ -364,7 +364,7 @@ details {
 
 #content5 {
     width: 100%;
-    height: 335px;
+    height: 300px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -454,14 +454,14 @@ details {
 #content6 {
     /* padding-top: 20px; */
     width: 100%;
-    height: 90px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     h6 {
         padding-top: 20px;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: normal;
         color: #707070;
     }
@@ -469,7 +469,7 @@ details {
         width: 100%;
         font-family: Noto Sans KR;
         font-weight: normal;
-        font-size: 24px;
+        font-size: 20px;
         color: #707070;
     }
 }
@@ -480,7 +480,7 @@ details {
 #content7 {
     padding-top: 15px;
     width: 100%;
-    height: 270px;
+    height: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -491,8 +491,8 @@ details {
         /* padding-top:5px; */
         text-align: center;
         background-color: #fcfcfc;
-        width: 240px;
-        height: 240px;
+        width: 210px;
+        height: 210px;
         border-radius: 10px;
         margin-left: 40px;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -501,7 +501,7 @@ details {
         }
         p {
             padding-top: 8px;
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 700;
             text-align: center;
             color: #7a7a7a;
@@ -519,8 +519,8 @@ details {
 /*평점보기 내부 박스*/
 
 .rate_box {
-    width: 200px;
-    height: 180px;
+    width: 170px;
+    height: 150px;
     /* padding: 8px 45px 10px; */
     border-radius: 10px;
     margin-left: 20px;
@@ -537,8 +537,8 @@ details {
 #content7 li .rate_box {
     img {
         display: block;
-        width: 80px;
-        height: 80px;
+        width: 65px;
+        height: 65px;
         margin-left: 29%;
         margin-top: 8px;
         padding-top: 8px;
@@ -546,7 +546,7 @@ details {
     h3 {
         display: block;
         font-family: Jalnan;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: normal;
         text-align: center;
         color: #616161;
@@ -554,7 +554,7 @@ details {
     }
     h4 {
         display: block;
-        font-size: 17px;
+        font-size: 14px;
         font-weight: 500;
         text-align: center;
         color: #707070;
@@ -576,29 +576,29 @@ details {
 
 #ticket_title {
     width: 100%;
-    height: 137.4px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     h1 {
         font-family: yg-jalnan;
         display: block;
-        font-size: 28px;
+        font-size: 23px;
         text-align: center;
         color: #008439;
         justify-content: center;
-        padding-top: 65px;
+        padding-top: 60px;
     }
     h2 {
         display: block;
         justify-content: center;
         font-family: Noto Sans KR;
-        font-size: 24px;
+        font-size: 19px;
         font-weight: normal;
         text-align: center;
         color: #707070;
         margin-top: -5px;
-        padding-bottom: 6.4px;
+        padding-bottom: 0px;
     }
 }
 
@@ -610,23 +610,23 @@ details {
 
 #ticket {
     width: 100%;
-    height: 622.6px;
+    height: 440px;
     display: flex;
     justify-content: center;
     #box {
         width: 620px;
-        height: 670px;
+        height: 440px;
         border-radius: 15px;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #fbfbfb;
         align-items: center;
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
+        margin-top: 0px;
     }
     img {
-        width: 88%;
-        padding-top: 25.1px;
+        width: 70%;
+        padding-top: 15px;
     }
     #input {
         width: 100%;
@@ -652,7 +652,7 @@ details {
         padding-left: 15%;
         padding-bottom: 5px;
         font-family: Noto Sans KR;
-        font-size: 18px;
+        font-size: 13px;
         font-weight: 500;
         text-align: left;
         color: #616161;
@@ -681,6 +681,7 @@ details {
 }
 
 #others {
+    margin-top: 20px;
     width: 50%;
     height: 90%;
     h1 {
@@ -688,15 +689,17 @@ details {
         padding-left: 15%;
         padding-bottom: 5px;
         font-family: Noto Sans KR;
-        font-size: 18px;
+        font-size: 13px;
         font-weight: 500;
         text-align: left;
         color: #616161;
+        float: left;
     }
     input {
+        margin-top:15px;
         width: 70%;
         /* 원하는 너비 설정 */
-        height: auto;
+        height: 10px;
         /* 높이값 초기화 */
         line-height: normal;
         /* line-height 초기화 */
@@ -748,7 +751,7 @@ textarea:focus {
 
 #bottom {
     width: 100%;
-    height: 100px;
+    height: 60px;
 }
 
 #ticketname {
