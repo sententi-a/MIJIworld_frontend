@@ -39,27 +39,26 @@ ul {
 }
 
 .header {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: $modwid - 1vw;
-    height: 120px;
+    height: 11vh;
     position: fixed;
     z-index: 999;
-    h1 {
-        margin-left: 0%;
-        margin-top: 0%;
-        padding-top: 17px;
         img {
+            margin-right: 1.5vh;
             width: 80px;
             height: 53.6px;
-            margin: 0 auto;
         }
-    }
     #country {
+        padding-right: 5vw;
         font-family: yg-jalnan;
         font-size: 20px;
         letter-spacing: 0.6px;
         text-align: center;
-        padding-top: 4px;
-        padding-bottom: 25px;
     }
 }
 
@@ -98,7 +97,7 @@ ul {
 /*content1 : restaurant name, open time, address*/
 
 #content1 {
-    padding-top: 120px;
+    padding-top: 11vh;
     max-width: 100%;
     flex-direction: column;
     justify-content: center;
