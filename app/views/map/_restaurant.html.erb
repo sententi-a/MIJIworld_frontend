@@ -174,19 +174,10 @@
                       <img src ="../assets/icon/navermap.png">
                       <h3><%= a.ratingnaver %></h3>
                       <h4>(<%= a.ratersnaver %>명의 후기)</h4>
-                      <div class="my-rating-7" data-rating="<%= a.ratingnaver %>"></div>
-                      <script>
-                        $(".my-rating-7").starRating({
-                          totalStars: 5,
-                          starShape: 'rounded',
-                          starSize: 19,
-                          emptyColor: 'lightgray',
-                          activeColor: '#ff9797',
-                          useGradient: false,
-                          readOnly: true
-                        });
-                      </script>
-                    </div>
+                      <span>
+                        <div style="overflow:hidden; display:flex; width:<%= a.ratingnaver * 20%>%; height:30px;">
+                        <img src="../assets/icon/star_full.png" style="width:100px; height:30px; margin-top:-8px; margin-left:0.4px"></div>
+                      </span>
 
 
                   </li>
@@ -196,21 +187,10 @@
                       <img src ="../assets/icon/kakaomap.png">
                       <h3><%= a.ratingkakao %></h3>
                       <h4>(<%= a.raterskakao %>명의 후기)</h4>
-                      <div class="my-rating-7" data-rating="<%= a.ratingkakao %>"></div>
-                      <script>
-                        $(".my-rating-7").starRating({
-                          totalStars: 5,
-                          starShape: 'rounded',
-                          starSize: 19,
-                          emptyColor: 'lightgray',
-                          activeColor: '#ff9797',
-                          useGradient: false,
-                          readOnly: true
-                        });
-                      </script>
-
-
-                    </div>
+                      <span>
+                        <div style="overflow:hidden; display:flex; width:<%= a.ratingkakao * 20%>%; height:30px;">
+                        <img src="../assets/icon/star_full.png" style="width:100px; height:30px; margin-top:-8px; margin-left:0.4px"></div>
+                      </span>
                   </li>
 
                 </ul>
