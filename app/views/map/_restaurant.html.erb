@@ -2,18 +2,18 @@
 
   <div id="modal<%= a.googleurl %>" class="overlay">
     <a class="cancel" href=""></a>
-    <div id="modal">
+    <div id="modalsmall<%= a.googleurl %>">
 
         <div class="header" style="background-color:<%= a.header %>;">
           <img src="../assets/restaurant/<%=a.restname%>/flag.png" />
         <div id="country" style="color:<%=a.font%>">  
           
           <%=a.flag%></div>
-          <button onclick="scrollToTop()" id="exit_button"></button>
+          <button onclick="scrollToTop<%= a.googleurl %>()" id="exit_button<%= a.googleurl %>"></button>
           <script>
-            function scrollToTop(){
+            function scrollToTop<%= a.googleurl %>(){
               history.back()
-              var elmnt = document.getElementByClassName("modal");
+              var elmnt = document.getElementById("modalsmall<%= a.googleurl %>");
               elmnt.scrollTop = -10000
             }
           </script>
@@ -30,10 +30,10 @@
         <div id="content1">
           <div id="title">
             <h2> <%=a.rest_kor%> </h2>
-            <button id="ticket_button" onclick = "scrollToTicket()"> </button>
+            <button id="ticket_button<%= a.googleurl %>" onclick = "scrollToTicket<%= a.googleurl %>()"> </button>
             <script>
-              function scrollToTicket(){
-                var elmnt = document.getElementById("modal");
+              function scrollToTicket<%= a.googleurl %>(){
+                var elmnt = document.getElementById("modalsmall<%= a.googleurl %>");
                 elmnt.scrollTop = 10000
               }
             </script>
@@ -114,7 +114,7 @@
               <input type="radio" name="slide<%= a.googleurl %>" id="slide04<%= a.googleurl %>">
               <ul class="slidelist">
                 <li class="slideitem">
-                <% ssibal = a.restname %>
+                
                 <a><img src= "../assets/restaurant/<%=a.restname%>/slide01.jpg" </a>
                 </li>
                 <li class="slideitem">
