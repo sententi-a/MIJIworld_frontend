@@ -34,9 +34,9 @@ class MapController < ApplicationController
             c.pointsize '20'
             c.font "NotoSansCJKkr-Light.otf"
 
-            c.write("practice.png")
+            c.write("MZworld_Ticket.png")
         end
-        send_file 'practice.png'
+        send_file 'MZworld_Ticket.png'
 
     end
 
