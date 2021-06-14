@@ -571,7 +571,22 @@ details {
     margin-top: 5px;
 }
 
+.rate_box span {
+    width:100px;
+    height:30px;
+    display:inline-block;
+    background: url("../assets/icon/star_bin.png");
+    background-size:100px 30px;
+    background-repeat:no-repeat;
+    overflow:hidden;
 
+    img {
+        width:100px;
+        height:30px;
+        display:inline;
+    }
+  }
+   
 /*Eat the World, Meet the World!*/
 
 #ticket_title {
