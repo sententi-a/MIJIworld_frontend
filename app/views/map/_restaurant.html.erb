@@ -1,7 +1,7 @@
 <% @restinfos.each do |a| %>
 
   <div id="modal<%= a.googleurl %>" class="overlay">
-    <a class="cancel" href=""></a>
+  <a class="cancel" onclick="scrollToTop<%= a.googleurl %>()"></a>
     <div id="modalsmall<%= a.googleurl %>">
 
         <div class="header" style="background-color:<%= a.header %>;">
