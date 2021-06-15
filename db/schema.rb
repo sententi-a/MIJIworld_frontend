@@ -59,6 +59,9 @@ ActiveRecord::Schema.define(version: 2021_06_12_182227) do
     t.text "googleurl"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "filter_type"
+    t.string "filter_price"
+    t.string "filter_where"
   end
 
   create_table "tickets", force: :cascade do |t|

@@ -2,15 +2,14 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <link type="text/css" rel="stylesheet" href="listpage.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
         <title>List Page</title>
         <!--필터 스크롤 따라오는 기능-->
         <script type="text/javascript">
-            var stmnLEFT = 14; // 오른쪽 여백
+            var stmnLEFT = 14; // 왼쪽 여백
             var stmnGAP1 = 0; // 위쪽 여백
-            var stmnGAP2 = 180; // 스크롤시 브라우저 위쪽과 떨어지는 거리
+            var stmnGAP2 = 170; // 스크롤시 브라우저 위쪽과 떨어지는 거리
             var stmnBASE = 150; // 스크롤 시작위치
             var stmnActivateSpeed = 15; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
             var stmnScrollSpeed = 25; //스크롤 속도 (클수록 느림)
@@ -45,6 +44,14 @@
             <img src="/assets/icon/scroll_up.png" onmouseover="this.src='/assets/icon/scroll_up_hover.png'" onmouseout="this.src='/assets/icon/scroll_up.png'" />
             <p>지도 보기</p>
         </div>
+
+
+
+            <%= render 'restaurant' %>
+
+
+
+
         <!--main 영역(filter, list(section(section_head, section_content)))-->
         <div class="main">
             <div id="STATICMENU" class="filters">
@@ -109,197 +116,89 @@
                 <div class="section">
                     <div class="section_head">
                         <!--대륙 이름 옆에 숫자 구현해야 됨-->
-                        <button><img src="../assets/list/globe.png" />아프리카(0)</button>
+                        <button><img src="assets/list/globe.png" />아프리카</button>
                     </div>
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
                             <% if restinfo.continent == '아프리카' %>
-                                <div class="card" data-location="dongjak" data-price="under10" data-type="restaurant">
+                                <div class="card" data-location=<%=restinfo.filter_where%> data-price=<%=restinfo.filter_price%> data-type=<%=restinfo.filter_type%>>
                                     <div class="title">
                                         <!--DB에서 가져오기-->
-                                        <div class="flag"><img src="..assets/restaurant/#{}/flag.png".<%=restinfo.restname%> /></div>
-                                        <div class="country" style="color: #{}".<%= restinfo.font%>><%= restinfo.flag%></div>
+                                        <div class="flag"><img src= <%= "assets/restaurant/"+ restinfo.restname + "/flag.png"%> /></div>
+                                        <div class="country" style=<%= "color:"+ restinfo.font%>><%= restinfo.flag%></div>
                                     </div>
                                     <div class="content">
                                         <!--DB에서 가져오기-->
-                                        <div class="food"><img src="..assets/restaurant/#{}/menu1.png".<%=restinfo.restname%> /></div>
+                                        <div class="food"><img src=<%= "assets/restaurant/"+ restinfo.restname + "/menu1.png"%> /></div>
                                         <div class="restaurant"><%= restinfo.rest_kor %></div>
                                         <div class="address_time">
-                                            <img class="address" src="address.png" />
+                                            <img class="address" src="assets/list/address.png" />
                                             <h4 class="address_h4"><%=restinfo.address%></h4>
-                                            <img class="time" src="clock.png" />
+                                            <img class="time" src="assets/list/clock.png" />
                                             <h4 class="time_h4"><%=restinfo.openwhen%></h4>
                                         </div>
                                     </div>
                                 </div>
                             <% end%>
-                        <% end%>
-                        <div class="card" data-location="mapo" data-price="20" data-type="restaurant">
-                            <div class="title">
-                                <!--DB에서 가져오기-->
-                                <div class="flag"><img src="ethiopia.png" /></div>
-                                <div class="country" style="color: #0c3f6d">에티오피아</div>
-                            </div>
-                            <div class="content">
-                                <!--DB에서 가져오기-->
-                                <div class="food"><img src="image.png" /></div>
-                                <div class="restaurant">야마레치 에티오피아</div>
-                                <div class="address_time">
-                                    <img class="address" src="address.png" />
-                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
-                                    <img class="time" src="clock.png" />
-                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card" data-location="seodae" data-price="30" data-type="restaurant">
-                            <div class="title">
-                                <!--DB에서 가져오기-->
-                                <div class="flag"><img src="ethiopia.png" /></div>
-                                <div class="country" style="color: #0c3f6d">에티오피아</div>
-                            </div>
-                            <div class="content">
-                                <!--DB에서 가져오기-->
-                                <div class="food"><img src="image.png" /></div>
-                                <div class="restaurant">야마레치 에티오피아</div>
-                                <div class="address_time">
-                                    <img class="address" src="address.png" />
-                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
-                                    <img class="time" src="clock.png" />
-                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
-                                </div>
-                            </div>
-                        </div>
+                        <% end%>                                
                     </div>
                 </div>
                 <div class="section">
                     <div class="section_head">
-                        <button><img src="../assets/list/globe.png" />아시아(0)</button>
+                        <button><img src="assets/list/globe.png" />아시아</button>
                     </div>
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
                             <% if restinfo.continent == '아시아' %>
-                                <div class="card" data-location="mapo" data-price="under10" data-type="restaurant">
+                                <div class="card" data-location=<%=restinfo.filter_where%> data-price=<%=restinfo.filter_price%> data-type=<%=restinfo.filter_type%>>
                                     <div class="title">
                                         <!--DB에서 가져오기-->
-                                        <div class="flag"><img src="..assets/restaurant/#{}/flag.png".<%=restinfo.restname%> /></div>
-                                        <div class="country" style="color: #{}".<%= restinfo.font%>><%= restinfo.flag%></div>
+                                        <div class="flag"><img src= <%= "assets/restaurant/"+ restinfo.restname + "/flag.png"%> /></div>
+                                        <div class="country" style=<%= "color:"+ restinfo.font%>><%= restinfo.flag%></div>
                                     </div>
                                     <div class="content">
                                         <!--DB에서 가져오기-->
-                                        <div class="food"><img src="..assets/restaurant/#{}/menu1.png".<%=restinfo.restname%> /></div>
+                                        <div class="food"><img src=<%= "assets/restaurant/"+ restinfo.restname + "/menu1.png"%> /></div>
                                         <div class="restaurant"><%=restinfo.rest_kor%></div>
                                         <div class="address_time">
-                                            <img class="address" src="address.png" />
+                                            <img class="address" src="assets/list/address.png" />
                                             <h4 class="address_h4"><%=restinfo.address%></h4>
-                                            <img class="time" src="clock.png" />
+                                            <img class="time" src="assets/list/clock.png" />
                                             <h4 class="time_h4"><%=restinfo.openwhen%></h4>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                             <% end %>
                         <%end %>
-                        <div class="card" data-location="dongjak" data-price="20" data-type="restaurant">
-                            <div class="title">
-                                <!--DB에서 가져오기-->
-                                <div class="flag"><img src="ethiopia.png" /></div>
-                                <div class="country" style="color: #0c3f6d">에티오피아</div>
-                            </div>
-                            <div class="content">
-                                <!--DB에서 가져오기-->
-                                <div class="food"><img src="image.png" /></div>
-                                <div class="restaurant">야마레치 에티오피아</div>
-                                <div class="address_time">
-                                    <img class="address" src="address.png" />
-                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
-                                    <img class="time" src="clock.png" />
-                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card" data-location="mapo" data-price="20" data-type="restaurant">
-                            <div class="title">
-                                <!--DB에서 가져오기-->
-                                <div class="flag"><img src="ethiopia.png" /></div>
-                                <div class="country" style="color: #0c3f6d">에티오피아</div>
-                            </div>
-                            <div class="content">
-                                <!--DB에서 가져오기-->
-                                <div class="food"><img src="image.png" /></div>
-                                <div class="restaurant">야마레치 에티오피아</div>
-                                <div class="address_time">
-                                    <img class="address" src="address.png" />
-                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
-                                    <img class="time" src="clock.png" />
-                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="section">
                     <div class="section_head">
-                        <button><img src="../assets/list/globe.png" />유럽/아메리카(0)</button>
+                        <button><img src="assets/list/globe.png" />유럽/아메리카</button>
                     </div>
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
-                            <% if restinfo.continent == '유럽' or restinfo.continent == '아메리카' %>
-                                <div class="card" data-location="mapo" data-price="20" data-type="cafe">
+                            <% if restinfo.continent == '유럽/아메리카' %>
+                                <div class="card" data-location=<%=restinfo.filter_where%> data-price=<%=restinfo.filter_price%> data-type=<%=restinfo.filter_type%>>
                                     <div class="title">
                                         <!--DB에서 가져오기-->
-                                        <div class="flag"><img src="..assets/restaurant/#{}/flag.png".<%=restinfo.restname%> /></div>
-                                        <div class="country" style="color: #{}".<%= restinfo.font%>><%= restinfo.flag%></div>
+                                        <div class="flag"><img src= <%= "assets/restaurant/"+ restinfo.restname + "/flag.png"%> /></div>
+                                        <div class="country" style=<%= "color:"+ restinfo.font%>><%= restinfo.flag%></div>
                                     </div>
                                     <div class="content">
                                         <!--DB에서 가져오기-->
-                                        <div class="food"><img src="..assets/restaurant/#{}/menu1.png".<%restinfo.restname%> /></div>
+                                        <div class="food"><img src=<%= "assets/restaurant/"+ restinfo.restname + "/menu1.png"%> /></div>
                                         <div class="restaurant"><%=restinfo.rest_kor%></div>
                                         <div class="address_time">
-                                            <img class="address" src="address.png" />
+                                            <img class="address" src="assets/list/address.png" />
                                             <h4 class="address_h4"><%=restinfo.address%></h4>
-                                            <img class="time" src="clock.png" />
+                                            <img class="time" src="assets/list/clock.png" />
                                             <h4 class="time_h4"><%=restinfo.openwhen%></h4>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                             <% end %>
                         <%end %>
-                        <div class="card" data-location="mapo" data-price="under10" data-type="cafe">
-                            <div class="title">
-                                <!--DB에서 가져오기-->
-                                <div class="flag"><img src="ethiopia.png" /></div>
-                                <div class="country" style="color: #0c3f6d">에티오피아</div>
-                            </div>
-                            <div class="content">
-                                <!--DB에서 가져오기-->
-                                <div class="food"><img src="image.png" /></div>
-                                <div class="restaurant">야마레치 에티오피아</div>
-                                <div class="address_time">
-                                    <img class="address" src="address.png" />
-                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
-                                    <img class="time" src="clock.png" />
-                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card" data-location="mapo" data-price="under10" data-type="cafe">
-                            <div class="title">
-                                <!--DB에서 가져오기-->
-                                <div class="flag"><img src="ethiopia.png" /></div>
-                                <div class="country" style="color: #0c3f6d">에티오피아</div>
-                            </div>
-                            <div class="content">
-                                <!--DB에서 가져오기-->
-                                <div class="food"><img src="image.png" /></div>
-                                <div class="restaurant">야마레치 에티오피아</div>
-                                <div class="address_time">
-                                    <img class="address" src="address.png" />
-                                    <h4 class="address_h4">서울시 용산구 어떤로 123-1</h4>
-                                    <img class="time" src="clock.png" />
-                                    <h4 class="time_h4">매일 몇시 - 몇시</h4>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <!--대륙별 음식점 목록 토글 기능-->
@@ -313,8 +212,7 @@
                         //클릭 -> 토글 기능
                     });
                 </script>
-                <!--<script language="JavaScript" type="text/javascript" src="listpage.js"></script>-->
-                <%= javascript_pack_tag 'listpage' %>
+                <script language="JavaScript" type="text/javascript" src="assets/packs/listpage.js"></script>
             </div>
         </div>
         <!--footer 영역, 여백을 위해 만듦-->

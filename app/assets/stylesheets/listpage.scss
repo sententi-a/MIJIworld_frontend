@@ -51,9 +51,9 @@ html {
 }
 
 .main {
-    /* 페이지 좌,우측 여백 */
-    margin-left: 10vw;
-    margin-right: 10vw;
+    /* 페이지 좌,우측 여백  이 왜 필요하지?*/
+    margin-left: 0;
+    margin-right: 0;
     /*display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     gap: 0 50px;*/
@@ -75,8 +75,8 @@ html {
     margin: 0pt;
     padding: 0pt;
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 12vw;
+    top: 170px;
 }
 
 .location_filter,
@@ -97,7 +97,7 @@ html {
     justify-self: center;
     margin-bottom: 7px;
 }
-
+/*
 label span {
     display: flex;
     cursor: pointer;
@@ -124,7 +124,7 @@ label input[type="checkbox"] {
 label input[type="checkbox"]:checked ~ span {
     background: #8d8debce;
 }
-
+*/
 .list {
     /* list는 대륙별 section으로 나누어져 있음 */
     padding-top: 125px;
@@ -135,7 +135,7 @@ label input[type="checkbox"]:checked ~ span {
 
 .section {
     /* section은 section_head와 section_content로 나누어져 있음 */
-    z-index: 1; /* filter 영역보다 앞으로 -> filter와 card의 호버 효과가 서로 충돌하지 않도록 레벨 지정 */
+    /* z-index: 1; filter 영역보다 앞으로 -> filter와 card의 호버 효과가 서로 충돌하지 않도록 레벨 지정 */
     display: grid;
     /*grid-template-columns: 1fr 1fr;*/
     gap: 15px 0; /* section_head와 section_content 간 상하 간격 */
@@ -162,12 +162,15 @@ label input[type="checkbox"]:checked ~ span {
     /* 대륙 이름 아래 하얀색 선 */
     border-bottom: 3px solid #ffffff69;
     width: max-content; /* 선의 길이가 대륙 이름 길이에 맞게 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section_head img {
     /* 지구본 이미지 크기, 우측 여백 */
     width: 18px;
-    padding-right: 10px;
+    padding: 2px 3px;
 }
 
 .section_head button:hover {
@@ -182,6 +185,10 @@ label input[type="checkbox"]:checked ~ span {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px 20px; /* card간 상하 간격, 좌우 간격 */
+}
+
+.list.filtered .card:not(.selected) {
+    display: none;
 }
 
 .card {
@@ -237,6 +244,7 @@ label input[type="checkbox"]:checked ~ span {
     height: 6vw; /* 내부 카드 높이 */
     min-height: 120px; /* 내부 카드 최소 높이 */
     border-radius: 15px; /* 내부 카드 테두리 둥글기 */
+    grid-template-columns: 130px 1fr;
 }
 
 .food img {
@@ -251,7 +259,7 @@ label input[type="checkbox"]:checked ~ span {
 
 .food {
     /* 음식 사진 위치 조정 */
-    justify-self: end;
+    justify-self: center;
     align-self: center;
     /* 그리드 1열 1행부터 1열 2행까지 자리 차지하고 있음 */
     grid-column-start: 1;
