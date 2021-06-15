@@ -19,38 +19,50 @@ html {
     color: #707070;
 }
 
+.logo {
+    text-align: center;
+    img {
+        text-align: center;
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+}
+
 .list_header {
     /* 지도 보기 상단 고정 */
     z-index: 99;
     position: fixed;
-    width: 100%;
     /* 헤더 영역 위아래 여백 */
-    margin-top: 10pt;
-    margin-bottom: 50pt;
-    display: flex;
-    justify-content: center;
-}
-
-.list_header p {
-    font-size: 10pt;
-    color: #aeaef9;
-    text-align: center;
+    top: 20px;
+    right: 0;
 }
 
 .list_header a.toMapButton:hover {
-    background-image: url("/assets/icon/scroll_up_hover.png");
+    background-image: url("/assets/icon/map_button_hover.png");
     background-repeat: no-repeat;
     background-position: center top;
 }
 
 .list_header a.toMapButton {
-    background-image: url("/assets/icon/scroll_up.png");
+    background-image: url("/assets/icon/map_button.png");
     background-repeat: no-repeat;
     background-position: center top;
     display: block;
     text-align: center;
-    height: 40px;
-    width: 55px;
+    height: 120px;
+    width: 60px;
+}
+
+.list_header a.toListButton {
+    background-image: url("/assets/icon/list_button_clicked.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+    text-align: center;
+    height: 120px;
+    width: 60px;
 }
 
 .footer {
@@ -74,7 +86,7 @@ html {
     /*align-self: start;
     margin-top: 40px;*/
     display: grid;
-    gap: 40px 0; /* 필터 Part 간 상하 간격 */
+    gap: 20px 0; /* 필터 Part 간 상하 간격 */
     place-items: start; /* 필터 Part들 위로 맞춤 정렬 */
 }
 
@@ -84,7 +96,7 @@ html {
     padding: 0pt;
     position: absolute;
     left: 100px;
-    top: 170px;
+    top: 150px;
 }
 
 .filters h5 {
@@ -127,9 +139,9 @@ label span {
     position: relative;
     display: inline-block;
     background: rgba(248, 248, 248, 0.548);
-    width: 100px;
-    height: 30px;
-    line-height: 30px;
+    width: 85px;
+    height: 28px;
+    line-height: 28px;
     border-radius: 20px;
     text-align: center;
     transition: 0.2s;
@@ -158,7 +170,7 @@ label input[type="checkbox"]:checked ~ span {
 
 .list {
     /* list는 대륙별 section으로 나누어져 있음 */
-    padding-top: 125px;
+    padding-top: 60px;
     display: grid;
     gap: 60px 0; /* 대륙별 section 간 상하 간격 */
     place-items: start center; /* section 위로 정렬, 가운데 맞춤 */

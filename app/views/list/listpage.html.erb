@@ -9,7 +9,7 @@
         <script type="text/javascript">
             var stmnLEFT = 100; // 왼쪽 여백
             var stmnGAP1 = 0; // 위쪽 여백
-            var stmnGAP2 = 170; // 스크롤시 브라우저 위쪽과 떨어지는 거리
+            var stmnGAP2 = 150; // 스크롤시 브라우저 위쪽과 떨어지는 거리
             var stmnBASE = 150; // 스크롤 시작위치
             var stmnActivateSpeed = 15; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
             var stmnScrollSpeed = 25; //스크롤 속도 (클수록 느림)
@@ -39,9 +39,12 @@
     </head>
 
     <body onload="InitializeStaticMenu();" id="list_body">
-        <!--header 영역(지도 보기, 위로 스크롤)-->
+        <div class="logo">
+            <img src="/assets/logo/logo.png" />
+        </div>
         <div class="list_header">
-            <p><%= link_to "", "/map", class: "toMapButton" %>지도 보기</p>
+            <%= link_to "", "/map", class: "toMapButton" %>
+            <%= link_to "", "/list", class: "toListButton" %>
         </div>
 
 

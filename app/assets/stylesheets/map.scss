@@ -64,9 +64,7 @@ ul {
     }
 }
 
-
 /*국기 이미지*/
-
 
 /*나가기 버튼*/
 
@@ -91,12 +89,9 @@ ul {
     }
 }
 
-
 /*국가명*/
 
-
 /*사이 여백*/
-
 
 /*content1 : restaurant name, open time, address*/
 
@@ -131,9 +126,7 @@ ul {
     }
 }
 
-
 /*레스토랑 이름*/
-
 
 /*티켓 버튼*/
 
@@ -157,9 +150,7 @@ ul {
     }
 }
 
-
 /*영업시간, 주소부분 margin값*/
-
 
 /*주소 toggle*/
 
@@ -167,12 +158,12 @@ ul {
     display: none;
 }
 
-#toggle:checked+#map {
+#toggle:checked + #map {
     display: block;
 }
 
 details {
-    >summary {
+    > summary {
         font-family: Noto Sans KR;
         margin-top: -5px;
         text-align: center;
@@ -185,10 +176,10 @@ details {
             color: #8d8deb;
         }
     }
-    &[open]>summary~* {
+    &[open] > summary ~ * {
         animation: reveal 0.5s;
     }
-    >p {
+    > p {
         padding-top: 20px;
         font-size: 20px;
         font-weight: bold;
@@ -208,7 +199,6 @@ details {
     }
 }
 
-
 /*구글 지도 길찾기*/
 
 #map {
@@ -222,7 +212,6 @@ details {
     margin: 0px auto;
     margin-bottom: 50px;
 }
-
 
 /*content2 : restaurant description*/
 
@@ -245,7 +234,6 @@ details {
         color: #979797;
     }
 }
-
 
 /*레스토랑 상세 설명*/
 
@@ -273,7 +261,6 @@ details {
         height: 180px;
     }
 }
-
 
 /*content4 : menu */
 
@@ -354,21 +341,15 @@ details {
     }
 }
 
-
 /*메뉴 설명 박스*/
-
 
 /*메뉴 이름*/
 
-
 /*메뉴 상세설명*/
-
 
 /*메뉴 가격*/
 
-
 /*메뉴 태그*/
-
 
 /*슬라이드*/
 
@@ -382,9 +363,7 @@ details {
     margin-top: 10px;
 }
 
-
 /*현재 사진의 가로 세로 비율에 따라 세로크기가 결정되고 있습니다.*/
-
 
 /*현재 슬라이드 사진은 가로세로 6:4, 가로 600px입니다. 700px을 넘어가면 상관없는데 700px보다 작으면 슬라이드가 작아집니다.*/
 
@@ -406,7 +385,7 @@ details {
             background-color: #fff;
             width: 100%;
             transition: all 1s;
-            >a {
+            > a {
                 display: inline-block;
                 width: auto;
                 position: relative;
@@ -457,7 +436,6 @@ details {
     display: none;
 }
 
-
 /*content6 : expression*/
 
 #content6 {
@@ -483,7 +461,6 @@ details {
         color: #707070;
     }
 }
-
 
 /*평점 보기*/
 
@@ -516,20 +493,16 @@ details {
             font-weight: 700;
             text-align: center;
             color: #7a7a7a;
-        
         }
-        p:hover{
-            color:#8d8deb;
+        p:hover {
+            color: #8d8deb;
         }
     }
 }
 
-
 /*평점보기 박스*/
 
-
 /*네이버지도/카카오맵/구글맵*/
-
 
 /*평점보기 내부 박스*/
 
@@ -546,67 +519,63 @@ details {
     align-items: center;
 }
 
-
 /*지도 검색엔진 아이콘*/
 
 #content7 li {
-    a:hover{
-        text-decoration-color:#8d8deb;
-        
+    a:hover {
+        text-decoration-color: #8d8deb;
     }
     a {
-        text-decoration-color:#616161;
+        text-decoration-color: #616161;
     }
 
     .rate_box {
-    img {
-        display: block;
-        width: 65px;
-        height: 65px;
-        margin-left: 31%;
-        margin-top: 6px;
-        padding-top: 6px;
-    }
-    h3 {
-        display: block;
-        font-family: yg-Jalnan;
-        font-size: 20px;
-        font-weight: normal;
-        text-align: center;
-        color: #616161;
-    }
-    h4 {
-        display: block;
-        font-size: 14px;
-        font-weight: 500;
-        text-align: center;
-        color: #707070;
-    }
-    span {
-        width: 100px;
-        height: 30px;
-        display: inline-block;
-        background: url("../assets/icon/star_bin.png");
-        background-size: 100px 30px;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        div {
-            img {
-                width: 100px;
-                height: 30px;
-                display: inline;
-                margin-left: 0%;
-                margin-top: 0px;
-                padding-top: 0px;
+        img {
+            display: block;
+            width: 65px;
+            height: 65px;
+            margin-left: 31%;
+            margin-top: 6px;
+            padding-top: 6px;
+        }
+        h3 {
+            display: block;
+            font-family: yg-Jalnan;
+            font-size: 20px;
+            font-weight: normal;
+            text-align: center;
+            color: #616161;
+        }
+        h4 {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            color: #707070;
+        }
+        span {
+            width: 100px;
+            height: 30px;
+            display: inline-block;
+            background: url("../assets/icon/star_bin.png");
+            background-size: 100px 30px;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            div {
+                img {
+                    width: 100px;
+                    height: 30px;
+                    display: inline;
+                    margin-left: 0%;
+                    margin-top: 0px;
+                    padding-top: 0px;
+                }
             }
         }
     }
-    
-}
 }
 
 /*평점 (숫자)*/
-
 
 /*n명의 후기*/
 
@@ -644,9 +613,7 @@ details {
     }
 }
 
-
 /*나만의 여행 티켓 만들기*/
-
 
 /*ticket diy div*/
 
@@ -677,12 +644,9 @@ details {
     }
 }
 
-
 /*티켓 이미지*/
 
-
 /*입력 영역*/
-
 
 /*날짜 입력 영역*/
 
@@ -887,7 +851,6 @@ textarea:focus {
     }
 }
 
-
 /*header*/
 
 .world-map {
@@ -950,28 +913,17 @@ textarea:focus {
             }
             margin: 0;
             padding: 0;
-            background: rgba(255,
-            255,
-            255,
-            0.5);
+            background: rgba(255, 255, 255, 0.5);
             filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
             opacity: 1;
             width: 260px;
             height: 140px;
             color: #000000;
             z-index: 3;
-            -webkit-transition: opacity 0.15s ease-in-out,
-            width 0.15s ease-in-out,
-            height 0.15s ease-in-out;
-            -moz-transition: opacity 0.15s ease-in-out,
-            width 0.15s ease-in-out,
-            height 0.15s ease-in-out;
-            -o-transition: opacity 0.15s ease-in-out,
-            width 0.15s ease-in-out,
-            height 0.15s ease-in-out;
-            transition: opacity 0.15s ease-in-out,
-            width 0.15s ease-in-out,
-            height 0.15s ease-in-out;
+            -webkit-transition: opacity 0.15s ease-in-out, width 0.15s ease-in-out, height 0.15s ease-in-out;
+            -moz-transition: opacity 0.15s ease-in-out, width 0.15s ease-in-out, height 0.15s ease-in-out;
+            -o-transition: opacity 0.15s ease-in-out, width 0.15s ease-in-out, height 0.15s ease-in-out;
+            transition: opacity 0.15s ease-in-out, width 0.15s ease-in-out, height 0.15s ease-in-out;
             .pin-content {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
                 opacity: 1;
@@ -995,28 +947,17 @@ textarea:focus {
             }
             margin: 0;
             padding: 0;
-            background: rgba(255,
-            255,
-            255,
-            0.5);
+            background: rgba(255, 255, 255, 0.5);
             filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
             opacity: 1;
             width: 240px;
             height: 110px;
             color: #000000;
             z-index: 3;
-            -webkit-transition: opacity 0.15s ease-in-out,
-            width 0.15s ease-in-out,
-            height 0.15s ease-in-out;
-            -moz-transition: opacity 0.15s ease-in-out,
-            width 0.15s ease-in-out,
-            height 0.15s ease-in-out;
-            -o-transition: opacity 0.15s ease-in-out,
-            width 0.15s ease-in-out,
-            height 0.15s ease-in-out;
-            transition: opacity 0.15s ease-in-out,
-            width 0.15s ease-in-out,
-            height 0.15s ease-in-out;
+            -webkit-transition: opacity 0.15s ease-in-out, width 0.15s ease-in-out, height 0.15s ease-in-out;
+            -moz-transition: opacity 0.15s ease-in-out, width 0.15s ease-in-out, height 0.15s ease-in-out;
+            -o-transition: opacity 0.15s ease-in-out, width 0.15s ease-in-out, height 0.15s ease-in-out;
+            transition: opacity 0.15s ease-in-out, width 0.15s ease-in-out, height 0.15s ease-in-out;
             .pin-content {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
                 opacity: 1;
@@ -1089,16 +1030,39 @@ textarea:focus {
     width: 100%;
 }
 
-.map-footer {
-    width: 100%;
+.list_footer {
+    /* 지도 보기 상단 고정 */
+    z-index: 99;
     position: fixed;
-    bottom: 0%;
-    /* 지도 보기 글씨 조절 */
-    text-align: center;
-    font-size: 10pt;
-    color: #aeaef9;
     /* 헤더 영역 위아래 여백 */
-    margin-bottom: 10pt;
+    top: 20px;
+    right: 0;
+}
+
+.list_footer a.toList:hover {
+    background-image: url("/assets/icon/list_button_hover.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.list_footer a.toMap {
+    background-image: url("/assets/icon/map_button_clicked.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+    text-align: center;
+    height: 120px;
+    width: 60px;
+}
+
+.list_footer a.toList {
+    background-image: url("/assets/icon/list_button.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+    text-align: center;
+    height: 120px;
+    width: 60px;
 }
 
 .list-button {
