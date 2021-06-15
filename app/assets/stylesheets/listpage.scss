@@ -196,9 +196,10 @@ label input[type="checkbox"]:checked ~ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/icon/list_toggle.png");
+    background-image: url("/assets/icon/list_toggle_down.png");
     background-repeat: no-repeat;
     background-position: left;
+    background-size: 20px;
 }
 
 .section_head img {
@@ -212,9 +213,10 @@ label input[type="checkbox"]:checked ~ span {
     /* 대륙 이름 버튼 호버 효과 */
     color: #363535;
     cursor: pointer;
-    background-image: url("/assets/icon/list_toggle_hover.png");
+    background-image: url("/assets/icon/list_toggle_down_hover.png");
     background-repeat: no-repeat;
     background-position: left;
+    background-size: 20px;
 }
 
 .toggle_down {
@@ -236,15 +238,17 @@ label input[type="checkbox"]:checked ~ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/icon/list_toggle_down.png");
+    background-image: url("/assets/icon/list_toggle.png");
     background-repeat: no-repeat;
     background-position: left;
+    background-size: 20px;
 }
 
 .toggle_down:hover {
-    background-image: url("/assets/icon/list_toggle_down_hover.png");
+    background-image: url("/assets/icon/list_toggle_hover.png");
     background-repeat: no-repeat;
     background-position: left;
+    background-size: 20px;
 }
 
 .section_content {
