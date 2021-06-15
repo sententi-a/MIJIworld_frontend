@@ -661,6 +661,7 @@ details {
 /*날짜 입력 영역*/
 
 #date {
+    margin-top: 20px;
     width: 50%;
     height: 90%;
     h1 {
@@ -769,7 +770,7 @@ textarea:focus {
     height: 13%;
     display: flex;
     justify-content: center;
-    padding-top: 24px;
+    padding-top: 4px;
 }
 
 #submit_button {
