@@ -673,6 +673,29 @@ details {
         text-align: left;
         color: #616161;
     }
+
+    input {
+        width: 70%;  /* 원하는 너비 설정 */ 
+        height: auto;  /* 높이값 초기화 */
+        line-height : normal;  /* line-height 초기화 */
+        margin-left:14%;
+        padding: 0.7em 0.3em; /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
+        outline-style: none;  /* 포커스시 발생하는 효과 제거를 원한다면 */
+        -webkit-appearance: none;  /* 브라우저별 기본 스타일링 제거 */
+        -moz-appearance: none;
+        appearance: none;
+    }
+    &:focus {
+        box-shadow: 0 0 5px #8d8deb;
+    }
+
+    img {
+        width:85%;
+        margin-left:14%;
+    }
 }
 
 #select_date {
