@@ -516,6 +516,10 @@ details {
             font-weight: 700;
             text-align: center;
             color: #7a7a7a;
+        
+        }
+        p:hover{
+            color:#8d8deb;
         }
     }
 }
@@ -545,7 +549,16 @@ details {
 
 /*지도 검색엔진 아이콘*/
 
-#content7 li .rate_box {
+#content7 li {
+    a:hover{
+        text-decoration-color:#8d8deb;
+        
+    }
+    a {
+        text-decoration-color:#616161;
+    }
+
+    .rate_box {
     img {
         display: block;
         width: 65px;
@@ -588,9 +601,9 @@ details {
             }
         }
     }
-     :hover {}
+    
 }
-
+}
 
 /*평점 (숫자)*/
 
