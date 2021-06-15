@@ -120,24 +120,26 @@
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
                             <% if restinfo.continent == '아프리카' %>
-                                <div class="card" data-location=<%=restinfo.filter_where%> data-price=<%=restinfo.filter_price%> data-type=<%=restinfo.filter_type%>>
-                                    <div class="title">
-                                        <!--DB에서 가져오기-->
-                                        <div class="flag"><img src= <%= "assets/restaurant/"+ restinfo.restname + "/flag.png"%> /></div>
-                                        <div class="country" style=<%= "color:"+ restinfo.font%>><%= restinfo.flag%></div>
-                                    </div>
-                                    <div class="content">
-                                        <!--DB에서 가져오기-->
-                                        <div class="food"><img src=<%= "assets/restaurant/"+ restinfo.restname + "/menu1.png"%> /></div>
-                                        <div class="restaurant"><%= restinfo.rest_kor %></div>
-                                        <div class="address_time">
-                                            <img class="address" src="assets/list/address.png" />
-                                            <h4 class="address_h4"><%=restinfo.address%></h4>
-                                            <img class="time" src="assets/list/clock.png" />
-                                            <h4 class="time_h4"><%=restinfo.openwhen%></h4>
+                                <a href="#modal<%= restinfo.googleurl%>" style="text-decoration:none">
+                                    <div class="card" data-location=<%=restinfo.filter_where%> data-price=<%=restinfo.filter_price%> data-type=<%=restinfo.filter_type%>>
+                                        <div class="title">
+                                            <!--DB에서 가져오기-->
+                                            <div class="flag"><img src= <%= "assets/restaurant/"+ restinfo.restname + "/flag.png"%> /></div>
+                                            <div class="country" style=<%= "color:"+ restinfo.font%>><%= restinfo.flag%></div>
+                                        </div>
+                                        <div class="content">
+                                            <!--DB에서 가져오기-->
+                                            <div class="food"><img src=<%= "assets/restaurant/"+ restinfo.restname + "/menu1.png"%> /></div>
+                                            <div class="restaurant"><%= restinfo.rest_kor %></div>
+                                            <div class="address_time">
+                                                <img class="address" src="assets/list/address.png" />
+                                                <h4 class="address_h4"><%=restinfo.address%></h4>
+                                                <img class="time" src="assets/list/clock.png" />
+                                                <h4 class="time_h4"><%=restinfo.openwhen%></h4>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             <% end%>
                         <% end%>                                
                     </div>
@@ -149,6 +151,7 @@
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
                             <% if restinfo.continent == '아시아' %>
+                            <a href="#modal<%= restinfo.googleurl%>" style="text-decoration:none">
                                 <div class="card" data-location=<%=restinfo.filter_where%> data-price=<%=restinfo.filter_price%> data-type=<%=restinfo.filter_type%>>
                                     <div class="title">
                                         <!--DB에서 가져오기-->
@@ -167,6 +170,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            </a>
                             <% end %>
                         <%end %>
                     </div>
@@ -178,6 +182,7 @@
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
                             <% if restinfo.continent == '유럽/아메리카' %>
+                            <a href="#modal<%= restinfo.googleurl%>" style="text-decoration:none">
                                 <div class="card" data-location=<%=restinfo.filter_where%> data-price=<%=restinfo.filter_price%> data-type=<%=restinfo.filter_type%>>
                                     <div class="title">
                                         <!--DB에서 가져오기-->
@@ -196,6 +201,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            </a>    
                             <% end %>
                         <%end %>
                     </div>
