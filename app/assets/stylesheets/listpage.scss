@@ -206,13 +206,13 @@ label input[type="checkbox"]:checked ~ span {
     box-shadow: 0px 0px 10px rgba(105, 103, 103, 0.116); /* card 그림자 효과 */
 }
 
-.card:hover {
+.card a:hover {
     /* card 호버 효과 */
     background-color: #8d8deb2d !important;
     cursor: pointer;
 }
 
-.card:active {
+.card a:active {
     /* card 클릭을 눌렀을 시 효과 */
     background-color: #8d8deb6b !important;
 }
