@@ -65,9 +65,6 @@ html {
     display: grid;
     gap: 40px 0; /* 필터 Part 간 상하 간격 */
     place-items: start; /* 필터 Part들 위로 맞춤 정렬 */
-    /* 필터 종류 글씨체 */
-    font-size: 15px;
-    font-weight: 500;
 }
 
 #STATICMENU {
@@ -85,17 +82,19 @@ html {
     /* 필터 그리드 -> 버튼 2개씩 보이게 만들기 */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px 10px; /* 버튼 간 상하 간격, 좌우 간격 */
+    gap: 5px 7px; /* 버튼 간 상하 간격, 좌우 간격 */
     justify-self: center;
 }
 
-.location_filter p,
-.price_filter p,
-.type_filter p {
+.location_filter h3,
+.price_filter h3,
+.type_filter h3 {
     /* 필터 종류가 가운데 맞춤 되도록 */
     grid-column: 1 / span 2;
     justify-self: center;
-    margin-bottom: 7px;
+    margin-bottom: 4px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 label {
@@ -103,7 +102,7 @@ label {
 }
 
 label input[type="checkbox"] {
-    visibility: hidden;
+    display: none;
 }
 
 label span {
@@ -112,9 +111,10 @@ label span {
     background: rgba(248, 248, 248, 0.548);
     width: 100px;
     height: 30px;
+    line-height: 30px;
     border-radius: 20px;
     text-align: center;
-    transition: 0.5s;
+    transition: 0.2s;
     user-select: none;
     overflow: hidden;
     border-style: hidden;
@@ -124,8 +124,18 @@ label span {
     color: #707070;
 }
 
+label span p {
+    vertical-align: middle;
+}
+
+label span:hover {
+    background: #8e8edf9c;
+    color: #fff;
+}
+
 label input[type="checkbox"]:checked ~ span {
-    background: #8d8debce;
+    background: #8d8debb7;
+    color: #fff;
 }
 
 .list {
