@@ -13,10 +13,10 @@ class MapController < ApplicationController
         temp_img.combine_options do |c|
 
             c.gravity 'Center'
-            c.draw "text 0, 0 '#{@ticket.datepick}'"
+            c.draw "text -363, -47'#{@ticket.datepick}'"
 
             c.gravity 'Center'
-            c.draw "text 360, -130 '#{@ticket.name}'"
+            c.draw "text 360, -133 '#{@ticket.name}'"
 
             c.gravity 'Center'
             c.draw "text 360, -65 '#{@ticket.with}'"
