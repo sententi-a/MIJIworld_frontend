@@ -210,6 +210,11 @@ label input[type="checkbox"]:checked ~ span {
     cursor: pointer;
 }
 
+.section_head button:active {
+    color: #594ccf;
+    cursor: pointer;
+}
+
 .section_content {
     /* section_content 안에 card(음식점 카드) 2줄 정렬 */
     justify-self: center;
