@@ -199,13 +199,13 @@ label input[type="checkbox"]:checked ~ span {
     background-image: url("/assets/icon/list_toggle_down.png");
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 20px;
+    background-size: 17px;
 }
 
 .section_head img {
     /* 지구본 이미지 크기, 우측 여백 */
     width: 18px;
-    padding: 2px 3px;
+    padding-right: 2px;
     opacity: 0;
 }
 
@@ -216,7 +216,7 @@ label input[type="checkbox"]:checked ~ span {
     background-image: url("/assets/icon/list_toggle_down_hover.png");
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 20px;
+    background-size: 17px;
 }
 
 .toggle_down {
@@ -241,14 +241,14 @@ label input[type="checkbox"]:checked ~ span {
     background-image: url("/assets/icon/list_toggle.png");
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 20px;
+    background-size: 17px;
 }
 
 .toggle_down:hover {
     background-image: url("/assets/icon/list_toggle_hover.png");
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 20px;
+    background-size: 17px;
 }
 
 .section_content {
