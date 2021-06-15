@@ -22,7 +22,7 @@ ul {
 
 @for $i from 1 through 26 {
     #modalsmall#{$i} {
-        font-family:Noto Sans KR;
+        font-family: Noto Sans KR;
         z-index: 100;
         margin: auto;
         position: fixed;
@@ -173,7 +173,7 @@ ul {
 
 details {
     >summary {
-        font-family:Noto Sans KR;
+        font-family: Noto Sans KR;
         margin-top: -5px;
         text-align: center;
         outline: 0;
@@ -212,7 +212,7 @@ details {
 /*구글 지도 길찾기*/
 
 #map {
-    font-family:Noto Sans KR;
+    font-family: Noto Sans KR;
     width: 540px;
     height: 270px;
     border: 0;
@@ -227,7 +227,7 @@ details {
 /*content2 : restaurant description*/
 
 #content2 {
-    font-family:Noto Sans KR;
+    font-family: Noto Sans KR;
     width: 100%;
     height: 80px;
     display: flex;
@@ -250,7 +250,7 @@ details {
 /*레스토랑 상세 설명*/
 
 #content3 {
-    font-family:Noto Sans KR;
+    font-family: Noto Sans KR;
     width: inherit;
     height: 213.75px;
     margin: auto;
@@ -278,7 +278,7 @@ details {
 /*content4 : menu */
 
 #content4 {
-    font-family:Noto Sans KR;
+    font-family: Noto Sans KR;
     margin-top: 20px;
     width: 100%;
     height: 280px;
@@ -373,7 +373,7 @@ details {
 /*슬라이드*/
 
 #content5 {
-    font-family:Noto Sans KR;
+    font-family: Noto Sans KR;
     width: 100%;
     height: 300px;
     display: flex;
@@ -462,7 +462,7 @@ details {
 
 #content6 {
     /* padding-top: 20px; */
-    font-family:Noto Sans KR;
+    font-family: Noto Sans KR;
     width: 100%;
     height: 80px;
     display: flex;
@@ -510,7 +510,7 @@ details {
             margin-left: 0;
         }
         p {
-            font-family:Noto Sans KR;
+            font-family: Noto Sans KR;
             padding-top: 8px;
             font-size: 17px;
             font-weight: 700;
@@ -577,21 +577,18 @@ details {
         background-size: 100px 30px;
         background-repeat: no-repeat;
         overflow: hidden;
-        div{
-        img {
-            
-            width: 100px;
-            height: 30px;
-            display: inline;
-            margin-left: 0%;
-            margin-top: 0px;
-            padding-top: 0px;
+        div {
+            img {
+                width: 100px;
+                height: 30px;
+                display: inline;
+                margin-left: 0%;
+                margin-top: 0px;
+                padding-top: 0px;
+            }
         }
     }
-    }
-    :hover {
-        
-    }
+     :hover {}
 }
 
 
@@ -603,7 +600,6 @@ details {
 // .my-rating-7 {
 //     margin-top: 5px;
 // }
-
 
 /*Eat the World, Meet the World!*/
 
@@ -691,29 +687,32 @@ details {
         text-align: left;
         color: #616161;
     }
-
     input {
-        width: 70%;  /* 원하는 너비 설정 */ 
-        height: auto;  /* 높이값 초기화 */
-        line-height : normal;  /* line-height 초기화 */
-        margin-left:14%;
-        padding: 0.7em 0.3em; /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */
+        width: 70%;
+        /* 원하는 너비 설정 */
+        height: auto;
+        /* 높이값 초기화 */
+        line-height: normal;
+        /* line-height 초기화 */
+        margin-left: 14%;
+        padding: 0.7em 0.3em;
+        /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */
         border: 1px solid #ffffff;
         border-radius: 5px;
         box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
-        outline-style: none;  /* 포커스시 발생하는 효과 제거를 원한다면 */
-        -webkit-appearance: none;  /* 브라우저별 기본 스타일링 제거 */
+        outline-style: none;
+        /* 포커스시 발생하는 효과 제거를 원한다면 */
+        -webkit-appearance: none;
+        /* 브라우저별 기본 스타일링 제거 */
         -moz-appearance: none;
         appearance: none;
     }
     &:focus {
         box-shadow: 0 0 5px #8d8deb;
     }
-
     img {
-        
-        width:70%;
-        margin-left:16%;
+        width: 70%;
+        margin-left: 16%;
     }
 }
 
@@ -904,20 +903,20 @@ textarea:focus {
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out;
-        -webkit-transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
-        transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
-        -moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
-        -o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
-        transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+        -webkit-transition: opacity 0.15s ease-in-out, width 0.15s ease-in-out, height 0.15s ease-in-out, z-index 0.15s ease-in-out;
+        -webkit-transition-delay: 0.15s, 0.15s, 0.15s, 0.15s;
+        transition-delay: 0.15s, 0.15s, 0.15s, 0.15s;
+        -moz-transition: opacity 0.15s ease-in-out 0.15s, width 0.15s ease-in-out 0.15s, height 0.15s ease-in-out 0.15s, z-index 0.15s ease-in-out 0.15s;
+        -o-transition: opacity 0.15s ease-in-out 0.15s, width 0.15s ease-in-out 0.15s, height 0.15s ease-in-out 0.15s, z-index 0.15s ease-in-out 0.15s;
+        transition: opacity 0.15s ease-in-out 0.15s, width 0.15s ease-in-out 0.15s, height 0.15s ease-in-out 0.15s, z-index 0.15s ease-in-out 0.15s;
         .pin-content {
             font-family: "yg-jalnan";
             filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
             opacity: 0;
-            -webkit-transition: opacity 0.25s ease-in-out;
-            -moz-transition: opacity 0.25s ease-in-out;
-            -o-transition: opacity 0.25s ease-in-out;
-            transition: opacity 0.25s ease-in-out;
+            -webkit-transition: opacity 0.15s ease-in-out;
+            -moz-transition: opacity 0.15s ease-in-out;
+            -o-transition: opacity 0.15s ease-in-out;
+            transition: opacity 0.15s ease-in-out;
             width: 100%;
             height: 100%;
             left: 50%;
@@ -931,10 +930,10 @@ textarea:focus {
             .pin-img {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
                 opacity: 0;
-                -webkit-transition: opacity 0.25s ease-in-out;
-                -moz-transition: opacity 0.25s ease-in-out;
-                -o-transition: opacity 0.25s ease-in-out;
-                transition: opacity 0.25s ease-in-out;
+                -webkit-transition: opacity 0.15s ease-in-out;
+                -moz-transition: opacity 0.15s ease-in-out;
+                -o-transition: opacity 0.15s ease-in-out;
+                transition: opacity 0.15s ease-in-out;
             }
             margin: 0;
             padding: 0;
@@ -948,27 +947,27 @@ textarea:focus {
             height: 140px;
             color: #000000;
             z-index: 3;
-            -webkit-transition: opacity 0.25s ease-in-out,
-            width 0.25s ease-in-out,
-            height 0.25s ease-in-out;
-            -moz-transition: opacity 0.25s ease-in-out,
-            width 0.25s ease-in-out,
-            height 0.25s ease-in-out;
-            -o-transition: opacity 0.25s ease-in-out,
-            width 0.25s ease-in-out,
-            height 0.25s ease-in-out;
-            transition: opacity 0.25s ease-in-out,
-            width 0.25s ease-in-out,
-            height 0.25s ease-in-out;
+            -webkit-transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
+            -moz-transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
+            -o-transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
+            transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
             .pin-content {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
                 opacity: 1;
-                -webkit-transition: opacity 0.25s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
-                -webkit-transition-delay: 0.25s, 0.25s, 0.25s;
-                transition-delay: 0.25s, 0.25s, 0.25s;
-                -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
-                -o-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
-                transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+                -webkit-transition: opacity 0.15s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
+                -webkit-transition-delay: 0.15s, 0.15s, 0.15s;
+                transition-delay: 0.15s, 0.15s, 0.15s;
+                -moz-transition: opacity 0.15s ease-in-out 0.15s, height 0 ease-in-out 0.15s, overflow 0 ease-in-out 0.15s;
+                -o-transition: opacity 0.15s ease-in-out 0.15s, height 0 ease-in-out 0.15s, overflow 0 ease-in-out 0.15s;
+                transition: opacity 0.15s ease-in-out 0.15s, height 0 ease-in-out 0.15s, overflow 0 ease-in-out 0.15s;
                 overflow: hidden;
             }
         }
@@ -976,10 +975,10 @@ textarea:focus {
             .pin-img {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
                 opacity: 0;
-                -webkit-transition: opacity 0.25s ease-in-out;
-                -moz-transition: opacity 0.25s ease-in-out;
-                -o-transition: opacity 0.25s ease-in-out;
-                transition: opacity 0.25s ease-in-out;
+                -webkit-transition: opacity 0.15s ease-in-out;
+                -moz-transition: opacity 0.15s ease-in-out;
+                -o-transition: opacity 0.15s ease-in-out;
+                transition: opacity 0.15s ease-in-out;
             }
             margin: 0;
             padding: 0;
@@ -993,27 +992,27 @@ textarea:focus {
             height: 110px;
             color: #000000;
             z-index: 3;
-            -webkit-transition: opacity 0.25s ease-in-out,
-            width 0.25s ease-in-out,
-            height 0.25s ease-in-out;
-            -moz-transition: opacity 0.25s ease-in-out,
-            width 0.25s ease-in-out,
-            height 0.25s ease-in-out;
-            -o-transition: opacity 0.25s ease-in-out,
-            width 0.25s ease-in-out,
-            height 0.25s ease-in-out;
-            transition: opacity 0.25s ease-in-out,
-            width 0.25s ease-in-out,
-            height 0.25s ease-in-out;
+            -webkit-transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
+            -moz-transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
+            -o-transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
+            transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
             .pin-content {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
                 opacity: 1;
-                -webkit-transition: opacity 0.25s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
-                -webkit-transition-delay: 0.25s, 0.25s, 0.25s;
-                transition-delay: 0.25s, 0.25s, 0.25s;
-                -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
-                -o-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
-                transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+                -webkit-transition: opacity 0.15s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
+                -webkit-transition-delay: 0.15s, 0.15s, 0.15s;
+                transition-delay: 0.15s, 0.15s, 0.15s;
+                -moz-transition: opacity 0.15s ease-in-out 0.15s, height 0 ease-in-out 0.15s, overflow 0 ease-in-out 0.15s;
+                -o-transition: opacity 0.15s ease-in-out 0.15s, height 0 ease-in-out 0.15s, overflow 0 ease-in-out 0.15s;
+                transition: opacity 0.15s ease-in-out 0.15s, height 0 ease-in-out 0.15s, overflow 0 ease-in-out 0.15s;
                 overflow: hidden;
             }
         }
@@ -1027,10 +1026,10 @@ textarea:focus {
         background-color: transparent;
         cursor: pointer;
         z-index: 2;
-        -webkit-transition: opacity 0.25s ease-in-out;
-        -moz-transition: opacity 0.25s ease-in-out;
-        -o-transition: opacity 0.25s ease-in-out;
-        transition: opacity 0.25s ease-in-out;
+        -webkit-transition: opacity 0.15s ease-in-out;
+        -moz-transition: opacity 0.15s ease-in-out;
+        -o-transition: opacity 0.15s ease-in-out;
+        transition: opacity 0.15s ease-in-out;
     }
     .pin-content {
         .restaurant {

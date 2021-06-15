@@ -26,11 +26,11 @@
             <% @pins.each do |pin| %>
                 <% rest = Restinfo.find(pin.restinfo_id) %>
                 <button class="pin" style="top: <%= pin.pos_y %>%; left: <%= pin.pos_x %>%">
-                <img src="../assets/pin/<%= pin.pin_image %>.png" class="pin-img" />
+                <img src="../assets/pin/world/<%= pin.pin_image %>.png" class="pin-img" />
                 <div class="pin-content">
                     <div class="country" style="color: <%= rest.font %>"><%= rest.flag %></div>
                     <a href="#modal<%= rest.googleurl%>" style="text-decoration:none", class="restaurant" >
-                        <img src="../assets/restaurant/samarkant/samarkant_menu2.png" class="res-img" />
+                        <img src= "assets/restaurant/<%=rest.restname%>/menu1.png" class="res-img" />
                         <div class="res-name"><%= rest.rest_kor %></div>
                     </a>
                 
