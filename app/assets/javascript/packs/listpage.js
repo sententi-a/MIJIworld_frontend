@@ -104,11 +104,9 @@
         return match;
     }
 
-    /*
     function renderCount(count) {
         el.heading.innerHTML = `${count} Matches`;
     }
-    */
 
     function applyFilter() {
         Array.from(el.items).forEach((item) => {
@@ -160,9 +158,8 @@
                 item.classList.remove("selected");
             }
         });
-        /*
+
         renderCount(el.list.querySelectorAll(".selected").length);
-        */
     }
 
     function isFilter() {
@@ -192,28 +189,29 @@
             applyFilter();
         } else {
             el.list.classList.remove("filtered");
-            /*renderCount(el.items.length);*/
+            renderCount(el.items.length);
         }
     }
 
     function onDocumentReady() {
-        /*el.heading = document.querySelector(".cars-heading");*/
+        el.heading = document.querySelector(".renderCount");
         /*el.sort = document.querySelector(".sort select");*/
         el.filters = document.querySelector(".filters");
         el.filtersList = el.filters.querySelectorAll("input");
         el.list = document.querySelector(".list");
         el.items = el.list.querySelectorAll(".card");
 
-        /*renderCount(el.items.length);*/
+        renderCount(el.items.length);
 
         Array.from(el.filtersList).forEach((input) => {
             // add match count to the label
-            input.parentNode.append(` (${matches(input.name, input.value)})`);
+            /*input.parentNode.append(` (${matches(input.name, input.value)})`);*/
 
             input.addEventListener("change", (event) => {
                 onFilterChange(event.target);
             });
         });
+
         /*
         el.sort.addEventListener("change", (event) => {
             onSortChange(event.target);

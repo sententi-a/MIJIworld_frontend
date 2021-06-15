@@ -97,34 +97,37 @@ html {
     justify-self: center;
     margin-bottom: 7px;
 }
-/*
-label span {
-    display: flex;
+
+label {
     cursor: pointer;
+}
+
+label input[type="checkbox"] {
+    visibility: hidden;
+}
+
+label span {
+    position: relative;
+    display: inline-block;
     background: rgba(248, 248, 248, 0.548);
-    width: 110px;
+    width: 100px;
     height: 30px;
-    justify-content: center;
-    align-items: center;
-    border-style: hidden;
     border-radius: 20px;
+    text-align: center;
+    transition: 0.5s;
+    user-select: none;
+    overflow: hidden;
+    border-style: hidden;
     font-family: Noto Sans KR;
     font-size: 14px;
     font-weight: 400;
     color: #707070;
-    transition: 0.5s;
-    user-select: none;
-    overflow: hidden;
-}
-
-label input[type="checkbox"] {
-    display: none;
 }
 
 label input[type="checkbox"]:checked ~ span {
     background: #8d8debce;
 }
-*/
+
 .list {
     /* list는 대륙별 section으로 나누어져 있음 */
     padding-top: 125px;
@@ -191,7 +194,7 @@ label input[type="checkbox"]:checked ~ span {
     display: none;
 }
 
-.card a{
+.card a {
     display: grid;
     grid-template-areas: /* card 안 구조 */
         "title"
@@ -306,5 +309,5 @@ label input[type="checkbox"]:checked ~ span {
     /* 장소, 시간 글씨 크기, 굵기 */
     font-size: 9pt;
     font-weight: 350;
-    color:black;
+    color: black;
 }

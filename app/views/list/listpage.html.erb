@@ -58,57 +58,58 @@
                 <div class="location_filter">
                     <p>지역</p>
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="dongjak" />동작구 </span></label
+                        ><input id="checkbox" type="checkbox" name="location" value="dongjak" /><span>동작구</span></label
                     >
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="mapo" />마포구 </span></label
+                        ><input id="checkbox" type="checkbox" name="location" value="mapo" /><span>마포구</span></label
                     >
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="seodae" />서대문구 </span></label
+                        ><input id="checkbox" type="checkbox" name="location" value="seodae" /><span>서대문구</span></label
                     >
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="seocho" />서초구 </span></label
+                        ><input id="checkbox" type="checkbox" name="location" value="seocho" /><span>서초구</span></label
                     >
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="yongsan" />용산구 </span></label
+                        ><input id="checkbox" type="checkbox" name="location" value="yongsan" /><span>용산구</span></label
                     >
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="jongno" />종로구 </span></label
+                        ><input id="checkbox" type="checkbox" name="location" value="jongno" /><span>종로구</span></label
                     >
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="jung" />중구 </span></label
+                        ><input id="checkbox" type="checkbox" name="location" value="jung" /><span>중구</span></label
                     >
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="jeongbu" />의정부시 </span></label
+                        ><input id="checkbox" type="checkbox" name="location" value="jeongbu" /><span>의정부시</span></label
                     >
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="location" value="pyeongtaek" />평택시 </span></label
+                        ><input id="checkbox" type="checkbox" name="location" value="pyeongtaek" /><span>평택시</span></label
                     >
                 </div>
                 <div class="price_filter">
                     <p>가격대</p>
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="price" value="under10" />만원미만 </span></label
+                        ><input id="checkbox" type="checkbox" name="price" value="under10" /><span>만원미만</span></label
                     >
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="price" value="10" />1만원대 </span></label
+                        ><input id="checkbox" type="checkbox" name="price" value="10" /><span>1만원대</span></label
                     >
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="price" value="20" />2만원대 </span></label
+                        ><input id="checkbox" type="checkbox" name="price" value="20" /><span>2만원대</span></label
                     >
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="price" value="30" />3만원대 </span></label
+                        ><input id="checkbox" type="checkbox" name="price" value="30" /><span>3만원대</span></label
                     >
                 </div>
                 <div class="type_filter">
                     <p>종류</p>
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="type" value="restaurant" />식사 </span></label
+                        ><input id="checkbox" type="checkbox" name="type" value="restaurant" /><span>식사</span></label
                     >
                     <label
-                        ><span class="space"><input id="checkbox" type="checkbox" name="type" value="cafe" />카페 </span></label
+                        ><input id="checkbox" type="checkbox" name="type" value="cafe" /><span>카페</span></label
                     >
                 </div>
+                <h5 class="renderCount"></h5>
             </div>
 
             <div class="list">
@@ -122,23 +123,23 @@
                             <% if restinfo.continent == '아프리카' %>
                                 
                                     <div class="card" data-location=<%=restinfo.filter_where%> data-price=<%=restinfo.filter_price%> data-type=<%=restinfo.filter_type%>>
-                                    <a href="#modal<%= restinfo.googleurl%>" style="text-decoration:none">   
-                                        <div class="title">
-                                            <!--DB에서 가져오기-->
-                                            <div class="flag"><img src= <%= "assets/restaurant/"+ restinfo.restname + "/flag.png"%> /></div>
-                                            <div class="country" style=<%= "color:"+ restinfo.font%>><%= restinfo.flag%></div>
-                                        </div>
-                                        <div class="content">
-                                            <!--DB에서 가져오기-->
-                                            <div class="food"><img src=<%= "assets/restaurant/"+ restinfo.restname + "/menu1.png"%> /></div>
-                                            <div class="restaurant"><%= restinfo.rest_kor %></div>
-                                            <div class="address_time">
-                                                <img class="address" src="assets/list/address.png" />
-                                                <h4 class="address_h4"><%=restinfo.address%></h4>
-                                                <img class="time" src="assets/list/clock.png" />
-                                                <h4 class="time_h4"><%=restinfo.openwhen%></h4>
+                                        <a href="#modal<%= restinfo.googleurl%>" style="text-decoration:none">   
+                                            <div class="title">
+                                                <!--DB에서 가져오기-->
+                                                <div class="flag"><img src= <%= "assets/restaurant/"+ restinfo.restname + "/flag.png"%> /></div>
+                                                <div class="country" style=<%= "color:"+ restinfo.font%>><%= restinfo.flag%></div>
                                             </div>
-                                        </div>
+                                            <div class="content">
+                                                <!--DB에서 가져오기-->
+                                                <div class="food"><img src=<%= "assets/restaurant/"+ restinfo.restname + "/menu1.png"%> /></div>
+                                                <div class="restaurant"><%= restinfo.rest_kor %></div>
+                                                <div class="address_time">
+                                                    <img class="address" src="assets/list/address.png" />
+                                                    <h4 class="address_h4"><%=restinfo.address%></h4>
+                                                    <img class="time" src="assets/list/clock.png" />
+                                                    <h4 class="time_h4"><%=restinfo.openwhen%></h4>
+                                                </div>
+                                            </div>
                                         </a>
                                     </div>
                                 
@@ -155,23 +156,23 @@
                             <% if restinfo.continent == '아시아' %>
                             
                                 <div class="card" data-location=<%=restinfo.filter_where%> data-price=<%=restinfo.filter_price%> data-type=<%=restinfo.filter_type%>>
-                                <a href="#modal<%= restinfo.googleurl%>" style="text-decoration:none">    
-                                    <div class="title">
-                                        <!--DB에서 가져오기-->
-                                        <div class="flag"><img src= <%= "assets/restaurant/"+ restinfo.restname + "/flag.png"%> /></div>
-                                        <div class="country" style=<%= "color:"+ restinfo.font%>><%= restinfo.flag%></div>
-                                    </div>
-                                    <div class="content">
-                                        <!--DB에서 가져오기-->
-                                        <div class="food"><img src=<%= "assets/restaurant/"+ restinfo.restname + "/menu1.png"%> /></div>
-                                        <div class="restaurant"><%=restinfo.rest_kor%></div>
-                                        <div class="address_time">
-                                            <img class="address" src="assets/list/address.png" />
-                                            <h4 class="address_h4"><%=restinfo.address%></h4>
-                                            <img class="time" src="assets/list/clock.png" />
-                                            <h4 class="time_h4"><%=restinfo.openwhen%></h4>
+                                    <a href="#modal<%= restinfo.googleurl%>" style="text-decoration:none">    
+                                        <div class="title">
+                                            <!--DB에서 가져오기-->
+                                            <div class="flag"><img src= <%= "assets/restaurant/"+ restinfo.restname + "/flag.png"%> /></div>
+                                            <div class="country" style=<%= "color:"+ restinfo.font%>><%= restinfo.flag%></div>
                                         </div>
-                                    </div>
+                                        <div class="content">
+                                            <!--DB에서 가져오기-->
+                                            <div class="food"><img src=<%= "assets/restaurant/"+ restinfo.restname + "/menu1.png"%> /></div>
+                                            <div class="restaurant"><%=restinfo.rest_kor%></div>
+                                            <div class="address_time">
+                                                <img class="address" src="assets/list/address.png" />
+                                                <h4 class="address_h4"><%=restinfo.address%></h4>
+                                                <img class="time" src="assets/list/clock.png" />
+                                                <h4 class="time_h4"><%=restinfo.openwhen%></h4>
+                                            </div>
+                                        </div>
                                     </a>
                                 </div>
                             
@@ -188,24 +189,24 @@
                             <% if restinfo.continent == '유럽/아메리카' %>
                             
                                 <div class="card" data-location=<%=restinfo.filter_where%> data-price=<%=restinfo.filter_price%> data-type=<%=restinfo.filter_type%>>
-                                <a href="#modal<%= restinfo.googleurl%>" style="text-decoration:none">    
-                                <div class="title">
-                                        <!--DB에서 가져오기-->
-                                        <div class="flag"><img src= <%= "assets/restaurant/"+ restinfo.restname + "/flag.png"%> /></div>
-                                        <div class="country" style=<%= "color:"+ restinfo.font%>><%= restinfo.flag%></div>
-                                    </div>
-                                    <div class="content">
-                                        <!--DB에서 가져오기-->
-                                        <div class="food"><img src=<%= "assets/restaurant/"+ restinfo.restname + "/menu1.png"%> /></div>
-                                        <div class="restaurant"><%=restinfo.rest_kor%></div>
-                                        <div class="address_time">
-                                            <img class="address" src="assets/list/address.png" />
-                                            <h4 class="address_h4"><%=restinfo.address%></h4>
-                                            <img class="time" src="assets/list/clock.png" />
-                                            <h4 class="time_h4"><%=restinfo.openwhen%></h4>
+                                    <a href="#modal<%= restinfo.googleurl%>" style="text-decoration:none">    
+                                        <div class="title">
+                                            <!--DB에서 가져오기-->
+                                            <div class="flag"><img src= <%= "assets/restaurant/"+ restinfo.restname + "/flag.png"%> /></div>
+                                            <div class="country" style=<%= "color:"+ restinfo.font%>><%= restinfo.flag%></div>
                                         </div>
-                                    </div>
-                                </a>    
+                                        <div class="content">
+                                            <!--DB에서 가져오기-->
+                                            <div class="food"><img src=<%= "assets/restaurant/"+ restinfo.restname + "/menu1.png"%> /></div>
+                                            <div class="restaurant"><%=restinfo.rest_kor%></div>
+                                            <div class="address_time">
+                                                <img class="address" src="assets/list/address.png" />
+                                                <h4 class="address_h4"><%=restinfo.address%></h4>
+                                                <img class="time" src="assets/list/clock.png" />
+                                                <h4 class="time_h4"><%=restinfo.openwhen%></h4>
+                                            </div>
+                                        </div>
+                                    </a>    
                                 </div>
                         
                             <% end %>
