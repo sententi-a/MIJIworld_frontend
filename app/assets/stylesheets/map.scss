@@ -22,6 +22,7 @@ ul {
 
 @for $i from 1 through 26 {
     #modalsmall#{$i} {
+        font-family:Noto Sans KR;
         z-index: 100;
         margin: auto;
         position: fixed;
@@ -172,6 +173,7 @@ ul {
 
 details {
     >summary {
+        font-family:Noto Sans KR;
         margin-top: -5px;
         text-align: center;
         outline: 0;
@@ -210,6 +212,7 @@ details {
 /*구글 지도 길찾기*/
 
 #map {
+    font-family:Noto Sans KR;
     width: 540px;
     height: 270px;
     border: 0;
@@ -224,6 +227,7 @@ details {
 /*content2 : restaurant description*/
 
 #content2 {
+    font-family:Noto Sans KR;
     width: 100%;
     height: 80px;
     display: flex;
@@ -246,6 +250,7 @@ details {
 /*레스토랑 상세 설명*/
 
 #content3 {
+    font-family:Noto Sans KR;
     width: inherit;
     height: 213.75px;
     margin: auto;
@@ -273,6 +278,7 @@ details {
 /*content4 : menu */
 
 #content4 {
+    font-family:Noto Sans KR;
     margin-top: 20px;
     width: 100%;
     height: 280px;
@@ -367,6 +373,7 @@ details {
 /*슬라이드*/
 
 #content5 {
+    font-family:Noto Sans KR;
     width: 100%;
     height: 300px;
     display: flex;
@@ -455,6 +462,7 @@ details {
 
 #content6 {
     /* padding-top: 20px; */
+    font-family:Noto Sans KR;
     width: 100%;
     height: 80px;
     display: flex;
@@ -502,6 +510,7 @@ details {
             margin-left: 0;
         }
         p {
+            font-family:Noto Sans KR;
             padding-top: 8px;
             font-size: 17px;
             font-weight: 700;
@@ -570,6 +579,7 @@ details {
         overflow: hidden;
         div{
         img {
+            
             width: 100px;
             height: 30px;
             display: inline;
