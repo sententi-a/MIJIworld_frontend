@@ -177,7 +177,7 @@ label input[type="checkbox"]:checked ~ span {
     justify-self: center; /* 가운데 맞춤 */
 }
 
-.section_head button {
+.toggle {
     /* 버튼 초기 설정 reset */
     border: none;
     padding: 0;
@@ -196,18 +196,59 @@ label input[type="checkbox"]:checked ~ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("/assets/icon/list_toggle_down.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 20px;
 }
 
 .section_head img {
     /* 지구본 이미지 크기, 우측 여백 */
     width: 18px;
     padding: 2px 3px;
+    opacity: 0;
 }
 
-.section_head button:hover {
+.toggle:hover {
     /* 대륙 이름 버튼 호버 효과 */
     color: #363535;
     cursor: pointer;
+    background-image: url("/assets/icon/list_toggle_down_hover.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 20px;
+}
+
+.toggle_down {
+    /* 버튼 초기 설정 reset */
+    border: none;
+    padding: 0;
+    background: transparent;
+    /* font와 color 설정을 부모 요소로부터 받아옴 */
+    font: inherit;
+    color: inherit;
+    /* 대륙 이름 아래 여백 */
+    margin-bottom: 7px;
+    /* 글씨 크기 설정 */
+    font-size: 15pt;
+    font-weight: bold;
+    /* 대륙 이름 아래 하얀색 선 */
+    border-bottom: 3px solid #ffffff69;
+    width: max-content; /* 선의 길이가 대륙 이름 길이에 맞게 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/icon/list_toggle.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 20px;
+}
+
+.toggle_down:hover {
+    background-image: url("/assets/icon/list_toggle_hover.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 20px;
 }
 
 .section_content {

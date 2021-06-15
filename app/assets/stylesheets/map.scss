@@ -956,7 +956,7 @@ textarea:focus {
             0.5);
             filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
             opacity: 1;
-            width: 300px;
+            width: 260px;
             height: 140px;
             color: #000000;
             z-index: 3;
@@ -1047,7 +1047,7 @@ textarea:focus {
     .pin-content {
         .restaurant {
             background: rgba(255, 255, 255, 1);
-            width: 160px;
+            width: 180px;
             height: 50px;
             object-fit: contain;
             -webkit-border-radius: 10px;
@@ -1080,9 +1080,6 @@ textarea:focus {
                 padding-right: 5%;
                 z-index: 4;
                 float: left;
-                &:hover {
-                    color: blue;
-                }
             }
         }
     }

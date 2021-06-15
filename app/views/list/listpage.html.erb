@@ -116,7 +116,7 @@
                 <div class="section">
                     <div class="section_head">
                         <!--대륙 이름 옆에 숫자 구현해야 됨-->
-                        <button><img src="assets/list/globe.png" />아프리카</button>
+                        <button class="toggle" onclick="myFunction(this)"><img src="assets/list/globe.png" /><p>아프리카</p></button>
                     </div>
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
@@ -149,7 +149,7 @@
                 </div>
                 <div class="section">
                     <div class="section_head">
-                        <button><img src="assets/list/globe.png" />아시아</button>
+                        <button class="toggle" onclick="myFunction(this)"><img src="assets/list/globe.png" /><p>아시아</p></button>
                     </div>
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
@@ -182,7 +182,7 @@
                 </div>
                 <div class="section">
                     <div class="section_head">
-                        <button><img src="assets/list/globe.png" />유럽/아메리카</button>
+                        <button class="toggle" onclick="myFunction(this)"><img src="assets/list/globe.png" /><p>유럽/아메리카</p></button>
                     </div>
                     <div class="section_content">
                         <% @restinfos.each do |restinfo|%>
@@ -223,6 +223,11 @@
                         });
                         //클릭 -> 토글 기능
                     });
+                </script>
+                <script>
+                    function myFunction(x) {
+                      x.classList.toggle("toggle_down");
+                    }
                 </script>
                 <script language="JavaScript" type="text/javascript" src="assets/packs/listpage.js"></script>
             </div>
