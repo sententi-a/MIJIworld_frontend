@@ -105,7 +105,7 @@
     }
 
     function renderCount(count) {
-        el.heading.innerHTML = `${count} Matches`;
+        el.heading.innerHTML = `검색 결과: ${count} 개`;
     }
 
     function applyFilter() {
