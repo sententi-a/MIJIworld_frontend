@@ -22,6 +22,7 @@ ul {
 
 @for $i from 1 through 26 {
     #modalsmall#{$i} {
+        font-family: Noto Sans KR;
         z-index: 100;
         margin: auto;
         position: fixed;
@@ -172,6 +173,7 @@ ul {
 
 details {
     >summary {
+        font-family: Noto Sans KR;
         margin-top: -5px;
         text-align: center;
         outline: 0;
@@ -210,6 +212,7 @@ details {
 /*구글 지도 길찾기*/
 
 #map {
+    font-family: Noto Sans KR;
     width: 540px;
     height: 270px;
     border: 0;
@@ -224,6 +227,7 @@ details {
 /*content2 : restaurant description*/
 
 #content2 {
+    font-family: Noto Sans KR;
     width: 100%;
     height: 80px;
     display: flex;
@@ -246,6 +250,7 @@ details {
 /*레스토랑 상세 설명*/
 
 #content3 {
+    font-family: Noto Sans KR;
     width: inherit;
     height: 213.75px;
     margin: auto;
@@ -273,6 +278,7 @@ details {
 /*content4 : menu */
 
 #content4 {
+    font-family: Noto Sans KR;
     margin-top: 20px;
     width: 100%;
     height: 280px;
@@ -367,6 +373,7 @@ details {
 /*슬라이드*/
 
 #content5 {
+    font-family: Noto Sans KR;
     width: 100%;
     height: 300px;
     display: flex;
@@ -455,6 +462,7 @@ details {
 
 #content6 {
     /* padding-top: 20px; */
+    font-family: Noto Sans KR;
     width: 100%;
     height: 80px;
     display: flex;
@@ -502,6 +510,7 @@ details {
             margin-left: 0;
         }
         p {
+            font-family: Noto Sans KR;
             padding-top: 8px;
             font-size: 17px;
             font-weight: 700;
@@ -522,7 +531,7 @@ details {
 
 .rate_box {
     width: 170px;
-    height: 150px;
+    height: 158px;
     /* padding: 8px 45px 10px; */
     border-radius: 10px;
     margin-left: 20px;
@@ -541,18 +550,17 @@ details {
         display: block;
         width: 65px;
         height: 65px;
-        margin-left: 29%;
-        margin-top: 8px;
-        padding-top: 8px;
+        margin-left: 31%;
+        margin-top: 6px;
+        padding-top: 6px;
     }
     h3 {
         display: block;
-        font-family: Jalnan;
+        font-family: yg-Jalnan;
         font-size: 20px;
         font-weight: normal;
         text-align: center;
         color: #616161;
-        padding-top: 4px;
     }
     h4 {
         display: block;
@@ -580,6 +588,7 @@ details {
             }
         }
     }
+     :hover {}
 }
 
 
@@ -1074,33 +1083,12 @@ textarea:focus {
     width: 100%;
     position: fixed;
     bottom: 0%;
-    /* 푸터 영역 아래 여백 */
-    margin-bottom: 10pt;
-    display: flex;
-    justify-content: center;
-}
-
-.map-footer p {
+    /* 지도 보기 글씨 조절 */
+    text-align: center;
     font-size: 10pt;
     color: #aeaef9;
-    text-align: center;
-    font-family: Noto Sans KR;
-}
-
-.map-footer a.toListButton:hover {
-    background-image: url("/assets/icon/scroll_down_hover.png");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-}
-
-.map-footer a.toListButton {
-    background-image: url("/assets/icon/scroll_down.png");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    display: block;
-    text-align: center;
-    height: 40px;
-    width: 55px;
+    /* 헤더 영역 위아래 여백 */
+    margin-bottom: 10pt;
 }
 
 .list-button {
