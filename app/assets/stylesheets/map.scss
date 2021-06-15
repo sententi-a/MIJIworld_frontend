@@ -63,7 +63,9 @@ ul {
     }
 }
 
+
 /*국기 이미지*/
+
 
 /*나가기 버튼*/
 
@@ -88,9 +90,12 @@ ul {
     }
 }
 
+
 /*국가명*/
 
+
 /*사이 여백*/
+
 
 /*content1 : restaurant name, open time, address*/
 
@@ -125,7 +130,9 @@ ul {
     }
 }
 
+
 /*레스토랑 이름*/
+
 
 /*티켓 버튼*/
 
@@ -149,7 +156,9 @@ ul {
     }
 }
 
+
 /*영업시간, 주소부분 margin값*/
+
 
 /*주소 toggle*/
 
@@ -157,12 +166,12 @@ ul {
     display: none;
 }
 
-#toggle:checked + #map {
+#toggle:checked+#map {
     display: block;
 }
 
 details {
-    > summary {
+    >summary {
         margin-top: -5px;
         text-align: center;
         outline: 0;
@@ -174,10 +183,10 @@ details {
             color: #8d8deb;
         }
     }
-    &[open] > summary ~ * {
+    &[open]>summary~* {
         animation: reveal 0.5s;
     }
-    > p {
+    >p {
         padding-top: 20px;
         font-size: 20px;
         font-weight: bold;
@@ -197,6 +206,7 @@ details {
     }
 }
 
+
 /*구글 지도 길찾기*/
 
 #map {
@@ -209,6 +219,7 @@ details {
     margin: 0px auto;
     margin-bottom: 50px;
 }
+
 
 /*content2 : restaurant description*/
 
@@ -230,6 +241,7 @@ details {
         color: #979797;
     }
 }
+
 
 /*레스토랑 상세 설명*/
 
@@ -256,6 +268,7 @@ details {
         height: 180px;
     }
 }
+
 
 /*content4 : menu */
 
@@ -335,15 +348,21 @@ details {
     }
 }
 
+
 /*메뉴 설명 박스*/
+
 
 /*메뉴 이름*/
 
+
 /*메뉴 상세설명*/
+
 
 /*메뉴 가격*/
 
+
 /*메뉴 태그*/
+
 
 /*슬라이드*/
 
@@ -356,7 +375,9 @@ details {
     margin-top: 10px;
 }
 
+
 /*현재 사진의 가로 세로 비율에 따라 세로크기가 결정되고 있습니다.*/
+
 
 /*현재 슬라이드 사진은 가로세로 6:4, 가로 600px입니다. 700px을 넘어가면 상관없는데 700px보다 작으면 슬라이드가 작아집니다.*/
 
@@ -378,7 +399,7 @@ details {
             background-color: #fff;
             width: 100%;
             transition: all 1s;
-            > a {
+            >a {
                 display: inline-block;
                 width: auto;
                 position: relative;
@@ -429,6 +450,7 @@ details {
     display: none;
 }
 
+
 /*content6 : expression*/
 
 #content6 {
@@ -453,6 +475,7 @@ details {
         color: #707070;
     }
 }
+
 
 /*평점 보기*/
 
@@ -488,9 +511,12 @@ details {
     }
 }
 
+
 /*평점보기 박스*/
 
+
 /*네이버지도/카카오맵/구글맵*/
+
 
 /*평점보기 내부 박스*/
 
@@ -506,6 +532,7 @@ details {
     flex-direction: row;
     align-items: center;
 }
+
 
 /*지도 검색엔진 아이콘*/
 
@@ -555,7 +582,9 @@ details {
     }
 }
 
+
 /*평점 (숫자)*/
+
 
 /*n명의 후기*/
 
@@ -593,7 +622,9 @@ details {
     }
 }
 
+
 /*나만의 여행 티켓 만들기*/
+
 
 /*ticket diy div*/
 
@@ -624,9 +655,12 @@ details {
     }
 }
 
+
 /*티켓 이미지*/
 
+
 /*입력 영역*/
+
 
 /*날짜 입력 영역*/
 
@@ -644,25 +678,29 @@ details {
         text-align: left;
         color: #616161;
     }
-
     input {
-        width: 70%; /* 원하는 너비 설정 */
-        height: auto; /* 높이값 초기화 */
-        line-height: normal; /* line-height 초기화 */
+        width: 70%;
+        /* 원하는 너비 설정 */
+        height: auto;
+        /* 높이값 초기화 */
+        line-height: normal;
+        /* line-height 초기화 */
         margin-left: 14%;
-        padding: 0.7em 0.3em; /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */
+        padding: 0.7em 0.3em;
+        /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */
         border: 1px solid #ffffff;
         border-radius: 5px;
         box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
-        outline-style: none; /* 포커스시 발생하는 효과 제거를 원한다면 */
-        -webkit-appearance: none; /* 브라우저별 기본 스타일링 제거 */
+        outline-style: none;
+        /* 포커스시 발생하는 효과 제거를 원한다면 */
+        -webkit-appearance: none;
+        /* 브라우저별 기본 스타일링 제거 */
         -moz-appearance: none;
         appearance: none;
     }
     &:focus {
         box-shadow: 0 0 5px #8d8deb;
     }
-
     img {
         width: 70%;
         margin-left: 16%;
@@ -827,6 +865,7 @@ textarea:focus {
     }
 }
 
+
 /*header*/
 
 .world-map {
@@ -855,20 +894,20 @@ textarea:focus {
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out;
-        -webkit-transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
-        transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
-        -moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
-        -o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
-        transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+        -webkit-transition: opacity 0.15s ease-in-out, width 0.15s ease-in-out, height 0.15s ease-in-out, z-index 0.15s ease-in-out;
+        -webkit-transition-delay: 0.15s, 0.15s, 0.15s, 0.15s;
+        transition-delay: 0.15s, 0.15s, 0.15s, 0.15s;
+        -moz-transition: opacity 0.15s ease-in-out 0.15s, width 0.15s ease-in-out 0.15s, height 0.15s ease-in-out 0.15s, z-index 0.15s ease-in-out 0.15s;
+        -o-transition: opacity 0.15s ease-in-out 0.15s, width 0.15s ease-in-out 0.15s, height 0.15s ease-in-out 0.15s, z-index 0.15s ease-in-out 0.15s;
+        transition: opacity 0.15s ease-in-out 0.15s, width 0.15s ease-in-out 0.15s, height 0.15s ease-in-out 0.15s, z-index 0.15s ease-in-out 0.15s;
         .pin-content {
             font-family: "yg-jalnan";
             filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
             opacity: 0;
-            -webkit-transition: opacity 0.25s ease-in-out;
-            -moz-transition: opacity 0.25s ease-in-out;
-            -o-transition: opacity 0.25s ease-in-out;
-            transition: opacity 0.25s ease-in-out;
+            -webkit-transition: opacity 0.15s ease-in-out;
+            -moz-transition: opacity 0.15s ease-in-out;
+            -o-transition: opacity 0.15s ease-in-out;
+            transition: opacity 0.15s ease-in-out;
             width: 100%;
             height: 100%;
             left: 50%;
@@ -882,33 +921,44 @@ textarea:focus {
             .pin-img {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
                 opacity: 0;
-                -webkit-transition: opacity 0.25s ease-in-out;
-                -moz-transition: opacity 0.25s ease-in-out;
-                -o-transition: opacity 0.25s ease-in-out;
-                transition: opacity 0.25s ease-in-out;
+                -webkit-transition: opacity 0.15s ease-in-out;
+                -moz-transition: opacity 0.15s ease-in-out;
+                -o-transition: opacity 0.15s ease-in-out;
+                transition: opacity 0.15s ease-in-out;
             }
             margin: 0;
             padding: 0;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255,
+            255,
+            255,
+            0.5);
             filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
             opacity: 1;
             width: 300px;
             height: 140px;
             color: #000000;
             z-index: 3;
-            -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
-            -moz-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
-            -o-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
-            transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+            -webkit-transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
+            -moz-transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
+            -o-transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
+            transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
             .pin-content {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
                 opacity: 1;
-                -webkit-transition: opacity 0.25s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
-                -webkit-transition-delay: 0.25s, 0.25s, 0.25s;
-                transition-delay: 0.25s, 0.25s, 0.25s;
-                -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
-                -o-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
-                transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+                -webkit-transition: opacity 0.15s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
+                -webkit-transition-delay: 0.15s, 0.15s, 0.15s;
+                transition-delay: 0.15s, 0.15s, 0.15s;
+                -moz-transition: opacity 0.15s ease-in-out 0.15s, height 0 ease-in-out 0.15s, overflow 0 ease-in-out 0.15s;
+                -o-transition: opacity 0.15s ease-in-out 0.15s, height 0 ease-in-out 0.15s, overflow 0 ease-in-out 0.15s;
+                transition: opacity 0.15s ease-in-out 0.15s, height 0 ease-in-out 0.15s, overflow 0 ease-in-out 0.15s;
                 overflow: hidden;
             }
         }
@@ -916,33 +966,44 @@ textarea:focus {
             .pin-img {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
                 opacity: 0;
-                -webkit-transition: opacity 0.25s ease-in-out;
-                -moz-transition: opacity 0.25s ease-in-out;
-                -o-transition: opacity 0.25s ease-in-out;
-                transition: opacity 0.25s ease-in-out;
+                -webkit-transition: opacity 0.15s ease-in-out;
+                -moz-transition: opacity 0.15s ease-in-out;
+                -o-transition: opacity 0.15s ease-in-out;
+                transition: opacity 0.15s ease-in-out;
             }
             margin: 0;
             padding: 0;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255,
+            255,
+            255,
+            0.5);
             filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
             opacity: 1;
             width: 240px;
             height: 110px;
             color: #000000;
             z-index: 3;
-            -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
-            -moz-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
-            -o-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
-            transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+            -webkit-transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
+            -moz-transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
+            -o-transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
+            transition: opacity 0.15s ease-in-out,
+            width 0.15s ease-in-out,
+            height 0.15s ease-in-out;
             .pin-content {
                 filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
                 opacity: 1;
-                -webkit-transition: opacity 0.25s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
-                -webkit-transition-delay: 0.25s, 0.25s, 0.25s;
-                transition-delay: 0.25s, 0.25s, 0.25s;
-                -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
-                -o-transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
-                transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+                -webkit-transition: opacity 0.15s ease-in-out, height 0 ease-in-out, overflow 0 ease-in-out;
+                -webkit-transition-delay: 0.15s, 0.15s, 0.15s;
+                transition-delay: 0.15s, 0.15s, 0.15s;
+                -moz-transition: opacity 0.15s ease-in-out 0.15s, height 0 ease-in-out 0.15s, overflow 0 ease-in-out 0.15s;
+                -o-transition: opacity 0.15s ease-in-out 0.15s, height 0 ease-in-out 0.15s, overflow 0 ease-in-out 0.15s;
+                transition: opacity 0.15s ease-in-out 0.15s, height 0 ease-in-out 0.15s, overflow 0 ease-in-out 0.15s;
                 overflow: hidden;
             }
         }
@@ -956,10 +1017,10 @@ textarea:focus {
         background-color: transparent;
         cursor: pointer;
         z-index: 2;
-        -webkit-transition: opacity 0.25s ease-in-out;
-        -moz-transition: opacity 0.25s ease-in-out;
-        -o-transition: opacity 0.25s ease-in-out;
-        transition: opacity 0.25s ease-in-out;
+        -webkit-transition: opacity 0.15s ease-in-out;
+        -moz-transition: opacity 0.15s ease-in-out;
+        -o-transition: opacity 0.15s ease-in-out;
+        transition: opacity 0.15s ease-in-out;
     }
     .pin-content {
         .restaurant {
