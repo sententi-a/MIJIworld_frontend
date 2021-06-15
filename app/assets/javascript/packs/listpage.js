@@ -105,7 +105,7 @@
     }
 
     function renderCount(count) {
-        el.heading.innerHTML = `검색 결과: ${count} 개`;
+        el.heading.innerHTML = `검색 결과: ${count}개`;
     }
 
     function applyFilter() {
@@ -187,6 +187,7 @@
         if (filtered) {
             el.list.classList.add("filtered");
             applyFilter();
+            pageScroll();
         } else {
             el.list.classList.remove("filtered");
             renderCount(el.items.length);
@@ -224,3 +225,8 @@
         document.addEventListener("DOMContentLoaded", onDocumentReady);
     }
 })();
+
+function pageScroll() {
+    window.scrollBy(0, 1);
+    scrolldelay = setTimeout(pageScroll, 10);
+}
