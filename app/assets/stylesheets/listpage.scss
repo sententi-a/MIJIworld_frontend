@@ -191,7 +191,7 @@ label input[type="checkbox"]:checked ~ span {
     display: none;
 }
 
-.card {
+.card a{
     display: grid;
     grid-template-areas: /* card 안 구조 */
         "title"
