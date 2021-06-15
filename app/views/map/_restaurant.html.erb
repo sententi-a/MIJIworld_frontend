@@ -170,7 +170,8 @@
 
                 <ul>
                   <li>
-                    <p>네이버 지도</p>
+
+                    <a><p>네이버 지도</p></a>
                     <div class ="rate_box">
                       <img src ="../assets/icon/navermap.png">
                       <h3><%= a.ratingnaver %></h3>
@@ -220,7 +221,7 @@
                 <li>
                   <%# <h1>날짜</h1> %>
                   <%# <span id ="datevalue"></span> %>
-                  <input type = "text" placeholder="날짜 ex) 2022.01.01" name="ticket[datepick]" required minlength="0" >
+                  <input type = "text" placeholder="언제? ex) 2022.01.01" name="ticket[datepick]" >
                   <%# <div id ="datepicker"></div> %>
                 </li>
                 <li>
@@ -235,19 +236,19 @@
               <ul>
                 <li>
                   <!--<h1>이름</h1>-->
-                  <input type="text" placeholder="이름" name="ticket[name]" required minlength="2" maxlength="8" >
+                  <input type="text" placeholder="이름" name="ticket[name]" >
                 </li>
                 <li>
                   <!--                  <h1>동행인</h1>-->
-                  <input type="text" placeholder="동행인"name="ticket[with]" required minlength="0" maxlength="8">
+                  <input type="text" placeholder="누구랑?"name="ticket[with]" >
                 </li>
                 <li>
                   <!--<h1>찜한 메뉴</h1>-->
-                  <input type="text" placeholder="찜한 메뉴"name="ticket[menu]" required minlength="0" maxlength="8" size="10">
+                  <input type="text" placeholder="원하는 말을"name="ticket[menu]" size="10">
                 </li>
                 <li>
                   <!--<h1>특이사항</h1>-->
-                  <input type="text" placeholder="특이사항"name="ticket[anything]"required minlength="0" maxlength="8" size="10">
+                  <input type="text" placeholder="입력하세요"name="ticket[anything]" size="10">
                 </li>
               </ul>
             </div>
