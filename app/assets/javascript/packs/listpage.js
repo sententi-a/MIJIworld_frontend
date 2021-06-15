@@ -187,7 +187,6 @@
         if (filtered) {
             el.list.classList.add("filtered");
             applyFilter();
-            pageScroll();
         } else {
             el.list.classList.remove("filtered");
             renderCount(el.items.length);
@@ -210,6 +209,7 @@
 
             input.addEventListener("change", (event) => {
                 onFilterChange(event.target);
+                scrollToTop();
             });
         });
 
@@ -226,7 +226,10 @@
     }
 })();
 
-function pageScroll() {
-    window.scrollBy(0, 1);
-    scrolldelay = setTimeout(pageScroll, 10);
+var timeOut;
+function scrollToTop() {
+    if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0) {
+        window.scrollBy(0, -100);
+        timeOut = setTimeout("scrollToTop()", 10);
+    } else clearTimeout(timeOut);
 }
