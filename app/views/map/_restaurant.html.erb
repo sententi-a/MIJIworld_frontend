@@ -6,8 +6,8 @@
 
         <div class="header" style="background-color:<%= a.header %>;">
           <img src="../assets/restaurant/<%=a.restname%>/flag.png" />
-        <div id="country" style="color:<%=a.font%>">  
-          
+        <div id="country" style="color:<%=a.font%>">
+
           <%=a.flag%></div>
           <button onclick="scrollToTop<%= a.googleurl %>()" id="exit_button<%= a.googleurl %>"></button>
           <script>
@@ -114,7 +114,7 @@
               <input type="radio" name="slide<%= a.googleurl %>" id="slide04<%= a.googleurl %>">
               <ul class="slidelist">
                 <li class="slideitem">
-                
+
                 <a><img src= "../assets/restaurant/<%=a.restname%>/slide01.jpg" </a>
                 </li>
                 <li class="slideitem">
@@ -176,10 +176,10 @@
                       <h3><%= a.ratingnaver %></h3>
                       <h4>(<%= a.ratersnaver %>명의 후기)</h4>
                       <span>
-                        <div style="overflow:hidden; display:flex; width:<%=a.ratingnaver %>%; height:30px;">
-                        <img src="../assets/icon/star_full.png" style="width:100px; height:30px; margin-top:-8px; margin-left:0.4px"></div>
-                      </span>
 
+                      <div style="overflow:hidden;width:<%=a.ratingnaver * 20%>%;height:30px"><img src = "assets/icon/star_full.png" width:100%;height:30px;>  </div>
+                      </span>
+                    </div>
 
                   </li>
                   <li>
@@ -189,14 +189,13 @@
                       <h3><%= a.ratingkakao %></h3>
                       <h4>(<%= a.raterskakao %>명의 후기)</h4>
                       <span>
-                        <div style="overflow:hidden; display:flex; width:<%=a.ratingkakao %>%; height:30px;">
-                        <img src="../assets/icon/star_full.png" style="width:100px; height:30px; margin-top:-8px; margin-left:0.4px"></div>
+                      <div style="overflow:hidden;width:<%=a.ratingkakao * 20%>%;height:30px"><img src = "assets/icon/star_full.png" width:100%;height:30px;>  </div>
                       </span>
+                    </div>
                   </li>
 
                 </ul>
-
-            </div>
+              </div>
 
 
           <div id ="ticket_title">
