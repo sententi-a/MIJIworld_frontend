@@ -35,8 +35,8 @@ html {
     z-index: 99;
     position: fixed;
     /* 헤더 영역 위아래 여백 */
-    top: 20px;
-    right: 0;
+    top: 1vw;
+    right: 1vw;
 }
 
 .list_header a.toMapButton:hover {
@@ -47,22 +47,24 @@ html {
 
 .list_header a.toMapButton {
     background-image: url("/assets/icon/map_button.png");
+    background-size:contain;
     background-repeat: no-repeat;
     background-position: center top;
     display: block;
     text-align: center;
-    height: 120px;
-    width: 60px;
+    height: 7vw;
+    width: 3.5vw;
 }
 
 .list_header a.toListButton {
     background-image: url("/assets/icon/list_button_clicked.png");
+    background-size:contain;
     background-repeat: no-repeat;
     background-position: center top;
     display: block;
     text-align: center;
-    height: 120px;
-    width: 60px;
+    height: 7vw;
+    width: 3.5vw;
 }
 
 .footer {
@@ -358,7 +360,7 @@ label input[type="checkbox"]:checked ~ span {
     /* 그리드 2열 1행에 위치함 */
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    font-size: 11pt;
+    font-size: 10.87pt;
     font-weight: 450;
     color: #5f5f5f;
     padding-top: 5px;
