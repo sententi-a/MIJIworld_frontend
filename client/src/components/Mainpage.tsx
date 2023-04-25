@@ -4,6 +4,10 @@ import Main from "../assets/images/main/main.png";
 import Logo from "../assets/images/main/logo_main.png";
 import { useNavigate } from "react-router-dom";
 
+interface BackImageProps {
+  path: string;
+}
+
 export default function Mainpage() {
   const navigate = useNavigate();
 
@@ -13,7 +17,7 @@ export default function Mainpage() {
 
   return (
     <>
-      <BackImage>
+      <BackImage path={Main}>
         <LogoImage src={Logo} />
         <Heading1>
           Eat the World, <br />
@@ -26,8 +30,8 @@ export default function Mainpage() {
   );
 }
 
-const BackImage = styled.div`
-  background-image: url(${Main});
+const BackImage = styled.div<BackImageProps>`
+  background-image: url(${(props) => props.path});
   background-size: cover;
   width: 100vw;
   height: 100vh;
