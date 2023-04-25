@@ -1,0 +1,396 @@
+/*listpage css*/
+
+/*reset*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    overflow-y: scroll; /* 스크롤바 항상 보이게 */
+}
+
+#list_body {
+    background: url("/assets/list/bg.png") no-repeat center center fixed; /* 배경 이미지 화면맞춤 */
+    background-size: cover;
+    font-family: Noto Sans KR; /* 디폴트 글씨체 */
+    font-weight: normal;
+    color: #707070;
+}
+
+.logo {
+    text-align: center;
+    img {
+        text-align: center;
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+}
+
+.list_header {
+    /* 지도 보기 상단 고정 */
+    z-index: 99;
+    position: fixed;
+    /* 헤더 영역 위아래 여백 */
+    top: 1vw;
+    right: 1vw;
+}
+
+.list_header a.toMapButton:hover {
+    background-image: url("/assets/icon/map_button_hover.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.list_header a.toMapButton {
+    background-image: url("/assets/icon/map_button.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+    text-align: center;
+    height: 7vw;
+    width: 3.5vw;
+}
+
+.list_header a.toListButton {
+    background-image: url("/assets/icon/list_button_clicked.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+    text-align: center;
+    height: 7vw;
+    width: 3.5vw;
+}
+
+.footer {
+    /* 페이지 하단 여백 */
+    width: auto;
+    height: 50px; /* 여백 높이 */
+    background: rgba(255, 255, 255, 0);
+    margin: auto;
+}
+
+.main {
+    /* 페이지 좌,우측 여백  이 왜 필요하지?*/
+    margin-left: 0;
+    margin-right: 0;
+    /*display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 0 50px;*/
+}
+
+.filters {
+    /*align-self: start;
+    margin-top: 40px;*/
+    display: grid;
+    gap: 20px 0; /* 필터 Part 간 상하 간격 */
+    place-items: start; /* 필터 Part들 위로 맞춤 정렬 */
+}
+
+#STATICMENU {
+    /* 필터 맞춤 스크롤 기본 설정 */
+    margin: 0pt;
+    padding: 0pt;
+    position: absolute;
+    left: 100px;
+    top: 150px;
+}
+
+.filters h5 {
+    justify-self: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #594ccfde;
+}
+
+.location_filter,
+.price_filter,
+.type_filter {
+    /* 필터 그리드 -> 버튼 2개씩 보이게 만들기 */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 7px; /* 버튼 간 상하 간격, 좌우 간격 */
+    justify-self: center;
+}
+
+.location_filter h3,
+.price_filter h3,
+.type_filter h3 {
+    /* 필터 종류가 가운데 맞춤 되도록 */
+    grid-column: 1 / span 2;
+    justify-self: center;
+    margin-bottom: 4px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+label {
+    cursor: pointer;
+}
+
+label input[type="checkbox"] {
+    display: none;
+}
+
+label span {
+    position: relative;
+    display: inline-block;
+    background: rgba(248, 248, 248, 0.548);
+    width: 85px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.2s;
+    user-select: none;
+    overflow: hidden;
+    border-style: hidden;
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    font-weight: 400;
+    color: #707070;
+}
+
+label span p {
+    vertical-align: middle;
+}
+
+label span:hover {
+    background: #8e8edf9c;
+    color: #fff;
+}
+
+label input[type="checkbox"]:checked ~ span {
+    background: #8d8debb7;
+    color: #fff;
+}
+
+.list {
+    /* list는 대륙별 section으로 나누어져 있음 */
+    padding-top: 45px;
+    display: grid;
+    gap: 60px 0; /* 대륙별 section 간 상하 간격 */
+    place-items: start center; /* section 위로 정렬, 가운데 맞춤 */
+}
+
+.section {
+    /* section은 section_head와 section_content로 나누어져 있음 */
+    /* z-index: 1; filter 영역보다 앞으로 -> filter와 card의 호버 효과가 서로 충돌하지 않도록 레벨 지정 */
+    display: grid;
+    /*grid-template-columns: 1fr 1fr;*/
+    gap: 15px 0; /* section_head와 section_content 간 상하 간격 */
+}
+
+.section_head {
+    /*grid-column: 1 / span 2;*/
+    justify-self: center; /* 가운데 맞춤 */
+}
+
+.toggle {
+    /* 버튼 초기 설정 reset */
+    border: none;
+    padding: 0;
+    background: transparent;
+    /* font와 color 설정을 부모 요소로부터 받아옴 */
+    font: inherit;
+    color: inherit;
+    /* 대륙 이름 아래 여백 */
+    margin-bottom: 7px;
+    /* 글씨 크기 설정 */
+    font-size: 15pt;
+    font-weight: bold;
+    /* 대륙 이름 아래 하얀색 선 */
+    border-bottom: 3px solid #ffffff69;
+    width: max-content; /* 선의 길이가 대륙 이름 길이에 맞게 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/icon/list_toggle_down.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 17px;
+}
+
+.section_head img {
+    /* 지구본 이미지 크기, 우측 여백 */
+    width: 18px;
+    padding-right: 2px;
+    opacity: 0;
+}
+
+.toggle:hover {
+    /* 대륙 이름 버튼 호버 효과 */
+    color: #363535;
+    cursor: pointer;
+    background-image: url("/assets/icon/list_toggle_down_hover.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 17px;
+}
+
+.toggle_down {
+    /* 버튼 초기 설정 reset */
+    border: none;
+    padding: 0;
+    background: transparent;
+    /* font와 color 설정을 부모 요소로부터 받아옴 */
+    font: inherit;
+    color: inherit;
+    /* 대륙 이름 아래 여백 */
+    margin-bottom: 7px;
+    /* 글씨 크기 설정 */
+    font-size: 15pt;
+    font-weight: bold;
+    /* 대륙 이름 아래 하얀색 선 */
+    border-bottom: 3px solid #ffffff69;
+    width: max-content; /* 선의 길이가 대륙 이름 길이에 맞게 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/icon/list_toggle.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 17px;
+}
+
+.toggle_down:hover {
+    background-image: url("/assets/icon/list_toggle_hover.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 17px;
+}
+
+.section_content {
+    /* section_content 안에 card(음식점 카드) 2줄 정렬 */
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px; /* card간 상하 간격, 좌우 간격 */
+}
+
+.list.filtered .card:not(.selected) {
+    display: none;
+}
+
+.card a {
+    display: grid;
+    grid-template-areas: /* card 안 구조 */
+        "title"
+        "content";
+    justify-items: center; /* card 안 요소 가운데 정렬 */
+    width: 20vw; /* card 너비 */
+    min-width: 320px; /* card 최소 너비 */
+    height: 10vw; /* card 높이 */
+    min-height: 177.27px; /* card 최소 높이 */
+    border-radius: 15px; /* card 테두리 둥글기 */
+    background-color: rgba(255, 255, 255, 0.123); /* card 배경색깔 및 투명도 */
+    box-shadow: 0px 0px 10px rgba(105, 103, 103, 0.116); /* card 그림자 효과 */
+}
+
+.card a:hover {
+    /* card 호버 효과 */
+    background-color: #8d8deb2d !important;
+    cursor: pointer;
+}
+
+.card a:active {
+    /* card 클릭을 눌렀을 시 효과 */
+    background-color: #8d8deb6b !important;
+}
+
+.title {
+    align-self: center; /* 세로 가운데 맞춤 */
+    display: grid;
+    grid-template-areas: "flag country"; /* card 안의 title 구조 */
+    /* 나라 이름 글씨 */
+    font-size: 13pt;
+    font-weight: bold;
+    color: #494646;
+}
+
+.flag img {
+    /* 국기 이미지 */
+    width: 35px;
+    padding-right: 5px;
+}
+
+.content {
+    /* content는 food, restaurant, address_time으로 이루어져 있음 */
+    align-self: start; /* 카드 속의 카드 위로 정렬 */
+    display: grid;
+    background-color: rgba(248, 248, 248, 0.342); /* 내부 카드 배경 색깔 및 투명도 */
+    box-shadow: 0px 0px 10px rgba(141, 137, 137, 0.116); /* 내부 카드 그림자 효과 */
+    width: 18vw; /* 내부 카드 너비 */
+    min-width: 276.3px; /* 내부 카드 최소 너비 */
+    height: 6vw; /* 내부 카드 높이 */
+    min-height: 120px; /* 내부 카드 최소 높이 */
+    border-radius: 15px; /* 내부 카드 테두리 둥글기 */
+    grid-template-columns: 120px 10vw;
+}
+
+.food img {
+    /* 카드 안 음식 사진 */
+    /* DB에서 가져오기 */
+    /* 각 사진들의 크기가 어느 정도일지 몰라서 우선 width 설정값만 있음. */
+    width: 6vw;
+    min-width: 95.2px;
+    padding-top: 0.5vw;
+    /* 나중에 수정 필요할듯 */
+}
+
+.food {
+    /* 음식 사진 위치 조정 */
+    justify-self: center;
+    align-self: center;
+    /* 그리드 1열 1행부터 1열 2행까지 자리 차지하고 있음 */
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: 1 / span 2;
+}
+
+.restaurant {
+    /* 음식점 이름 위치 조정 */
+    align-self: center;
+    justify-self: start;
+    /* 그리드 2열 1행에 위치함 */
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: 10.87pt;
+    font-weight: 450;
+    color: #5f5f5f;
+    padding-top: 5px;
+}
+
+.address_time {
+    /* 장소 시간 위치 조정 */
+    justify-self: start;
+    align-self: start;
+    /* 그리드 2열 2행에 위치함 */
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    /* address_time은 address와 time으로 이루어져 있음 */
+    display: grid;
+    grid-template-columns: 20px auto; /* 이미지 파일이 20px 차지하고 글씨가 그 옆에 위치하도록 */
+    gap: 3px 0; /* 장소와 시간 줄 간격 */
+}
+
+.address,
+.time {
+    /* address, time 이미지 크기 여백 */
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    margin-right: 3px;
+}
+
+.address_time h4 {
+    /* 장소, 시간 글씨 크기, 굵기 */
+    font-size: 9pt;
+    font-weight: 350;
+    color: black;
+}
