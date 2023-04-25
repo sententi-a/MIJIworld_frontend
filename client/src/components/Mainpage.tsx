@@ -2,8 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import Main from "../assets/images/main/main.png";
 import Logo from "../assets/images/main/logo_main.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Mainpage() {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/map");
+  };
+
   return (
     <>
       <BackImage>
@@ -13,7 +20,7 @@ export default function Mainpage() {
           Meet the World!
         </Heading1>
         <Heading2>당신이 알지 못했던 세계 음식 맛집 소개 서비스</Heading2>
-        <Button>맛보러 가기</Button>
+        <Button onClick={handleButtonClick}>맛보러 가기</Button>
       </BackImage>
     </>
   );
