@@ -7,7 +7,6 @@ import Mainpage from "./components/Mainpage";
 function App() {
   return (
     <BrowserRouter>
-      <Mainpage />
       <Routes>
         <Route path="/" element={<Mainpage />} />
       </Routes>
