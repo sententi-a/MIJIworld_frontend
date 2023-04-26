@@ -2,12 +2,20 @@ import styled from "styled-components";
 import Close from "../assets/images/icon/exit1.png";
 import { CloseOutlined } from "@ant-design/icons";
 
-export default function Modal() {
+interface ModalProps {
+  setIsModalOpen: any;
+}
+
+export default function Modal({ setIsModalOpen }: ModalProps) {
   const headerColor = "#ef2345";
   const restName = "samarkant";
   const restNameKr = "사마르칸트";
   const countryName = "우즈베키스탄";
   const countryNameColor = "#10ef10";
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <>
@@ -15,7 +23,7 @@ export default function Modal() {
         <ModalBg>
           <ModalHeader color={headerColor}>
             <CloseButtonContainer>
-              <CloseOutlined />
+              <CloseOutlined onClick={closeModal} />
             </CloseButtonContainer>
             <ModalHeaderContent>
               <CountryImage

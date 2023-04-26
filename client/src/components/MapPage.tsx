@@ -22,7 +22,7 @@ export default function MapPage() {
           <VerticalButtons isMap={true} isList={false} />
         </Container>
         {isDialogOpen && <RestDialog />}
-        {isModalOpen && <Modal />}
+        {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
       </BackImage>
     </>
   );
