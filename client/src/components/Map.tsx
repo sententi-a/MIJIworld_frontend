@@ -6,6 +6,7 @@ import MapBg from "../assets/images/map/worldmap.png";
 import Logo from "./Logo";
 import LogoPath from "../assets/images/logo/logo.png";
 import VerticalButtons from "./VerticalButtons";
+import RestDialog from "./RestDialog";
 
 export default function Map() {
   return (
@@ -16,6 +17,7 @@ export default function Map() {
           <WorldMap src={MapBg} />
           <VerticalButtons isMap={true} isList={false} />
         </Container>
+        <RestDialog />
       </BackImage>
     </>
   );
