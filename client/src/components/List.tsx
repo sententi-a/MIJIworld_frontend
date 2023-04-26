@@ -1,7 +1,16 @@
+import Logo from "./Logo";
+import LogoPath from "../assets/images/logo/logo.png";
+import VerticalButtons from "./VerticalButtons";
+import BackImage from "./BackImage";
+import Bg from "../assets/images/list/bg.png";
+
 export default function List() {
   return (
     <>
-      <div>List 화면입니다.</div>
+      <BackImage path={Bg}>
+        <Logo src={LogoPath} />
+        <VerticalButtons isMap={false} isList={true} />
+      </BackImage>
     </>
   );
 }
