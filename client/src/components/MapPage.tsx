@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import BackImage from "./BackImage";
 import Bg from "../assets/images/map/worldmap_background.png";
@@ -10,6 +10,9 @@ import RestDialog from "./RestDialog";
 import Modal from "./Modal";
 
 export default function MapPage() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
   return (
     <>
       <BackImage path={Bg}>
@@ -17,9 +20,9 @@ export default function MapPage() {
         <Container>
           <WorldMap src={MapBg} />
           <VerticalButtons isMap={true} isList={false} />
-          <Modal />
         </Container>
-        <RestDialog />
+        {isDialogOpen && <RestDialog />}
+        {isModalOpen && <Modal />}
       </BackImage>
     </>
   );

@@ -14,11 +14,15 @@ export default function Modal() {
       <Backdrop>
         <ModalBg>
           <ModalHeader color={headerColor}>
-            <CountryImage
-              src={require(`../assets/images/restaurant/${restName}/flag.png`)}
-            />
-            <CountryName color={countryNameColor}>{countryName}</CountryName>
-            <CloseOutlined style={{ fontSize: "2vw" }} />
+            <CloseButtonContainer>
+              <CloseOutlined />
+            </CloseButtonContainer>
+            <ModalHeaderContent>
+              <CountryImage
+                src={require(`../assets/images/restaurant/${restName}/flag.png`)}
+              />
+              <CountryName color={countryNameColor}>{countryName}</CountryName>
+            </ModalHeaderContent>
           </ModalHeader>
         </ModalBg>
       </Backdrop>
@@ -48,19 +52,30 @@ const ModalBg = styled.div`
 const ModalHeader = styled.div<{ color: string }>`
   background-color: ${(props) => props.color};
   height: 10vh;
+`;
+
+const ModalHeaderContent = styled.div`
   display: flex;
-  text-align: center;
-  jusify-content: center;
+  justify-content: center;
   align-items: center;
+  height: 10vh;
+`;
+
+const CloseButtonContainer = styled.div`
+  font-size: 2vw;
+  float: right;
+  transform: translate(-50%, 50%);
 `;
 
 const CountryImage = styled.img`
   width: 6%;
   height: auto;
+  object-fit: contain;
 `;
 
 const CountryName = styled.div<{ color: string }>`
   font-family: yg-jalnan;
   font-size: 1.4vw;
   color: ${(props) => props.color || "black"};
+  margin-left: 1vw;
 `;
