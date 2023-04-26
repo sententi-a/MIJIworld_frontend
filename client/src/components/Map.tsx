@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import BackImage from "./BackImage";
 import Bg from "../assets/images/map/worldmap_background.png";
@@ -8,14 +9,22 @@ import LogoPath from "../assets/images/logo/logo.png";
 import VerticalBtn from "./VerticalBtn";
 
 export default function Map() {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/list");
+  };
+
   return (
     <>
       <BackImage path={Bg}>
         <Logo src={LogoPath} />
         <WorldMap src={MapBg} />
         <VerticalBtnContainer>
-          <VerticalBtn text="지도보기" clicked={true} />
-          <VerticalBtn text="목록보기" clicked={false} />
+          <VerticalBtn clicked={true}>지도 보기</VerticalBtn>
+          <VerticalBtn clicked={false} onClick={handleButtonClick}>
+            목록 보기
+          </VerticalBtn>
         </VerticalBtnContainer>
       </BackImage>
     </>
@@ -34,4 +43,5 @@ const VerticalBtnContainer = styled.div`
   display: flex;
   flex-direction: column;
   float: right;
+  margin-top: 1vh;
 `;

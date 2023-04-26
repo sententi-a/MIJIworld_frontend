@@ -5,11 +5,19 @@ interface VerticalBtnProps {
   clicked: boolean;
 }
 
-export default function VerticalBtn({ text, clicked }: VerticalBtnProps) {
-  return <Btn clicked={clicked}>{text}</Btn>;
-}
+// export default function VerticalBtn({ text, clicked }: VerticalBtnProps) {
+//   const texts = text.split(" ");
 
-const Btn = styled.button<{ clicked: boolean }>`
+//   return (
+//     <Btn clicked={clicked}>
+//       {texts[0]}
+//       <br />
+//       {texts[1]}
+//     </Btn>
+//   );
+// }
+
+const VerticalBtn = styled.button<{ clicked: boolean }>`
   background-color: ${(props) => (props.clicked ? "#8d8de5" : "white")};
   font-family: Noto Sans KR;
   font-weight: 700;
@@ -17,7 +25,7 @@ const Btn = styled.button<{ clicked: boolean }>`
   color: ${(props) => (props.clicked ? "white" : "#8d8de5")};
   border: none;
   border-radius: 10px;
-  width: 5vw;
+  width: 4vw;
   height: 15vh;
   // Text-align
   justify-content: center;
@@ -28,3 +36,5 @@ const Btn = styled.button<{ clicked: boolean }>`
     color: ${(props) => (props.clicked ? "none" : "white")};
   }
 `;
+
+export default VerticalBtn;
