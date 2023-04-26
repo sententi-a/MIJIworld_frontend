@@ -9,6 +9,7 @@ const BackImage = styled.div<BackImageProps>`
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  text-align: center;
 `;
 
 export default BackImage;
