@@ -4,7 +4,7 @@ import VerticalButtons from "./VerticalButtons";
 import BackImage from "./BackImage";
 import Bg from "../assets/images/list/bg.png";
 
-export default function List() {
+export default function ListPage() {
   return (
     <>
       <BackImage path={Bg}>

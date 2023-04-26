@@ -5,7 +5,7 @@ import Logo from "../assets/images/main/logo_main.png";
 import BackImage from "./BackImage";
 import { useNavigate } from "react-router-dom";
 
-export default function Mainpage() {
+export default function MainPage() {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {

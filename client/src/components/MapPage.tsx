@@ -7,8 +7,9 @@ import Logo from "./Logo";
 import LogoPath from "../assets/images/logo/logo.png";
 import VerticalButtons from "./VerticalButtons";
 import RestDialog from "./RestDialog";
+import Modal from "./Modal";
 
-export default function Map() {
+export default function MapPage() {
   return (
     <>
       <BackImage path={Bg}>
@@ -16,6 +17,7 @@ export default function Map() {
         <Container>
           <WorldMap src={MapBg} />
           <VerticalButtons isMap={true} isList={false} />
+          <Modal />
         </Container>
         <RestDialog />
       </BackImage>
