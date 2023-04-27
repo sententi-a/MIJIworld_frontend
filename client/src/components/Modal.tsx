@@ -1,9 +1,10 @@
+import { useRef } from "react";
 import styled from "styled-components";
 import Close from "../assets/images/icon/exit1.png";
 import { CloseOutlined } from "@ant-design/icons";
 
 interface ModalProps {
-  setIsModalOpen: any;
+  setIsModalOpen: (open: boolean) => void;
 }
 
 export default function Modal({ setIsModalOpen }: ModalProps) {
@@ -17,9 +18,20 @@ export default function Modal({ setIsModalOpen }: ModalProps) {
     setIsModalOpen(false);
   };
 
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  // Close modal when clicking outside (==Backdrop)
+  const clickModalOutside = (event: React.MouseEvent<HTMLDivElement>) => {
+    event.stopPropagation();
+
+    if (modalRef.current == event.target) {
+      setIsModalOpen(false);
+    }
+  };
+
   return (
     <>
-      <Backdrop>
+      <Backdrop ref={modalRef} onClick={(event) => clickModalOutside(event)}>
         <ModalBg>
           <ModalHeader color={headerColor}>
             <CloseButtonContainer>
