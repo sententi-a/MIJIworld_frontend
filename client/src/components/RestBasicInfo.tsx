@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import RestMap from "./RestMap";
 
 export default function RestBasicInfo({ restInfo }: any) {
   const [isMapOpen, setIsMapOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function RestBasicInfo({ restInfo }: any) {
       <RestAddress onClick={toggleMapOpen}>
         <strong>{!isMapOpen ? "▶" : "▼"} 주소 </strong>| {restInfo.restAddress}
       </RestAddress>
-      {isMapOpen && <div />}
+      {isMapOpen && <RestMap />}
     </>
   );
 }
