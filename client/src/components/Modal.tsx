@@ -2,6 +2,7 @@ import { useRef } from "react";
 import styled from "styled-components";
 import Close from "../assets/images/icon/exit1.png";
 import { CloseOutlined } from "@ant-design/icons";
+import ModalBodyContent from "./ModalBodyContent";
 
 interface ModalProps {
   setIsModalOpen: (open: boolean) => void;
@@ -11,8 +12,17 @@ export default function Modal({ setIsModalOpen }: ModalProps) {
   const headerColor = "#ef2345";
   const restName = "samarkant";
   const restNameKr = "사마르칸트";
+  const restBusinessHour = "월-토 11:30 - 21:00";
+  const restAddress = "서울 용산구 녹사평대로 174-11";
   const countryName = "우즈베키스탄";
   const countryNameColor = "#10ef10";
+
+  const restInfo = {
+    restName,
+    restNameKr,
+    restBusinessHour,
+    restAddress,
+  };
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -44,6 +54,7 @@ export default function Modal({ setIsModalOpen }: ModalProps) {
               <CountryName color={countryNameColor}>{countryName}</CountryName>
             </ModalHeaderContent>
           </ModalHeader>
+          <ModalBodyContent restInfo={restInfo} />
         </ModalBg>
       </Backdrop>
     </>
