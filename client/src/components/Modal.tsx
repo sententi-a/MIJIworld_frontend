@@ -87,6 +87,7 @@ const ModalBg = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: scroll;
 `;
 
 const ModalHeader = styled.div<{ color: string }>`
