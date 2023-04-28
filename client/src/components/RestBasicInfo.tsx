@@ -18,7 +18,7 @@ export default function RestBasicInfo({ restInfo }: any) {
       <RestAddress onClick={toggleMapOpen}>
         <strong>{!isMapOpen ? "▶" : "▼"} 주소 </strong>| {restInfo.restAddress}
       </RestAddress>
-      {isMapOpen && <RestMap />}
+      {isMapOpen && <RestMap restInfo={restInfo} />}
     </>
   );
 }
