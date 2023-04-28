@@ -92,7 +92,10 @@ const ModalBg = styled.div`
 
 const ModalHeader = styled.div<{ color: string }>`
   background-color: ${(props) => props.color};
+  width: 80vw;
   height: 10vh;
+  position: fixed;
+  z-index: 10;
 `;
 
 const ModalHeaderContent = styled.div`
