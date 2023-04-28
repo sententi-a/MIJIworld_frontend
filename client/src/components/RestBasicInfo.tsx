@@ -19,6 +19,11 @@ export default function RestBasicInfo({ restInfo }: any) {
         <strong>{!isMapOpen ? "▶" : "▼"} 주소 </strong>| {restInfo.restAddress}
       </RestAddress>
       {isMapOpen && <RestMap restInfo={restInfo} />}
+      <RestIntroduction>{restInfo.restIntroduction}</RestIntroduction>
+      <DinnerGreeting>
+        잘 먹겠습니다! <br />
+        {restInfo.countryWord}
+      </DinnerGreeting>
     </>
   );
 }
@@ -38,4 +43,16 @@ const RestAddress = styled.div`
   font-size: 1.5vw;
   font-weight: 500;
   margin-top: 1vh;
+`;
+
+const RestIntroduction = styled.p`
+  font-size: 1.4vw;
+  font-weight: 400;
+  white-space: pre-line;
+  margin: 4vh;
+`;
+
+const DinnerGreeting = styled.p`
+  font-size: 1.4vw;
+  font-weight: 500;
 `;
