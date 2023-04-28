@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import styled from "styled-components";
-import Close from "../assets/images/icon/exit1.png";
 import { CloseOutlined } from "@ant-design/icons";
 import ModalBodyContent from "./ModalBodyContent";
 
@@ -14,6 +13,9 @@ export default function Modal({ setIsModalOpen }: ModalProps) {
   const restNameKr = "사마르칸트";
   const restBusinessHour = "월-토 11:30 - 21:00";
   const restAddress = "서울 용산구 녹사평대로 174-11";
+  const restMapId = 18577297;
+  const latitude = 33.450701;
+  const longitude = 126.570667;
   const countryName = "우즈베키스탄";
   const countryNameColor = "#10ef10";
 
@@ -22,6 +24,9 @@ export default function Modal({ setIsModalOpen }: ModalProps) {
     restNameKr,
     restBusinessHour,
     restAddress,
+    restMapId,
+    latitude,
+    longitude,
   };
 
   const closeModal = () => {
@@ -34,7 +39,7 @@ export default function Modal({ setIsModalOpen }: ModalProps) {
   const clickModalOutside = (event: React.MouseEvent<HTMLDivElement>) => {
     event.stopPropagation();
 
-    if (modalRef.current == event.target) {
+    if (modalRef.current === event.target) {
       setIsModalOpen(false);
     }
   };
