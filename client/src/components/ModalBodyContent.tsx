@@ -2,6 +2,7 @@ import styled from "styled-components";
 import RestBasicInfo from "./RestBasicInfo";
 import RestDish from "./RestDish";
 import RestExterior from "./RestExterior";
+import RestTicket from "./RestTicket";
 
 export default function ModalBodyContent({ restInfo }: any) {
   return (
@@ -20,6 +21,7 @@ export default function ModalBodyContent({ restInfo }: any) {
         ))}
       </DishesWrapper>
       <RestExterior restName={restInfo.restName} />
+      <RestTicket restInfo={restInfo} />
     </div>
   );
 }

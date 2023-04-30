@@ -37,6 +37,7 @@ export default function Modal({ setIsModalOpen }: ModalProps) {
     restIntroduction,
     countryWord,
     menus,
+    countryNameColor,
   };
 
   const closeModal = () => {
