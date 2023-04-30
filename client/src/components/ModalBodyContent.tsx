@@ -8,7 +8,15 @@ export default function ModalBodyContent({ restInfo }: any) {
       <RestBasicInfo restInfo={restInfo} />
       <DishesWrapper>
         {/* RestDishes (using map) */}
-        <RestDish />
+        {[1, 2, 3].map((elem) => (
+          <RestDish
+            restName={restInfo.restName}
+            id={elem}
+            name={restInfo.menus[elem - 1]["name"]}
+            exp={restInfo.menus[elem - 1]["explain"]}
+            price={restInfo.menus[elem - 1]["price"]}
+          />
+        ))}
       </DishesWrapper>
     </div>
   );

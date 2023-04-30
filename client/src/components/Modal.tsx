@@ -17,6 +17,11 @@ export default function Modal({ setIsModalOpen }: ModalProps) {
   const latitude = 33.450701;
   const longitude = 126.570667;
   const restIntroduction = `사마르칸트는 녹사평로에 위치한 우즈베키스탄 음식점입니다. \n어쩌구저쩌구할 수 있어 어쩌구`;
+  const menus = [
+    { name: "menu1Name", explain: "menu1Explain\nExplain", price: 1000 },
+    { name: "menu2Name", explain: "menu2Explain\nExplain", price: 1000 },
+    { name: "menu3Name", explain: "menu3Explain\nExplain", price: 1000 },
+  ];
   const countryWord = "Thank you for the meal!";
   const countryName = "우즈베키스탄";
   const countryNameColor = "#10ef10";
@@ -31,6 +36,7 @@ export default function Modal({ setIsModalOpen }: ModalProps) {
     longitude,
     restIntroduction,
     countryWord,
+    menus,
   };
 
   const closeModal = () => {
