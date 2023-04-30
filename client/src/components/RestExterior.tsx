@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useEffect } from "react";
 import { Navigation, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -10,6 +11,11 @@ interface RestExteriorProps {
 }
 
 export default function RestExterior({ restName }: RestExteriorProps) {
+  // Set carousel navigation button color to gray
+  useEffect(() => {
+    document.documentElement.style.setProperty("--swiper-theme-color", "#999");
+  }, []);
+
   return (
     <>
       <RestExteriorWrapper>
