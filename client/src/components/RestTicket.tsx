@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import CustomInput from "./CustomInput";
+import DayPicker from "./DayPicker";
 
 export default function RestTicket({ restInfo }: any) {
   return (
@@ -10,6 +12,13 @@ export default function RestTicket({ restInfo }: any) {
         <img
           src={require(`../assets/images/restaurant/${restInfo.restName}/ticket@2x.png`)}
         ></img>
+        <InputWrapper>
+          <DayPicker />
+          <CustomInput label={"이름"} />
+          <CustomInput label={"동행"} />
+          <CustomInput label={"노트"} />
+          <CustomInput label={"ETC"} />
+        </InputWrapper>
       </FormWrapper>
     </>
   );
@@ -28,10 +37,10 @@ const Slogan = styled.div<{ color: string }>`
 `;
 
 const FormWrapper = styled.div`
-  width: 50vw;
+  width: 80%;
   height: auto;
-  margin: 3vh auto;
-  padding: 3vh;
+  margin: 30px auto;
+  padding: 30px;
   border-radius: 20px;
   background-color: #fbfbfb;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -39,4 +48,10 @@ const FormWrapper = styled.div`
   img {
     width: 80%;
   }
+`;
+
+const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
