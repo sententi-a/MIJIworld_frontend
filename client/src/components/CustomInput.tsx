@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 interface CustomInputProps {
   label: string;
+  handleChange: Function;
 }
 
-export default function CustomInput({ label }: CustomInputProps) {
+export default function CustomInput({ label, handleChange }: CustomInputProps) {
   return (
     <>
       <div
@@ -15,7 +16,7 @@ export default function CustomInput({ label }: CustomInputProps) {
       >
         <Label>{label}</Label>
         <div style={{ display: "inline-block", width: "80%" }}>
-          <Input />
+          <Input onChange={(e) => handleChange(e.target.value)} />
         </div>
       </div>
     </>

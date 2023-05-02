@@ -1,24 +1,53 @@
+import { useState } from "react";
 import styled from "styled-components";
 import CustomInput from "./CustomInput";
 import DayPicker from "./DayPicker";
 
 export default function RestTicket({ restInfo }: any) {
+  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
+  const [name, setName] = useState<String>("");
+  const [company, setCompany] = useState<String>("");
+  const [note, setNote] = useState<String>("");
+  const [message, setMessage] = useState<String>("");
+
   return (
     <>
       <Slogan color={restInfo.countryNameColor}>
         Eat the World, Meet the World! <p>나만의 여행 티켓 만들기</p>
       </Slogan>
       <FormWrapper>
-        <img
-          src={require(`../assets/images/restaurant/${restInfo.restName}/ticket@2x.png`)}
-        ></img>
-        {/* <InputWrapper> */}
-        <DayPicker />
-        <CustomInput label={"이름"} />
-        <CustomInput label={"동행"} />
-        <CustomInput label={"노트"} />
-        <CustomInput label={"ETC"} />
-        {/* </InputWrapper> */}
+        <div style={{ position: "relative", width: "80%" }}>
+          <img
+            src={require(`../assets/images/restaurant/${restInfo.restName}/ticket@2x.png`)}
+            style={{ width: "100%" }}
+          ></img>
+          <ShowInputWrapper>
+            <DateDiv>
+              {selectedDate?.toLocaleDateString("ko-KR", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}{" "}
+              (
+              {selectedDate?.toLocaleDateString("ko-KR", {
+                weekday: "short",
+              })}
+              )
+            </DateDiv>
+            <NameDiv>{name}</NameDiv>
+            <CompanyDiv>{company}</CompanyDiv>
+            <NoteDiv>{note}</NoteDiv>
+            <MessageDiv>{message}</MessageDiv>
+          </ShowInputWrapper>
+        </div>
+        <DayPicker
+          selectedDate={selectedDate}
+          setSelectedDate={setSelectedDate}
+        />
+        <CustomInput handleChange={setName} label={"이름"} />
+        <CustomInput handleChange={setCompany} label={"동행"} />
+        <CustomInput handleChange={setNote} label={"노트"} />
+        <CustomInput handleChange={setMessage} label={"ETC"} />
       </FormWrapper>
     </>
   );
@@ -52,11 +81,49 @@ const FormWrapper = styled.div`
     width: 80%;
   }
 `;
+const ShowInputWrapper = styled.div`
+  z-index: 1;
+  font-size: 0.9vw;
+  font-weight: 700;
+  color: #464746;
+`;
 
-const InputWrapper = styled.div`
-  // width: 80%;
-  // display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+const DateDiv = styled.div`
+  width: 9vw;
+  position: absolute;
+  top: 36.5%;
+  left: 3.3%;
+  // border: 1px solid red;
+`;
+
+const NameDiv = styled.div`
+  width: 9vw;
+  position: absolute;
+  top: 16%;
+  right: 3.5%;
+  // border: 1px solid blue;
+`;
+
+const CompanyDiv = styled.div`
+  width: 9vw;
+  position: absolute;
+  top: 32%;
+  right: 3.5%;
+  // border: 1px solid pink;
+`;
+
+const NoteDiv = styled.div`
+  width: 9vw;
+  position: absolute;
+  top: 48%;
+  right: 3.5%;
+  // border: 1px solid green;
+`;
+
+const MessageDiv = styled.div`
+  width: 9vw;
+  position: absolute;
+  top: 63%;
+  right: 3.5%;
+  // border: 1px solid red;
 `;
