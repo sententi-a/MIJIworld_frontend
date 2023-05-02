@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+/* DatePicker custom css */
+.react-datepicker {
+  border: none !important;
+  box-shadow: 0 10px 10px 0 #cccccc;
+}
+
+.react-datepicker__triangle {
+  display: none;
+}
+
+.react-datepicker__header {
+  /* background-color: #eeeeee !important; */
+  background-color: #e8e8fc !important;
+  color: white;
+  border-bottom: none !important;
+  border-radius: 0;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: white !important;
+}
+
+.react-datepicker__day-names {
+  height: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.react-datepicker__day--selected {
+  background-color: #8d8deb !important;
+}

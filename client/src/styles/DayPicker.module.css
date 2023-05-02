@@ -1,9 +1,6 @@
 .wrapper {
   width: 80%;
-  /* padding: 0 10px 0 10px; */
-  /* width: auto; */
   display: inline-block;
-  /* overflow: hidden; */
 }
 
 .dayPicker {
@@ -17,8 +14,8 @@
   outline: none;
   padding: 0 10px 0 10px;
   margin: 0 auto;
+}
 
-  :focus {
-    border: 1px solid #aaaaaa;
-  }
+.header {
+  background-color: #707070;
 }
