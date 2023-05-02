@@ -48,7 +48,6 @@
 }
 
 .react-datepicker__header {
-  /* background-color: #eeeeee !important; */
   background-color: #e8e8fc !important;
   color: white;
   border-bottom: none !important;
@@ -57,13 +56,6 @@
 
 .react-datepicker__navigation-icon::before {
   border-color: white !important;
-}
-
-.react-datepicker__day-names {
-  height: 40px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
 }
 
 .react-datepicker__day--selected {
