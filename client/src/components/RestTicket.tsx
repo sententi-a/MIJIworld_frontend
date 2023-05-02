@@ -12,13 +12,13 @@ export default function RestTicket({ restInfo }: any) {
         <img
           src={require(`../assets/images/restaurant/${restInfo.restName}/ticket@2x.png`)}
         ></img>
-        <InputWrapper>
-          <DayPicker />
-          <CustomInput label={"이름"} />
-          <CustomInput label={"동행"} />
-          <CustomInput label={"노트"} />
-          <CustomInput label={"ETC"} />
-        </InputWrapper>
+        {/* <InputWrapper> */}
+        <DayPicker />
+        <CustomInput label={"이름"} />
+        <CustomInput label={"동행"} />
+        <CustomInput label={"노트"} />
+        <CustomInput label={"ETC"} />
+        {/* </InputWrapper> */}
       </FormWrapper>
     </>
   );
@@ -44,6 +44,9 @@ const FormWrapper = styled.div`
   border-radius: 20px;
   background-color: #fbfbfb;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   img {
     width: 80%;
@@ -51,7 +54,9 @@ const FormWrapper = styled.div`
 `;
 
 const InputWrapper = styled.div`
-  display: flex;
+  // width: 80%;
+  // display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `;

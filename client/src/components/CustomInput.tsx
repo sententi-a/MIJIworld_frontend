@@ -7,9 +7,16 @@ interface CustomInputProps {
 export default function CustomInput({ label }: CustomInputProps) {
   return (
     <>
-      <div style={{ width: "100%", margin: "5px" }}>
+      <div
+        style={{
+          width: "50%",
+          margin: "10px",
+        }}
+      >
         <Label>{label}</Label>
-        <Input />
+        <div style={{ display: "inline-block", width: "80%" }}>
+          <Input />
+        </div>
       </div>
     </>
   );
@@ -26,7 +33,7 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  width: 50%;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(0, 0, 0, 0);
   box-shadow: 0 1px 3px 0 #cccccc;
