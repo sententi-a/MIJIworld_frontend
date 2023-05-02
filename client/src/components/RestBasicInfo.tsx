@@ -43,6 +43,11 @@ const RestAddress = styled.div`
   font-size: 1.5vw;
   font-weight: 500;
   margin-top: 1vh;
+
+  :hover {
+    color: #8d8de5;
+    cursor: pointer;
+  }
 `;
 
 const RestIntroduction = styled.p`
