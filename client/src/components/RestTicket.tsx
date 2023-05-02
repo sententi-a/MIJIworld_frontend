@@ -89,6 +89,7 @@ const ShowInputWrapper = styled.div`
 `;
 
 const DateDiv = styled.div`
+  font-size: 0.8vw;
   width: 9vw;
   position: absolute;
   top: 36.5%;
