@@ -10,6 +10,11 @@ export default function RestTicket({ restInfo }: any) {
   const [note, setNote] = useState<String>("");
   const [message, setMessage] = useState<String>("");
 
+  const handleTicketDownload = () => {
+    // 로컬에 티켓 사진 저장하기 / 로그인 기능 넣는다면, 티켓 저장소에 저장
+    console.log("Save Button Clicked");
+  };
+
   return (
     <>
       <Slogan color={restInfo.countryNameColor}>
@@ -48,6 +53,7 @@ export default function RestTicket({ restInfo }: any) {
         <CustomInput handleChange={setCompany} label={"동행"} />
         <CustomInput handleChange={setNote} label={"노트"} />
         <CustomInput handleChange={setMessage} label={"ETC"} />
+        <SaveButton onClick={handleTicketDownload}>다운로드</SaveButton>
       </FormWrapper>
     </>
   );
@@ -127,4 +133,22 @@ const MessageDiv = styled.div`
   top: 63%;
   right: 3.5%;
   // border: 1px solid red;
+`;
+
+const SaveButton = styled.button`
+  padding: 5px 20px 5px 20px;
+  height: auto;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  margin-top: 2vh;
+  font-weight: bold;
+  font-size: 1.6vw;
+  background-color: #8d8de5;
+
+  :hover {
+    color: #8d8de5;
+    background-color: white;
+    cursor: pointer;
+  }
 `;
