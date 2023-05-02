@@ -9,7 +9,6 @@ export default function RestMap({ restInfo }: any) {
     name: restInfo.restNameKr,
   });
 
-  console.log("호출됨");
   return (
     <>
       <MapContainer id="map"></MapContainer>

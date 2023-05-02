@@ -26,7 +26,6 @@ export default function RestExterior({ restName }: RestExteriorProps) {
           loop={true}
         >
           {[1, 2, 3, 4].map((elem) => {
-            console.log(elem);
             return (
               <SwiperSlide>
                 <img
