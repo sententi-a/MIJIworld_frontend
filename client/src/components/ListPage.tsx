@@ -5,6 +5,7 @@ import VerticalButtons from "./VerticalButtons";
 import BackImage from "./BackImage";
 import Bg from "../assets/images/list/bg.png";
 import RestCard from "./RestCard";
+import SearchBar from "./SearchBar";
 
 export default function ListPage() {
   return (
@@ -13,6 +14,7 @@ export default function ListPage() {
         <Logo src={LogoPath} />
         <VerticalButtons isMap={false} isList={true} />
         <Wrapper>
+          <SearchBar />
           <CardWrapper>
             {[1, 2, 3, 4, 5, 6, 7].map((elem) => {
               return <RestCard />;
@@ -27,8 +29,11 @@ const Wrapper = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   position: absolute;
-  top: 10vw;
+  top: 8vmax;
 `;
 
 const CardWrapper = styled.div`
