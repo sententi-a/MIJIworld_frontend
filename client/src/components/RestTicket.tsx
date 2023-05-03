@@ -89,13 +89,12 @@ const FormWrapper = styled.div`
 `;
 const ShowInputWrapper = styled.div`
   z-index: 1;
-  font-size: 0.9vw;
+  font-size: 0.6vmin;
   font-weight: 700;
   color: #464746;
 `;
 
 const DateDiv = styled.div`
-  font-size: 0.8vw;
   width: 9vw;
   position: absolute;
   top: 36.5%;
@@ -104,35 +103,35 @@ const DateDiv = styled.div`
 `;
 
 const NameDiv = styled.div`
-  width: 9vw;
+  width: 20%;
   position: absolute;
-  top: 16%;
-  right: 3.5%;
-  // border: 1px solid blue;
+  top: 18%;
+  right: 4%;
+  border: 1px solid blue;
 `;
 
 const CompanyDiv = styled.div`
-  width: 9vw;
+  width: 20%;
   position: absolute;
-  top: 32%;
-  right: 3.5%;
-  // border: 1px solid pink;
+  top: 33%;
+  right: 4%;
+  border: 1px solid pink;
 `;
 
 const NoteDiv = styled.div`
-  width: 9vw;
+  width: 20%;
   position: absolute;
-  top: 48%;
-  right: 3.5%;
-  // border: 1px solid green;
+  top: 49%;
+  right: 4%;
+  border: 1px solid green;
 `;
 
 const MessageDiv = styled.div`
-  width: 9vw;
+  width: 20%;
   position: absolute;
-  top: 63%;
-  right: 3.5%;
-  // border: 1px solid red;
+  top: 65%;
+  right: 4%;
+  border: 1px solid red;
 `;
 
 const SaveButton = styled.button`
