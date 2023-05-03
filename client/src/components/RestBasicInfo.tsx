@@ -55,6 +55,9 @@ const RestIntroduction = styled.p`
   font-weight: 400;
   white-space: pre-line;
   margin: 4vh;
+  background-color: #fafafa;
+  padding: 10px;
+  border-radius: 40px;
 `;
 
 const DinnerGreeting = styled.p`
