@@ -36,7 +36,9 @@ const CardWrapper = styled.div`
   text-align: center;
   display: grid;
   justify-content: space-evenly;
-  grid-template-columns: repeat(auto-fill, minmax(50%, auto));
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(25vmax, 25vmax));
   margin: 20px;
   row-gap: 3vh;
+  // col-gap: 3vw;
 `;
