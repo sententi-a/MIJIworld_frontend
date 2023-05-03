@@ -37,7 +37,7 @@ export default function RestCard() {
 }
 
 const Card = styled.div`
-  width: 25vw;
+  width: 25vmax;
   background-color: rgba(255, 255, 255, 0.123);
   box-shadow: 0px 0px 10px rgba(105, 103, 103, 0.116);
   text-align: center;
@@ -61,7 +61,7 @@ const InnerCard = styled.div`
   box-shadow: 0px 0px 10px rgba(141, 137, 137, 0.116);
   border-radius: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 10px;
   margin-top: 10px;

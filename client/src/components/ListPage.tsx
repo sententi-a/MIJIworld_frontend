@@ -14,7 +14,7 @@ export default function ListPage() {
         <VerticalButtons isMap={false} isList={true} />
         <Wrapper>
           <CardWrapper>
-            {[1, 2, 3, 4, 5].map((elem) => {
+            {[1, 2, 3, 4, 5, 6, 7].map((elem) => {
               return <RestCard />;
             })}
           </CardWrapper>
@@ -34,9 +34,9 @@ const Wrapper = styled.div`
 const CardWrapper = styled.div`
   width: 52vw;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fill, minmax(50%, auto));
   margin: 20px;
   row-gap: 3vh;
 `;
