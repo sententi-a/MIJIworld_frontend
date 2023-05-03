@@ -78,4 +78,5 @@ const DetailText = styled.div`
   font-size: 1.1vw;
   font-weight: 400;
   color: #707070;
+  text-align: left;
 `;
