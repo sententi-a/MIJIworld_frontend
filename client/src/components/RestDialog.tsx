@@ -64,3 +64,5 @@ const RestName = styled.div`
   font-weight: 500;
   color: #555;
 `;
+
+export { RestDishImg, RestName };

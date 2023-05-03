@@ -127,6 +127,9 @@ const CountryImage = styled.img`
 const CountryName = styled.div<{ color: string }>`
   font-family: yg-jalnan;
   font-size: 1.4vw;
+  font-weight: 700;
   color: ${(props) => props.color || "black"};
   margin-left: 1vw;
 `;
+
+export { CountryImage, CountryName };
