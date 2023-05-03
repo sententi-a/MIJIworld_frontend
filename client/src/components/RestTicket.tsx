@@ -140,15 +140,17 @@ const SaveButton = styled.button`
   height: auto;
   border: none;
   border-radius: 30px;
-  color: white;
+  // color: #707070;
+  background-color: #df9391;
   margin-top: 2vh;
   font-weight: bold;
-  font-size: 1.6vw;
-  background-color: #8d8de5;
+  font-size: 1.5vw;
+  color: white;
+  box-shadow: 0 2px 4px 0 #dddddd;
 
   :hover {
-    color: #8d8de5;
-    background-color: white;
+    // background-color: white;
+    background-color: #db7976;
     cursor: pointer;
   }
 `;

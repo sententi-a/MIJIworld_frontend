@@ -25,12 +25,10 @@ export default function CustomInput({ label, handleChange }: CustomInputProps) {
 
 const Label = styled.label`
   font-size: 1.3vw;
-  font-weight: 500;
-  background-color: #cccccc;
-  padding: 10px;
+  font-weight: 700;
   border-radius: 20px;
   margin-right: 10px;
-  color: white;
+  color: #db7976;
 `;
 
 const Input = styled.input`
