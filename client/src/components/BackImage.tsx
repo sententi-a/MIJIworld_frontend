@@ -5,10 +5,10 @@ interface BackImageProps {
 }
 
 const BackImage = styled.div<BackImageProps>`
-  background-image: url(${(props) => props.path});
+  background: url(${(props) => props.path}) no-repeat center center fixed;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 export default BackImage;
