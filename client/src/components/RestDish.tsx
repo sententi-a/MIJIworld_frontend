@@ -15,6 +15,7 @@ export default function RestDish({
   id,
   price,
 }: RestDishProps) {
+  // 1000 단위로 콤마 삽입하는 정규식
   const priceWithComma = price
     .toString()
     .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
@@ -37,7 +38,8 @@ const DishContainer = styled.div`
   width: 25%;
   height: auto;
   border-radius: 10px;
-  border: 1px solid gray;
+  // border: 1px solid gray;
+  box-shadow: 5px 5px 10px 0 #cccccc;
   padding: 10px;
 `;
 
