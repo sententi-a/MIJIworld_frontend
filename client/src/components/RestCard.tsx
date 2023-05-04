@@ -15,9 +15,12 @@ export default function RestCard() {
         <CountryHeader>
           <CountryImage
             src={require(`../assets/images/restaurant/${restName}/flag.png`)}
-            style={{ width: "20%" }}
+            style={{ width: "15%" }}
           ></CountryImage>
-          <CountryName color={"#707070"} style={{ fontFamily: "Noto Sans KR" }}>
+          <CountryName
+            color={"#707070"}
+            style={{ fontFamily: "Noto Sans KR", fontSize: "1.3vw" }}
+          >
             {countryName}
           </CountryName>
         </CountryHeader>
