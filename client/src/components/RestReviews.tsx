@@ -60,8 +60,9 @@ const Title = styled.div`
 
 const ReviewBg = styled.div`
   width: 40%;
-  background-color: #eeeeee;
+  background-color: #fbfbfb;
   border-radius: 20px;
+  box-shadow: 0 5px 5px 0 #eeeeee;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,6 +82,7 @@ const ReviewContainer = styled.div`
   border-radius: 20px;
   font-size: 1.3vw;
   font-weight: 500;
+  box-shadow: 0 2px 2px 0 #eeeeee;
 `;
 
 const ReviewLink = styled.a`
