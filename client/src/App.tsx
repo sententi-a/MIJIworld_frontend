@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import "./styles/font.css";
-import MainPage from "./components/MainPage";
-import MapPage from "./components/MapPage";
-import ListPage from "./components/ListPage";
+import MainPage from "./pages/MainPage";
+import MapPage from "./pages/MapPage";
+import ListPage from "./pages/ListPage";
 
 function App() {
   return (

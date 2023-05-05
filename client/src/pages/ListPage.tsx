@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import Logo from "./Logo";
+import Logo from "../components/Logo";
 import LogoPath from "../assets/images/logo/logo.png";
-import VerticalButtons from "./VerticalButtons";
-import BackImage from "./BackImage";
+import VerticalButtons from "../components/VerticalButtons";
+import BackImage from "../components/BackImage";
 import Bg from "../assets/images/list/bg.png";
-import RestCard from "./RestCard";
-import SearchBar from "./SearchBar";
+import RestCard from "../components/RestCard";
+import SearchBar from "../components/SearchBar";
 
 export default function ListPage() {
   return (

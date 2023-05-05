@@ -1,13 +1,13 @@
 import { useState } from "react";
 import styled from "styled-components";
-import BackImage from "./BackImage";
+import BackImage from "../components/BackImage";
 import Bg from "../assets/images/map/worldmap_background.png";
 import MapBg from "../assets/images/map/worldmap.png";
-import Logo from "./Logo";
+import Logo from "../components/Logo";
 import LogoPath from "../assets/images/logo/logo.png";
-import VerticalButtons from "./VerticalButtons";
-import RestDialog from "./RestDialog";
-import Modal from "./Modal";
+import VerticalButtons from "../components/VerticalButtons";
+import RestDialog from "../components/RestDialog";
+import Modal from "../components/Modal";
 
 export default function MapPage() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);

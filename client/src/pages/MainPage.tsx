@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Main from "../assets/images/main/main.png";
 import Logo from "../assets/images/main/logo_main.png";
-import BackImage from "./BackImage";
+import BackImage from "../components/BackImage";
 import { useNavigate } from "react-router-dom";
 
 export default function MainPage() {
