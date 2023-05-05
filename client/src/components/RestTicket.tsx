@@ -26,24 +26,32 @@ export default function RestTicket({ restInfo }: any) {
             src={require(`../assets/images/restaurant/${restInfo.restName}/ticket@2x.png`)}
             style={{ width: "100%" }}
           ></img>
-          <ShowInputWrapper>
-            <DateDiv>
-              {selectedDate?.toLocaleDateString("ko-KR", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}{" "}
-              (
-              {selectedDate?.toLocaleDateString("ko-KR", {
-                weekday: "short",
-              })}
-              )
-            </DateDiv>
-            <NameDiv>{name}</NameDiv>
-            <CompanyDiv>{company}</CompanyDiv>
-            <NoteDiv>{note}</NoteDiv>
-            <MessageDiv>{message}</MessageDiv>
-          </ShowInputWrapper>
+          {/* <ShowInputWrapper> */}
+          <ShowInput top="36" left="3.3">
+            {selectedDate?.toLocaleDateString("ko-KR", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}{" "}
+            (
+            {selectedDate?.toLocaleDateString("ko-KR", {
+              weekday: "short",
+            })}
+            )
+          </ShowInput>
+          <ShowInput top="16" right="4">
+            {name}
+          </ShowInput>
+          <ShowInput top="32" right="4">
+            {company}
+          </ShowInput>
+          <ShowInput top="48" right="4">
+            {note}
+          </ShowInput>
+          <ShowInput top="64" right="4">
+            {message}
+          </ShowInput>
+          {/* </ShowInputWrapper> */}
         </div>
         <DayPicker
           selectedDate={selectedDate}
@@ -87,51 +95,19 @@ const FormWrapper = styled.div`
     width: 80%;
   }
 `;
-const ShowInputWrapper = styled.div`
-  z-index: 1;
-  font-size: 0.6vmin;
+
+const ShowInput = styled.div<{ top: string; left?: string; right?: string }>`
+  width: 20%;
+  height: 10%;
+  position: absolute;
+  top: ${(props) => props.top}%;
+  left: ${(props) => props.left}%;
+  right: ${(props) => props.right}%;
+  overflow: hidden;
   font-weight: 700;
+  font-size: 0.8vw;
   color: #464746;
-`;
-
-const DateDiv = styled.div`
-  width: 9vw;
-  position: absolute;
-  top: 36.5%;
-  left: 3.3%;
   // border: 1px solid red;
-`;
-
-const NameDiv = styled.div`
-  width: 20%;
-  position: absolute;
-  top: 18%;
-  right: 4%;
-  border: 1px solid blue;
-`;
-
-const CompanyDiv = styled.div`
-  width: 20%;
-  position: absolute;
-  top: 33%;
-  right: 4%;
-  border: 1px solid pink;
-`;
-
-const NoteDiv = styled.div`
-  width: 20%;
-  position: absolute;
-  top: 49%;
-  right: 4%;
-  border: 1px solid green;
-`;
-
-const MessageDiv = styled.div`
-  width: 20%;
-  position: absolute;
-  top: 65%;
-  right: 4%;
-  border: 1px solid red;
 `;
 
 const SaveButton = styled.button`
