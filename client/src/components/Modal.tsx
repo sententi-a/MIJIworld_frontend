@@ -91,8 +91,6 @@ const ModalBg = styled.div`
   background-color: white;
   width: 80vw;
   height: 90vh;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   overflow: scroll;
 `;
