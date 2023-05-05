@@ -3,7 +3,7 @@ import RestBasicInfo from "./RestBasicInfo";
 import RestDish from "./RestDish";
 import RestExterior from "./RestExterior";
 import RestTicket from "./RestTicket";
-import RestReview from "./RestReview";
+import RestReviews from "./RestReviews";
 
 export default function ModalBodyContent({ restInfo }: any) {
   return (
@@ -22,7 +22,7 @@ export default function ModalBodyContent({ restInfo }: any) {
         ))}
       </DishesWrapper>
       <RestExterior restName={restInfo.restName} />
-      <RestReview />
+      <RestReviews />
       <RestTicket restInfo={restInfo} />
     </div>
   );
