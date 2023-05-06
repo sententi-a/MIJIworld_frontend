@@ -16,7 +16,7 @@ export default function ListPage() {
         <Wrapper>
           <SearchBar />
           <CardWrapper>
-            {[1, 2, 3, 4, 5, 6, 7].map((elem) => {
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((elem) => {
               return <RestCard />;
             })}
           </CardWrapper>
@@ -28,7 +28,7 @@ export default function ListPage() {
 const Wrapper = styled.div`
   width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   gap: 20px;
@@ -38,6 +38,7 @@ const Wrapper = styled.div`
 
 const CardWrapper = styled.div`
   width: 52vw;
+  height: 70vh;
   text-align: center;
   display: grid;
   justify-content: space-evenly;
@@ -45,5 +46,6 @@ const CardWrapper = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(25vmax, 25vmax));
   margin: 20px;
   row-gap: 3vh;
-  // col-gap: 3vw;
+  padding: 10px;
+  overflow: scroll;
 `;
