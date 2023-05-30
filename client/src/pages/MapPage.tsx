@@ -1,10 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
-import BackImage from "../components/BackImage";
+import { MemoizedBackground } from "../components/Background";
 import Bg from "../assets/images/map/worldmap_background.png";
 import MapBg from "../assets/images/map/worldmap.png";
-import Logo from "../components/Logo";
-import LogoPath from "../assets/images/logo/logo.png";
 import VerticalButtons from "../components/VerticalButtons";
 import RestDialog from "../components/RestDialog";
 import Modal from "../components/Modal";
@@ -15,15 +13,14 @@ export default function MapPage() {
 
   return (
     <>
-      <BackImage path={Bg}>
-        <Logo src={LogoPath} />
+      <MemoizedBackground bgPath={Bg} isMain={false}>
         <Container>
           <WorldMap src={MapBg} />
           <VerticalButtons isMap={true} isList={false} />
         </Container>
         {isDialogOpen && <RestDialog />}
         {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
-      </BackImage>
+      </MemoizedBackground>
     </>
   );
 }

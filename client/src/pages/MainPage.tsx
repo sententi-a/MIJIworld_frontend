@@ -1,9 +1,7 @@
-import React from "react";
 import styled from "styled-components";
 import Main from "../assets/images/main/main.png";
-import Logo from "../assets/images/main/logo_main.png";
-import BackImage from "../components/BackImage";
 import { useNavigate } from "react-router-dom";
+import { MemoizedBackground } from "../components/Background";
 
 export default function MainPage() {
   const navigate = useNavigate();
@@ -14,24 +12,17 @@ export default function MainPage() {
 
   return (
     <>
-      <BackImage path={Main}>
-        <LogoImage src={Logo} />
+      <MemoizedBackground bgPath={Main} isMain={true}>
         <Heading1>
           Eat the World, <br />
           Meet the World!
         </Heading1>
         <Heading2>당신이 알지 못했던 세계 음식 맛집 소개 서비스</Heading2>
         <Button onClick={handleButtonClick}>맛보러 가기</Button>
-      </BackImage>
+      </MemoizedBackground>
     </>
   );
 }
-
-const LogoImage = styled.img`
-  width: 12vw;
-  margin-top: 3vw;
-  margin-left: 10vw;
-`;
 
 const Heading1 = styled.h1`
   font-size: 3.7vw;

@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import Logo from "../components/Logo";
-import LogoPath from "../assets/images/logo/logo.png";
 import VerticalButtons from "../components/VerticalButtons";
-import BackImage from "../components/BackImage";
+import { MemoizedBackground } from "../components/Background";
 import Bg from "../assets/images/list/bg.png";
 import RestCard from "../components/RestCard";
 import SearchBar from "../components/SearchBar";
@@ -10,8 +8,7 @@ import SearchBar from "../components/SearchBar";
 export default function ListPage() {
   return (
     <>
-      <BackImage path={Bg}>
-        <Logo src={LogoPath} />
+      <MemoizedBackground bgPath={Bg} isMain={false}>
         <VerticalButtons isMap={false} isList={true} />
         <Wrapper>
           <SearchBar />
@@ -21,7 +18,7 @@ export default function ListPage() {
             })}
           </CardWrapper>
         </Wrapper>
-      </BackImage>
+      </MemoizedBackground>
     </>
   );
 }
