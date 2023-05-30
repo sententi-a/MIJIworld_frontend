@@ -4,7 +4,6 @@ import styled from "styled-components";
 import React from "react";
 
 interface BackgroundProps {
-  children: React.ReactNode;
   bgPath: string;
   isMain: boolean;
 }
@@ -23,6 +22,7 @@ const Logo1 = styled.img`
   width: 12vw;
   margin-top: 3vw;
   margin-left: 10vw;
+  position: absolute;
 `;
 
 const Logo2 = styled.img`
@@ -38,7 +38,8 @@ const BackImage = styled.div<{ path: string }>`
   background-size: cover;
   width: 100vw;
   min-height: 100vh;
-  z-index: 1000;
+  position: absolute;
+  top: 0;
 `;
 
 export const MemoizedBackground = React.memo(Background);

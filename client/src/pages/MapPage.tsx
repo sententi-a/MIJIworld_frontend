@@ -13,20 +13,20 @@ export default function MapPage() {
 
   return (
     <>
-      <MemoizedBackground bgPath={Bg} isMain={false}>
-        <Container>
-          <WorldMap src={MapBg} />
-          <VerticalButtons isMap={true} isList={false} />
-        </Container>
-        {isDialogOpen && <RestDialog />}
-        {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
-      </MemoizedBackground>
+      <MemoizedBackground bgPath={Bg} isMain={false} />
+      <Container>
+        <WorldMap src={MapBg} />
+        <VerticalButtons isMap={true} isList={false} />
+      </Container>
+      {isDialogOpen && <RestDialog />}
+      {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
     </>
   );
 }
 
 const Container = styled.div`
   text-align: center;
+  position: relative;
 `;
 
 const WorldMap = styled.img`

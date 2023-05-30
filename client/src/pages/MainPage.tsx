@@ -12,14 +12,15 @@ export default function MainPage() {
 
   return (
     <>
-      <MemoizedBackground bgPath={Main} isMain={true}>
+      <MemoizedBackground bgPath={Main} isMain={true} />
+      <div style={{ position: "relative" }}>
         <Heading1>
           Eat the World, <br />
           Meet the World!
         </Heading1>
         <Heading2>당신이 알지 못했던 세계 음식 맛집 소개 서비스</Heading2>
         <Button onClick={handleButtonClick}>맛보러 가기</Button>
-      </MemoizedBackground>
+      </div>
     </>
   );
 }

@@ -8,7 +8,8 @@ import SearchBar from "../components/SearchBar";
 export default function ListPage() {
   return (
     <>
-      <MemoizedBackground bgPath={Bg} isMain={false}>
+      <MemoizedBackground bgPath={Bg} isMain={false} />
+      <div style={{ position: "relative" }}>
         <VerticalButtons isMap={false} isList={true} />
         <Wrapper>
           <SearchBar />
@@ -18,7 +19,7 @@ export default function ListPage() {
             })}
           </CardWrapper>
         </Wrapper>
-      </MemoizedBackground>
+      </div>
     </>
   );
 }
