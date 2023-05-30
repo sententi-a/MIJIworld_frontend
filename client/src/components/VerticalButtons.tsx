@@ -1,15 +1,13 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 interface VerticalButtonProps {
   isMap: boolean;
   isList: boolean;
 }
 
-export default function VerticalButtons({
-  isMap,
-  isList,
-}: VerticalButtonProps) {
+function VerticalButtons({ isMap, isList }: VerticalButtonProps) {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
@@ -65,3 +63,5 @@ const VerticalBtn = styled.button<{ clicked: boolean }>`
     color: ${(props) => (props.clicked ? "none" : "white")};
   }
 `;
+
+export const MemoizedVerticalButtons = React.memo(VerticalButtons);

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { MemoizedBackground } from "../components/Background";
+import { MemoizedVerticalButtons } from "../components/VerticalButtons";
 import Bg from "../assets/images/map/worldmap_background.png";
 import MapBg from "../assets/images/map/worldmap.png";
-import VerticalButtons from "../components/VerticalButtons";
 import RestDialog from "../components/RestDialog";
 import Modal from "../components/Modal";
 
@@ -16,7 +16,7 @@ export default function MapPage() {
       <MemoizedBackground bgPath={Bg} isMain={false} />
       <Container>
         <WorldMap src={MapBg} />
-        <VerticalButtons isMap={true} isList={false} />
+        <MemoizedVerticalButtons isMap={true} isList={false} />
       </Container>
       {isDialogOpen && <RestDialog />}
       {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
