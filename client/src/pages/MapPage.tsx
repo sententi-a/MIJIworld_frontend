@@ -14,9 +14,9 @@ export default function MapPage() {
   return (
     <>
       <MemoizedBackground bgPath={Bg} isMain={false} />
+      <MemoizedVerticalButtons isMap={true} isList={false} />
       <Container>
         <WorldMap src={MapBg} />
-        <MemoizedVerticalButtons isMap={true} isList={false} />
       </Container>
       {isDialogOpen && <RestDialog />}
       {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
