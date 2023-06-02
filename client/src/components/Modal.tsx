@@ -86,6 +86,7 @@ const Backdrop = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 `;
 const ModalBg = styled.div`
   background-color: white;
