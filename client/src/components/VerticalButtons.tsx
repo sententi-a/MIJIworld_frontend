@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import React from "react";
 import { useCallback } from "react";
 
-interface VerticalButtonProps {
+export interface VerticalButtonProps {
   isMap: boolean;
   isList: boolean;
 }
@@ -51,15 +51,13 @@ const VerticalBtn = styled.button<{ clicked: boolean }>`
   background-color: ${(props) => (props.clicked ? "#8d8de5" : "white")};
   font-family: Noto Sans KR;
   font-weight: 700;
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   color: ${(props) => (props.clicked ? "white" : "#8d8de5")};
   border: none;
   border-radius: 10px;
   width: 4vw;
   height: 15vh;
   // Text-align
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   z-index: 10;
 
