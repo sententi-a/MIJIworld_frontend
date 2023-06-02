@@ -4,8 +4,12 @@ import { MemoizedBackground } from "../components/Background";
 import Bg from "../assets/images/list/bg.png";
 import RestCard from "../components/RestCard";
 import SearchBar from "../components/SearchBar";
+import Modal from "../components/Modal";
+import { useState } from "react";
 
 export default function ListPage() {
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
   return (
     <>
       <MemoizedBackground bgPath={Bg} isMain={false} />
@@ -20,6 +24,7 @@ export default function ListPage() {
           </CardWrapper>
         </Wrapper>
       </div>
+      {/* {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />} */}
     </>
   );
 }

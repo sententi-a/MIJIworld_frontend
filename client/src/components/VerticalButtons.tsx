@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import React from "react";
+import { useCallback } from "react";
 
 interface VerticalButtonProps {
   isMap: boolean;
@@ -58,6 +60,8 @@ const VerticalBtn = styled.button<{ clicked: boolean }>`
   // Text-align
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  z-index: 10;
 
   :hover {
     background-color: ${(props) => (props.clicked ? "none" : "#aaaaf0")};
@@ -65,4 +69,9 @@ const VerticalBtn = styled.button<{ clicked: boolean }>`
   }
 `;
 
-export const MemoizedVerticalButtons = React.memo(VerticalButtons);
+export const MemoizedVerticalButtons = React.memo(
+  VerticalButtons,
+  (prev: VerticalButtonProps, next: VerticalButtonProps) => {
+    return prev.isMap === next.isMap && prev.isList === next.isList;
+  }
+);
