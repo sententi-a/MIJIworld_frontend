@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import React from "react";
 
-interface CustomProps {
+interface CustomProps extends React.HTMLAttributes<HTMLButtonElement> {
   bgColor?: string;
   clicked?: boolean;
   label?: string;
@@ -10,9 +10,7 @@ interface CustomProps {
   size?: "small" | "medium" | "large";
 }
 
-export default function Button(
-  props: React.HTMLAttributes<HTMLButtonElement> & CustomProps
-) {
+export default function Button(props: CustomProps) {
   return (
     <>
       <CustomButton {...props}>{props.label || "버튼"}</CustomButton>
