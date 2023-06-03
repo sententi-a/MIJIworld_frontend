@@ -28,6 +28,8 @@ const CustomButton = styled.button<CustomProps>`
   cursor: pointer;
   z-index: 10;
   position: relative;
+  display: flex;
+  align-items: center;
 
   background-color: ${(props) =>
     props.clicked ? props.bgColor || "#8d8de5" : "white"};
@@ -77,7 +79,7 @@ const getButtonSize = (size: string, isVertical?: boolean) => {
       `;
 
     case "large":
-      properties = `font-size: 2vw; `;
+      properties = `font-size: 2vw; border-radius: 30px; `;
 
       if (isVertical) {
         properties = properties.concat(`width: 5vw; height: 18vh`);

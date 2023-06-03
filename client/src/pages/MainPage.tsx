@@ -3,6 +3,7 @@ import Main from "../assets/images/main/main.png";
 import { useNavigate } from "react-router-dom";
 import { MemoizedBackground } from "../components/Background";
 import { MemoizedLogo } from "../components/Logo";
+import Button from "../components/Button";
 
 export default function MainPage() {
   const navigate = useNavigate();
@@ -21,7 +22,13 @@ export default function MainPage() {
           Meet the World!
         </Heading1>
         <Heading2>당신이 알지 못했던 세계 음식 맛집 소개 서비스</Heading2>
-        <Button onClick={handleButtonClick}>맛보러 가기</Button>
+        <div style={{ marginLeft: "10vw", marginTop: "6vh" }}>
+          <Button
+            size="large"
+            onClick={handleButtonClick}
+            label="맛보러 가기"
+          />
+        </div>
       </div>
     </>
   );
@@ -44,22 +51,4 @@ const Heading2 = styled.h2`
   color: #979797;
   margin-left: 10vw;
   margin-top: 1.3vh;
-`;
-
-const Button = styled.button`
-  padding: 10px 30px 10px 30px;
-  height: 6vh;
-  border: none;
-  border-radius: 30px;
-  color: white;
-  font-weight: bold;
-  font-size: 2vw;
-  margin-left: 10vw;
-  margin-top: 6vh;
-  background-color: #8d8de5;
-
-  :hover {
-    color: #8d8de5;
-    background-color: white;
-  }
 `;

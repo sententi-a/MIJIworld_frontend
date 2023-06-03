@@ -15,7 +15,7 @@ function Logo({ isMain }: LogoProps) {
 
 const KoreanLogo = styled.img`
   width: 12vw;
-  margin-top: 3vw;
+  top: 4vh;
   margin-left: 10vw;
   position: absolute;
 `;
