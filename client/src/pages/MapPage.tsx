@@ -15,8 +15,6 @@ export default function MapPage() {
   return (
     <>
       <MemoizedBackground bgPath={Bg} isMain={false} />
-      {/* test */}
-      <Button isVertical={true} label={"지도보기"} size={"medium"} />
       <MemoizedVerticalButtons isMap={true} isList={false} />
       <Container>
         <WorldMap src={MapBg} />

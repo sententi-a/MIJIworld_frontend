@@ -40,7 +40,7 @@ const CustomButton = styled.button<CustomProps>`
   }
 
   ${(props) => props.isVertical && "width: 4vw; height: 15vh;"}
-  ${(props) => getButtonSize(props.size || "small", props.isVertical)}
+  ${(props) => getButtonSize(props.size || "medium", props.isVertical)}
 `;
 
 const getButtonSize = (size: string, isVertical?: boolean) => {
@@ -48,7 +48,7 @@ const getButtonSize = (size: string, isVertical?: boolean) => {
 
   switch (size) {
     case "small":
-      properties = `font-size: 1.2vw `;
+      properties = `font-size: 1.1vw; `;
       if (isVertical) {
         properties = properties.concat(`width: 3vw; height: 14vh;`);
       } else {
@@ -61,10 +61,11 @@ const getButtonSize = (size: string, isVertical?: boolean) => {
       `;
 
     case "medium":
-      properties = `font-size: 1.3vw `;
+      properties = `font-size: 1.3vw; `;
 
       if (isVertical) {
         properties = properties.concat(`width: 4vw; height: 15vh;`);
+        console.log(properties);
       } else {
         properties = properties.concat(
           `height: 5vh; padding: 8px 20px 8px 20px;`
