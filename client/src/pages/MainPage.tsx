@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Main from "../assets/images/main/main.png";
 import { useNavigate } from "react-router-dom";
 import { MemoizedBackground } from "../components/Background";
+import { MemoizedLogo } from "../components/Logo";
 
 export default function MainPage() {
   const navigate = useNavigate();
@@ -12,7 +13,8 @@ export default function MainPage() {
 
   return (
     <>
-      <MemoizedBackground bgPath={Main} isMain={true} />
+      <MemoizedBackground bgPath={Main} />
+      <MemoizedLogo isMain={true} />
       <div style={{ position: "relative" }}>
         <Heading1>
           Eat the World, <br />

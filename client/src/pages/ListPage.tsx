@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MemoizedVerticalButtons } from "../components/VerticalButtons";
 import { MemoizedBackground } from "../components/Background";
+import { MemoizedLogo } from "../components/Logo";
 import Bg from "../assets/images/list/bg.png";
 import RestCard from "../components/RestCard";
 import SearchBar from "../components/SearchBar";
@@ -12,7 +13,8 @@ export default function ListPage() {
 
   return (
     <>
-      <MemoizedBackground bgPath={Bg} isMain={false} />
+      <MemoizedBackground bgPath={Bg} />
+      <MemoizedLogo isMain={false} />
       <div style={{ position: "relative" }}>
         <MemoizedVerticalButtons isMap={false} isList={true} />
         <Wrapper>

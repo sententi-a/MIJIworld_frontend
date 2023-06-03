@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { MemoizedBackground } from "../components/Background";
+import { MemoizedLogo } from "../components/Logo";
 import { MemoizedVerticalButtons } from "../components/VerticalButtons";
 import Bg from "../assets/images/map/worldmap_background.png";
 import MapBg from "../assets/images/map/worldmap.png";
@@ -14,7 +15,8 @@ export default function MapPage() {
 
   return (
     <>
-      <MemoizedBackground bgPath={Bg} isMain={false} />
+      <MemoizedBackground bgPath={Bg} />
+      <MemoizedLogo isMain={false} />
       <MemoizedVerticalButtons isMap={true} isList={false} />
       <Container>
         <WorldMap src={MapBg} />

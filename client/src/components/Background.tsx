@@ -1,31 +1,29 @@
-import LogoKr from "../assets/images/main/logo_main.png";
-import LogoEn from "../assets/images/logo/logo.png";
 import styled from "styled-components";
 import React from "react";
 
 interface BackgroundProps {
   bgPath: string;
-  isMain: boolean;
+  //   isMain: boolean;
 }
 
-function Background({ bgPath, isMain }: BackgroundProps) {
+function Background({ bgPath }: BackgroundProps) {
   return (
     <>
-      <BackImage path={bgPath}>
-        {isMain ? <Logo1 src={LogoKr} /> : <Logo2 src={LogoEn} />}
-      </BackImage>
+      <BackImage path={bgPath} />
+      {/* {isMain ? <KoreanLogo src={LogoKr} /> : <EnglishLogo src={LogoEn} />} */}
+      {/* </BackImage> */}
     </>
   );
 }
 
-const Logo1 = styled.img`
+const KoreanLogo = styled.img`
   width: 12vw;
   margin-top: 3vw;
   margin-left: 10vw;
   position: absolute;
 `;
 
-const Logo2 = styled.img`
+const EnglishLogo = styled.img`
   width: 10vw;
   margin-top: 2vw;
   position: absolute;
