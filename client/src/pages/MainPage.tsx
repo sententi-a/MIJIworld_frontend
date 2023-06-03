@@ -15,7 +15,10 @@ export default function MainPage() {
   return (
     <>
       <MemoizedBackground bgPath={Main} />
-      <MemoizedLogo isMain={true} />
+      <MemoizedLogo
+        isMain={true}
+        style={{ top: "4vh", marginLeft: "10vw", position: "absolute" }}
+      />
       <div style={{ position: "relative" }}>
         <Heading1>
           Eat the World, <br />

@@ -16,7 +16,15 @@ export default function MapPage() {
   return (
     <>
       <MemoizedBackground bgPath={Bg} />
-      <MemoizedLogo isMain={false} />
+      <MemoizedLogo
+        isMain={false}
+        style={{
+          marginTop: "2vw",
+          position: "absolute",
+          left: "50%",
+          transform: "translate(-50%)",
+        }}
+      />
       <MemoizedVerticalButtons isMap={true} isList={false} />
       <Container>
         <WorldMap src={MapBg} />

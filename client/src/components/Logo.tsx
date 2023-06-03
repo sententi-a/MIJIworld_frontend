@@ -3,29 +3,26 @@ import styled from "styled-components";
 import LogoKr from "../assets/images/main/logo_main.png";
 import LogoEn from "../assets/images/logo/logo.png";
 
-interface LogoProps {
+interface LogoProps extends React.HTMLAttributes<HTMLDivElement> {
   isMain?: boolean;
 }
 
-function Logo({ isMain }: LogoProps) {
+function Logo({ isMain, ...props }: LogoProps) {
   return (
-    <>{isMain ? <KoreanLogo src={LogoKr} /> : <EnglishLogo src={LogoEn} />}</>
+    <>
+      <div {...props}>
+        {isMain ? <KoreanLogo src={LogoKr} /> : <EnglishLogo src={LogoEn} />}
+      </div>
+    </>
   );
 }
 
 const KoreanLogo = styled.img`
   width: 12vw;
-  top: 4vh;
-  margin-left: 10vw;
-  position: absolute;
 `;
 
 const EnglishLogo = styled.img`
   width: 10vw;
-  margin-top: 2vw;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
 `;
 
 export const MemoizedLogo = React.memo(Logo);
