@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CountryImage, CountryName } from "./Modal";
+import ImageWithText from "./ImageWithText";
 import { RestDishImg, RestName } from "./RestDialog";
 
 export default function RestCard() {
@@ -13,16 +13,18 @@ export default function RestCard() {
     <>
       <Card>
         <CountryHeader>
-          <CountryImage
-            src={require(`../assets/images/restaurant/${restName}/flag.png`)}
-            style={{ width: "15%" }}
-          ></CountryImage>
-          <CountryName
-            color={"#707070"}
-            style={{ fontFamily: "Noto Sans KR", fontSize: "1.3vw" }}
-          >
-            {countryName}
-          </CountryName>
+          <ImageWithText
+            imgSrc={require(`../assets/images/restaurant/${restName}/flag.png`)}
+            text={countryName}
+            imageProps={{ style: { width: "15%" } }}
+            textProps={{
+              style: {
+                color: "#707070",
+                fontFamily: "Noto Sans KR",
+                fontSize: "1.5vw",
+              },
+            }}
+          />
         </CountryHeader>
         <InnerCard>
           <RestDishImg

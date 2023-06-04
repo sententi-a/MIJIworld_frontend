@@ -2,6 +2,8 @@ import { useRef } from "react";
 import styled from "styled-components";
 import { CloseOutlined } from "@ant-design/icons";
 import ModalBodyContent from "./ModalBodyContent";
+import ImageWithText from "./ImageWithText";
+import React from "react";
 
 interface ModalProps {
   setIsModalOpen: (open: boolean) => void;
@@ -59,16 +61,38 @@ export default function Modal({ setIsModalOpen }: ModalProps) {
     <>
       <Backdrop ref={modalRef} onClick={(event) => clickModalOutside(event)}>
         <ModalBg>
-          <ModalHeader color={headerColor}>
-            <CloseButtonContainer>
-              <CloseOutlined onClick={closeModal} />
-            </CloseButtonContainer>
-            <ModalHeaderContent>
-              <CountryImage
-                src={require(`../assets/images/restaurant/${restName}/flag.png`)}
+          <ModalHeader backgroundColor={headerColor}>
+            <div
+              style={{
+                position: "absolute",
+                transform: "translate(-50%, 25%)",
+                top: 0,
+                left: "50%",
+              }}
+            >
+              <ImageWithText
+                imgSrc={require(`../assets/images/restaurant/${restName}/flag.png`)}
+                text={countryName}
+                imageProps={{ style: { width: "3vw" } }}
+                textProps={{
+                  style: {
+                    fontSize: "1.4vw",
+                    color: countryNameColor,
+                  },
+                }}
               />
-              <CountryName color={countryNameColor}>{countryName}</CountryName>
-            </ModalHeaderContent>
+            </div>
+            <CloseOutlined
+              onClick={closeModal}
+              style={{
+                fontSize: "2.3vw",
+                color: "white",
+                position: "absolute",
+                top: 0,
+                right: 0,
+                transform: "translate(-50%, 75%)",
+              }}
+            />
           </ModalHeader>
           <ModalBodyContent restInfo={restInfo} />
         </ModalBg>
@@ -88,6 +112,7 @@ const Backdrop = styled.div`
   align-items: center;
   z-index: 10;
 `;
+
 const ModalBg = styled.div`
   background-color: white;
   width: 80vw;
@@ -96,39 +121,34 @@ const ModalBg = styled.div`
   overflow: scroll;
 `;
 
-const ModalHeader = styled.div<{ color: string }>`
-  background-color: ${(props) => props.color};
-  width: 80vw;
-  height: 10vh;
-  position: fixed;
-  z-index: 10;
-`;
+interface HeaderProps {
+  backgroundColor: string;
+  children: React.ReactNode;
+}
 
-const ModalHeaderContent = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
-`;
+// molecule
+function Header({ backgroundColor, children }: HeaderProps) {
+  return (
+    <div
+      style={{
+        width: "100%",
+        minHeight: "6vw",
+        position: "sticky",
+        top: 0,
+        zIndex: 10,
+        backgroundColor,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
 
-const CloseButtonContainer = styled.div`
-  font-size: 2vw;
-  float: right;
-  transform: translate(-50%, 50%);
-`;
-
-const CountryImage = styled.img`
-  width: 6%;
-  height: auto;
-  object-fit: contain;
-`;
-
-const CountryName = styled.div<{ color: string }>`
-  font-family: yg-jalnan;
-  font-size: 1.4vw;
-  font-weight: 700;
-  color: ${(props) => props.color || "black"};
-  margin-left: 1vw;
-`;
-
-export { CountryImage, CountryName };
+// Organism with context
+function ModalHeader({ backgroundColor, children }: HeaderProps) {
+  return (
+    <>
+      <Header backgroundColor={backgroundColor}>{children}</Header>
+    </>
+  );
+}
