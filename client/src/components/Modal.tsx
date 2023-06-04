@@ -2,8 +2,10 @@ import { useRef } from "react";
 import styled from "styled-components";
 import { CloseOutlined } from "@ant-design/icons";
 import ModalBodyContent from "./ModalBodyContent";
-import ImageWithText from "./ImageWithText";
 import React from "react";
+import Image from "./Image";
+import Text from "./Text";
+import Horizontal from "./Horizontal";
 
 interface ModalProps {
   setIsModalOpen: (open: boolean) => void;
@@ -62,35 +64,25 @@ export default function Modal({ setIsModalOpen }: ModalProps) {
       <Backdrop ref={modalRef} onClick={(event) => clickModalOutside(event)}>
         <ModalBg>
           <ModalHeader backgroundColor={headerColor}>
-            <div
-              style={{
-                position: "absolute",
-                transform: "translate(-50%, 25%)",
-                top: 0,
-                left: "50%",
-              }}
-            >
-              <ImageWithText
-                imgSrc={require(`../assets/images/restaurant/${restName}/flag.png`)}
-                text={countryName}
-                imageProps={{ style: { width: "3vw" } }}
-                textProps={{
-                  style: {
-                    fontSize: "1.4vw",
-                    color: countryNameColor,
-                  },
-                }}
+            <Horizontal>
+              <Image
+                src={require(`../assets/images/restaurant/${restName}/flag.png`)}
               />
-            </div>
+              <Text
+                text={countryName}
+                fancy={true}
+                style={{ color: countryNameColor }}
+              />
+            </Horizontal>
             <CloseOutlined
               onClick={closeModal}
               style={{
                 fontSize: "2.3vw",
                 color: "white",
                 position: "absolute",
-                top: 0,
+                top: "50%",
                 right: 0,
-                transform: "translate(-50%, 75%)",
+                transform: "translate(-50%, -50%)",
               }}
             />
           </ModalHeader>
@@ -117,38 +109,33 @@ const ModalBg = styled.div`
   background-color: white;
   width: 80vw;
   height: 90vh;
+
   text-align: center;
   overflow: scroll;
 `;
 
-interface HeaderProps {
+interface ModalHeaderProps {
   backgroundColor: string;
   children: React.ReactNode;
 }
 
-// molecule
-function Header({ backgroundColor, children }: HeaderProps) {
+function ModalHeader({ backgroundColor, children }: ModalHeaderProps) {
   return (
     <div
       style={{
         width: "100%",
-        minHeight: "6vw",
+        height: "6vw",
         position: "sticky",
         top: 0,
         zIndex: 10,
         backgroundColor,
       }}
     >
-      {children}
+      <div
+        style={{ height: "100%", display: "flex", justifyContent: "center" }}
+      >
+        {children}
+      </div>
     </div>
-  );
-}
-
-// Organism with context
-function ModalHeader({ backgroundColor, children }: HeaderProps) {
-  return (
-    <>
-      <Header backgroundColor={backgroundColor}>{children}</Header>
-    </>
   );
 }

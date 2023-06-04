@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import ImageWithText from "./ImageWithText";
 import { RestDishImg, RestName } from "./RestDialog";
+import Image from "./Image";
+import Text from "./Text";
+import Horizontal from "./Horizontal";
 
 export default function RestCard() {
   const restName = "samarkant";
@@ -13,18 +15,12 @@ export default function RestCard() {
     <>
       <Card>
         <CountryHeader>
-          <ImageWithText
-            imgSrc={require(`../assets/images/restaurant/${restName}/flag.png`)}
-            text={countryName}
-            imageProps={{ style: { width: "15%" } }}
-            textProps={{
-              style: {
-                color: "#707070",
-                fontFamily: "Noto Sans KR",
-                fontSize: "1.5vw",
-              },
-            }}
-          />
+          <Horizontal>
+            <Image
+              src={require(`../assets/images/restaurant/${restName}/flag.png`)}
+            />
+            <Text text={countryName} bold={true} />
+          </Horizontal>
         </CountryHeader>
         <InnerCard>
           <RestDishImg
