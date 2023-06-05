@@ -40,9 +40,8 @@ function VerticalButtons({ isMap, isList }: VerticalButtonProps) {
 }
 
 const VerticalBtnContainer = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  right: 0;
   float: right;
   margin-top: 1vh;
 `;

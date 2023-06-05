@@ -22,6 +22,7 @@ function Txt({ text, size, bold, fancy, ...props }: TextProps) {
 const CustomText = styled.div`
   font-family: Noto Sans KR;
   color: #707070;
+  white-space: pre-line;
 
   &.bold {
     font-weight: bold;
