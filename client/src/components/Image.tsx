@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 interface ImageProps extends React.HTMLAttributes<HTMLImageElement> {
-  size?: "small" | "medium" | "large";
+  size?: "small" | "medium" | "large" | "xlarge";
   src: string;
 }
 
