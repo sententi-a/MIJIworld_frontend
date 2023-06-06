@@ -1,36 +1,63 @@
 import React from "react";
 import { useState } from "react";
 
+interface ticketDataType {
+  name: string;
+  company: string;
+  note: string;
+  message: string;
+  // index signature
+  [key: string]: string;
+}
+
 export default function useTicketForm() {
-  const [ticketData, setTicketData] = useState({
-    date: new Date(),
+  const [date, setDate] = useState(new Date());
+  const [ticketData, setTicketData] = useState<ticketDataType>({
     name: "",
     company: "",
     note: "",
     message: "",
   });
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>, target: string) => {
+  const dateToString = () => {
+    return (
+      date.toLocaleDateString("ko-KR", {
+        year: "2-digit",
+        month: "long",
+        day: "numeric",
+      }) +
+      " (" +
+      date.toLocaleDateString("ko-KR", {
+        weekday: "short",
+      }) +
+      ")"
+    );
+  };
+
+  const handleOnChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    target: string
+  ) => {
     setTicketData((prev) => ({ ...prev, [target]: e.target.value }));
   };
 
   const getTicketFormLabels = () => {
-    const labels = {
-      name: "이름",
-      company: "동행",
-      note: "노트",
-      message: "ETC",
-    };
+    const labels = [
+      { name: "name", label: "이름" },
+      { name: "company", label: "동행" },
+      { name: "note", label: "노트" },
+      { name: "message", label: "ETC" },
+    ];
+
     return labels;
   };
 
-  const getTicketFormValues = () => {
-    return ticketData;
-  };
-
   return {
-    onChange,
+    handleOnChange,
     getTicketFormLabels,
-    getTicketFormValues,
+    ticketData,
+    date,
+    setDate,
+    dateToString,
   };
 }
