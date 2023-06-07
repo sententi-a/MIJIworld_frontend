@@ -2,48 +2,89 @@ import styled, { css } from "styled-components";
 import React from "react";
 
 interface CustomProps extends React.HTMLAttributes<HTMLButtonElement> {
-  bgColor?: string;
+  color?: string;
   clicked?: boolean;
   label?: string;
   isVertical?: boolean;
-  hoverColor?: string;
   size?: "small" | "medium" | "large";
 }
 
-export default function Button(props: CustomProps) {
+export default function Button({
+  color = "#8d8de5",
+  clicked = false,
+  label = "버튼",
+  isVertical = false,
+  size = "medium",
+  ...props
+}: CustomProps) {
   return (
     <>
-      <CustomButton {...props}>{props.label || "버튼"}</CustomButton>
+      <CustomButton
+        color={color}
+        clicked={clicked}
+        isVertical={isVertical}
+        size={size}
+        disabled={clicked}
+        {...props}
+      >
+        {label}
+      </CustomButton>
     </>
   );
 }
 
 const CustomButton = styled.button<CustomProps>`
-  font-family: "Noto Sans KR";
+  font-family: Noto Sans KR;
   font-weight: 700;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  z-index: 10;
   position: relative;
   display: flex;
   align-items: center;
+  background-color: ${(props) => props.color};
+  z-index: 10;
 
-  background-color: ${(props) =>
-    props.clicked ? props.bgColor || "#8d8de5" : "white"};
-  color: ${(props) => (props.clicked ? "white" : props.bgColor || "#8d8de5")};
+  ${(props) => getFontColor(props.color)}
+  ${(props) => getButtonSize(props.size, props.isVertical)}
 
   :hover {
-    background-color: ${(props) =>
-      props.clicked ? "none" : props.hoverColor || "#aaaaf0"};
-    color: ${(props) => (props.clicked ? "none" : "white")};
+    ${(props) => (props.clicked ? "" : "filter: brightness(0.9)")}
   }
-
-  ${(props) => props.isVertical && "width: 4vw; height: 15vh;"}
-  ${(props) => getButtonSize(props.size || "medium", props.isVertical)}
 `;
 
-const getButtonSize = (size: string, isVertical?: boolean) => {
+// Get RGB number based on the color given
+// It just parses the color code and make it decimal int type
+const getRGB = (color: string): number[] => {
+  const hexColor = color.replace("#", "");
+  const r = parseInt(hexColor.substring(0, 2), 16);
+  const g = parseInt(hexColor.substring(2, 4), 16);
+  const b = parseInt(hexColor.substring(4, 6), 16);
+  return [r, g, b];
+};
+
+// Get Font Color based on the background-color of the Button
+// It returns color: white if the color is dark enough, color: black vice versa.
+const getFontColor = (bgColor: string | undefined) => {
+  if (bgColor) {
+    const [r, g, b] = getRGB(bgColor);
+    const brightness = (0.1 * r + 0.1 * g + 0.1 * b) / 255;
+
+    return brightness <= 0.5
+      ? css`
+          color: white;
+        `
+      : css`
+          color: black;
+        `;
+  }
+
+  return css`
+    color: black;
+  `;
+};
+
+const getButtonSize = (size: string | undefined, isVertical?: boolean) => {
   let properties = ``;
 
   switch (size) {
