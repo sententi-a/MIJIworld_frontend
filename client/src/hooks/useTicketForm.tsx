@@ -10,6 +10,10 @@ interface ticketDataType {
   [key: string]: string;
 }
 
+interface textPositionsType {
+  [key: string]: React.CSSProperties;
+}
+
 export default function useTicketForm() {
   const [date, setDate] = useState(new Date());
   const [ticketData, setTicketData] = useState<ticketDataType>({
@@ -28,13 +32,41 @@ export default function useTicketForm() {
 
   const getTicketFormLabels = () => {
     const labels = [
-      { name: "name", label: "이름" },
-      { name: "company", label: "동행" },
-      { name: "note", label: "노트" },
-      { name: "message", label: "ETC" },
+      { name: "name", label: "Name" },
+      { name: "company", label: "With" },
+      { name: "note", label: "Note" },
+      { name: "message", label: "Message" },
     ];
 
     return labels;
+  };
+
+  const textPositions: textPositionsType = {
+    date: { position: "absolute", top: "8.5vw", left: "3.3vw" },
+    name: {
+      position: "absolute",
+      top: "4vw",
+      left: "39vw",
+      overflow: "hidden",
+    },
+    company: {
+      position: "absolute",
+      top: "7.4vw",
+      left: "39vw",
+      overflow: "hidden",
+    },
+    note: {
+      position: "absolute",
+      top: "10.8vw",
+      left: "39vw",
+      overflow: "hidden",
+    },
+    message: {
+      position: "absolute",
+      top: "14.2vw",
+      left: "39vw",
+      overflow: "hidden",
+    },
   };
 
   return {
@@ -43,5 +75,6 @@ export default function useTicketForm() {
     ticketData,
     date,
     setDate,
+    textPositions,
   };
 }
