@@ -5,40 +5,21 @@ import { useState, useCallback } from "react";
 interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
   label?: string;
   size?: "small" | "medium" | "large";
-  handleOnChange: Function;
+  handleOnChange?: Function;
 }
 
 function Input_({ label, size, handleOnChange, ...props }: InputProps) {
   return (
-    <div>
-      <CustomLabel className={size ? size : "medium"}>{label}</CustomLabel>
+    <>
       <CustomInput
+        placeholder={label}
         className={size ? size : "medium"}
-        onChange={(e) => handleOnChange(e)}
+        onChange={handleOnChange ? (e) => handleOnChange(e) : undefined}
         {...props}
       />
-    </div>
+    </>
   );
 }
-
-const CustomLabel = styled.label`
-  font-family: Noto Sans KR;
-  font-weight: 700;
-  color: #db7976;
-  margin: 1vw;
-
-  &.small {
-    font-size: 1.2vw;
-  }
-
-  &.medium {
-    font-size: 1.4vw;
-  }
-
-  &.large {
-    font-size: 1.6vw;
-  }
-`;
 
 const CustomInput = styled.input`
   border: 1px solid rgba(0, 0, 0, 0);
@@ -71,6 +52,11 @@ const CustomInput = styled.input`
     height: 24px;
     font-size: 1.6vw;
     padding: 10px;
+  }
+
+  ::placeholder {
+    color: #db7976;
+    font-weight: 700;
   }
 `;
 
