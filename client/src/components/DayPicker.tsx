@@ -1,6 +1,5 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import styles from "../styles/DayPicker.module.css";
 import ko from "date-fns/locale/ko";
 import Input from "./Input";
 
