@@ -50,7 +50,6 @@ const CustomButton = styled.button<CustomProps>`
   align-items: center;
   background-color: ${(props) => props.bgColor};
   color: ${(props) => props.fontColor};
-  z-index: 10;
 
   ${(props) => getButtonSize(props.size, props.isVertical)}
 

@@ -173,7 +173,7 @@ export default function ModalBodyContent({ restInfo }: any) {
           })}
 
           {/* TODO: Button component 수정하기(z-index도), hover color get하는 함수 utils로 만들기  */}
-          <Button label="다운로드" style={{ border: "1px solid red" }} />
+          <Button label="다운로드" size="small" />
         </Box>
       </RestTicket>
     </>

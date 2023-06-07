@@ -29,6 +29,7 @@ function VerticalButtons({ isMap, isList }: VerticalButtonProps) {
           bgColor={isMap ? undefined : "#ffffff"}
           fontColor={isMap ? undefined : "#8d8de5"}
           hoverColor={isMap ? undefined : "#faf5ff"}
+          style={{ zIndex: 10 }}
         />
         <Button
           clicked={isList}
@@ -39,6 +40,7 @@ function VerticalButtons({ isMap, isList }: VerticalButtonProps) {
           bgColor={isList ? undefined : "#ffffff"}
           fontColor={isList ? undefined : "#8d8de5"}
           hoverColor={isList ? undefined : "#faf5ff"}
+          style={{ zIndex: 10 }}
         />
       </VerticalBtnContainer>
     </>
