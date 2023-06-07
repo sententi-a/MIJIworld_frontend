@@ -1,39 +1,33 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import styles from "../styles/DayPicker.module.css";
-import { Label } from "../components/CustomInput";
 import ko from "date-fns/locale/ko";
+import Input from "./Input";
 
 interface DayPickerProps {
-  selectedDate: Date | null;
-  setSelectedDate: Function;
+  date: Date | null;
+  setDate: Function;
 }
 
-export default function DayPicker({
-  selectedDate,
-  setSelectedDate,
-}: DayPickerProps) {
+export default function DayPicker({ date, setDate }: DayPickerProps) {
   return (
     <>
-      <div
-        style={{
-          width: "50%",
-          margin: "10px",
-          marginTop: "30px",
-        }}
-      >
-        <Label>날짜</Label>
-        <DatePicker
-          dateFormat={"yyyy년 M월 d일 (eee)"}
-          locale={ko}
-          selected={selectedDate}
-          onChange={(date) => setSelectedDate(date)}
-          shouldCloseOnSelect
-          className={styles.dayPicker}
-          wrapperClassName={styles.wrapper}
-          // inline
-        />
-      </div>
+      <DatePicker
+        popperPlacement="bottom-start"
+        closeOnScroll={true}
+        dateFormat={"yy년 M월 d일 (eee)"}
+        locale={ko}
+        selected={date}
+        onChange={(date) => setDate(date)}
+        shouldCloseOnSelect
+        customInput={
+          <Input
+            label="Date"
+            size="medium"
+            style={{ height: "35px", width: "31.3vw" }}
+          />
+        }
+      />
     </>
   );
 }
