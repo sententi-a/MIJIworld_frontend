@@ -20,6 +20,7 @@ function Input_({
         placeholder={label}
         className={size}
         onChange={handleOnChange ? (e) => handleOnChange(e) : undefined}
+        maxLength={15}
         {...props}
       />
     </>
