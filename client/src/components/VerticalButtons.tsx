@@ -26,6 +26,9 @@ function VerticalButtons({ isMap, isList }: VerticalButtonProps) {
           label="지도 보기"
           isVertical={true}
           size="medium"
+          bgColor={isMap ? undefined : "#ffffff"}
+          fontColor={isMap ? undefined : "#8d8de5"}
+          hoverColor={isMap ? undefined : "#faf5ff"}
         />
         <Button
           clicked={isList}
@@ -33,6 +36,9 @@ function VerticalButtons({ isMap, isList }: VerticalButtonProps) {
           label="목록 보기"
           isVertical={true}
           size="medium"
+          bgColor={isList ? undefined : "#ffffff"}
+          fontColor={isList ? undefined : "#8d8de5"}
+          hoverColor={isList ? undefined : "#faf5ff"}
         />
       </VerticalBtnContainer>
     </>
