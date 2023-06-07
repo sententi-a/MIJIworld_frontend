@@ -8,12 +8,17 @@ interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
   handleOnChange?: Function;
 }
 
-function Input_({ label, size, handleOnChange, ...props }: InputProps) {
+function Input_({
+  label,
+  size = "medium",
+  handleOnChange,
+  ...props
+}: InputProps) {
   return (
     <>
       <CustomInput
         placeholder={label}
-        className={size ? size : "medium"}
+        className={size}
         onChange={handleOnChange ? (e) => handleOnChange(e) : undefined}
         {...props}
       />
