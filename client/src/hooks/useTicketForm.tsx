@@ -19,21 +19,6 @@ export default function useTicketForm() {
     message: "",
   });
 
-  const dateToString = () => {
-    return (
-      date.toLocaleDateString("ko-KR", {
-        year: "2-digit",
-        month: "long",
-        day: "numeric",
-      }) +
-      " (" +
-      date.toLocaleDateString("ko-KR", {
-        weekday: "short",
-      }) +
-      ")"
-    );
-  };
-
   const handleOnChange = (
     e: React.ChangeEvent<HTMLInputElement>,
     target: string
@@ -58,6 +43,5 @@ export default function useTicketForm() {
     ticketData,
     date,
     setDate,
-    dateToString,
   };
 }
