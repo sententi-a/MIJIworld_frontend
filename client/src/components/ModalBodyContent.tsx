@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import useTicketForm from "../hooks/useTicketForm";
 import Button from "./Button";
 import DayPicker from "./DayPicker";
+import dateToString from "../utils/dateToString";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
@@ -23,9 +24,8 @@ export default function ModalBodyContent({ restInfo }: any) {
     ticketData,
     date,
     setDate,
-    dateToString,
+    textPositions,
   } = useTicketForm();
-  const { name, company, note, message } = ticketData;
 
   return (
     <>
@@ -60,7 +60,7 @@ export default function ModalBodyContent({ restInfo }: any) {
         <Horizontal>
           {/* TODO: Menu 합성 컴포넌트로 만들기 organism을 합성 comp로*/}
           {[1, 2, 3].map((id) => (
-            <Box style={{ width: "25%", gap: "1vh" }}>
+            <Box style={{ width: "20%", gap: "1vh" }}>
               <Image
                 src={require(`../assets/images/restaurant/${restInfo.restName}/menu${id}.png`)}
                 size="medium"
@@ -105,7 +105,10 @@ export default function ModalBodyContent({ restInfo }: any) {
               <Text text={`(4.5점)`} size="t5" />
             </Horizontal>
             <StarRate rate={4.5} />
-            <Box style={{ width: "80%", backgroundColor: "#ffffff" }}>
+            <Box
+              shadowIntensity="weak"
+              style={{ width: "80%", backgroundColor: "#ffffff" }}
+            >
               <Text text={"리뷰 리스트"} size="t5" />
               <a href={"https://www.naver.com"} target="_blank" rel="external">
                 <Text text={"더보기"} size="t6" />
@@ -119,7 +122,10 @@ export default function ModalBodyContent({ restInfo }: any) {
               <Text text={`(4.5점)`} size="t5" />
             </Horizontal>
             <StarRate rate={4.5} />
-            <Box style={{ width: "80%", backgroundColor: "#ffffff" }}>
+            <Box
+              shadowIntensity="weak"
+              style={{ width: "80%", backgroundColor: "#ffffff" }}
+            >
               <Text text={"리뷰 리스트"} size="t5" />
               <a href={"https://www.naver.com"} target="_blank" rel="external">
                 <Text text={"더보기"} size="t6" />
@@ -136,16 +142,18 @@ export default function ModalBodyContent({ restInfo }: any) {
           style={{ color: restInfo.countryNameColor }}
         />
         <Text text="나만의 여행 티켓 만들기" size="t5" />
-        <Box style={{}}>
+        <Box style={{ position: "relative" }}>
           <Image
             src={require(`../assets/images/restaurant/${restInfo.restName}/ticket@2x.png`)}
             size="xlarge"
           />
+
           <DayPicker date={date} setDate={setDate} />
           <Text
-            text={dateToString()}
-            size="t7"
-            style={{ position: "relative", top: 0 }}
+            text={dateToString(date)}
+            size="t6"
+            bold={true}
+            style={{ ...textPositions["date"] }}
           />
           {getTicketFormLabels().map((elem) => {
             return (
@@ -156,16 +164,18 @@ export default function ModalBodyContent({ restInfo }: any) {
                     handleOnChange(e, elem.name)
                   }
                 />
-                {/* // TODO: showInput의 위치 정하기 */}
-                <Text text={ticketData[elem.name]} style={{}} />
+                <Text
+                  text={ticketData[elem.name]}
+                  style={{ ...textPositions[elem.name] }}
+                />
               </>
             );
           })}
+
           {/* TODO: Button component 수정하기(z-index도), hover color get하는 함수 utils로 만들기  */}
           <Button label="다운로드" style={{ border: "1px solid red" }} />
         </Box>
       </RestTicket>
-      {/* <RestTicket restInfo={restInfo} /> */}
     </>
   );
 }
@@ -215,5 +225,16 @@ interface RestTicketProps {
 }
 
 function RestTicket({ children }: RestTicketProps) {
-  return <div style={{}}>{children}</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        margin: "30px",
+      }}
+    >
+      {children}
+    </div>
+  );
 }
