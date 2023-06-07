@@ -56,7 +56,7 @@ const CustomInput = styled.input`
 
   ::placeholder {
     color: #db7976;
-    font-weight: 700;
+    font-weight: 500;
   }
 `;
 
