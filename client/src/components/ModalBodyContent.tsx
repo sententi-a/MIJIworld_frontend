@@ -1,16 +1,18 @@
 import styled from "styled-components";
-import Text from "./common/Text";
-import Image from "./common/Image";
-import Horizontal from "./common/Horizontal";
-import Toggle from "./common/Toggle";
-import Box from "./common/Box";
-import Input from "./common/Input";
+import {
+  Text,
+  Image,
+  Horizontal,
+  Toggle,
+  Box,
+  Input,
+  Button,
+} from "./common/index";
 import StarRate from "./StarRate";
 import RestMap from "./RestMap";
 import { Navigation, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useTicketForm from "../hooks/useTicketForm";
-import Button from "./common/Button";
 import DayPicker from "./DayPicker";
 import dateToString from "../utils/dateToString";
 import "swiper/css";
