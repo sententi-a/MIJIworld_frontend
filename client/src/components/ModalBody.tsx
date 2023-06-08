@@ -4,9 +4,9 @@ import RestPhoto from "@components/Modal/ModalBody/RestPhoto";
 import RestReview from "./Modal/ModalBody/RestReview";
 import RestTicket from "./Modal/ModalBody/RestTicket";
 
-export default function ModalBodyContent({ restInfo }: any) {
+export default function ModalBody({ restInfo }: any) {
   return (
-    <>
+    <ModalBodyWrapper>
       <RestOverview restInfo={restInfo} />
 
       <RestMenu restInfo={restInfo} />
@@ -16,14 +16,14 @@ export default function ModalBodyContent({ restInfo }: any) {
       <RestReview restInfo={restInfo} />
 
       <RestTicket restInfo={restInfo} />
-    </>
+    </ModalBodyWrapper>
   );
 }
 
-interface ModalBodyProps {
+interface ModalBodyWrapperProps {
   children: React.ReactNode;
 }
 
-function ModalBody({ children }: ModalBodyProps) {
+function ModalBodyWrapper({ children }: ModalBodyWrapperProps) {
   return <div>{children}</div>;
 }
