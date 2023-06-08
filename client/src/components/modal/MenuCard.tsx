@@ -1,4 +1,5 @@
 import { Box, Image, Text } from "../common";
+import getPriceWithComma from "../../utils/getPriceWithComma";
 
 interface MenuCardProps {
   restName: string;
@@ -20,7 +21,7 @@ export default function MenuCard({ restName, menuId }: MenuCardProps) {
       />
       <Text text={menus[menuId - 1]["name"]} bold={true} />
       <Text text={menus[menuId - 1]["explain"]} />
-      <Text text={menus[menuId - 1]["price"]} />
+      <Text text={getPriceWithComma(menus[menuId - 1]["price"]) + "원"} />
     </Box>
   );
 }
