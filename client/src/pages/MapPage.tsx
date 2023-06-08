@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { MemoizedBackground } from "../components/Background";
-import { MemoizedLogo } from "../components/Logo";
+import { MemoizedLogo } from "../components/common/Logo";
 import { MemoizedVerticalButtons } from "../components/VerticalButtons";
 import Bg from "../assets/images/map/worldmap_background.png";
 import MapBg from "../assets/images/map/worldmap.png";

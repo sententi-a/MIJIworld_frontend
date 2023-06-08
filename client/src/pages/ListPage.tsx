@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { MemoizedVerticalButtons } from "../components/VerticalButtons";
 import { MemoizedBackground } from "../components/Background";
-import { MemoizedLogo } from "../components/Logo";
+import { MemoizedLogo } from "../components/common/Logo";
 import Bg from "../assets/images/list/bg.png";
 import RestCard from "../components/RestCard";
 import SearchBar from "../components/SearchBar";
