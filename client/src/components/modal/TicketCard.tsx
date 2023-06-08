@@ -1,5 +1,5 @@
 import { Box, Text, Image, Input, Button } from "../common";
-import DayPicker from "../DayPicker";
+import DayPicker from "../common/DayPicker";
 import dateToString from "../../utils/dateToString";
 import useTicketForm from "../../hooks/useTicketForm";
 
