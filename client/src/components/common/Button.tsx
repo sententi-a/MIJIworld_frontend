@@ -85,7 +85,6 @@ const getButtonSize = (size: string | undefined, isVertical?: boolean) => {
 
       if (isVertical) {
         properties = properties.concat(`width: 4vw; height: 15vh;`);
-        console.log(properties);
       } else {
         properties = properties.concat(
           `height: 5vh; padding: 8px 20px 8px 20px;`
