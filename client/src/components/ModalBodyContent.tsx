@@ -3,11 +3,7 @@ import ReviewCard from "./modal/ReviewCard";
 import MenuCard from "./modal/MenuCard";
 import TicketCard from "./modal/TicketCard";
 import RestMap from "./RestMap";
-import { Navigation, EffectFade } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
+import RestPhotoSlide from "./modal/RestPhotoSlide";
 
 export default function ModalBodyContent({ restInfo }: any) {
   return (
@@ -47,26 +43,9 @@ export default function ModalBodyContent({ restInfo }: any) {
         </Horizontal>
       </RestMenu>
 
-      <RestExterior>
-        {/* TODO: 이것도 ImageSlide 같은 컴포넌트로 만들어서 깔끔하게 보이게 하기  */}
-        <Swiper
-          navigation={true}
-          modules={[Navigation, EffectFade]}
-          className="mySwiper"
-          loop={true}
-        >
-          {[1, 2, 3, 4].map((elem) => {
-            return (
-              <SwiperSlide>
-                <img
-                  src={require(`../assets/images/restaurant/${restInfo.restName}/slide0${elem}.jpg`)}
-                  style={{ width: "70%" }}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </RestExterior>
+      <RestPhoto>
+        <RestPhotoSlide restName={restInfo.restName} />
+      </RestPhoto>
 
       <RestReview>
         <Text text={`${restInfo.restNameKr} 평점 보기`} fancy={true} />
@@ -118,7 +97,7 @@ interface RestExteriorProps {
   children: React.ReactNode;
 }
 
-function RestExterior({ children }: RestExteriorProps) {
+function RestPhoto({ children }: RestExteriorProps) {
   return <div style={{}}>{children}</div>;
 }
 
