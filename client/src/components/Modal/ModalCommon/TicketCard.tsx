@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Text, Image, Input, Button } from "@components/common";
 import DayPicker from "@components/common/DayPicker";
 import dateToString from "@utils/dateToString";
@@ -33,7 +34,7 @@ export default function TicketCard({ restName }: TicketCardProps) {
       />
       {getTicketFormLabels().map((elem) => {
         return (
-          <>
+          <React.Fragment key={elem.label}>
             <Input
               label={elem.label}
               handleOnChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -44,7 +45,7 @@ export default function TicketCard({ restName }: TicketCardProps) {
               text={ticketData[elem.name]}
               style={{ ...textPositions[elem.name] }}
             />
-          </>
+          </React.Fragment>
         );
       })}
       <Button label="다운로드" size="small" />

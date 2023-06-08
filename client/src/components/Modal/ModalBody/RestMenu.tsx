@@ -11,7 +11,11 @@ export default function RestMenu({ restInfo }: any) {
       />
       <Horizontal>
         {[1, 2, 3].map((id) => (
-          <MenuCard restName={restInfo.restName} menuId={id} />
+          <MenuCard
+            key={`menu${id}`}
+            restName={restInfo.restName}
+            menuId={id}
+          />
         ))}
       </Horizontal>
     </RestMenuWrapper>

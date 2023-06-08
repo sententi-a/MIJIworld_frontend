@@ -18,7 +18,7 @@ export default function RestPhotoSlide({ restName }: RestPhotoSlideProps) {
     >
       {[1, 2, 3, 4].map((elem) => {
         return (
-          <SwiperSlide>
+          <SwiperSlide key={`photo${elem}`}>
             <img
               src={require(`@assets/images/restaurant/${restName}/slide0${elem}.jpg`)}
               style={{ width: "70%" }}
