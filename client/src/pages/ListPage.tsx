@@ -5,7 +5,7 @@ import { MemoizedLogo } from "../components/common/Logo";
 import Bg from "../assets/images/list/bg.png";
 import RestCard from "../components/RestCard";
 import SearchBar from "../components/SearchBar";
-import Modal from "../components/Modal";
+import Modal from "./Modal";
 import { useState } from "react";
 
 export default function ListPage() {
