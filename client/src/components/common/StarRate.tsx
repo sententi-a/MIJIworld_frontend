@@ -13,13 +13,13 @@ function StarRate_({ rate }: StarRateProps) {
       <div style={{ position: "relative" }}>
         <div style={{ position: "absolute", overflow: "hidden", width }}>
           <Image
-            src={require("../../assets/images/icon/star_full.png")}
+            src={require("@assets/images/icon/star_full.png")}
             size="medium"
             style={{ zIndex: 10, width: "7vw" }}
           />
         </div>
         <Image
-          src={require("../../assets/images/icon/star_bin.png")}
+          src={require("@assets/images/icon/star_bin.png")}
           size="medium"
           style={{ width: "7vw", top: 0 }}
         />

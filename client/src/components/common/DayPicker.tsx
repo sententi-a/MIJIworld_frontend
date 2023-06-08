@@ -1,7 +1,7 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ko from "date-fns/locale/ko";
-import Input from "./Input";
+import Input from "@components/common/Input";
 
 interface DayPickerProps {
   date: Date | null;

@@ -1,11 +1,9 @@
 import { useRef } from "react";
 import styled from "styled-components";
 import { CloseOutlined } from "@ant-design/icons";
-import ModalBodyContent from "./ModalBodyContent";
+import ModalBodyContent from "@components/ModalBodyContent";
 import React from "react";
-import Image from "./common/Image";
-import Text from "./common/Text";
-import Horizontal from "./common/Horizontal";
+import { Image, Text, Horizontal } from "@components/common/index";
 
 interface ModalProps {
   setIsModalOpen: (open: boolean) => void;

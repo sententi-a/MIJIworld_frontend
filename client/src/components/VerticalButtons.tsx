@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import { useCallback } from "react";
-import Button from "./common/Button";
+import Button from "@components/common/Button";
 
 export interface VerticalButtonProps {
   isMap: boolean;

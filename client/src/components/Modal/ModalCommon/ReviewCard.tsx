@@ -1,5 +1,5 @@
-import { Box, Horizontal, Image, Text } from "../common";
-import StarRate from "../common/StarRate";
+import { Box, Horizontal, Image, Text } from "@components/common";
+import StarRate from "@components/common/StarRate";
 
 interface ReviewCardProps {
   mapType: string;
@@ -13,7 +13,7 @@ export default function ReviewCard({ mapType, rate, url }: ReviewCardProps) {
   return (
     <Box style={{ width: "30%", backgroundColor: "#fcfcfc" }}>
       <Horizontal gap="0.5vw">
-        <Image src={require(`../../assets/images/icon/${mapType}map.png`)} />
+        <Image src={require(`@assets/images/icon/${mapType}map.png`)} />
         <Text text={mapName} bold={true} size="t5" />
         <Text text={`(${rate}점)`} size="t5" />
       </Horizontal>

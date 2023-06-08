@@ -1,5 +1,5 @@
-import { Box, Image, Text } from "../common";
-import getPriceWithComma from "../../utils/getPriceWithComma";
+import { Box, Image, Text } from "@components/common";
+import getPriceWithComma from "@utils/getPriceWithComma";
 
 interface MenuCardProps {
   restName: string;
@@ -16,7 +16,7 @@ export default function MenuCard({ restName, menuId }: MenuCardProps) {
   return (
     <Box style={{ width: "20%", gap: "1vh" }}>
       <Image
-        src={require(`../../assets/images/restaurant/${restName}/menu${menuId}.png`)}
+        src={require(`@assets/images/restaurant/${restName}/menu${menuId}.png`)}
         size="medium"
       />
       <Text text={menus[menuId - 1]["name"]} bold={true} />

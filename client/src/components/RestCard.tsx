@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { RestDishImg, RestName } from "./RestDialog";
-import Image from "./common/Image";
-import Text from "./common/Text";
-import Horizontal from "./common/Horizontal";
+import { RestDishImg, RestName } from "@components/RestDialog";
+import Image from "@components/common/Image";
+import Text from "@components/common/Text";
+import Horizontal from "@components/common/Horizontal";
 
 export default function RestCard() {
   const restName = "samarkant";

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import LogoKr from "../assets/images/main/logo_main.png";
-import LogoEn from "../assets/images/logo/logo.png";
+import LogoKr from "@assets/images/main/logo_main.png";
+import LogoEn from "@assets/images/logo/logo.png";
 
 interface LogoProps extends React.HTMLAttributes<HTMLDivElement> {
   isMain?: boolean;

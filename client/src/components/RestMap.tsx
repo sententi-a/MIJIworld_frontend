@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import useKakaoMap from "../hooks/useKakaoMap";
+import useKakaoMap from "@hooks/useKakaoMap";
 
 export default function RestMap({ restInfo }: any) {
   useKakaoMap({

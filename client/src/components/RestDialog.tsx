@@ -12,7 +12,7 @@ export default function RestDialog() {
         <CountryText color={restNameColor}>{country}</CountryText>
         <RestInfoContainer>
           <RestDishImg
-            src={require(`../assets/images/restaurant/${restName}/menu1.png`)}
+            src={require(`@assets/images/restaurant/${restName}/menu1.png`)}
           />
           <RestName>{restNameKr}</RestName>
         </RestInfoContainer>

@@ -1,9 +1,9 @@
-import { Text, Horizontal, Toggle } from "./common/index";
-import ReviewCard from "./modal/ReviewCard";
-import MenuCard from "./modal/MenuCard";
-import TicketCard from "./modal/TicketCard";
-import RestMap from "./RestMap";
-import RestPhotoSlide from "./modal/RestPhotoSlide";
+import { Text, Horizontal, Toggle } from "@components/common/index";
+import ReviewCard from "@components/Modal/ModalCommon/ReviewCard";
+import MenuCard from "@components/Modal/ModalCommon/MenuCard";
+import TicketCard from "@components/Modal/ModalCommon/TicketCard";
+import RestMap from "@components/RestMap";
+import RestPhotoSlide from "@components/Modal/ModalCommon/RestPhotoSlide";
 
 export default function ModalBodyContent({ restInfo }: any) {
   return (
