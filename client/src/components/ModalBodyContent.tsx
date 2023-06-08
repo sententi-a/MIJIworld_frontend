@@ -8,7 +8,8 @@ import {
   Input,
   Button,
 } from "./common/index";
-import StarRate from "./StarRate";
+import ReviewCard from "./modal/ReviewCard";
+import StarRate from "./common/StarRate";
 import RestMap from "./RestMap";
 import { Navigation, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -97,43 +98,11 @@ export default function ModalBodyContent({ restInfo }: any) {
       </RestExterior>
 
       <RestReview>
-        {/* TODO: 무조건 컴포넌트 하나 만들기 Inner Card Outer Card 사용한 compound / 아니면 context 포함한 ReviewCard */}
         <Text text={`${restInfo.restNameKr} 평점 보기`} fancy={true} />
         <Horizontal gap="2vw">
-          <Box style={{ width: "30%", backgroundColor: "#fcfcfc" }}>
-            <Horizontal gap="0.5vw">
-              <Image src={require(`../assets/images/icon/navermap.png`)} />
-              <Text text="네이버 지도" bold={true} size="t5" />
-              <Text text={`(4.5점)`} size="t5" />
-            </Horizontal>
-            <StarRate rate={4.5} />
-            <Box
-              shadowIntensity="weak"
-              style={{ width: "80%", backgroundColor: "#ffffff" }}
-            >
-              <Text text={"리뷰 리스트"} size="t5" />
-              <a href={"https://www.naver.com"} target="_blank" rel="external">
-                <Text text={"더보기"} size="t6" />
-              </a>
-            </Box>
-          </Box>
-          <Box style={{ width: "30%", backgroundColor: "#fcfcfc" }}>
-            <Horizontal gap="0.5vw">
-              <Image src={require(`../assets/images/icon/kakaomap.png`)} />
-              <Text text="카카오맵" bold={true} size="t5" />
-              <Text text={`(4.5점)`} size="t5" />
-            </Horizontal>
-            <StarRate rate={4.5} />
-            <Box
-              shadowIntensity="weak"
-              style={{ width: "80%", backgroundColor: "#ffffff" }}
-            >
-              <Text text={"리뷰 리스트"} size="t5" />
-              <a href={"https://www.naver.com"} target="_blank" rel="external">
-                <Text text={"더보기"} size="t6" />
-              </a>
-            </Box>
-          </Box>
+          {["naver", "kakao"].map((elem) => (
+            <ReviewCard mapType={elem} rate={4.5} url={`www.${elem}map.com`} />
+          ))}
         </Horizontal>
       </RestReview>
 
