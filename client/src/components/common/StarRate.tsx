@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "./index";
+import { Image } from "@components/common/index";
 
 interface StarRateProps {
   rate: number;
