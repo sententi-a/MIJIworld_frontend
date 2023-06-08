@@ -9,7 +9,7 @@ import {
   Button,
 } from "./common/index";
 import ReviewCard from "./modal/ReviewCard";
-import StarRate from "./common/StarRate";
+import MenuCard from "./modal/MenuCard";
 import RestMap from "./RestMap";
 import { Navigation, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -61,17 +61,8 @@ export default function ModalBodyContent({ restInfo }: any) {
           style={{ fontWeight: 500 }}
         />
         <Horizontal>
-          {/* TODO: Menu 합성 컴포넌트로 만들기 organism을 합성 comp로*/}
           {[1, 2, 3].map((id) => (
-            <Box style={{ width: "20%", gap: "1vh" }}>
-              <Image
-                src={require(`../assets/images/restaurant/${restInfo.restName}/menu${id}.png`)}
-                size="medium"
-              />
-              <Text text={restInfo.menus[id - 1]["name"]} bold={true} />
-              <Text text={restInfo.menus[id - 1]["explain"]} />
-              <Text text={restInfo.menus[id - 1]["price"]} />
-            </Box>
+            <MenuCard restName={restInfo.restName} menuId={id} />
           ))}
         </Horizontal>
       </RestMenu>
