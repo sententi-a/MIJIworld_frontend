@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 interface TextProps extends React.HTMLAttributes<HTMLDivElement> {
-  text: string;
+  text: string | number;
   size?: string;
   bold?: boolean;
   fancy?: boolean;
