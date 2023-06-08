@@ -5,3 +5,4 @@ export { default as Image } from "./Image";
 export { default as Input } from "./Input";
 export { default as Text } from "./Text";
 export { default as Toggle } from "./Toggle";
+export { default as StarRate } from "./StarRate";
