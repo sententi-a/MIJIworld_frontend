@@ -1,35 +1,15 @@
-import styled from "styled-components";
-import {
-  Text,
-  Image,
-  Horizontal,
-  Toggle,
-  Box,
-  Input,
-  Button,
-} from "./common/index";
+import { Text, Horizontal, Toggle } from "./common/index";
 import ReviewCard from "./modal/ReviewCard";
 import MenuCard from "./modal/MenuCard";
+import TicketCard from "./modal/TicketCard";
 import RestMap from "./RestMap";
 import { Navigation, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import useTicketForm from "../hooks/useTicketForm";
-import DayPicker from "./DayPicker";
-import dateToString from "../utils/dateToString";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 
 export default function ModalBodyContent({ restInfo }: any) {
-  const {
-    handleOnChange,
-    getTicketFormLabels,
-    ticketData,
-    date,
-    setDate,
-    textPositions,
-  } = useTicketForm();
-
   return (
     <>
       <RestOverview>
@@ -104,37 +84,7 @@ export default function ModalBodyContent({ restInfo }: any) {
           style={{ color: restInfo.countryNameColor }}
         />
         <Text text="나만의 여행 티켓 만들기" size="t5" />
-        <Box style={{ position: "relative" }}>
-          <Image
-            src={require(`../assets/images/restaurant/${restInfo.restName}/ticket@2x.png`)}
-            size="xlarge"
-          />
-
-          <DayPicker date={date} setDate={setDate} />
-          <Text
-            text={dateToString(date)}
-            size="t6"
-            bold={true}
-            style={{ ...textPositions["date"] }}
-          />
-          {getTicketFormLabels().map((elem) => {
-            return (
-              <>
-                <Input
-                  label={elem.label}
-                  handleOnChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    handleOnChange(e, elem.name)
-                  }
-                />
-                <Text
-                  text={ticketData[elem.name]}
-                  style={{ ...textPositions[elem.name] }}
-                />
-              </>
-            );
-          })}
-          <Button label="다운로드" size="small" />
-        </Box>
+        <TicketCard restName={restInfo.restName} />
       </RestTicket>
     </>
   );
