@@ -1,16 +1,16 @@
 import styled from "styled-components";
-import Text from "./Text";
-import Image from "./Image";
-import Horizontal from "./Horizontal";
-import Toggle from "./Toggle";
-import Box from "./Box";
-import Input from "./Input";
+import Text from "./common/Text";
+import Image from "./common/Image";
+import Horizontal from "./common/Horizontal";
+import Toggle from "./common/Toggle";
+import Box from "./common/Box";
+import Input from "./common/Input";
 import StarRate from "./StarRate";
 import RestMap from "./RestMap";
 import { Navigation, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useTicketForm from "../hooks/useTicketForm";
-import Button from "./Button";
+import Button from "./common/Button";
 import DayPicker from "./DayPicker";
 import dateToString from "../utils/dateToString";
 import "swiper/css";
@@ -171,8 +171,6 @@ export default function ModalBodyContent({ restInfo }: any) {
               </>
             );
           })}
-
-          {/* TODO: Button component 수정하기(z-index도), hover color get하는 함수 utils로 만들기  */}
           <Button label="다운로드" size="small" />
         </Box>
       </RestTicket>

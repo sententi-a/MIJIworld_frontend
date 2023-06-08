@@ -3,7 +3,7 @@ import Main from "../assets/images/main/main.png";
 import { useNavigate } from "react-router-dom";
 import { MemoizedBackground } from "../components/Background";
 import { MemoizedLogo } from "../components/Logo";
-import Button from "../components/Button";
+import Button from "../components/common/Button";
 
 export default function MainPage() {
   const navigate = useNavigate();

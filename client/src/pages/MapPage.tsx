@@ -7,7 +7,7 @@ import Bg from "../assets/images/map/worldmap_background.png";
 import MapBg from "../assets/images/map/worldmap.png";
 import RestDialog from "../components/RestDialog";
 import Modal from "../components/Modal";
-import Button from "../components/Button";
+import Button from "../components/common/Button";
 
 export default function MapPage() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
