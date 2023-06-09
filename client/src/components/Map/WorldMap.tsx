@@ -7,22 +7,19 @@ interface WorldMapProps {
 
 function WorldMap_({ children }: WorldMapProps) {
   return (
-    <>
+    <div style={{ marginTop: "8vh" }}>
       <Image
         src={require("@assets/images/map/world_map.png")}
         size="xxlarge"
         style={{
           objectFit: "contain",
           objectPosition: "center center",
-          marginTop: "6vh",
+          minWidth: "100%",
+          height: "auto",
         }}
       />
-      <div
-        style={{ position: "absolute", top: 0, width: "90vw", height: "90vh" }}
-      >
-        {children}
-      </div>
-    </>
+      {children}
+    </div>
   );
 }
 

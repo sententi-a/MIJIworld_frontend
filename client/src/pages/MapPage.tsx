@@ -21,6 +21,7 @@ export default function MapPage() {
         style={{
           marginTop: "2vw",
           position: "absolute",
+          top: 0,
           left: "50%",
           transform: "translate(-50%)",
         }}
