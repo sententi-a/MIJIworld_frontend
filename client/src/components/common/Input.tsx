@@ -1,31 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import { useState, useCallback } from "react";
 
 interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
   label?: string;
   size?: "small" | "medium" | "large";
-  handleOnChange?: Function;
+  handleOnChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-function Input_({
-  label,
-  size = "medium",
-  handleOnChange,
-  ...props
-}: InputProps) {
-  return (
-    <>
-      <CustomInput
-        placeholder={label}
-        className={size}
-        onChange={handleOnChange ? (e) => handleOnChange(e) : undefined}
-        maxLength={15}
-        {...props}
-      />
-    </>
-  );
-}
+const Input_ = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ label, size = "medium", handleOnChange, ...props }, ref) => {
+    return (
+      <>
+        <CustomInput
+          placeholder={label}
+          className={size}
+          onChange={handleOnChange ? (e) => handleOnChange(e) : undefined}
+          maxLength={15}
+          {...props}
+          ref={ref}
+        />
+      </>
+    );
+  }
+);
 
 const CustomInput = styled.input`
   border: 1px solid rgba(0, 0, 0, 0);
