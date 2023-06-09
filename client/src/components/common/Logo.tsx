@@ -7,7 +7,7 @@ interface LogoProps extends React.HTMLAttributes<HTMLDivElement> {
   isMain?: boolean;
 }
 
-function Logo({ isMain, ...props }: LogoProps) {
+function Logo_({ isMain, ...props }: LogoProps) {
   return (
     <>
       <div {...props}>
@@ -25,4 +25,5 @@ const EnglishLogo = styled.img`
   width: 10vw;
 `;
 
-export const MemoizedLogo = React.memo(Logo);
+const Logo = React.memo(Logo_);
+export default Logo;

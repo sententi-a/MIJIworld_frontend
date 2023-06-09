@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import React from "react";
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 import Button from "@components/common/Button";
 
 export interface VerticalButtonProps {
@@ -9,7 +8,7 @@ export interface VerticalButtonProps {
   isList: boolean;
 }
 
-function VerticalButtons({ isMap, isList }: VerticalButtonProps) {
+function VerticalButtons_({ isMap, isList }: VerticalButtonProps) {
   const navigate = useNavigate();
 
   const handleButtonClick = useCallback(() => {
@@ -54,9 +53,11 @@ const VerticalBtnContainer = styled.div`
   margin-top: 1vh;
 `;
 
-export const MemoizedVerticalButtons = React.memo(
-  VerticalButtons,
+const VerticalButtons = React.memo(
+  VerticalButtons_,
   (prev: VerticalButtonProps, next: VerticalButtonProps) => {
     return prev.isMap === next.isMap && prev.isList === next.isList;
   }
 );
+
+export default VerticalButtons;

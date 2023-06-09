@@ -7,3 +7,6 @@ export { default as Text } from "@components/common/Text";
 export { default as Toggle } from "@components/common/Toggle";
 export { default as StarRate } from "@components/common/StarRate";
 export { default as Backdrop } from "@components/common/Backdrop";
+export { default as Background } from "@components/common/Background";
+export { default as VerticalButtons } from "@components/common/VerticalButtons";
+export { default as Logo } from "@components/common/Logo";
