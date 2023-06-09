@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 interface ImageProps extends React.HTMLAttributes<HTMLImageElement> {
-  size?: "small" | "medium" | "large" | "xlarge";
+  size?: "small" | "medium" | "large" | "xlarge" | "xxlarge";
   src: string;
 }
 
-function Img({ src, size }: ImageProps) {
-  return <CustomImage src={src} className={size ? size : "small"} />;
+function Image_({ src, size, ...props }: ImageProps) {
+  return <CustomImage src={src} className={size ? size : "small"} {...props} />;
 }
 
 const CustomImage = styled.img`
@@ -26,8 +26,11 @@ const CustomImage = styled.img`
   &.xlarge {
     width: 50vw;
   }
+
+  &.xxlarge {
+    width: 90vw;
+  }
 `;
 
-const Image = React.memo(Img);
-
+const Image = React.memo(Image_);
 export default Image;
