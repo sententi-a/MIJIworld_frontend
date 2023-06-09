@@ -9,7 +9,6 @@ import usePin from "@hooks/usePin";
 import Pin from "@components/Map/Pin";
 
 export default function MapPage() {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(true);
   const { getPins } = usePin();
 
@@ -34,12 +33,11 @@ export default function MapPage() {
               restName={elem.name}
               top={elem.top}
               left={elem.top}
-              dialog={<div>안녕</div>}
+              dialog={<RestDialog />}
             />
           ))}
         </WorldMap>
       </Container>
-      {isDialogOpen && <RestDialog />}
       {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
     </>
   );

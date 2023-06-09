@@ -27,7 +27,7 @@ function Pin_({ restName, top, left, dialog }: PinProps) {
         onMouseLeave={() => handleMouseLeave()}
         style={{ position: "absolute", top, left }}
       />
-      {/* {isHovered && { dialog }} */}
+      {isHovered && dialog}
     </>
   );
 }
