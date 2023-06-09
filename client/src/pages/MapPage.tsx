@@ -1,14 +1,17 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Background, VerticalButtons, Logo } from "@components/common";
+import { Background, VerticalButtons, Logo, Image } from "@components/common";
 import WorldMap from "@components/Map/WorldMap";
 import BgImage from "@assets/images/map/worldmap_background.png";
-import RestDialog from "../components/RestDialog";
-import Modal from "./Modal";
+import RestDialog from "@components/RestDialog";
+import Modal from "@pages/Modal";
+import usePin from "@hooks/usePin";
+import Pin from "@components/Map/Pin";
 
 export default function MapPage() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(true);
+  const { getPins } = usePin();
 
   return (
     <>
@@ -25,7 +28,14 @@ export default function MapPage() {
       <VerticalButtons isMap={true} isList={false} />
       <Container>
         <WorldMap>
-          <div>안녕하세요</div>
+          {getPins().map((elem) => (
+            <Pin
+              restName={elem.name}
+              top={elem.top}
+              left={elem.top}
+              dialog={<div>안녕</div>}
+            />
+          ))}
         </WorldMap>
       </Container>
       {isDialogOpen && <RestDialog />}
