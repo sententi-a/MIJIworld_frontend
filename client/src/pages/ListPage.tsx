@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import { MemoizedVerticalButtons } from "../components/VerticalButtons";
-import { MemoizedBackground } from "../components/Background";
-import { MemoizedLogo } from "../components/common/Logo";
-import Bg from "../assets/images/list/bg.png";
-import RestCard from "../components/RestCard";
-import SearchBar from "../components/SearchBar";
+import { VerticalButtons, Background, Logo } from "@components/common";
+import BgImage from "@assets/images/list/bg.png";
+import RestCard from "@components/RestCard";
+import SearchBar from "@components/SearchBar";
 import Modal from "./Modal";
 import { useState } from "react";
 
@@ -13,8 +11,8 @@ export default function ListPage() {
 
   return (
     <>
-      <MemoizedBackground bgPath={Bg} />
-      <MemoizedLogo
+      <Background bgPath={BgImage} />
+      <Logo
         isMain={false}
         style={{
           marginTop: "2vw",
@@ -24,7 +22,7 @@ export default function ListPage() {
         }}
       />
       <div style={{ position: "relative" }}>
-        <MemoizedVerticalButtons isMap={false} isList={true} />
+        <VerticalButtons isMap={false} isList={true} />
         <Wrapper>
           <SearchBar />
           <CardWrapper>

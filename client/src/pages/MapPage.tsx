@@ -1,13 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { MemoizedBackground } from "../components/Background";
-import { MemoizedLogo } from "../components/common/Logo";
-import { MemoizedVerticalButtons } from "../components/VerticalButtons";
-import Bg from "../assets/images/map/worldmap_background.png";
-import MapBg from "../assets/images/map/worldmap.png";
+import { Background, VerticalButtons, Logo } from "@components/common";
+import WorldMap from "@components/Map/WorldMap";
+import BgImage from "@assets/images/map/worldmap_background.png";
 import RestDialog from "../components/RestDialog";
 import Modal from "./Modal";
-import Button from "../components/common/Button";
 
 export default function MapPage() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -15,8 +12,8 @@ export default function MapPage() {
 
   return (
     <>
-      <MemoizedBackground bgPath={Bg} />
-      <MemoizedLogo
+      <Background bgPath={BgImage} />
+      <Logo
         isMain={false}
         style={{
           marginTop: "2vw",
@@ -25,9 +22,11 @@ export default function MapPage() {
           transform: "translate(-50%)",
         }}
       />
-      <MemoizedVerticalButtons isMap={true} isList={false} />
+      <VerticalButtons isMap={true} isList={false} />
       <Container>
-        <WorldMap src={MapBg} />
+        <WorldMap>
+          <div>안녕하세요</div>
+        </WorldMap>
       </Container>
       {isDialogOpen && <RestDialog />}
       {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
@@ -40,10 +39,10 @@ const Container = styled.div`
   position: relative;
 `;
 
-const WorldMap = styled.img`
-  width: 90vw;
-  height: auto;
-  object-fit: contain;
-  object-position: center center;
-  margin-top: 15vh;
-`;
+// const WorldMap = styled.img`
+//   width: 90vw;
+//   height: auto;
+//   object-fit: contain;
+//   object-position: center center;
+//   margin-top: 15vh;
+// `;

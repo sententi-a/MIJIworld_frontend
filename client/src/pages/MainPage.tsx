@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import Main from "../assets/images/main/main.png";
+import BgImage from "@assets/images/main/main.png";
 import { useNavigate } from "react-router-dom";
-import { MemoizedBackground } from "../components/Background";
-import { MemoizedLogo } from "../components/common/Logo";
-import Button from "../components/common/Button";
+import { Background, Logo, Button } from "@components/common";
 
 export default function MainPage() {
   const navigate = useNavigate();
@@ -14,8 +12,8 @@ export default function MainPage() {
 
   return (
     <>
-      <MemoizedBackground bgPath={Main} />
-      <MemoizedLogo
+      <Background bgPath={BgImage} />
+      <Logo
         isMain={true}
         style={{ top: "4vh", marginLeft: "10vw", position: "absolute" }}
       />
