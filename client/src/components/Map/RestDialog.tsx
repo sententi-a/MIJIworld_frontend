@@ -6,25 +6,28 @@ interface RestDialogProps {
   restName: string;
   restNameKr: string;
   restNameColor: string;
-  handleOnClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
-  // handleOnClick?: Function;
+  handleOnClick: (event: React.MouseEvent<HTMLDivElement>) => void;
+  handleOnMouseLeave: (event: React.MouseEvent<HTMLDivElement>) => void;
   top?: string | number;
   left?: string | number;
 }
 
+//TODO: hook 사용해서 restName 토대로 필요한 것들 가져오기
 export default function RestDialog({
   country,
   restName,
   restNameKr,
   restNameColor,
   handleOnClick,
+  handleOnMouseLeave,
   top,
   left,
 }: RestDialogProps) {
   return (
     <div
-      style={{ position: "absolute", top: "20%", left, zIndex: 20 }}
+      style={{ position: "absolute", top: "20%", left, zIndex: 10 }}
       onClick={handleOnClick}
+      onMouseLeave={handleOnMouseLeave}
     >
       <Box style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}>
         <Text text={country} fancy={true} style={{ color: restNameColor }} />

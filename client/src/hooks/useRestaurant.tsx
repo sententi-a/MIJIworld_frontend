@@ -1,4 +1,4 @@
-export default function useRestaurant() {
+export default function useRestaurant(name: string) {
   const headerColor = "#ef2345";
   const restName = "samarkant";
   const restNameKr = "사마르칸트";

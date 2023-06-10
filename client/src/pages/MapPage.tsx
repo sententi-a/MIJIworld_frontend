@@ -3,14 +3,21 @@ import styled from "styled-components";
 import { Background, VerticalButtons, Logo, Image } from "@components/common";
 import WorldMap from "@components/Map/WorldMap";
 import BgImage from "@assets/images/map/worldmap_background.png";
-import RestDialog from "@components/RestDialog";
+import RestDialog from "@components/Map/RestDialog";
 import Modal from "@pages/Modal";
 import usePin from "@hooks/usePin";
-import Pin from "@components/Map/Pin";
+import PinWithDialog from "@components/Map/PinWithDialog";
 
 export default function MapPage() {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentRest, setCurrentRest] = useState("");
+
   const { getPins } = usePin();
+
+  const handleDialogClick = (restName: string) => {
+    setIsModalOpen(true);
+    setCurrentRest(restName);
+  };
 
   return (
     <>
@@ -29,16 +36,25 @@ export default function MapPage() {
       <Container>
         <WorldMap>
           {getPins().map((elem) => (
-            <Pin
-              restName={elem.name}
-              top={elem.top}
-              left={elem.top}
-              dialog={<RestDialog />}
-            />
+            <>
+              <PinWithDialog
+                restName={elem.name}
+                top={elem.top}
+                left={elem.left}
+                country="우즈베키스탄"
+                restNameKr="사마르칸트"
+                restNameColor="#10ef10"
+                handleOnClick={() => {
+                  handleDialogClick(elem.name);
+                }}
+              />
+            </>
           ))}
         </WorldMap>
       </Container>
-      {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
+      {isModalOpen && (
+        <Modal restName={currentRest} setIsModalOpen={setIsModalOpen} />
+      )}
     </>
   );
 }

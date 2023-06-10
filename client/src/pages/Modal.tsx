@@ -7,10 +7,12 @@ import useRestaurant from "@hooks/useRestaurant";
 
 interface ModalProps {
   setIsModalOpen: (open: boolean) => void;
+  restName: string;
 }
 
-export default function Modal({ setIsModalOpen }: ModalProps) {
-  const { getRestInfos, getRestReviews, getRestMapInfos } = useRestaurant();
+export default function Modal({ setIsModalOpen, restName }: ModalProps) {
+  const { getRestInfos, getRestReviews, getRestMapInfos } =
+    useRestaurant(restName);
   const restInfo = getRestInfos();
 
   const closeModal = () => {
