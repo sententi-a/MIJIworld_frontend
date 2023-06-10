@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { RestDishImg, RestName } from "@components/RestDialog";
+import { RestDishImg, RestName } from "@components/Map/RestDialog";
 import Image from "@components/common/Image";
 import Text from "@components/common/Text";
 import Horizontal from "@components/common/Horizontal";
