@@ -25,7 +25,7 @@ export default function RestDialog({
 }: RestDialogProps) {
   return (
     <div
-      style={{ position: "absolute", top, left, zIndex: 10 }}
+      style={{ position: "absolute", top, left, zIndex: 10, cursor: "pointer" }}
       onClick={handleOnClick}
       onMouseLeave={handleOnMouseLeave}
     >
