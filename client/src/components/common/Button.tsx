@@ -11,7 +11,7 @@ interface CustomProps extends React.HTMLAttributes<HTMLButtonElement> {
   size?: "small" | "medium" | "large";
 }
 
-export default function Button({
+function Button_({
   bgColor = "#8d8de5",
   fontColor = "#ffffff",
   hoverColor = "#7272db",
@@ -111,3 +111,6 @@ const getButtonSize = (size: string | undefined, isVertical?: boolean) => {
       `;
   }
 };
+
+const Button = React.memo(Button_);
+export default Button;
