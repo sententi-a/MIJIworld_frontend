@@ -7,7 +7,13 @@ import Modal from "./Modal";
 import { useState } from "react";
 
 export default function ListPage() {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentRest, setCurrentRest] = useState("");
+
+  const handleCardClick = (restName: string) => {
+    setIsModalOpen((prev) => !prev);
+    setCurrentRest(restName);
+  };
 
   return (
     <>
@@ -21,18 +27,21 @@ export default function ListPage() {
           transform: "translate(-50%)",
         }}
       />
-      <div style={{ position: "relative" }}>
-        <VerticalButtons isMap={false} isList={true} />
-        <Wrapper>
-          <SearchBar />
-          <CardWrapper>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((elem) => {
-              return <RestCard />;
-            })}
-          </CardWrapper>
-        </Wrapper>
-      </div>
-      {/* {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />} */}
+      <VerticalButtons isMap={false} isList={true} />
+      <Wrapper>
+        <SearchBar />
+        <CardWrapper>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((elem) => {
+            return (
+              // TODO: currentRest를 elem의 restName으로 바꾸기
+              <RestCard handleOnClick={() => handleCardClick(currentRest)} />
+            );
+          })}
+        </CardWrapper>
+      </Wrapper>
+      {isModalOpen && (
+        <Modal restName={currentRest} setIsModalOpen={setIsModalOpen} />
+      )}
     </>
   );
 }

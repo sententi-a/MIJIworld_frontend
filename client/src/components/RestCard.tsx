@@ -1,10 +1,12 @@
-import styled from "styled-components";
-import { RestDishImg, RestName } from "@components/Map/RestDialog";
-import Image from "@components/common/Image";
-import Text from "@components/common/Text";
-import Horizontal from "@components/common/Horizontal";
+import React from "react";
+import { Image, Text, Box, Horizontal } from "@components/common";
 
-export default function RestCard() {
+interface RestCardProps {
+  handleOnClick?: (event: React.MouseEvent) => void;
+}
+
+export default function RestCard({ handleOnClick }: RestCardProps) {
+  //TODO: Hook으로 RestDialog와 같은 정보 전달받기
   const restName = "samarkant";
   const restNameKr = "사마르칸트";
   const restAddress = "서울 종로구 희우정로 110-40";
@@ -13,71 +15,40 @@ export default function RestCard() {
 
   return (
     <>
-      <Card>
-        <CountryHeader>
+      <Box
+        shadowIntensity="weak"
+        style={{ backgroundColor: "rgba(255, 255, 255, 0.123)", gap: "1vh" }}
+        onClick={handleOnClick}
+      >
+        <Horizontal>
+          <Image
+            src={require(`../assets/images/restaurant/${restName}/flag.png`)}
+          />
+          <Text text={countryName} fancy={true} size="t6" />
+        </Horizontal>
+        <Box
+          shadowIntensity="weak"
+          style={{ backgroundColor: "rgba(248, 248, 248, 0.342)" }}
+        >
           <Horizontal>
             <Image
-              src={require(`../assets/images/restaurant/${restName}/flag.png`)}
+              src={require(`../assets/images/restaurant/${restName}/menu1.png`)}
+              size="medium"
             />
-            <Text text={countryName} bold={true} />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                textAlign: "left",
+              }}
+            >
+              <Text text={restNameKr} size="t6" style={{ fontWeight: 600 }} />
+              <Text text={restAddress} size="t7" />
+              <Text text={restBusinessHour} size="t7" />
+            </div>
           </Horizontal>
-        </CountryHeader>
-        <InnerCard>
-          <RestDishImg
-            src={require(`../assets/images/restaurant/${restName}/menu1.png`)}
-          />
-          <RestBasicInfoContainer>
-            <RestName style={{ width: "auto" }}>{restNameKr}</RestName>
-            <DetailText>{restAddress}</DetailText>
-            <DetailText>{restBusinessHour}</DetailText>
-          </RestBasicInfoContainer>
-        </InnerCard>
-      </Card>
+        </Box>
+      </Box>
     </>
   );
 }
-
-const Card = styled.div`
-  width: 25vmax;
-  background-color: rgba(255, 255, 255, 0.123);
-  box-shadow: 0px 0px 10px rgba(105, 103, 103, 0.116);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-`;
-
-const CountryHeader = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
-const InnerCard = styled.div`
-  width: 80%;
-  background-color: rgba(248, 248, 248, 0.342);
-  box-shadow: 0px 0px 10px rgba(141, 137, 137, 0.116);
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px;
-  margin-top: 10px;
-`;
-
-const RestBasicInfoContainer = styled.div`
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;
-
-const DetailText = styled.div`
-  font-size: 1.1vw;
-  font-weight: 400;
-  color: #707070;
-  text-align: left;
-`;
