@@ -48,6 +48,7 @@ function VerticalButtons_({ isMap, isList }: VerticalButtonProps) {
 
 const VerticalBtnContainer = styled.div`
   position: absolute;
+  top: 0;
   right: 0;
   float: right;
   margin-top: 1vh;

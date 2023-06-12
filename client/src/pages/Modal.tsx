@@ -2,7 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import { Backdrop } from "@components/common";
 import ModalHeader from "@components/Modal/ModalHeader/ModalHeader";
-import ModalBody from "@components/ModalBody";
+import ModalBody from "@components/Modal/ModalBody/ModalBody";
 import useRestaurant from "@hooks/useRestaurant";
 
 interface ModalProps {

@@ -1,8 +1,8 @@
 import RestOverview from "@components/Modal/ModalBody/RestOverview";
 import RestMenu from "@components/Modal/ModalBody/RestMenu";
 import RestPhoto from "@components/Modal/ModalBody/RestPhoto";
-import RestReview from "./Modal/ModalBody/RestReview";
-import RestTicket from "./Modal/ModalBody/RestTicket";
+import RestReview from "./RestReview";
+import RestTicket from "./RestTicket";
 
 export default function ModalBody({ restInfo }: any) {
   return (
