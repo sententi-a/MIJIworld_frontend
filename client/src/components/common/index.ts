@@ -10,3 +10,5 @@ export { default as Backdrop } from "@components/common/Backdrop";
 export { default as Background } from "@components/common/Background";
 export { default as VerticalButtons } from "@components/common/VerticalButtons";
 export { default as Logo } from "@components/common/Logo";
+export { default as Grid } from "@components/common/Grid";
+export { default as SearchBar } from "@components/common/SearchBar";
