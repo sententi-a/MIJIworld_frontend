@@ -1,0 +1,25 @@
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToOne,
+  JoinColumn,
+} from "typeorm";
+
+import { Restaurant } from "./Restaurant";
+
+@Entity()
+export class KakaoReviewInfo {
+  @PrimaryGeneratedColumn()
+  id: string;
+
+  @OneToOne(() => Restaurant)
+  @JoinColumn()
+  rest_name: Restaurant;
+
+  @Column()
+  url: string;
+
+  @Column()
+  score: number;
+}
