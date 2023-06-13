@@ -35,13 +35,14 @@ export default function useRestaurant(name: string) {
   //TODO: API call
   // To use API Call inside useRestaurant, it should get restaurant ID as a parameter
 
-  const getRestReviews = () => {};
+  // TODO: 모든 레스토랑 정보가 이미 API 요청을 통해 초기화되었다면 더이상 API를 호출하지 말것
+  const getRestReviews = (id: string) => {};
 
   const getRestInfos = () => {
     return restInfo;
   };
 
-  const getRestMapInfos = () => {};
+  const getRestMapInfos = (id: string) => {};
 
   return { getRestReviews, getRestInfos, getRestMapInfos };
 }

@@ -1,8 +1,13 @@
 import styled from "styled-components";
-import { VerticalButtons, Background, Logo, Grid } from "@components/common";
+import {
+  VerticalButtons,
+  Background,
+  Logo,
+  Grid,
+  SearchBar,
+} from "@components/common";
 import BgImage from "@assets/images/list/bg.png";
 import RestCard from "@components/RestCard";
-import SearchBar from "@components/common/SearchBar";
 import Modal from "@pages/Modal";
 import { useState } from "react";
 
