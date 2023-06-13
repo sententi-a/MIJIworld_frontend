@@ -4,7 +4,7 @@ import { DataSource } from "typeorm";
 // Use env variable
 require("dotenv").config();
 
-const password = process.env.DB_PASSWORD || "dnfl*7020";
+const password = process.env.DB_PASSWORD;
 
 export const AppDataSource = new DataSource({
   type: "mysql",
@@ -13,9 +13,9 @@ export const AppDataSource = new DataSource({
   username: "root",
   password: password,
   database: "MIJIworld",
-  synchronize: true,
-  logging: false,
-  entities: [],
-  migrations: [],
+  synchronize: false,
+  logging: true,
+  entities: ["src/entity/*"],
+  migrations: ["src/migration/*"],
   subscribers: [],
 });
