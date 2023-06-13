@@ -14,8 +14,8 @@ export const AppDataSource = new DataSource({
   password: password,
   database: "MIJIworld",
   synchronize: true,
-  logging: false,
-  entities: [],
-  migrations: [],
+  logging: true,
+  entities: ["src/entity/*"],
+  migrations: ["src/migration/*"],
   subscribers: [],
 });
