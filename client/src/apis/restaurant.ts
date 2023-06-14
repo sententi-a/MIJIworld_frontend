@@ -4,14 +4,30 @@ const server = process.env.SERVER || "localhost:5500";
 
 const restaurantApi = {
   getRestaurants: async () => {
-    const result = await api.get(`/restaurants`);
-    console.log(result);
-    return result.data;
+    try {
+      const result = await api.get(`/restaurants`);
+      return result.data;
+    } catch (e) {
+      console.error(e);
+    }
   },
   getDialog: async (name: string) => {
-    console.log(server);
-    const result = await api.get(`/restaurant/dialog/${name}`);
-    return result.data;
+    try {
+      const result = await api.get(`/restaurant/dialog/${name}`);
+      // console.log(result.data);
+      return result.data;
+    } catch (e) {
+      console.error(e);
+    }
+  },
+  getModal: async (name: string) => {
+    try {
+      const result = await api.get(`/restaurant/${name}`);
+      // 헤더 컬러 가져오기
+      return result.data;
+    } catch (e) {
+      console.error(e);
+    }
   },
 };
 

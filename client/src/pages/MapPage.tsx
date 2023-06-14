@@ -10,7 +10,6 @@ import PinWithDialog from "@components/Map/PinWithDialog";
 export default function MapPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentRest, setCurrentRest] = useState("");
-
   const { data } = usePin();
 
   const handleDialogClick = (restName: string) => {
@@ -34,18 +33,20 @@ export default function MapPage() {
       <VerticalButtons isMap={true} isList={false} />
       <Container>
         <WorldMap>
-          {data.map((elem: any) => (
-            <>
-              <PinWithDialog
-                restName={elem.name}
-                top={elem.top}
-                left={elem.left}
-                handleOnClick={() => {
-                  handleDialogClick(elem.name);
-                }}
-              />
-            </>
-          ))}
+          {data &&
+            data.map((elem: any) => (
+              <>
+                <PinWithDialog
+                  restName={elem.en_name}
+                  top={elem.top}
+                  left={elem.left}
+                  handleOnClick={() => {
+                    handleDialogClick(elem.en_name);
+                  }}
+                  key={"" + elem.en_name}
+                />
+              </>
+            ))}
         </WorldMap>
       </Container>
       {isModalOpen && (

@@ -5,9 +5,8 @@ import QUERYKEYS from "@constants/queryKeys";
 const usePin = () => {
   return useQuery(
     [QUERYKEYS.PIN],
-    async () => {
-      const response = await pinApi.getPins();
-      return response.data;
+    () => {
+      return pinApi.getPins();
     },
     { suspense: true }
   );
