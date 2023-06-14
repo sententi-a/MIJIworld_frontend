@@ -11,8 +11,17 @@ export const getAllPinData = async () => {
       .leftJoin("p.rest_name", "r")
       .where("p.rest_name = r.en_name")
       .getMany();
-    // const allData = await AppDataSource.manager.find(Pin, {});
-    return allData;
+
+    const results = allData.map((data) => {
+      const result = {
+        ...data.rest_name,
+        top: data.top,
+        left: data.left,
+      };
+      return result;
+    });
+
+    return results;
   } catch (e) {
     console.error(e);
   }

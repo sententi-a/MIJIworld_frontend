@@ -24,6 +24,11 @@ app.get("/pins", async (req: Request, res: Response) => {
   res.send(data);
 });
 
+app.get("/restaurant/dialog/:name", async (req: Request, res: Response) => {
+  const data = await getRestDialogData(req.params.name);
+  res.send(data);
+});
+
 // ***** DB Setup *****
 import {
   setupDBfromExcel,
@@ -32,7 +37,10 @@ import {
   scrapNaverReviews,
 } from "./jobs/db-setup";
 
-import { getAllRestaurantData } from "./controllers/restaurant";
+import {
+  getAllRestaurantData,
+  getRestDialogData,
+} from "./controllers/restaurant";
 import { getAllPinData } from "./controllers/pin";
 
 // Connect to mysql DB
