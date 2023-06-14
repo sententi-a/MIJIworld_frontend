@@ -1,15 +1,16 @@
 const readExcelFile = require("read-excel-file/node");
+require("dotenv").config();
 
 import { AppDataSource } from "../data-source";
-import { Restaurant } from "../entity/Restaurant";
-import { Pin } from "../entity/Pin";
-import { Color } from "../entity/Color";
-import { Menu } from "../entity/Menu";
+import { Restaurant, Pin, Color, Menu, Map } from "../entity/index";
+import axios from "axios";
+const cheerio = require("cheerio");
 
 export const restRepo = AppDataSource.getRepository(Restaurant);
 export const pinRepo = AppDataSource.getRepository(Pin);
 export const colorRepo = AppDataSource.getRepository(Color);
 export const menuRepo = AppDataSource.getRepository(Menu);
+export const mapRepo = AppDataSource.getRepository(Map);
 
 const filename = __dirname + "/../restInfos.xlsx";
 
@@ -86,7 +87,6 @@ export const setupDBfromExcel = async () => {
 const setupRestaurant = (datum) => {
   datum.forEach((data) => {
     const each = restRepo.save(data);
-    console.log(each);
   });
 };
 
@@ -106,4 +106,55 @@ const setupPin = (datum) => {
   datum.forEach((data) => {
     const each = pinRepo.save(data);
   });
+};
+
+export const setupMap = async () => {
+  try {
+    const datum = await AppDataSource.manager.find(Restaurant, {});
+    datum.forEach(async (data) => {
+      const response = await axios.get(
+        `https://dapi.kakao.com/v2/local/search/keyword.json?category_group_code=FD6&query=${data.kr_name}`,
+        { headers: { Authorization: process.env.KAKAO_MAP_REST_API } }
+      );
+      const document = response.data.documents[0];
+      console.log(document);
+
+      if (document) {
+        const mapInfo = {
+          rest_name: data.en_name,
+          kr_name: data.kr_name,
+          map_id: document.id,
+        };
+        // mapRepo.save(mapInfo);
+      }
+    });
+  } catch (error) {
+    console.error(error);
+    console.log("에러 발생");
+  }
+};
+
+export const setupKakaoReviewInfo = async () => {
+  try {
+    const datum = await AppDataSource.manager.find(Restaurant, {});
+    datum.forEach(async (data) => {
+      const response = await axios.get(
+        `https://dapi.kakao.com/v2/local/search/keyword.json?category_group_code=FD6&query=${data.kr_name}`,
+        { headers: { Authorization: process.env.KAKAO_MAP_REST_API } }
+      );
+      const document = response.data.documents[0];
+
+      if (document) {
+        const placeUrl = document.place_url;
+        const $ = cheerio.load(placeUrl);
+        const score = $(
+          "#mArticle > div.cont_essential > div:nth-child(1) > div.place_details > div > div > a:nth-child(3) > span.color_b"
+        );
+
+        console.log(score);
+      }
+    });
+  } catch (error) {
+    console.error(error);
+  }
 };

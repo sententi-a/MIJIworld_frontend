@@ -1,5 +1,16 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
+import {
+  Restaurant,
+  Map,
+  Color,
+  Pin,
+  Menu,
+  KakaoReview,
+  KakaoReviewInfo,
+  NaverReview,
+  NaverReviewInfo,
+} from "./entity/index";
 
 // Use env variable
 require("dotenv").config();
@@ -15,7 +26,8 @@ export const AppDataSource = new DataSource({
   database: "MIJIworld",
   synchronize: false,
   logging: true,
-  entities: ["src/entity/*"],
+  entities: ["src/entity/*.{ts, js}"],
+  // entities: [__dirname + "/entity/*.js"],
   migrations: ["src/migration/*"],
   subscribers: [],
 });
