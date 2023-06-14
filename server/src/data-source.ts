@@ -1,16 +1,5 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import {
-  Restaurant,
-  Map,
-  Color,
-  Pin,
-  Menu,
-  KakaoReview,
-  KakaoReviewInfo,
-  NaverReview,
-  NaverReviewInfo,
-} from "./entity/index";
 
 // Use env variable
 require("dotenv").config();
