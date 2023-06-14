@@ -20,6 +20,8 @@ module.exports = {
       "@hooks": path.resolve(__dirname, "src/hooks"),
       "@assets": path.resolve(__dirname, "src/assets"),
       "@pages": path.resolve(__dirname, "src/pages"),
+      "@apis": path.resolve(__dirname, "src/apis"),
+      "@constants": path.resolve(__dirname, "src/constants"),
     },
   },
 };
