@@ -1,5 +1,5 @@
 const QUERYKEYS = {
-  RESTAURANT: "restaurant",
+  RESTAURANT: { ALL: "restaurants", DIALOG: "dialog" },
   PIN: "pin",
 };
 

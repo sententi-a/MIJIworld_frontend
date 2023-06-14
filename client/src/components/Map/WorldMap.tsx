@@ -2,7 +2,7 @@ import React from "react";
 import { Image } from "@components/common";
 
 interface WorldMapProps {
-  children: React.ReactNode;
+  children: React.ReactNode | undefined;
 }
 
 function WorldMap_({ children }: WorldMapProps) {
