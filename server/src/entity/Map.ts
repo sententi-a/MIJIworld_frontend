@@ -3,20 +3,23 @@ import {
   PrimaryGeneratedColumn,
   Column,
   OneToOne,
-  OneToMany,
+  JoinColumn,
 } from "typeorm";
+
+import { Restaurant } from "./Restaurant";
 
 @Entity()
 export class Map {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column()
-  en_name: string;
+  @OneToOne(() => Restaurant)
+  @JoinColumn()
+  rest_name: string;
 
   @Column()
   kr_name: string;
 
   @Column()
-  map_id: number;
+  map_id: string;
 }

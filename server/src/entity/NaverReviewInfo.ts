@@ -19,6 +19,6 @@ export class NaverReviewInfo {
   @Column()
   url: string;
 
-  @Column()
+  @Column({ type: "float" })
   score: number;
 }

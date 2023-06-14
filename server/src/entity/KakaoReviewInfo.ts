@@ -11,7 +11,7 @@ import { Restaurant } from "./Restaurant";
 @Entity()
 export class KakaoReviewInfo {
   @PrimaryGeneratedColumn()
-  id: string;
+  id: number;
 
   @OneToOne(() => Restaurant)
   @JoinColumn()
@@ -20,6 +20,6 @@ export class KakaoReviewInfo {
   @Column()
   url: string;
 
-  @Column()
+  @Column({ type: "float" })
   score: number;
 }

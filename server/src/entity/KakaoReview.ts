@@ -10,10 +10,10 @@ export class KakaoReview {
   @ManyToOne(() => Restaurant, (restaurant) => restaurant.kakao_reviews)
   rest_name: Restaurant;
 
-  @Column()
+  @Column({ nullable: true })
   author: string;
 
-  @Column()
+  @Column({ nullable: true })
   rate: number;
 
   @Column()
