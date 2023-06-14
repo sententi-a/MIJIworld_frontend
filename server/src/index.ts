@@ -3,8 +3,11 @@ import { Express, Response, Request } from "express";
 import express from "express";
 import "reflect-metadata";
 
+const cors = require("cors");
 const app: Express = express();
 const port = process.env.PORT || 5500;
+
+app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Server is ready!");
