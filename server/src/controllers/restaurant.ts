@@ -26,3 +26,14 @@ export const getRestDialogData = async (name: string) => {
     console.error(e);
   }
 };
+
+export const getRestBasicData = async (name: string) => {
+  try {
+    const data = await AppDataSource.manager.findOne(Restaurant, {
+      where: { en_name: name },
+    });
+    return data;
+  } catch (e) {
+    console.error(e);
+  }
+};

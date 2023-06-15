@@ -32,6 +32,33 @@ app.get("/restaurant/dialog/:name", async (req: Request, res: Response) => {
   res.send(data);
 });
 
+app.get("/restaurant/:name", async (req: Request, res: Response) => {
+  const data = await getRestBasicData(req.params.name);
+  res.send(data);
+});
+
+app.get("/restaurant/color/:name", async (req: Request, res: Response) => {
+  const data = await getColorData(req.params.name);
+  res.send(data);
+});
+
+app.get("/restaurant/map/:name", async (req: Request, res: Response) => {
+  const data = await getMapData(req.params.name);
+  res.send(data);
+});
+
+app.get(
+  "/restaurant/reviews/kakao/:name",
+  async (req: Request, res: Response) => {
+    const data = await getKakaoReviews(req.params.name);
+    res.send(data);
+  }
+);
+app.get("/restaurant/menus/:name", async (req: Request, res: Response) => {
+  const data = await getMenus(req.params.name);
+  res.send(data);
+});
+
 // ***** DB Setup *****
 import {
   setupDBfromExcel,
@@ -43,8 +70,13 @@ import {
 import {
   getAllRestaurantData,
   getRestDialogData,
+  getRestBasicData,
 } from "./controllers/restaurant";
 import { getAllPinData } from "./controllers/pin";
+import { getColorData } from "./controllers/color";
+import { getMapData } from "./controllers/map";
+import { getKakaoReviews } from "./controllers/review";
+import { getMenus } from "./controllers/menu";
 
 // Connect to mysql DB
 AppDataSource.initialize().then(() => {

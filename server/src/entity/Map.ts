@@ -15,7 +15,7 @@ export class Map {
 
   @OneToOne(() => Restaurant)
   @JoinColumn()
-  rest_name: string;
+  rest_name: Restaurant;
 
   @Column()
   kr_name: string;
