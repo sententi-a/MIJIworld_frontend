@@ -3,16 +3,21 @@ import { Image, Text, Box, Horizontal } from "@components/common";
 
 interface RestCardProps {
   handleOnClick?: (event: React.MouseEvent) => void;
+  restName: string;
+  address: string;
+  businessHour: string;
+  country: string;
+  krRestName: string;
 }
 
-export default function RestCard({ handleOnClick }: RestCardProps) {
-  //TODO: Hook으로 RestDialog와 같은 정보 전달받기
-  const restName = "samarkant";
-  const restNameKr = "사마르칸트";
-  const restAddress = "서울 종로구 희우정로 110-40";
-  const restBusinessHour = "매일 오전 11:00 - 오후 5:00";
-  const countryName = "우즈베키스탄";
-
+export default function RestCard({
+  handleOnClick,
+  restName,
+  address,
+  businessHour,
+  country,
+  krRestName,
+}: RestCardProps) {
   return (
     <>
       <Box
@@ -24,7 +29,7 @@ export default function RestCard({ handleOnClick }: RestCardProps) {
           <Image
             src={require(`../assets/images/restaurant/${restName}/flag.png`)}
           />
-          <Text text={countryName} fancy={true} size="t6" />
+          <Text text={country} fancy={true} size="t6" />
         </Horizontal>
         <Box
           shadowIntensity="weak"
@@ -42,9 +47,9 @@ export default function RestCard({ handleOnClick }: RestCardProps) {
                 textAlign: "left",
               }}
             >
-              <Text text={restNameKr} size="t6" style={{ fontWeight: 600 }} />
-              <Text text={restAddress} size="t7" />
-              <Text text={restBusinessHour} size="t7" />
+              <Text text={krRestName} size="t6" style={{ fontWeight: 600 }} />
+              <Text text={address} size="t7" />
+              <Text text={businessHour} size="t7" />
             </div>
           </Horizontal>
         </Box>

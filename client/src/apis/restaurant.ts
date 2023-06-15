@@ -26,25 +26,6 @@ const restaurantApi = {
       console.error(e);
     }
   },
-  getModal: async (name: string) => {
-    try {
-      //TODO: Promise.allsettled 적용
-      const basicInfo = await api.get(`/restaurant/${name}`);
-      // 헤더 컬러 가져오기
-      const colorInfo = await api.get(`/restaurant/color/${name}`);
-      const mapInfo = await api.get(`/restaurant/map/${name}`);
-      const kakaoReviews = await api.get(`/review/kakao/${name}`);
-
-      return {
-        basicInfo: basicInfo.data,
-        colorInfo: colorInfo.data,
-        mapInfo: mapInfo.data,
-        kakaoReviews: kakaoReviews.data,
-      };
-    } catch (e) {
-      console.error(e);
-    }
-  },
 };
 
 export default restaurantApi;

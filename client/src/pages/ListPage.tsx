@@ -9,9 +9,11 @@ import {
 import BgImage from "@assets/images/list/bg.png";
 import RestCard from "@components/RestCard";
 import Modal from "@pages/Modal";
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useRestaurants } from "@hooks/restaurant";
 
 export default function ListPage() {
+  const { data } = useRestaurants();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentRest, setCurrentRest] = useState("");
 
@@ -35,13 +37,22 @@ export default function ListPage() {
       <VerticalButtons isMap={false} isList={true} />
       <Wrapper>
         <SearchBar />
+        {/* TODO: RestCardList 컴포넌트로 만들기 */}
         <Grid>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((elem) => {
-            return (
-              // TODO: currentRest를 elem의 restName으로 바꾸기
-              <RestCard handleOnClick={() => handleCardClick(currentRest)} />
-            );
-          })}
+          {/* TODO: 수정 */}
+          <Suspense fallback={<div>만드는 중</div>}>
+            {data &&
+              data.map((elem: typeof data) => (
+                <RestCard
+                  restName={elem.en_name}
+                  krRestName={elem.kr_name}
+                  country={elem.country}
+                  address={elem.address}
+                  businessHour={elem.business_hour}
+                  handleOnClick={() => handleCardClick(elem.en_name)}
+                />
+              ))}
+          </Suspense>
         </Grid>
       </Wrapper>
       {isModalOpen && (
