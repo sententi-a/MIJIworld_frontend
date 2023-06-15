@@ -1,25 +1,33 @@
 import { Text, Horizontal, Toggle } from "@components/common/index";
 import RestMap from "@components/RestMap";
+import { useRestBasicInfo } from "@hooks/restaurant";
 
-//TODO: types에 타입 지정하고, any 타입에서 바꾸기
-export default function RestOverview({ restInfo }: any) {
+interface RestOverviewProps {
+  restName: string;
+}
+
+export default function RestOverview({ restName }: RestOverviewProps) {
+  const { data } = useRestBasicInfo(restName);
+
   return (
     <RestOverviewWrapper>
-      <Text text={restInfo.restNameKr} bold={true} size="t2" />
+      <Text text={data?.kr_name} bold={true} size="t2" />
       <Horizontal>
         <Text text={"영업 시간 | "} bold={true} />
-        <Text text={restInfo.restBusinessHour} />
+        <Text text={data?.business_hour} />
       </Horizontal>
-      <Toggle showComponent={<RestMap restInfo={restInfo} />}>
+      <Toggle
+        showComponent={<RestMap restName={restName} address={data?.address} />}
+      >
         {(isDown) => (
           <Horizontal>
             <Text text={`${isDown ? "▼" : "▶"} 주소 | `} bold={true} />
-            <Text text={restInfo.restAddress} />
+            <Text text={data?.address} />
           </Horizontal>
         )}
       </Toggle>
       <Text
-        text={restInfo.restIntroduction}
+        text={data?.introduction}
         style={{
           backgroundColor: "#fafafa",
           borderRadius: "40px",

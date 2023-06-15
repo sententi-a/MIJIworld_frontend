@@ -1,12 +1,19 @@
 import styled from "styled-components";
 import useKakaoMap from "@hooks/useKakaoMap";
+import { useMap } from "@hooks/useMap";
 
-export default function RestMap({ restInfo }: any) {
+interface RestMapProps {
+  restName: string;
+  address: string;
+}
+
+export default function RestMap({ restName, address }: RestMapProps) {
+  const { data } = useMap(restName);
+
   useKakaoMap({
-    latitude: restInfo.latitude,
-    longitude: restInfo.longitude,
-    mapId: restInfo.restMapId,
-    name: restInfo.restNameKr,
+    mapId: data?.map_id,
+    name: data?.kr_name,
+    address: address,
   });
 
   return (

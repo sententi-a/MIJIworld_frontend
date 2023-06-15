@@ -1,22 +1,32 @@
 import { Text, Horizontal } from "@components/common";
 import MenuCard from "@components/Modal/ModalCommon/MenuCard";
+import { useMenu } from "@hooks/useMenu";
 
-//TODO: context API로 restInfo를 props 없이 사용할 수 있게 만들기
-export default function RestMenu({ restInfo }: any) {
+interface RestMenuProps {
+  restName: string;
+}
+
+export default function RestMenu({ restName }: RestMenuProps) {
+  const { data } = useMenu(restName);
+
   return (
     <RestMenuWrapper>
       <Text
-        text={`잘 먹겠습니다!\n${restInfo.countryWord}`}
+        text={`잘 먹겠습니다!\n${data?.country_word}`}
         style={{ fontWeight: 500 }}
       />
       <Horizontal>
-        {[1, 2, 3].map((id) => (
-          <MenuCard
-            key={`menu${id}`}
-            restName={restInfo.restName}
-            menuId={id}
-          />
-        ))}
+        {data &&
+          data.menus.map((elem: typeof data) => (
+            <MenuCard
+              key={`menu${elem.id}`}
+              restName={restName}
+              menuId={elem.order}
+              menuName={elem.name}
+              description={elem.description}
+              price={elem.price}
+            />
+          ))}
       </Horizontal>
     </RestMenuWrapper>
   );

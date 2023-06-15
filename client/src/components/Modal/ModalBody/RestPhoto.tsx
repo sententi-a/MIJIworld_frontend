@@ -1,9 +1,13 @@
 import RestPhotoSlide from "@components/Modal/ModalCommon/RestPhotoSlide";
 
-export default function RestPhoto({ restInfo }: any) {
+interface RestPhotoProps {
+  restName: string;
+}
+
+export default function RestPhoto({ restName }: RestPhotoProps) {
   return (
     <RestPhotoWrapper>
-      <RestPhotoSlide restName={restInfo.restName} />
+      <RestPhotoSlide restName={restName} />
     </RestPhotoWrapper>
   );
 }

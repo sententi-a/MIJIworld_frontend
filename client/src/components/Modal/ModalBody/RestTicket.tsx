@@ -1,16 +1,21 @@
 import { Text } from "@components/common";
 import TicketCard from "../ModalCommon/TicketCard";
 
-export default function RestTicket({ restInfo }: any) {
+interface RestTicketProps {
+  restName: string;
+}
+
+export default function RestTicket({ restName }: RestTicketProps) {
   return (
     <RestTicketWrapper>
       <Text
         text="Eat the World, Meet the World!"
         fancy={true}
-        style={{ color: restInfo.countryNameColor }}
+        // TODO: color 바꾸기
+        style={{ color: "red" }}
       />
       <Text text="나만의 여행 티켓 만들기" size="t5" />
-      <TicketCard restName={restInfo.restName} />
+      <TicketCard restName={restName} />
     </RestTicketWrapper>
   );
 }

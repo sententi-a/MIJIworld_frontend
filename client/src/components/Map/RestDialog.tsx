@@ -18,6 +18,7 @@ export default function RestDialog({
   left,
 }: RestDialogProps) {
   const { data } = useRestDialog(restName);
+
   return (
     <div
       style={{ position: "absolute", top, left, zIndex: 10, cursor: "pointer" }}
@@ -26,16 +27,16 @@ export default function RestDialog({
     >
       <Box style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}>
         <Text
-          text={data.country}
+          text={data?.country}
           fancy={true}
-          style={{ color: data.text_color }}
+          style={{ color: data?.text_color }}
         />
         <Box style={{ backgroundColor: "#ffffff" }}>
           <Horizontal>
             <Image
               src={require(`@assets/images/restaurant/${restName}/menu1.png`)}
             />
-            <Text text={data.kr_name} size="t5" />
+            <Text text={data?.kr_name} size="t5" />
           </Horizontal>
         </Box>
       </Box>

@@ -4,18 +4,22 @@ import RestPhoto from "@components/Modal/ModalBody/RestPhoto";
 import RestReview from "./RestReview";
 import RestTicket from "./RestTicket";
 
-export default function ModalBody({ restInfo }: any) {
+interface ModalBodyProps {
+  restName: string;
+}
+
+export default function ModalBody({ restName }: ModalBodyProps) {
   return (
     <ModalBodyWrapper>
-      <RestOverview restInfo={restInfo} />
+      <RestOverview restName={restName} />
 
-      <RestMenu restInfo={restInfo} />
+      <RestMenu restName={restName} />
 
-      <RestPhoto restInfo={restInfo} />
+      <RestPhoto restName={restName} />
 
-      <RestReview restInfo={restInfo} />
+      <RestReview restName={restName} />
 
-      <RestTicket restInfo={restInfo} />
+      <RestTicket restName={restName} />
     </ModalBodyWrapper>
   );
 }

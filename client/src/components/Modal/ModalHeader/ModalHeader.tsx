@@ -1,17 +1,35 @@
 import { Image, Text, Horizontal } from "@components/common";
 import { CloseOutlined } from "@ant-design/icons";
+import { useColor } from "@hooks/useColor";
 
-export default function ModalHeader({ restInfo, handleOnClick }: any) {
+interface ModalHeaderProps {
+  restName: string;
+  // country: string;
+  // textColor: string;
+  // headerColor: string;
+  handleOnClick: (event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void;
+}
+
+export default function ModalHeader({
+  restName,
+  // country,
+  // textColor,
+  // headerColor,
+  handleOnClick,
+}: ModalHeaderProps) {
+  const { data } = useColor(restName);
+
   return (
-    <ModalHeaderWrapper backgroundColor={restInfo.headerColor}>
+    <ModalHeaderWrapper backgroundColor={data?.header_color}>
       <Horizontal>
         <Image
-          src={require(`@assets/images/restaurant/${restInfo.restName}/flag.png`)}
+          src={require(`@assets/images/restaurant/${restName}/flag.png`)}
         />
+        {/* <Text text={country} fancy={true} style={{ color: data?.text_color }} /> */}
         <Text
-          text={restInfo.countryName}
+          text={"대체예정"}
           fancy={true}
-          style={{ color: restInfo.countryNameColor }}
+          style={{ color: data?.text_color }}
         />
       </Horizontal>
       <CloseOutlined
