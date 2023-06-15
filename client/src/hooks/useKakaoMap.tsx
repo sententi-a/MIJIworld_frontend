@@ -11,20 +11,12 @@ declare global {
 const { kakao } = window;
 
 interface KakaoMapProps {
-  latitude: number;
-  longitude: number;
   mapId: number;
   name: string;
   address?: string;
 }
 
-export default function useKakaoMap_({
-  latitude,
-  longitude,
-  mapId,
-  name,
-  address,
-}: KakaoMapProps) {
+export default function useKakaoMap_({ mapId, name, address }: KakaoMapProps) {
   useEffect(() => {
     const mapContainer = document.getElementById("map"), // 지도를 표시할 div
       mapOption = {
@@ -40,8 +32,8 @@ export default function useKakaoMap_({
 
     // 주소로 좌표를 검색합니다
     geocoder.addressSearch(
-      "제주특별자치도 제주시 첨단로 242",
-      // address,
+      // "제주특별자치도 제주시 첨단로 242",
+      address,
       (result: any, status: any) => {
         // 정상적으로 검색이 완료됐으면
         if (status === kakao.maps.services.Status.OK) {
