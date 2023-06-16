@@ -25,15 +25,7 @@ export default function ListPage() {
   return (
     <>
       <Background bgPath={BgImage} />
-      <Logo
-        isMain={false}
-        style={{
-          marginTop: "2vw",
-          position: "absolute",
-          left: "50%",
-          transform: "translate(-50%)",
-        }}
-      />
+      <Logo isMain={false} />
       <VerticalButtons isMap={false} isList={true} />
       <Wrapper>
         <SearchBar />
