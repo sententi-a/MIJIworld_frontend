@@ -20,17 +20,7 @@ export default function MapPage() {
   return (
     <>
       <Background bgPath={BgImage} />
-      {/* TODO: false? style 배열이 memo를 방해하는 요소 */}
-      <Logo
-        isMain={false}
-        style={{
-          marginTop: "2vw",
-          position: "absolute",
-          top: 0,
-          left: "50%",
-          transform: "translate(-50%)",
-        }}
-      />
+      <Logo isMain={false} />
       <VerticalButtons isMap={true} isList={false} />
       <Container>
         <WorldMap>
