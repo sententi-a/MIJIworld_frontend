@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import styled from "styled-components";
 import { Background, VerticalButtons, Logo } from "@components/common";
 import WorldMap from "@components/Map/WorldMap";
@@ -11,15 +11,16 @@ export default function MapPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentRest, setCurrentRest] = useState("");
   const { data } = usePin();
-
-  const handleDialogClick = (restName: string) => {
+  //TODO: 리렌더링 되고 있으니 의존성 배열 확인하기
+  const handleDialogClick = useCallback((restName: string) => {
     setIsModalOpen(true);
     setCurrentRest(restName);
-  };
+  }, []);
 
   return (
     <>
       <Background bgPath={BgImage} />
+      {/* TODO: false? style 배열이 memo를 방해하는 요소 */}
       <Logo
         isMain={false}
         style={{
@@ -35,17 +36,16 @@ export default function MapPage() {
         <WorldMap>
           {data &&
             data.map((elem: any) => (
-              <>
-                <PinWithDialog
-                  restName={elem.en_name}
-                  top={elem.top}
-                  left={elem.left}
-                  handleOnClick={() => {
-                    handleDialogClick(elem.en_name);
-                  }}
-                  key={"" + elem.en_name}
-                />
-              </>
+              //TODO: memoization
+              <PinWithDialog
+                key={"pin " + elem.en_name}
+                restName={elem.en_name}
+                top={elem.top}
+                left={elem.left}
+                handleOnClick={() => {
+                  handleDialogClick(elem.en_name);
+                }}
+              />
             ))}
         </WorldMap>
       </Container>

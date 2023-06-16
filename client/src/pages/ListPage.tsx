@@ -44,6 +44,7 @@ export default function ListPage() {
             {data &&
               data.map((elem: typeof data) => (
                 <RestCard
+                  key={"restCard " + elem.en_name}
                   restName={elem.en_name}
                   krRestName={elem.kr_name}
                   country={elem.country}

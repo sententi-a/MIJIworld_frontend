@@ -32,7 +32,7 @@ export default function ReviewCard({ restName, mapType }: ReviewCardProps) {
         <Text text={"리뷰 리스트"} size="t5" bold={true} />
         {data &&
           data.reviews.map((elem: typeof data.reviews) => (
-            <Text text={"📌 " + elem.content} />
+            <Text key={elem.content} text={"📌 " + elem.content} />
           ))}
         <a href={data?.overview.url} target="_blank" rel="external">
           <Text text={"더보기"} size="t6" />
