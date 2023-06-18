@@ -9,7 +9,16 @@ interface PinProps extends React.HTMLAttributes<HTMLImageElement> {
   left: number;
 }
 
-function Pin_({ restName, top, left, handleOnClick }: PinProps) {
+function PinWithDialog_({ restName, top, left, handleOnClick }: PinProps) {
+  //TODO: useMemo 안 써도 될까?
+  const imagePath: string = React.useMemo(() => {
+    return require(`@assets/images/pin/${restName}.png`);
+  }, []);
+
+  const imageStyle: React.CSSProperties = React.useMemo(() => {
+    return { position: "absolute", top: `${top}%`, left: `${left}%` };
+  }, []);
+
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = useCallback(() => {
@@ -23,9 +32,9 @@ function Pin_({ restName, top, left, handleOnClick }: PinProps) {
   return (
     <>
       <Image
-        src={require(`@assets/images/pin/${restName}.png`)}
-        onMouseEnter={() => handleMouseEnter()}
-        style={{ position: "absolute", top: `${top}%`, left: `${left}%` }}
+        src={imagePath}
+        onMouseEnter={handleMouseEnter}
+        style={imageStyle}
       />
       {isHovered && (
         <RestDialog
@@ -40,5 +49,5 @@ function Pin_({ restName, top, left, handleOnClick }: PinProps) {
   );
 }
 
-const Pin = React.memo(Pin_);
-export default Pin;
+const PinWithDialog = React.memo(PinWithDialog_);
+export default PinWithDialog;

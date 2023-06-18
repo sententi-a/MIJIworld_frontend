@@ -12,10 +12,13 @@ export default function MapPage() {
   const [currentRest, setCurrentRest] = useState("");
   const { data } = usePin();
   //TODO: 리렌더링 되고 있으니 의존성 배열 확인하기
-  const handleDialogClick = useCallback((restName: string) => {
-    setIsModalOpen(true);
-    setCurrentRest(restName);
-  }, []);
+  const handleDialogClick = useCallback(
+    (restName: string) => {
+      setIsModalOpen(true);
+      setCurrentRest(restName);
+    },
+    [setIsModalOpen, setCurrentRest]
+  );
 
   return (
     <>
