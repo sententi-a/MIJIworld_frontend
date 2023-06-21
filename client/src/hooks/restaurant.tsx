@@ -13,13 +13,13 @@ const useRestaurants = () => {
 };
 
 const useRestDialog = (name: string) => {
-  return useQuery([QUERYKEYS.RESTAURANT.DIALOG], () => {
+  return useQuery([QUERYKEYS.RESTAURANT.DIALOG, name], () => {
     return restaurantApi.getDialog(name);
   });
 };
 
 const useRestBasicInfo = (name: string) => {
-  return useQuery([QUERYKEYS.RESTAURANT.BASIC_INFO], () => {
+  return useQuery([QUERYKEYS.RESTAURANT.BASIC_INFO, name], () => {
     return restaurantApi.getBasicInfo(name);
   });
 };
