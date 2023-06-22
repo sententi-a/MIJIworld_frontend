@@ -1,11 +1,27 @@
-import axios from "axios";
 import { AppDataSource } from "../data-source";
 import { Restaurant, Color } from "../entity";
+import { Like } from "typeorm";
 
-export const getAllRestaurantData = async () => {
+// Get restaurants data that includes 'query' in kr_name/address/country
+export const getRestaurantData = async (
+  query: string | undefined = undefined
+) => {
   try {
-    const allData = await AppDataSource.manager.find(Restaurant, {});
-    return allData;
+    let whereCondition = {};
+
+    if (query) {
+      whereCondition = [
+        { kr_name: Like(`%${query}%`) },
+        { address: Like(`%${query}%`) },
+        { country: Like(`%${query}%`) },
+      ];
+    }
+
+    const data = await AppDataSource.manager.find(Restaurant, {
+      where: whereCondition,
+    });
+
+    return data;
   } catch (error) {
     console.error(error);
   }

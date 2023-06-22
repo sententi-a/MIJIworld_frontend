@@ -14,11 +14,13 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is listening at localhost:${port}`);
+  console.log(`***** Server is listening at localhost:${port} *****`);
 });
 
 app.get("/restaurants", async (req: Request, res: Response) => {
-  const data = await getAllRestaurantData();
+  const filter = String(req.query.q);
+  const data = await getRestaurantData(filter);
+
   res.send(data);
 });
 
@@ -68,7 +70,7 @@ import {
 } from "./jobs/db-setup";
 
 import {
-  getAllRestaurantData,
+  getRestaurantData,
   getRestDialogData,
   getRestBasicData,
 } from "./controllers/restaurant";
@@ -80,12 +82,12 @@ import { getMenus } from "./controllers/menu";
 
 // Connect to mysql DB
 AppDataSource.initialize().then(() => {
-  console.log("DB connection success");
+  console.log("***** DB connection success *****");
   //   setupDBfromExcel();
   //   setupMap();
   //   setupKakaoReview();
   //   scrapNaverReviews();
-  getAllRestaurantData();
+  // getAllRestaurantData();
 });
 
 // setupMap();
