@@ -2,11 +2,11 @@ import { useQuery } from "react-query";
 import restaurantApi from "@apis/restaurant";
 import QUERYKEYS from "@constants/queryKeys";
 
-const useRestaurants = () => {
+const useRestaurants = (filter: string | undefined = undefined) => {
   return useQuery(
-    [QUERYKEYS.RESTAURANT.ALL],
+    [QUERYKEYS.RESTAURANT.LIST, filter],
     () => {
-      return restaurantApi.getRestaurants();
+      return restaurantApi.getRestaurants(filter);
     },
     { suspense: true }
   );

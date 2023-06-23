@@ -11,11 +11,14 @@ import RestCard from "@components/RestCard";
 import Modal from "@pages/Modal";
 import { useState, useEffect, Suspense } from "react";
 import { useRestaurants } from "@hooks/restaurant";
+import useSearch from "@hooks/useSearch";
 
 export default function ListPage() {
-  const { data } = useRestaurants();
+  const { keyword, handleSearchChange } = useSearch();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentRest, setCurrentRest] = useState("");
+
+  const { data } = useRestaurants(keyword);
 
   const handleCardClick = (restName: string) => {
     setIsModalOpen((prev) => !prev);
@@ -28,7 +31,7 @@ export default function ListPage() {
       <Logo isMain={false} />
       <VerticalButtons isMap={false} isList={true} />
       <Wrapper>
-        <SearchBar />
+        <SearchBar handleOnChange={handleSearchChange} />
         {/* TODO: RestCardList 컴포넌트로 만들기 */}
         <Grid>
           {/* TODO: 수정 */}

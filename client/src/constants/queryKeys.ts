@@ -1,6 +1,6 @@
 const QUERYKEYS = {
   RESTAURANT: {
-    ALL: "restaurants",
+    LIST: "restaurants",
     DIALOG: "dialog",
     BASIC_INFO: "basicInfo",
     MODAL: "modal",

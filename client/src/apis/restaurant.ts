@@ -1,9 +1,15 @@
 import api from "./index";
 
 const restaurantApi = {
-  getRestaurants: async () => {
+  getRestaurants: async (filter: string | undefined = undefined) => {
     try {
-      const result = await api.get(`/restaurants`);
+      let endpoint = `/restaurants`;
+
+      if (filter) {
+        endpoint += `?q=${filter}`;
+      }
+
+      const result = await api.get(endpoint);
       return result.data;
     } catch (e) {
       console.error(e);

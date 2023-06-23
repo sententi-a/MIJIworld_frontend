@@ -5,7 +5,7 @@ import { SearchOutlined } from "@ant-design/icons";
 interface SearchBarProps {
   placeholder?: string;
   color?: string;
-  handleOnChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleOnChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 function SearchBar_({ placeholder, color, handleOnChange }: SearchBarProps) {
@@ -20,7 +20,7 @@ function SearchBar_({ placeholder, color, handleOnChange }: SearchBarProps) {
         <Bar
           placeholder={placeholder || "Search everything you want..."}
           color={color}
-          // onChange={(event) => handleOnChange(event)}
+          onChange={(event) => handleOnChange(event)}
         ></Bar>
       </Container>
     </>
@@ -49,9 +49,9 @@ const Bar = styled.input<{ color: string | undefined }>`
 
 const IconContainer = styled.div`
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 2%;
-  bottom: 0;
+  transform: translate(0, -50%);
 `;
 
 const SearchBar = React.memo(SearchBar_);
