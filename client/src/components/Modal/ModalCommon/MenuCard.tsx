@@ -17,14 +17,14 @@ export default function MenuCard({
   price,
 }: MenuCardProps) {
   return (
-    <Box style={{ width: "20%", gap: "1vh" }}>
+    <Box style={{ width: "20%", gap: "1vh", height: "20vmax" }}>
       <Image
         src={require(`@assets/images/restaurant/${restName}/menu${menuId}.png`)}
         size="medium"
       />
-      <Text text={menuName} bold={true} />
-      <Text text={description} />
-      <Text text={getPriceWithComma(price) + "원"} />
+      <Text text={menuName} bold={true} size="t5" />
+      <Text text={description} size="t6" />
+      <Text text={getPriceWithComma(price) + "원"} size="t6" />
     </Box>
   );
 }
