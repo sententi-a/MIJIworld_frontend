@@ -22,7 +22,12 @@ export default function RestCard({
     <>
       <Box
         shadowIntensity="weak"
-        style={{ backgroundColor: "rgba(255, 255, 255, 0.123)", gap: "1vh" }}
+        style={{
+          backgroundColor: "rgba(255, 255, 255, 0.123)",
+          gap: "1vh",
+          width: "90%",
+          height: "90%",
+        }}
         onClick={handleOnClick}
       >
         <Horizontal>
@@ -33,7 +38,11 @@ export default function RestCard({
         </Horizontal>
         <Box
           shadowIntensity="weak"
-          style={{ backgroundColor: "rgba(248, 248, 248, 0.342)" }}
+          style={{
+            backgroundColor: "rgba(248, 248, 248, 0.342)",
+            width: "85%",
+            height: "90%",
+          }}
         >
           <Horizontal>
             <Image

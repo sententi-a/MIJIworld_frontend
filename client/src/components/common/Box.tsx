@@ -21,8 +21,6 @@ const BoxDiv = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  width: 90%;
-  height: 90%;
 
   &.weak {
     box-shadow: rgba(105, 103, 103, 0.118) 0px 0px 10px;
