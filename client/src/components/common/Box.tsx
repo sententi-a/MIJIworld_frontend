@@ -6,7 +6,7 @@ interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   shadowIntensity?: "strong" | "weak" | "modest";
 }
 
-function Box_({ children, shadowIntensity = "modest", ...props }: BoxProps) {
+function Box({ children, shadowIntensity = "modest", ...props }: BoxProps) {
   return (
     <BoxDiv className={shadowIntensity} {...props}>
       {children}
@@ -21,6 +21,8 @@ const BoxDiv = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
+  width: 90%;
+  height: 90%;
 
   &.weak {
     box-shadow: rgba(105, 103, 103, 0.118) 0px 0px 10px;
@@ -33,5 +35,4 @@ const BoxDiv = styled.div`
   }
 `;
 
-const Box = React.memo(Box_);
-export default Box;
+export default React.memo(Box);
