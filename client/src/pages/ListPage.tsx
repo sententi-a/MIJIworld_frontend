@@ -3,13 +3,12 @@ import {
   VerticalButtons,
   Background,
   Logo,
-  Grid,
   SearchBar,
 } from "@components/common";
 import BgImage from "@assets/images/list/bg.png";
-import RestCard from "@components/RestCard";
+import RestCardList from "@components/List/RestCardList";
 import Modal from "@pages/Modal";
-import { useState, useEffect, Suspense } from "react";
+import { useState } from "react";
 import { useRestaurants } from "@hooks/restaurant";
 import useSearch from "@hooks/useSearch";
 
@@ -32,24 +31,7 @@ export default function ListPage() {
       <VerticalButtons isMap={false} isList={true} />
       <Wrapper>
         <SearchBar handleOnChange={handleSearchChange} />
-        {/* TODO: RestCardList 컴포넌트로 만들기 */}
-        <Grid>
-          {/* TODO: 수정 */}
-          <Suspense fallback={<div>만드는 중</div>}>
-            {data &&
-              data.map((elem: typeof data) => (
-                <RestCard
-                  key={"restCard " + elem.en_name}
-                  restName={elem.en_name}
-                  krRestName={elem.kr_name}
-                  country={elem.country}
-                  address={elem.address}
-                  businessHour={elem.business_hour}
-                  handleOnClick={() => handleCardClick(elem.en_name)}
-                />
-              ))}
-          </Suspense>
-        </Grid>
+        <RestCardList restData={data} handleOnClick={handleCardClick} />
       </Wrapper>
       {isModalOpen && (
         <Modal restName={currentRest} setIsModalOpen={setIsModalOpen} />

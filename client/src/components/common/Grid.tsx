@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   text-align: center;
   display: grid;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: start;
   grid-template-columns: repeat(auto-fill, minmax(25vmax, 25vmax));
   margin: 20px;
   row-gap: 3vh;
