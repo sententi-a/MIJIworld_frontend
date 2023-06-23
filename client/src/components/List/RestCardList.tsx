@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Grid } from "@components/common";
-import RestCard from "@components/RestCard";
+import RestCard from "@components/List/RestCard";
 
 interface RestCardListProps {
   //TODO: Type 정리해서 정의하기

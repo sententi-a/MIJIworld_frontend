@@ -27,7 +27,7 @@ export default function RestCard({
       >
         <Horizontal>
           <Image
-            src={require(`../assets/images/restaurant/${restName}/flag.png`)}
+            src={require(`@assets/images/restaurant/${restName}/flag.png`)}
           />
           <Text text={country} fancy={true} size="t6" />
         </Horizontal>
@@ -37,7 +37,7 @@ export default function RestCard({
         >
           <Horizontal>
             <Image
-              src={require(`../assets/images/restaurant/${restName}/menu1.png`)}
+              src={require(`@assets/images/restaurant/${restName}/menu1.png`)}
               size="medium"
             />
             <div
