@@ -61,21 +61,22 @@ app.get("/restaurant/menus/:name", async (req: Request, res: Response) => {
   res.send(data);
 });
 
-app.post(
-  "/restaurant/ticket/:restName",
-  async (req: Request, res: Response) => {
-    console.log(req.body);
-    const { image, date, name, company, note, message } = req.body;
-    try {
-      console.log("도달");
-      getTicket(image, date, name, company, note, message);
-      res.status(200).send(image);
-    } catch (error) {
-      console.error(error);
-      res.sendStatus(500);
-    }
+app.get("/restaurant/ticket/:restName", async (req: Request, res: Response) => {
+  const restName = req.params.restName;
+  const date = req.query.date;
+  const name = req.query.name;
+  const company = req.query.company;
+  const note = req.query.note;
+  const message = req.query.message;
+
+  try {
+    getTicket(restName, date, name, company, note, message);
+    res.sendStatus(200);
+  } catch (error) {
+    console.error(error);
+    res.sendStatus(500);
   }
-);
+});
 
 // ***** DB Setup *****
 import {
