@@ -22,6 +22,7 @@ module.exports = {
       "@pages": path.resolve(__dirname, "src/pages"),
       "@apis": path.resolve(__dirname, "src/apis"),
       "@constants": path.resolve(__dirname, "src/constants"),
+      "@types": path.resolve(__dirname, "src/types"),
     },
   },
 };
