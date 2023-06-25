@@ -26,7 +26,14 @@ export const ticketApi = {
         message: ticketData.message,
       };
 
-      const response = await api.post(`/restaurant/ticket/${restName}`, data);
+      const response = await api.get(
+        `/restaurant/ticket/${restName}?date=${dateToString(date)}&name=${
+          ticketData.name
+        }&company=${ticketData.company}&note=${ticketData.note}&message=${
+          ticketData.message
+        }`
+      );
+      // const response = await api.post(`/restaurant/ticket/${restName}`, data);
       return response.data;
     } catch (error) {
       console.error(error);
