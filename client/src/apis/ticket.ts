@@ -10,22 +10,6 @@ export const ticketApi = {
     ticketData: ticketDataType
   ) => {
     try {
-      const formData = new FormData();
-
-      formData.append("date", dateToString(date));
-      formData.append("name", ticketData.name);
-      formData.append("company", ticketData.company);
-      formData.append("note", ticketData.note);
-      formData.append("message", ticketData.message);
-
-      const data = {
-        date,
-        name: ticketData.name,
-        company: ticketData.company,
-        note: ticketData.note,
-        message: ticketData.message,
-      };
-
       const response = await api.get(
         `/restaurant/ticket/${restName}?date=${dateToString(date)}&name=${
           ticketData.name
