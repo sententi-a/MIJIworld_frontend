@@ -21,7 +21,7 @@ export const getKakaoReviews = async (name: string) => {
       where: { rest_name: restData },
     });
 
-    console.log(reviews);
+    // console.log(reviews);
 
     const result = {
       overview: { ...overviewData },

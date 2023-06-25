@@ -11,7 +11,7 @@ export const getMenus = async (name: string) => {
       where: { rest_name: restData },
     });
 
-    console.log(menuData);
+    // console.log(menuData);
 
     const result = {
       country_word: restData.country_word,

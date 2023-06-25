@@ -10,7 +10,7 @@ export const getRestaurantData = async (
     let whereCondition = {};
 
     if (query !== "undefined") {
-      console.log(query);
+      // console.log(query);
       whereCondition = [
         { kr_name: Like(`%${query}%`) },
         { address: Like(`%${query}%`) },
