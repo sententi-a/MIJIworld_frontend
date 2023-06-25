@@ -26,6 +26,7 @@
     "puppeteer": "^20.7.1",
     "read-excel-file": "^5.6.1",
     "reflect-metadata": "^0.1.13",
+    "sharp": "^0.32.1",
     "typeorm": "^0.3.16"
   },
   "devDependencies": {

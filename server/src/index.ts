@@ -61,6 +61,22 @@ app.get("/restaurant/menus/:name", async (req: Request, res: Response) => {
   res.send(data);
 });
 
+app.post(
+  "/restaurant/ticket/:restName",
+  async (req: Request, res: Response) => {
+    console.log(req.body);
+    const { image, date, name, company, note, message } = req.body;
+    try {
+      console.log("도달");
+      getTicket(image, date, name, company, note, message);
+      res.status(200).send(image);
+    } catch (error) {
+      console.error(error);
+      res.sendStatus(500);
+    }
+  }
+);
+
 // ***** DB Setup *****
 import {
   setupDBfromExcel,
@@ -74,11 +90,13 @@ import {
   getRestDialogData,
   getRestBasicData,
 } from "./controllers/restaurant";
+//TODO: index.ts 만들어서 controller 통합
 import { getAllPinData } from "./controllers/pin";
 import { getColorData } from "./controllers/color";
 import { getMapData } from "./controllers/map";
 import { getKakaoReviews } from "./controllers/review";
 import { getMenus } from "./controllers/menu";
+import { getTicket } from "./controllers/ticket";
 
 // Connect to mysql DB
 AppDataSource.initialize().then(() => {
