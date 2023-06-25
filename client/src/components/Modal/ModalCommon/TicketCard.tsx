@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Box, Text, Image, Input, Button } from "@components/common";
 import DayPicker from "@components/common/DayPicker";
 import dateToString from "@utils/dateToString";
 import useTicketForm from "@hooks/useTicketForm";
+import { useTicketUpload } from "@hooks/useTicketUpload";
 
 interface TicketCardProps {
   restName: string;
@@ -17,6 +18,12 @@ export default function TicketCard({ restName }: TicketCardProps) {
     setDate,
     textPositions,
   } = useTicketForm();
+
+  const uploadTicket = useTicketUpload(restName, date, ticketData);
+
+  const handleDownloadClick = () => {
+    uploadTicket.mutate();
+  };
 
   return (
     <Box style={{ position: "relative" }}>
@@ -48,7 +55,7 @@ export default function TicketCard({ restName }: TicketCardProps) {
           </React.Fragment>
         );
       })}
-      <Button label="다운로드" size="small" />
+      <Button label="다운로드" size="small" onClick={handleDownloadClick} />
     </Box>
   );
 }
