@@ -17,15 +17,11 @@ export default function RestMap({ restName, address, krName }: RestMapProps) {
     address: address,
   });
 
-  return (
-    <>
-      <MapContainer id="map"></MapContainer>
-    </>
-  );
+  return <MapContainer id="map"></MapContainer>;
 }
 
 const MapContainer = styled.div`
-  width: 50%;
-  height: 40vh;
+  width: 60%;
+  height: 25vmax;
   margin: 10px auto;
 `;
