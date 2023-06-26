@@ -62,16 +62,25 @@ app.get("/restaurant/menus/:name", async (req: Request, res: Response) => {
 });
 
 app.get("/restaurant/ticket/:restName", async (req: Request, res: Response) => {
-  const restName = req.params.restName;
-  const date = req.query.date;
-  const name = req.query.name;
-  const company = req.query.company;
-  const note = req.query.note;
-  const message = req.query.message;
+  const restName = req.params.restName.toString();
+  const date = req.query.date ? req.query.date.toString() : "";
+  const name = req.query.name ? req.query.name.toString() : "";
+  const company = req.query.company ? req.query.company.toString() : "";
+  const note = req.query.note ? req.query.note.toString() : "";
+  const message = req.query.message ? req.query.message.toString() : "";
 
   try {
-    getTicket(restName, date, name, company, note, message);
-    res.sendStatus(200);
+    const ticketImage = await getTicket(
+      restName,
+      date,
+      name,
+      company,
+      note,
+      message
+    );
+
+    res.setHeader("Content-Type", "image/png");
+    res.send(ticketImage);
   } catch (error) {
     console.error(error);
     res.sendStatus(500);

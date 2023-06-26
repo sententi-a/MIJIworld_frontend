@@ -3,12 +3,12 @@ const fs = require("fs");
 
 // Process ticket image(add text on it) and help client to download the image
 export const getTicket = async (
-  restName,
-  date,
-  name,
-  company,
-  note,
-  message
+  restName: string,
+  date: string,
+  name: string,
+  company: string,
+  note: string,
+  message: string
 ) => {
   const imagePath = `src/assets/tickets/${restName}.png`;
 
@@ -21,16 +21,18 @@ export const getTicket = async (
           text {font-size: 18px; font-family: Noto Sans KR; font-weight: bold; fill: #525253;}    
         </style>
         <text x="14%" y="42%" text-anchor="middle">${date}</text>
-        <text x="79%" y="21%" text-anchor="middle">${name}</text>
-        <text x="79%" y="37%" text-anchor="middle">${company}</text>
-        <text x="79%" y="53%" text-anchor="middle">${note}</text>
-        <text x="79%" y="69%" text-anchor="middle">${message}</text>
+        <text x="77%" y="21%" text-anchor="left">${name}</text>
+        <text x="77%" y="37%" text-anchor="left">${company}</text>
+        <text x="77%" y="53%" text-anchor="left">${note}</text>
+        <text x="77%" y="69%" text-anchor="left">${message}</text>
       </svg>`
     );
 
-    await sharp(imageBuffer)
+    const resultImage = await sharp(imageBuffer)
       .composite([{ input: text, top: 0, left: 0 }])
-      .toFile(`restaurant_ticket.png`);
+      .toBuffer();
+
+    return resultImage;
   } catch (error) {
     console.error(error);
   }
