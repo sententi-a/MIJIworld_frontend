@@ -24,7 +24,7 @@ const CustomImage = styled.img`
   }
 
   &.xlarge {
-    width: 50vw;
+    width: 40vw;
   }
 
   &.xxlarge {

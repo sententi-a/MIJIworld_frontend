@@ -1,6 +1,5 @@
 import { Text } from "@components/common";
 import TicketCard from "../ModalCommon/TicketCard";
-import { useColor } from "@hooks/queries/color";
 import ModalSubTitle from "../ModalCommon/ModalSubTitle";
 
 interface RestTicketProps {
@@ -8,8 +7,6 @@ interface RestTicketProps {
 }
 
 export default function RestTicket({ restName }: RestTicketProps) {
-  const { data } = useColor(restName);
-
   return (
     <RestTicketWrapper>
       <ModalSubTitle restName={restName} text="티켓 만들기" />

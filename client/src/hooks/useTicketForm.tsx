@@ -42,29 +42,29 @@ export default function useTicketForm() {
   };
 
   const textPositions: textPositionsType = {
-    date: { position: "absolute", top: "8.5vw", left: "3.3vw" },
+    date: { position: "absolute", top: "6.8vw", left: "3vw" },
     name: {
       position: "absolute",
-      top: "4vw",
-      left: "39vw",
+      top: "3.8vw",
+      left: "32vw",
       overflow: "hidden",
     },
     company: {
       position: "absolute",
-      top: "7.4vw",
-      left: "39vw",
+      top: "6.1vw",
+      left: "32vw",
       overflow: "hidden",
     },
     note: {
       position: "absolute",
-      top: "10.8vw",
-      left: "39vw",
+      top: "8.8vw",
+      left: "32vw",
       overflow: "hidden",
     },
     message: {
       position: "absolute",
-      top: "14.2vw",
-      left: "39vw",
+      top: "11.5vw",
+      left: "32vw",
       overflow: "hidden",
     },
   };

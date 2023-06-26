@@ -23,7 +23,7 @@ export default function DayPicker({ date, setDate }: DayPickerProps) {
           <Input
             label="Date"
             size="medium"
-            style={{ height: "35px", width: "31.3vw" }}
+            style={{ height: "35px", width: "31.3vw", fontSize: "1.2vw" }}
           />
         }
       />

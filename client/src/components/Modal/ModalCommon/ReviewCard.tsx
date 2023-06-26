@@ -12,13 +12,10 @@ export default function ReviewCard({ restName, mapType }: ReviewCardProps) {
   const mapName = mapType === "naver" ? "네이버 지도" : "카카오맵";
   const useReview = mapType === "naver" ? useKakaoReview : useKakaoReview;
 
-  // TODO: data?를 안 붙이면 undefined 에러 나는 이유 찾기
-  // TODO: undefined 일수도 있는 상태에서 구조분해할당 어떻게 하는지
   const { data } = useReview(restName);
 
   const score = data ? (data.overview.score ? data.overview.score : 0) : 0;
   const isEmpty = data ? (data.reviews.length > 0 ? false : true) : true;
-  console.log(isEmpty);
 
   return (
     <Box style={{ backgroundColor: "#fcfcfc" }}>

@@ -27,8 +27,8 @@ const Input_ = React.forwardRef<HTMLInputElement, InputProps>(
 const CustomInput = styled.input`
   border: 1px solid rgba(0, 0, 0, 0);
   outline: none;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px 0 #cccccc;
+  border-radius: 20px;
+  box-shadow: rgba(105, 103, 103, 0.118) 0px 0px 10px;
   font-family: Noto Sans KR;
   color: #707070;
 
@@ -39,14 +39,14 @@ const CustomInput = styled.input`
   &.small {
     width: 20vw;
     height: 18px;
-    font-size: 1.2vw;
+    font-size: 1vw;
     padding: 5px;
   }
 
   &.medium {
     width: 30vw;
-    height: 20px;
-    font-size: 1.4vw;
+    height: 22px;
+    font-size: 1.2vw;
     padding: 8px;
   }
 
@@ -58,7 +58,17 @@ const CustomInput = styled.input`
   }
 
   ::placeholder {
-    color: #db7976;
+    &.small {
+      font-size: 1.2vw;
+    }
+
+    &.medium {
+      font-size: 1.4vw;
+    }
+
+    &.large {
+      font-size: 1.6vw;
+    }
     font-weight: 500;
   }
 `;
