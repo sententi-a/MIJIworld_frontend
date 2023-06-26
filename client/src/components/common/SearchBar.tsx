@@ -8,7 +8,7 @@ interface SearchBarProps {
   handleOnChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-function SearchBar_({ placeholder, color, handleOnChange }: SearchBarProps) {
+function SearchBar({ placeholder, color, handleOnChange }: SearchBarProps) {
   return (
     <>
       <Container>
@@ -54,5 +54,4 @@ const IconContainer = styled.div`
   transform: translate(0, -50%);
 `;
 
-const SearchBar = React.memo(SearchBar_);
-export default SearchBar;
+export default React.memo(SearchBar);

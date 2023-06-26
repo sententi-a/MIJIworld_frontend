@@ -4,6 +4,7 @@ import {
   Background,
   Logo,
   SearchBar,
+  Text,
 } from "@components/common";
 import BgImage from "@assets/images/list/bg.png";
 import RestCardList from "@components/List/RestCardList";
@@ -31,6 +32,12 @@ export default function ListPage() {
       <VerticalButtons isMap={false} isList={true} />
       <Wrapper>
         <SearchBar handleOnChange={handleSearchChange} />
+        <Text
+          text={`검색 결과 : ${data.length}개`}
+          size="t4"
+          bold={true}
+          style={{ color: "#8D8DE5" }}
+        />
         <RestCardList restData={data} handleOnClick={handleCardClick} />
       </Wrapper>
       {isModalOpen && (
@@ -46,4 +53,5 @@ const Wrapper = styled.div`
   align-items: center;
   position: relative;
   top: 8vmax;
+  gap: 1vh;
 `;
