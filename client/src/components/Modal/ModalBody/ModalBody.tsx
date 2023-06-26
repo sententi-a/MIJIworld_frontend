@@ -1,11 +1,9 @@
 import RestOverview from "@components/Modal/ModalBody/RestOverview";
 import RestMenu from "@components/Modal/ModalBody/RestMenu";
 import RestPhoto from "@components/Modal/ModalBody/RestPhoto";
-import RestReview from "./RestReview";
-import RestTicket from "./RestTicket";
-
-//TODO: type 절대경로
-import { restDataType } from "../../../types/restaurant";
+import RestReview from "@components/Modal/ModalBody/RestReview";
+import RestTicket from "@components/Modal/ModalBody/RestTicket";
+import { restDataType } from "@customTypes/restaurant";
 
 interface ModalBodyProps {
   restName: string;

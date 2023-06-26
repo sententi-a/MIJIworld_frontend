@@ -9,7 +9,8 @@
       "@pages/*": ["src/pages/*"],
       "@apis/*": ["src/apis/*"],
       "@constants/*": ["src/constants/*"],
-      "@types/*": ["src/types/*"]
+      "@customTypes/*": ["src/types/*"],
+      "@styles/*": ["src/styles/*"]
     }
   }
 }

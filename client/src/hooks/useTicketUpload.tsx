@@ -1,7 +1,6 @@
 import { useMutation } from "react-query";
 import { ticketApi } from "@apis/ticket";
-// import ticketDataType from "@types/ticket";
-import ticketDataType from "../types/ticket";
+import ticketDataType from "@customTypes/ticket";
 
 const useTicketUpload = (
   restName: string,

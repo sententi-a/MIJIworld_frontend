@@ -1,7 +1,6 @@
 import { Text, Horizontal, Toggle } from "@components/common/index";
 import RestMap from "@components/Modal/ModalBody/RestMap";
-//TODO: type path
-import { restDataType } from "../../../types/restaurant";
+import { restDataType } from "@customTypes/restaurant";
 
 interface RestOverviewProps {
   restName: string;
