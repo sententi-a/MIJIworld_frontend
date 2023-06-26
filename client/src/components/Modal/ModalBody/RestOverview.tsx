@@ -38,7 +38,9 @@ export default function RestOverview({
         text={restData.introduction}
         style={{
           backgroundColor: "#fafafa",
-          borderRadius: "40px",
+          borderRadius: "20px",
+          marginTop: "0.5vmax",
+          padding: "10px",
         }}
       />
     </RestOverviewWrapper>
@@ -50,5 +52,17 @@ interface RestOverviewWrapperProps {
 }
 
 function RestOverviewWrapper({ children }: RestOverviewWrapperProps) {
-  return <div style={{ textAlign: "center" }}>{children}</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "0.3vmax",
+        alignItems: "center",
+        width: "80%",
+      }}
+    >
+      {children}
+    </div>
+  );
 }

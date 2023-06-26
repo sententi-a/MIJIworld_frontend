@@ -15,37 +15,47 @@ export default function ReviewCard({ restName, mapType }: ReviewCardProps) {
   // TODO: data?를 안 붙이면 undefined 에러 나는 이유 찾기
   // TODO: undefined 일수도 있는 상태에서 구조분해할당 어떻게 하는지
   const { data } = useReview(restName);
-  // const { overview, reviews } = data;
-  // const { score, url } = overview;
+
+  const score = data ? (data.overview.score ? data.overview.score : 0) : 0;
+  const isEmpty = data ? (data.reviews.length > 0 ? false : true) : true;
+  console.log(isEmpty);
 
   return (
-    <Box style={{ width: "30%", backgroundColor: "#fcfcfc" }}>
-      <Horizontal gap="0.5vw">
-        <Image src={require(`@assets/images/icon/${mapType}map.png`)} />
-        <Text text={mapName} bold={true} size="t5" />
-        <Text text={`(${data?.overview.score}점)`} size="t5" />
+    <Box style={{ backgroundColor: "#fcfcfc" }}>
+      <Horizontal gap="2vw">
+        <div>
+          <Image src={require(`@assets/images/icon/${mapType}map.png`)} />
+          <a href={data?.overview.url} target="_blank" rel="external">
+            <Text text={`${mapName}`} bold={true} size="t5" />
+          </a>
+          <Text text={`(${score}점)`} size="t5" />
+          <StarRate rate={score} />
+        </div>
+
+        <Box
+          shadowIntensity="weak"
+          style={{
+            width: "30vw",
+            backgroundColor: "#ffffff",
+            display: "flex",
+            gap: "0.5vmax",
+            alignItems: "flex-start",
+          }}
+        >
+          {data &&
+            data.reviews.map((elem: typeof data.reviews) => (
+              <React.Fragment key={`${mapType}review${elem.id}`}>
+                <Text
+                  key={elem.content}
+                  text={"📌 " + elem.content}
+                  size="t6"
+                  style={{ textAlign: "left" }}
+                />
+              </React.Fragment>
+            ))}
+          {isEmpty && <Text text="❗️ 해당 음식점에 등록된 리뷰가 없습니다." />}
+        </Box>
       </Horizontal>
-      <StarRate rate={data?.overview.score} />
-      <Box
-        shadowIntensity="weak"
-        style={{ width: "80%", backgroundColor: "#ffffff" }}
-      >
-        <Text text={"리뷰 리스트"} size="t5" bold={true} />
-        {data &&
-          data.reviews.map((elem: typeof data.reviews) => (
-            <React.Fragment key={`${mapType}review${elem.id}`}>
-              <Text
-                key={elem.content}
-                text={"📌 " + elem.content}
-                size="t6"
-                style={{ textAlign: "left" }}
-              />
-            </React.Fragment>
-          ))}
-        <a href={data?.overview.url} target="_blank" rel="external">
-          <Text text={"더보기"} size="t6" />
-        </a>
-      </Box>
     </Box>
   );
 }

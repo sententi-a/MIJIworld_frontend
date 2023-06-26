@@ -31,5 +31,16 @@ interface ModalBodyWrapperProps {
 }
 
 function ModalBodyWrapper({ children }: ModalBodyWrapperProps) {
-  return <div>{children}</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "4vmax",
+        alignItems: "center",
+      }}
+    >
+      {children}
+    </div>
+  );
 }

@@ -17,7 +17,7 @@ export default function MenuCard({
   price,
 }: MenuCardProps) {
   return (
-    <Box style={{ width: "20%", gap: "1vh", height: "20vmax" }}>
+    <Box style={{ width: "100%", gap: "1vh", height: "20vmax" }}>
       <Image
         src={require(`@assets/images/restaurant/${restName}/menu${menuId}.png`)}
         size="medium"

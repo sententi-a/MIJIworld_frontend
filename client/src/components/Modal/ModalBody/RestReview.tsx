@@ -1,20 +1,17 @@
-import { Text, Horizontal } from "@components/common";
 import ReviewCard from "@components/Modal/ModalCommon/ReviewCard";
+import ModalSubTitle from "@components/Modal/ModalCommon/ModalSubTitle";
 
 interface RestReviewProps {
   restName: string;
-  // krRestName: string;
 }
 
 export default function RestReview({ restName }: RestReviewProps) {
   return (
     <RestReviewWrapper>
-      <Text text={`${restName} 평점 보기`} fancy={true} />
-      <Horizontal gap="2vw">
-        {["naver", "kakao"].map((elem) => (
-          <ReviewCard key={`map${elem}`} restName={restName} mapType={elem} />
-        ))}
-      </Horizontal>
+      <ModalSubTitle restName={restName} text="리뷰 보기" />
+      {["naver", "kakao"].map((elem) => (
+        <ReviewCard key={`map${elem}`} restName={restName} mapType={elem} />
+      ))}
     </RestReviewWrapper>
   );
 }
@@ -24,5 +21,17 @@ interface RestReviewWrapperProps {
 }
 
 function RestReviewWrapper({ children }: RestReviewWrapperProps) {
-  return <div style={{}}>{children}</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column",
+        gap: "2vmax",
+        width: "85%",
+      }}
+    >
+      {children}
+    </div>
+  );
 }
