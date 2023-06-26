@@ -38,6 +38,7 @@ export default function RestOverview({
       )}
       <Text
         text={restData.introduction}
+        size="t5"
         style={{
           backgroundColor: "#fafafa",
           borderRadius: "20px",

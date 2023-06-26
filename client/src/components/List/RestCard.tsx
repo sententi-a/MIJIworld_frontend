@@ -24,15 +24,18 @@ export default function RestCard({
         shadowIntensity="weak"
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.123)",
-          gap: "1vh",
+          gap: "0.5vh",
           width: "90%",
-          height: "90%",
+          height: "10vmax",
+          paddingTop: "15px",
+          paddingBottom: "20px",
         }}
         onClick={handleOnClick}
       >
         <Horizontal>
           <Image
             src={require(`@assets/images/restaurant/${restName}/flag.png`)}
+            size="small"
           />
           <Text text={country} fancy={true} size="t6" />
         </Horizontal>
@@ -41,7 +44,8 @@ export default function RestCard({
           style={{
             backgroundColor: "rgba(248, 248, 248, 0.342)",
             width: "85%",
-            height: "90%",
+            height: "60%",
+            padding: "15px 10px",
           }}
         >
           <Horizontal>

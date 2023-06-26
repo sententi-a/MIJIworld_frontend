@@ -8,7 +8,7 @@ interface LogoProps extends React.HTMLAttributes<HTMLDivElement> {
   position?: "left" | "center" | "right";
 }
 
-function Logo_({ isMain, position = "center", ...props }: LogoProps) {
+function Logo({ isMain, position = "center", ...props }: LogoProps) {
   return (
     <>
       <Wrapper className={position} {...props}>
@@ -43,12 +43,11 @@ const Wrapper = styled.div`
 `;
 
 const KoreanLogo = styled.img`
-  width: 12vw;
-`;
-
-const EnglishLogo = styled.img`
   width: 10vw;
 `;
 
-const Logo = React.memo(Logo_);
-export default Logo;
+const EnglishLogo = styled.img`
+  width: 8vw;
+`;
+
+export default React.memo(Logo);

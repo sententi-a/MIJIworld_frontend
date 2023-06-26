@@ -5,7 +5,7 @@ interface BackgroundProps {
   bgPath: string;
 }
 
-function Background_({ bgPath }: BackgroundProps) {
+function Background({ bgPath }: BackgroundProps) {
   return (
     <>
       <BackImage path={bgPath} />
@@ -22,5 +22,4 @@ const BackImage = styled.div<{ path: string }>`
   top: 0;
 `;
 
-const Background = React.memo(Background_);
-export default Background;
+export default React.memo(Background);

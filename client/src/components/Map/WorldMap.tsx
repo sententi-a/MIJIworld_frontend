@@ -6,12 +6,11 @@ interface WorldMapProps {
   children: React.ReactNode | undefined;
 }
 
-function WorldMap_({ children }: WorldMapProps) {
+function WorldMap({ children }: WorldMapProps) {
   const imageStyle: React.CSSProperties = React.useMemo(() => {
     return {
       objectFit: "contain",
       objectPosition: "center center",
-      minWidth: "100%",
       height: "auto",
     };
   }, []);
@@ -24,5 +23,4 @@ function WorldMap_({ children }: WorldMapProps) {
   );
 }
 
-const WorldMap = React.memo(WorldMap_);
-export default WorldMap;
+export default React.memo(WorldMap);

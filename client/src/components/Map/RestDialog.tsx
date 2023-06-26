@@ -30,13 +30,14 @@ export default function RestDialog({
           text={data?.country}
           fancy={true}
           style={{ color: data?.text_color }}
+          size="t6"
         />
         <Box style={{ backgroundColor: "#ffffff" }}>
           <Horizontal>
             <Image
               src={require(`@assets/images/restaurant/${restName}/menu1.png`)}
             />
-            <Text text={data?.kr_name} size="t5" />
+            <Text text={data?.kr_name} size="t6" />
           </Horizontal>
         </Box>
       </Box>

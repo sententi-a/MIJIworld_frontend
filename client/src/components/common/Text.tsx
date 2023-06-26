@@ -8,7 +8,7 @@ interface TextProps extends React.HTMLAttributes<HTMLDivElement> {
   fancy?: boolean;
 }
 
-function Txt({ text, size, bold, fancy, ...props }: TextProps) {
+function Text({ text, size, bold, fancy, ...props }: TextProps) {
   const className = `${size ? size + " " : "t4 "}${bold ? "bold " : ""}${
     fancy ? "fancy " : ""
   }`;
@@ -29,11 +29,11 @@ const CustomText = styled.div`
   }
 
   &.t1 {
-    font-size: 3.6vw;
+    font-size: 3.3vw;
   }
 
   &.t2 {
-    font-size: 3vw;
+    font-size: 2.8vw;
   }
 
   &.t3 {
@@ -41,11 +41,11 @@ const CustomText = styled.div`
   }
 
   &.t4 {
-    font-size: 1.5vw;
+    font-size: 1.4vw;
   }
 
   &.t5 {
-    font-size: 1.4vw;
+    font-size: 1.3vw;
   }
 
   &.t6 {
@@ -61,5 +61,4 @@ const CustomText = styled.div`
   }
 `;
 
-const Text = React.memo(Txt);
-export default Text;
+export default React.memo(Text);

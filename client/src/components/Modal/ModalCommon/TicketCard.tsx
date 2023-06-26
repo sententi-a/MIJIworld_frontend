@@ -49,6 +49,7 @@ export default function TicketCard({ restName }: TicketCardProps) {
         text={dateToString(date)}
         size="t7"
         style={{ ...textPositions["date"] }}
+        bold={true}
       />
       {getTicketFormLabels().map((elem) => {
         return (
@@ -63,6 +64,7 @@ export default function TicketCard({ restName }: TicketCardProps) {
               text={ticketData[elem.name]}
               size="t7"
               style={{ ...textPositions[elem.name] }}
+              bold={true}
             />
           </React.Fragment>
         );

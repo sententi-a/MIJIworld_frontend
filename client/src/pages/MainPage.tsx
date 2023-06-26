@@ -15,7 +15,7 @@ export default function MainPage() {
       <Background bgPath={BgImage} />
       <Logo
         isMain={true}
-        style={{ top: "4vh", marginLeft: "10vw", position: "absolute" }}
+        style={{ top: "8vh", paddingLeft: "10vw", position: "relative" }}
       />
       <div style={{ position: "relative" }}>
         <Heading1>

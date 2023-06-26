@@ -12,11 +12,11 @@ function Image_({ src, size, ...props }: ImageProps) {
 
 const CustomImage = styled.img`
   &.small {
-    width: 3vw;
+    width: 2.5vw;
   }
 
   &.medium {
-    width: 8vw;
+    width: 6vw;
   }
 
   &.large {

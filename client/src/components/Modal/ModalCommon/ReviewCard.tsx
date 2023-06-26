@@ -18,7 +18,7 @@ export default function ReviewCard({ restName, mapType }: ReviewCardProps) {
   const isEmpty = data ? (data.reviews.length > 0 ? false : true) : true;
 
   return (
-    <Box style={{ backgroundColor: "#fcfcfc" }}>
+    <Box style={{ backgroundColor: "#fcfcfc", padding: "10px 20px" }}>
       <Horizontal gap="2vw">
         <div>
           <Image src={require(`@assets/images/icon/${mapType}map.png`)} />
