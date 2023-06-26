@@ -1,6 +1,7 @@
 import { Text, Horizontal, Toggle } from "@components/common/index";
 import RestMap from "@components/Modal/ModalBody/RestMap";
 import { restDataType } from "@customTypes/restaurant";
+import useToggle from "@hooks/useToggle";
 
 interface RestOverviewProps {
   restName: string;
@@ -11,6 +12,8 @@ export default function RestOverview({
   restName,
   restData,
 }: RestOverviewProps) {
+  const { isDown, handleOnClick } = useToggle();
+
   return (
     <RestOverviewWrapper>
       <Text text={restData.kr_name} bold={true} size="t2" />
@@ -18,22 +21,21 @@ export default function RestOverview({
         <Text text={"영업 시간 | "} bold={true} />
         <Text text={restData.business_hour} />
       </Horizontal>
-      <Toggle
-        showComponent={
-          <RestMap
-            restName={restName}
-            address={restData.address}
-            krName={restData.kr_name}
-          />
-        }
-      >
-        {(isDown) => (
-          <Horizontal>
-            <Text text={`${isDown ? "▼" : "▶"} 주소 | `} bold={true} />
-            <Text text={restData.address} />
-          </Horizontal>
-        )}
-      </Toggle>
+      <Horizontal>
+        <Text
+          text={`${isDown ? "▼" : "▶"} 주소 | `}
+          bold={true}
+          onClick={handleOnClick}
+        />
+        <Text text={restData.address} onClick={handleOnClick} />
+      </Horizontal>
+      {isDown && (
+        <RestMap
+          restName={restName}
+          address={restData.address}
+          krName={restData.kr_name}
+        />
+      )}
       <Text
         text={restData.introduction}
         style={{
