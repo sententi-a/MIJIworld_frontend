@@ -1,30 +1,17 @@
 import React from "react";
-import { useRef } from "react";
 import { Backdrop } from "@components/common";
 import ModalHeader from "@components/Modal/ModalHeader/ModalHeader";
 import ModalBody from "@components/Modal/ModalBody/ModalBody";
 import { useRestaurants } from "@hooks/queries/restaurant";
+import useModal from "@hooks/useModal";
 
 interface ModalProps {
-  setIsModalOpen: (open: boolean) => void;
+  setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
   restName: string;
 }
 
 export default function Modal({ setIsModalOpen, restName }: ModalProps) {
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const modalRef = useRef<HTMLDivElement>(null);
-
-  // Close modal when clicking outside (==Backdrop)
-  const clickModalOutside = (event: React.MouseEvent<HTMLDivElement>) => {
-    event.stopPropagation();
-
-    if (modalRef.current === event.target) {
-      setIsModalOpen(false);
-    }
-  };
+  const { modalRef, closeModal, clickModalOutside } = useModal(setIsModalOpen);
 
   const { data } = useRestaurants(restName);
   const restData = data[0];
@@ -48,6 +35,7 @@ export default function Modal({ setIsModalOpen, restName }: ModalProps) {
 interface ModalWrapperProps {
   children: React.ReactNode;
 }
+
 function ModalWrapper({ children }: ModalWrapperProps) {
   return (
     <div
