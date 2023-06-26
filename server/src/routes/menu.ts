@@ -1,0 +1,12 @@
+import { getMenus } from "../controllers/menu";
+import { Request, Response } from "express";
+
+const express = require("express");
+const router = express.Router();
+
+router.get("/restaurant/menus/:name", async (req: Request, res: Response) => {
+  const data = await getMenus(req.params.name);
+  res.send(data);
+});
+
+module.exports = router;

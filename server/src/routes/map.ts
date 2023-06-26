@@ -1,0 +1,12 @@
+import { getMapData } from "../controllers/map";
+import { Request, Response } from "express";
+
+const express = require("express");
+const router = express.Router();
+
+router.get("/restaurant/map/:name", async (req: Request, res: Response) => {
+  const data = await getMapData(req.params.name);
+  res.send(data);
+});
+
+module.exports = router;
