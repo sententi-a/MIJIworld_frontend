@@ -4,7 +4,7 @@ import RestDialog from "@components/Map/RestDialog";
 
 interface PinProps extends React.HTMLAttributes<HTMLImageElement> {
   restName: string;
-  handleOnClick: (event: React.MouseEvent<HTMLDivElement>) => void;
+  handleOnClick: (restName: string) => void;
   top: number;
   left: number;
 }

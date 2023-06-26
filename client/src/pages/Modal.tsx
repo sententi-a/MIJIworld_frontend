@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { Backdrop } from "@components/common";
 import ModalHeader from "@components/Modal/ModalHeader/ModalHeader";
 import ModalBody from "@components/Modal/ModalBody/ModalBody";
+import { useRestaurants } from "@hooks/restaurant";
 
 interface ModalProps {
   setIsModalOpen: (open: boolean) => void;
@@ -25,12 +26,19 @@ export default function Modal({ setIsModalOpen, restName }: ModalProps) {
     }
   };
 
+  const { data } = useRestaurants(restName);
+  const restData = data[0];
+
   return (
     <>
       <Backdrop ref={modalRef} onClick={(event) => clickModalOutside(event)}>
         <ModalWrapper>
-          <ModalHeader restName={restName} handleOnClick={closeModal} />
-          <ModalBody restName={restName} />
+          <ModalHeader
+            restName={restName}
+            handleOnClick={closeModal}
+            country={restData.country}
+          />
+          <ModalBody restName={restName} restData={restData} />
         </ModalWrapper>
       </Backdrop>
     </>

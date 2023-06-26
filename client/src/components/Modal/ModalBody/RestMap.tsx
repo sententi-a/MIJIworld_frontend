@@ -5,14 +5,15 @@ import { useMap } from "@hooks/useMap";
 interface RestMapProps {
   restName: string;
   address: string;
+  krName: string;
 }
 
-export default function RestMap({ restName, address }: RestMapProps) {
+export default function RestMap({ restName, address, krName }: RestMapProps) {
   const { data } = useMap(restName);
 
   useKakaoMap({
     mapId: data?.map_id,
-    name: data?.kr_name,
+    name: krName,
     address: address,
   });
 

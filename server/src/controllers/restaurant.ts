@@ -13,6 +13,7 @@ export const getRestaurantData = async (
       // console.log(query);
       whereCondition = [
         { kr_name: Like(`%${query}%`) },
+        { en_name: Like(`%${query}%`) },
         { address: Like(`%${query}%`) },
         { country: Like(`%${query}%`) },
       ];

@@ -4,17 +4,13 @@ import { useColor } from "@hooks/useColor";
 
 interface ModalHeaderProps {
   restName: string;
-  // country: string;
-  // textColor: string;
-  // headerColor: string;
+  country: string;
   handleOnClick: (event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void;
 }
 
 export default function ModalHeader({
   restName,
-  // country,
-  // textColor,
-  // headerColor,
+  country,
   handleOnClick,
 }: ModalHeaderProps) {
   const { data } = useColor(restName);
@@ -25,12 +21,7 @@ export default function ModalHeader({
         <Image
           src={require(`@assets/images/restaurant/${restName}/flag.png`)}
         />
-        {/* <Text text={country} fancy={true} style={{ color: data?.text_color }} /> */}
-        <Text
-          text={"대체예정"}
-          fancy={true}
-          style={{ color: data?.text_color }}
-        />
+        <Text text={country} fancy={true} style={{ color: data?.text_color }} />
       </Horizontal>
       <CloseOutlined
         onClick={handleOnClick}
