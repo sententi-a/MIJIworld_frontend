@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Horizontal, Image, Text } from "@components/common";
 import StarRate from "@components/common/StarRate";
 import { useKakaoReview } from "@hooks/review";
@@ -32,7 +33,14 @@ export default function ReviewCard({ restName, mapType }: ReviewCardProps) {
         <Text text={"리뷰 리스트"} size="t5" bold={true} />
         {data &&
           data.reviews.map((elem: typeof data.reviews) => (
-            <Text key={elem.content} text={"📌 " + elem.content} />
+            <React.Fragment key={`${mapType}review${elem.id}`}>
+              <Text
+                key={elem.content}
+                text={"📌 " + elem.content}
+                size="t6"
+                style={{ textAlign: "left" }}
+              />
+            </React.Fragment>
           ))}
         <a href={data?.overview.url} target="_blank" rel="external">
           <Text text={"더보기"} size="t6" />
