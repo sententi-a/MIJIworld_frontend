@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Box, Text, Image, Horizontal } from "@components/common";
-import { useRestDialog } from "@hooks/restaurant";
+import { useRestDialog } from "@hooks/queries/restaurant";
 
 interface RestDialogProps {
   restName: string;

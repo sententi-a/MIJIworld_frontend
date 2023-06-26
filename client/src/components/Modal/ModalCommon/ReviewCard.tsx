@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Horizontal, Image, Text } from "@components/common";
 import StarRate from "@components/common/StarRate";
-import { useKakaoReview } from "@hooks/review";
+import { useKakaoReview } from "@hooks/queries/review";
 
 interface ReviewCardProps {
   restName: string;

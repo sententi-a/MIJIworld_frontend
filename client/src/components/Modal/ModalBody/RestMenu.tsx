@@ -1,6 +1,6 @@
 import { Text, Horizontal } from "@components/common";
 import MenuCard from "@components/Modal/ModalCommon/MenuCard";
-import { useMenu } from "@hooks/useMenu";
+import { useMenu } from "@hooks/queries/menu";
 
 interface RestMenuProps {
   restName: string;

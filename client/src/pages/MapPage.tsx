@@ -4,7 +4,7 @@ import { Background, VerticalButtons, Logo } from "@components/common";
 import WorldMap from "@components/Map/WorldMap";
 import BgImage from "@assets/images/map/worldmap_background.png";
 import Modal from "@pages/Modal";
-import usePin from "@hooks/usePin";
+import usePin from "@hooks/queries/pin";
 import PinWithDialog from "@components/Map/PinWithDialog";
 
 export default function MapPage() {

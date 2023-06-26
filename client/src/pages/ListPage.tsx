@@ -9,7 +9,7 @@ import BgImage from "@assets/images/list/bg.png";
 import RestCardList from "@components/List/RestCardList";
 import Modal from "@pages/Modal";
 import { useState } from "react";
-import { useRestaurants } from "@hooks/restaurant";
+import { useRestaurants } from "@hooks/queries/restaurant";
 import useSearch from "@hooks/useSearch";
 
 export default function ListPage() {

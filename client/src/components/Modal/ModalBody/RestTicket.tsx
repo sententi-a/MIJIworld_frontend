@@ -1,6 +1,6 @@
 import { Text } from "@components/common";
 import TicketCard from "../ModalCommon/TicketCard";
-import { useColor } from "@hooks/useColor";
+import { useColor } from "@hooks/queries/color";
 
 interface RestTicketProps {
   restName: string;

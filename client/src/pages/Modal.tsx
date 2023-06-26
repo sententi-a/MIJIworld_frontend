@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { Backdrop } from "@components/common";
 import ModalHeader from "@components/Modal/ModalHeader/ModalHeader";
 import ModalBody from "@components/Modal/ModalBody/ModalBody";
-import { useRestaurants } from "@hooks/restaurant";
+import { useRestaurants } from "@hooks/queries/restaurant";
 
 interface ModalProps {
   setIsModalOpen: (open: boolean) => void;

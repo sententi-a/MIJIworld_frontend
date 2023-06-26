@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import useKakaoMap from "@hooks/useKakaoMap";
-import { useMap } from "@hooks/useMap";
+import { useMap } from "@hooks/queries/map";
 
 interface RestMapProps {
   restName: string;

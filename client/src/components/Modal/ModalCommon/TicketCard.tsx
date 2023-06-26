@@ -3,7 +3,7 @@ import { Box, Text, Image, Input, Button } from "@components/common";
 import DayPicker from "@components/common/DayPicker";
 import dateToString from "@utils/dateToString";
 import useTicketForm from "@hooks/useTicketForm";
-import { useTicketUpload } from "@hooks/useTicketUpload";
+import { useTicketUpload } from "@hooks/queries/ticket";
 
 interface TicketCardProps {
   restName: string;

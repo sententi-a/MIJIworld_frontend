@@ -1,6 +1,6 @@
 import { Image, Text, Horizontal } from "@components/common";
 import { CloseOutlined } from "@ant-design/icons";
-import { useColor } from "@hooks/useColor";
+import { useColor } from "@hooks/queries/color";
 
 interface ModalHeaderProps {
   restName: string;
