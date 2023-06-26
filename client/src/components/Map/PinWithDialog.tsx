@@ -1,6 +1,7 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import { Image } from "@components/common";
 import RestDialog from "@components/Map/RestDialog";
+import useHover from "@hooks/useHover";
 
 interface PinProps extends React.HTMLAttributes<HTMLImageElement> {
   restName: string;
@@ -9,7 +10,7 @@ interface PinProps extends React.HTMLAttributes<HTMLImageElement> {
   left: number;
 }
 
-function PinWithDialog_({ restName, top, left, handleOnClick }: PinProps) {
+function PinWithDialog({ restName, top, left, handleOnClick }: PinProps) {
   //TODO: useMemo 안 써도 될까?
   const imagePath: string = React.useMemo(() => {
     return require(`@assets/images/pin/${restName}.png`);
@@ -19,15 +20,7 @@ function PinWithDialog_({ restName, top, left, handleOnClick }: PinProps) {
     return { position: "absolute", top: `${top}%`, left: `${left}%` };
   }, []);
 
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = useCallback(() => {
-    setIsHovered(true);
-  }, []);
-
-  const handleMouseLeave = useCallback(() => {
-    setIsHovered(false);
-  }, []);
+  const { isHovered, handleMouseEnter, handleMouseLeave } = useHover();
 
   return (
     <>
@@ -49,5 +42,4 @@ function PinWithDialog_({ restName, top, left, handleOnClick }: PinProps) {
   );
 }
 
-const PinWithDialog = React.memo(PinWithDialog_);
-export default PinWithDialog;
+export default React.memo(PinWithDialog);
