@@ -7,7 +7,7 @@ export default function useSearch() {
   const handleSearchChange = useCallback(
     debounce((event: React.ChangeEvent<HTMLInputElement>) => {
       setKeyword(event.target.value);
-    }, 500),
+    }, 200),
     []
   );
 

@@ -45,7 +45,7 @@ export default function useTicketForm() {
     date: { position: "absolute", top: "6.8vw", left: "3vw" },
     name: {
       position: "absolute",
-      top: "3.8vw",
+      top: "3.5vw",
       left: "32vw",
       overflow: "hidden",
     },

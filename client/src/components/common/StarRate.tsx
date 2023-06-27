@@ -6,7 +6,7 @@ interface StarRateProps {
 }
 
 function StarRate_({ rate }: StarRateProps) {
-  const width = (rate / 5) * 7.9 + "vw";
+  const width = (rate / 5) * 7 + "vw";
 
   return (
     <>

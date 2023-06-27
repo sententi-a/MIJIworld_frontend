@@ -28,7 +28,7 @@ function PinWithDialog({ restName, top, left, handleOnClick }: PinProps) {
         <RestDialog
           restName={restName}
           top={`${top - 6.5}%`}
-          left={`${left - 6.5}%`}
+          left={`${left - 3}%`}
           handleOnClick={handleOnClick}
           handleOnMouseLeave={handleMouseLeave}
         />
