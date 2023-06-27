@@ -1,4 +1,6 @@
+import { useState, Suspense } from "react";
 import styled from "styled-components";
+import BgImage from "@assets/images/list/bg.png";
 import {
   VerticalButtons,
   Background,
@@ -6,24 +8,19 @@ import {
   SearchBar,
   Text,
 } from "@components/common";
-import BgImage from "@assets/images/list/bg.png";
 import RestCardList from "@components/List/RestCardList";
+import ModalFallback from "@components/Modal/ModalCommon/ModalFallback";
 import Modal from "@pages/Modal";
-import { useState } from "react";
 import { useRestaurants } from "@hooks/queries/restaurant";
 import useSearch from "@hooks/useSearch";
+import useModal from "@hooks/useModal";
 
 export default function ListPage() {
-  const { keyword, handleSearchChange } = useSearch();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentRest, setCurrentRest] = useState("");
 
-  const { data } = useRestaurants(keyword);
-
-  const handleCardClick = (restName: string) => {
-    setIsModalOpen((prev) => !prev);
-    setCurrentRest(restName);
-  };
+  const { keyword, handleSearchChange } = useSearch();
+  const { data: restData } = useRestaurants(keyword);
+  const { currentRest, handleTriggerClick } = useModal(setIsModalOpen);
 
   return (
     <>
@@ -33,15 +30,17 @@ export default function ListPage() {
       <Wrapper>
         <SearchBar handleOnChange={handleSearchChange} />
         <Text
-          text={`검색 결과 : ${data.length}개`}
+          text={`검색 결과 : ${restData.length}개`}
           size="t4"
           bold={true}
           style={{ color: "#8D8DE5" }}
         />
-        <RestCardList restData={data} handleOnClick={handleCardClick} />
+        <RestCardList restData={restData} handleOnClick={handleTriggerClick} />
       </Wrapper>
       {isModalOpen && (
-        <Modal restName={currentRest} setIsModalOpen={setIsModalOpen} />
+        <Suspense fallback={<ModalFallback />}>
+          <Modal restName={currentRest} setIsModalOpen={setIsModalOpen} />
+        </Suspense>
       )}
     </>
   );

@@ -1,8 +1,19 @@
-import React, { useRef } from "react";
+import React, { useRef, useCallback, useState } from "react";
 
 export default function useModal(
   setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>
 ) {
+  const [currentRest, setCurrentRest] = useState("");
+
+  // When trigger is clicked, open the modal
+  const handleTriggerClick = useCallback(
+    (restName: string) => {
+      setIsModalOpen(true);
+      setCurrentRest(restName);
+    },
+    [setIsModalOpen, setCurrentRest]
+  );
+
   const modalRef = useRef<HTMLDivElement>(null);
 
   // Close modal when clicking button
@@ -19,5 +30,11 @@ export default function useModal(
     }
   };
 
-  return { modalRef, closeModal, clickModalOutside };
+  return {
+    currentRest,
+    handleTriggerClick,
+    modalRef,
+    closeModal,
+    clickModalOutside,
+  };
 }
