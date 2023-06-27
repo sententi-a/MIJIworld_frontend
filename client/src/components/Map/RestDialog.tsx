@@ -4,7 +4,7 @@ import { useRestDialog } from "@hooks/queries/restaurant";
 
 interface RestDialogProps {
   restName: string;
-  handleOnClick: (restName: string) => void;
+  handleOnClick?: (restName: string) => void;
   handleOnMouseLeave: (event: React.MouseEvent<HTMLDivElement>) => void;
   top?: string | number;
   left?: string | number;
@@ -22,7 +22,7 @@ export default function RestDialog({
   return (
     <div
       style={{ position: "absolute", top, left, zIndex: 10, cursor: "pointer" }}
-      onClick={() => handleOnClick(restName)}
+      onClick={() => handleOnClick && handleOnClick(restName)}
       onMouseLeave={handleOnMouseLeave}
     >
       <Box style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}>

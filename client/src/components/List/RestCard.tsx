@@ -29,6 +29,7 @@ export default function RestCard({
           height: "10vmax",
           paddingTop: "15px",
           paddingBottom: "20px",
+          cursor: "pointer",
         }}
         onClick={handleOnClick}
       >

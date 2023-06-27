@@ -1,33 +1,28 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { Grid } from "@components/common";
 import RestCard from "@components/List/RestCard";
+import { restDataType } from "@customTypes/restaurant";
 
 interface RestCardListProps {
-  //TODO: Type 정리해서 정의하기
-  restData?: any[] | undefined;
+  restData: restDataType[];
   handleOnClick?: (restName: string) => void;
 }
 
 function RestCardList({ restData, handleOnClick }: RestCardListProps) {
   return (
     <Grid>
-      {/* TODO: Suspense 수정, elem type 변경 */}
-      <Suspense fallback={<div>만드는 중</div>}>
-        {restData &&
-          restData.map((elem: any) => (
-            <RestCard
-              key={"restCard " + elem.en_name}
-              restName={elem.en_name}
-              krRestName={elem.kr_name}
-              country={elem.country}
-              address={elem.address}
-              businessHour={elem.business_hour}
-              handleOnClick={
-                handleOnClick && (() => handleOnClick(elem.en_name))
-              }
-            />
-          ))}
-      </Suspense>
+      {restData &&
+        restData.map((elem: restDataType) => (
+          <RestCard
+            key={"restCard " + elem.en_name}
+            restName={elem.en_name}
+            krRestName={elem.kr_name}
+            country={elem.country}
+            address={elem.address}
+            businessHour={elem.business_hour}
+            handleOnClick={handleOnClick && (() => handleOnClick(elem.en_name))}
+          />
+        ))}
     </Grid>
   );
 }
