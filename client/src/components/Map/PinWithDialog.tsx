@@ -27,7 +27,7 @@ function PinWithDialog({ restName, top, left, handleOnClick }: PinProps) {
       {isHovered && (
         <RestDialog
           restName={restName}
-          top={`${top - 6.5}%`}
+          top={`${top - 7.3}%`}
           left={`${left - 3}%`}
           handleOnClick={handleOnClick}
           handleOnMouseLeave={handleMouseLeave}

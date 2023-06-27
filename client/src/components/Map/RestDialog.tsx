@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { Box, Text, Image, Horizontal } from "@components/common";
 import { useRestDialog } from "@hooks/queries/restaurant";
 
@@ -23,7 +22,6 @@ export default function RestDialog({
     <div
       style={{ position: "absolute", top, left, zIndex: 10, cursor: "pointer" }}
       onClick={() => handleOnClick && handleOnClick(restName)}
-      onMouseLeave={handleOnMouseLeave}
     >
       <Box style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}>
         <Text
@@ -32,7 +30,10 @@ export default function RestDialog({
           style={{ color: data?.text_color }}
           size="t6"
         />
-        <Box style={{ backgroundColor: "#ffffff" }}>
+        <Box
+          style={{ backgroundColor: "#ffffff" }}
+          onMouseLeave={handleOnMouseLeave}
+        >
           <Horizontal>
             <Image
               src={require(`@assets/images/restaurant/${restName}/menu1.png`)}
