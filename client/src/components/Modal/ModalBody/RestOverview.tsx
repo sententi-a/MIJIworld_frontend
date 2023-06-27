@@ -1,7 +1,8 @@
-import { Text, Horizontal, Toggle } from "@components/common/index";
+import { Text, Horizontal } from "@components/common/index";
 import RestMap from "@components/Modal/ModalBody/RestMap";
 import { restDataType } from "@customTypes/restaurant";
 import useToggle from "@hooks/useToggle";
+import { Suspense } from "react";
 
 interface RestOverviewProps {
   restName: string;
@@ -29,12 +30,15 @@ export default function RestOverview({
         />
         <Text text={restData.address} onClick={handleOnClick} />
       </Horizontal>
+      {/* TODO: fallback 만들기 */}
       {isDown && (
-        <RestMap
-          restName={restName}
-          address={restData.address}
-          krName={restData.kr_name}
-        />
+        <Suspense fallback={<Text text={""} />}>
+          <RestMap
+            restName={restName}
+            address={restData.address}
+            krName={restData.kr_name}
+          />
+        </Suspense>
       )}
       <Text
         text={restData.introduction}
