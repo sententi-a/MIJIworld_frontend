@@ -30,7 +30,6 @@ export default function RestOverview({
         />
         <Text text={restData.address} onClick={handleOnClick} />
       </Horizontal>
-      {/* TODO: fallback 만들기 */}
       {isDown && (
         <Suspense fallback={<Text text={""} />}>
           <RestMap

@@ -11,11 +11,6 @@ interface PinProps extends React.HTMLAttributes<HTMLImageElement> {
 }
 
 function PinWithDialog({ restName, top, left, handleOnClick }: PinProps) {
-  //TODO: useMemo 안 써도 될까?
-  const imagePath: string = React.useMemo(() => {
-    return require(`@assets/images/pin/${restName}.png`);
-  }, []);
-
   const imageStyle: React.CSSProperties = React.useMemo(() => {
     return { position: "absolute", top: `${top}%`, left: `${left}%` };
   }, []);
@@ -25,7 +20,7 @@ function PinWithDialog({ restName, top, left, handleOnClick }: PinProps) {
   return (
     <>
       <Image
-        src={imagePath}
+        src={require(`@assets/images/pin/${restName}.png`)}
         onMouseEnter={handleMouseEnter}
         style={imageStyle}
       />

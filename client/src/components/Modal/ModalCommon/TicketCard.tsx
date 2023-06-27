@@ -27,7 +27,7 @@ export default function TicketCard({ restName }: TicketCardProps) {
   };
 
   const { data: colorData } = useColor(restName);
-  //TODO: 추상화하기
+
   return (
     <Box
       style={{

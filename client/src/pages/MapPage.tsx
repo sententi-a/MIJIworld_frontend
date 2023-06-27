@@ -19,7 +19,7 @@ export default function MapPage() {
       <VerticalButtons isMap={true} isList={false} />
       <Container>
         <WorldMap>
-          <Suspense fallback={<div>로딩중</div>}>
+          <Suspense>
             <Pins handleOnClick={handleTriggerClick} />
           </Suspense>
         </WorldMap>
