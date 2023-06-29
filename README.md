@@ -1,7 +1,8 @@
 <div align='center'>
+
 <img src="./client/src/assets/images/logo/logo.png"/>
 
-<div style=" font-size: 24px; font-weight:900; color: #8D8DE5">Eat the World, Meet the World!</div>
+<p style=" font-size: 24px; font-weight:900; color: #8D8DE5">Eat the World, Meet the World!</p>
 
 당신이 알지 못했던 세계음식 맛집 소개 서비스, 미지의 세계
 <br>
@@ -21,31 +22,31 @@
 
 ## 📄 Pages
 
-#### 1. 메인 페이지
+### 1. 메인 페이지
 
 ![](https://user-images.githubusercontent.com/77879373/249679429-84beb174-839c-4495-92c3-a0d61bc07909.png)
 
-#### 2. 지도 페이지
+### 2. 지도 페이지
 
 ![](https://user-images.githubusercontent.com/77879373/249679627-4027edbc-49a4-4bbe-9fc1-841ab4ece66f.png)
 등록된 음식점들을 세계 지도 위에서 확인할 수 있습니다.
 
-#### 3. 목록 페이지
+### 3. 목록 페이지
 
 ![](https://user-images.githubusercontent.com/77879373/249679669-1961f5fc-9c1d-4fa5-8ba3-35968af4db68.png)
 등록된 음식점들을 리스트 형태로 확인할 수 있습니다.
 
 ![](https://user-images.githubusercontent.com/77879373/249682648-c0fbcec7-4297-4c6a-b1fa-9d0334e83d66.gif)
-
 검색을 통해 음식점 필터링을 할 수 있습니다.
 
-#### 4. 상세 페이지
+### 4. 상세 페이지
 
 ![](https://user-images.githubusercontent.com/77879373/249680162-3add416a-eff7-4e23-a116-0fefc869679b.png)
 지도 페이지/목록 페이지에서 클릭한 음식점의 상세 정보를 모달의 형태로 확인할 수 있습니다.
 
 ![](https://user-images.githubusercontent.com/77879373/249681959-b5a2a113-6027-4688-95d9-771f109589fa.gif)
 음식점 전용 커스텀 티켓을 다운로드할 수 있습니다.
+
 <br>
 
 ## 🛠 Stack
