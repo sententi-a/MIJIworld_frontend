@@ -29,17 +29,14 @@
 ### 2. 지도 페이지
 
 <img src="https://user-images.githubusercontent.com/77879373/249679627-4027edbc-49a4-4bbe-9fc1-841ab4ece66f.png" width="70%">
-<br>
 등록된 음식점들을 세계 지도 위에서 확인할 수 있습니다.
 
 ### 3. 목록 페이지
 
 <img src="https://user-images.githubusercontent.com/77879373/249679669-1961f5fc-9c1d-4fa5-8ba3-35968af4db68.png" width="70%">
-<br>
 등록된 음식점들을 리스트 형태로 확인할 수 있습니다.
 
 <img src="https://user-images.githubusercontent.com/77879373/249682648-c0fbcec7-4297-4c6a-b1fa-9d0334e83d66.gif" width="70%">
-<br>
 검색을 통해 음식점 필터링을 할 수 있습니다.
 
 ### 4. 상세 페이지
