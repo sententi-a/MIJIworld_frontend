@@ -33,8 +33,8 @@
 #### 3. 목록 페이지
 
 ![](https://user-images.githubusercontent.com/77879373/249679669-1961f5fc-9c1d-4fa5-8ba3-35968af4db68.png)
-
 등록된 음식점들을 리스트 형태로 확인할 수 있습니다.
+
 ![](https://user-images.githubusercontent.com/77879373/249682648-c0fbcec7-4297-4c6a-b1fa-9d0334e83d66.gif)
 
 검색을 통해 음식점 필터링을 할 수 있습니다.
@@ -43,6 +43,7 @@
 
 ![](https://user-images.githubusercontent.com/77879373/249680162-3add416a-eff7-4e23-a116-0fefc869679b.png)
 지도 페이지/목록 페이지에서 클릭한 음식점의 상세 정보를 모달의 형태로 확인할 수 있습니다.
+
 ![](https://user-images.githubusercontent.com/77879373/249681959-b5a2a113-6027-4688-95d9-771f109589fa.gif)
 음식점 전용 커스텀 티켓을 다운로드할 수 있습니다.
 <br>
