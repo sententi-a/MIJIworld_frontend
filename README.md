@@ -1,7 +1,10 @@
-<div align='center'><img src="./client/src/assets/images/logo/logo.png"/><div><span style=" font-size: 24px; font-weight:900; color: #8D8DE5">Eat the World, Meet the World!</span><div>당신이 알지 못했던 세계음식 맛집 소개 서비스, 미지의 세계</div></div></div></div>
+<div align='center'><img src="./client/src/assets/images/logo/logo.png"/><div style=" font-size: 24px; font-weight:900; color: #8D8DE5">Eat the World, Meet the World!</div>
+당신이 알지 못했던 세계음식 맛집 소개 서비스, 미지의 세계
 <br>
-<div style="font-size: 12px;">(해당 프로젝트는 5인이 진행했던 Ruby on rails 웹 프로젝트를 혼자 React, Express로 마이그레이션한 프로젝트입니다.)</div>
+(해당 프로젝트는 5인이 진행했던 Ruby on rails 웹 프로젝트를 혼자 React, Express로 마이그레이션한 프로젝트입니다.)
+</div>
 <br>
+
 ## 🔗 Dev Log
 
 [🌐 미지의 세계]() - 배포 준비중
