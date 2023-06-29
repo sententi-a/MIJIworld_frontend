@@ -2,12 +2,12 @@
 
 <img src="./client/src/assets/images/logo/logo.png"/>
 
-<p style=" font-size: 24px; font-weight:900; color: #8D8DE5">Eat the World, Meet the World!</p>
+<h2 style=" font-size: 24px; font-weight:900; color: #8D8DE5">Eat the World, Meet the World!</h2>
 
 당신이 알지 못했던 세계음식 맛집 소개 서비스, 미지의 세계
 <br>
 
-(해당 프로젝트는 5인이 진행했던 Ruby on rails 웹 프로젝트를 혼자 React, Express로 마이그레이션한 프로젝트입니다.)
+###### (해당 프로젝트는 5인이 진행했던 Ruby on rails 웹 프로젝트를 혼자 React, Express로 마이그레이션한 프로젝트입니다.)
 
 </div>
 <br>
