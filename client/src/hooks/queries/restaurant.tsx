@@ -3,13 +3,9 @@ import restaurantApi from "@apis/restaurant";
 import QUERYKEYS from "@constants/queryKeys";
 
 const useRestaurants = (filter: string | undefined = undefined) => {
-  return useQuery(
-    [QUERYKEYS.RESTAURANT.LIST, filter],
-    () => {
-      return restaurantApi.getRestaurants(filter);
-    },
-    { suspense: true }
-  );
+  return useQuery([QUERYKEYS.RESTAURANT.LIST, filter], () => {
+    return restaurantApi.getRestaurants(filter);
+  });
 };
 
 const useRestDialog = (name: string) => {

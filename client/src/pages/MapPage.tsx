@@ -1,7 +1,14 @@
 import { useState, Suspense } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+import { useQueryErrorResetBoundary } from "react-query";
 import styled from "styled-components";
 import BgImage from "@assets/images/map/worldmap_background.png";
-import { Background, VerticalButtons, Logo } from "@components/common";
+import {
+  Background,
+  VerticalButtons,
+  Logo,
+  ErrorFallback,
+} from "@components/common";
 import WorldMap from "@components/Map/WorldMap";
 import Pins from "@components/Map/Pins";
 import ModalFallback from "@components/Modal/ModalCommon/ModalFallback";
@@ -11,6 +18,7 @@ import useModal from "@hooks/useModal";
 export default function MapPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { currentRest, handleTriggerClick } = useModal(setIsModalOpen);
+  const { reset } = useQueryErrorResetBoundary();
 
   return (
     <>
@@ -20,7 +28,9 @@ export default function MapPage() {
       <Container>
         <WorldMap>
           <Suspense>
-            <Pins handleOnClick={handleTriggerClick} />
+            <ErrorBoundary FallbackComponent={ErrorFallback} onReset={reset}>
+              <Pins handleOnClick={handleTriggerClick} />
+            </ErrorBoundary>
           </Suspense>
         </WorldMap>
       </Container>

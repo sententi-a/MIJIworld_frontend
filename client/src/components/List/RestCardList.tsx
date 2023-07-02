@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Grid } from "@components/common";
 import RestCard from "@components/List/RestCard";
 import { restDataType } from "@customTypes/restaurant";
+import { useRestaurants } from "@hooks/queries/restaurant";
 
 interface RestCardListProps {
-  restData: restDataType[];
+  keyword: string;
   handleOnClick?: (restName: string) => void;
+  handleOnDataChange?: (count: number) => void;
 }
 
-function RestCardList({ restData, handleOnClick }: RestCardListProps) {
+function RestCardList({
+  keyword,
+  handleOnClick,
+  handleOnDataChange,
+}: RestCardListProps) {
+  const { data: restData } = useRestaurants(keyword);
+
+  // If restData changes, set restCount state in ListPage component
+  useEffect(() => {
+    handleOnDataChange && handleOnDataChange(restData?.length || 0);
+  }, [restData, handleOnDataChange]);
+
   return (
     <Grid>
       {restData &&
