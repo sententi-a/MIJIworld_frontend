@@ -14,12 +14,26 @@ module.exports = {
     "@storybook/addon-interactions",
   ],
   webpackFinal: async (config) => {
-    config.resolve.plugins.push(
-      new TsconfigPathsPlugin({
-        configFile: path.resolve(__dirname, "../tsconfig.json"),
-      })
-    );
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@components": path.resolve(__dirname, "../src/components"),
+      "@assets": path.resolve(__dirname, "../src/assets"),
+      "@hooks": path.resolve(__dirname, "../src/hooks"),
+      "@utils": path.resolve(__dirname, "../src/utils"),
+      "@pages": path.resolve(__dirname, "../src/pages"),
+      "@apis": path.resolve(__dirname, "../src/apis"),
+      "@constants": path.resolve(__dirname, "../src/constants"),
+      "@customTypes": path.resolve(__dirname, "../src/types"),
+      "@styles": path.resolve(__dirname, "../src/styles"),
+    };
     return config;
+
+    // config.resolve.plugins.push(
+    //   new TsconfigPathsPlugin({
+    //     configFile: path.resolve(__dirname, "../tsconfig.json"),
+    //   })
+    // );
+    // return config;
   },
   framework: {
     name: "@storybook/react-webpack5",
