@@ -11,6 +11,7 @@ export { default as Background } from "@components/common/Background";
 export { default as VerticalButtons } from "@components/common/VerticalButtons";
 export { default as Logo } from "@components/common/Logo";
 export { default as Grid } from "@components/common/Grid";
+export { default as DayPicker } from "@components/common/DayPicker";
 export { default as SearchBar } from "@components/common/SearchBar";
 export { default as PageFallback } from "@components/common/PageFallback";
 export { default as ErrorFallback } from "@components/common/ErrorFallback";
