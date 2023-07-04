@@ -4,6 +4,7 @@ import RestCard from "@components/List/RestCard";
 const meta: Meta<typeof RestCard> = {
   title: "components/list/RestCard",
   component: RestCard,
+  argTypes: { handleOnClick: { action: "openModal" } },
 };
 
 export default meta;
