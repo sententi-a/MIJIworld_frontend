@@ -1,6 +1,7 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { withRouter } from "storybook-addon-react-router-v6";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ const preview: Preview = {
     },
   },
   decorators: [
+    withRouter,
     (Story) => (
       <QueryClientProvider client={queryClient}>
         <Story />
