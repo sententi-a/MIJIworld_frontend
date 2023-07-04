@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import RestMenu from "@components/Modal/ModalBody/RestMenu";
 
 const meta: Meta<typeof RestMenu> = {
-  title: "modal/ModalBody",
+  title: "components/modal/ModalBody/RestMenu",
   component: RestMenu,
   decorators: [
     (Story) => (

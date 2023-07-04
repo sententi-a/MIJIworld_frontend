@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import ModalFallback from "@components/Modal/ModalCommon/ModalFallback";
 
 const meta: Meta<typeof ModalFallback> = {
-  title: "modal/ModalCommon",
+  title: "components/modal/ModalCommon/ModalFallback",
   component: ModalFallback,
 };
 

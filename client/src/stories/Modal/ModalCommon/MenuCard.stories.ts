@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import MenuCard from "@components/Modal/ModalCommon/MenuCard";
 
 const meta: Meta<typeof MenuCard> = {
-  title: "modal/ModalCommon",
+  title: "components/modal/ModalCommon/MenuCard",
   component: MenuCard,
 };
 

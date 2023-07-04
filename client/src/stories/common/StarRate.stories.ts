@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { StarRate } from "@components/common";
 
 const meta: Meta<typeof StarRate> = {
-  title: "common/StarRate",
+  title: "components/common/StarRate",
   component: StarRate,
 };
 

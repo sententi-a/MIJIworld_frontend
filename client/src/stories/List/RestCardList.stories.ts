@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import RestCardList from "@components/List/RestCardList";
 
 const meta: Meta<typeof RestCardList> = {
-  title: "list/RestCardList",
+  title: "components/list/RestCardList",
   component: RestCardList,
 };
 

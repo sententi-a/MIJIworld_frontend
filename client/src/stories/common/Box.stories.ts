@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Box } from "@components/common";
 
 const meta: Meta<typeof Box> = {
-  title: "common/Box",
+  title: "components/common/Box",
   component: Box,
 };
 

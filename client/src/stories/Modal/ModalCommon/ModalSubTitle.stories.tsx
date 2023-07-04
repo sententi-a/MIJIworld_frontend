@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import ModalSubTitle from "@components/Modal/ModalCommon/ModalSubTitle";
 
 const meta: Meta<typeof ModalSubTitle> = {
-  title: "modal/ModalCommon",
+  title: "components/modal/ModalCommon/ModalSubTitle",
   component: ModalSubTitle,
   decorators: [
     (Story) => (
@@ -17,6 +17,6 @@ export default meta;
 
 type Story = StoryObj<typeof ModalSubTitle>;
 
-export const Modal_Subtitle: Story = {
+export const Modal_Sub_Title: Story = {
   args: { text: "메뉴 보기", restName: "samarkant" },
 };

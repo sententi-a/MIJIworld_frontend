@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import TicketCard from "@components/Modal/ModalCommon/TicketCard";
 
 const meta: Meta<typeof TicketCard> = {
-  title: "modal/ModalCommon",
+  title: "components/modal/ModalCommon/TicketCard",
   component: TicketCard,
   decorators: [
     (Story) => (

@@ -5,7 +5,7 @@ import MapImage from "@assets/images/map/worldmap_background.png";
 import ListImage from "@assets/images/list/bg.png";
 
 const meta: Meta<typeof Background> = {
-  title: "common/Background",
+  title: "components/common/Background",
   component: Background,
 };
 

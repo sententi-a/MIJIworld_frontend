@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import ReviewCard from "@components/Modal/ModalCommon/ReviewCard";
 
 const meta: Meta<typeof ReviewCard> = {
-  title: "modal/ModalCommon",
+  title: "components/modal/ModalCommon/ReviewCard",
   component: ReviewCard,
 };
 

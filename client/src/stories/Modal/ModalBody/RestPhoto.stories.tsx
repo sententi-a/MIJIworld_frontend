@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import RestPhoto from "@components/Modal/ModalBody/RestPhoto";
 
 const meta: Meta<typeof RestPhoto> = {
-  title: "modal/ModalBody",
+  title: "components/modal/ModalBody/RestPhoto",
   component: RestPhoto,
   decorators: [
     (Story) => (

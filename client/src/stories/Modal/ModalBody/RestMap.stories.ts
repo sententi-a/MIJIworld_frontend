@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import RestMap from "@components/Modal/ModalBody/RestMap";
 
 const meta: Meta<typeof RestMap> = {
-  title: "modal/ModalBody",
+  title: "components/modal/ModalBody/RestMap",
   component: RestMap,
 };
 

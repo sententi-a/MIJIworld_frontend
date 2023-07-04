@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import RestOverview from "@components/Modal/ModalBody/RestOverview";
 
 const meta: Meta<typeof RestOverview> = {
-  title: "modal/ModalBody",
+  title: "components/modal/ModalBody/RestOverview",
   component: RestOverview,
 };
 

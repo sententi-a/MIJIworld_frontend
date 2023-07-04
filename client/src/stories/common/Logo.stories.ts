@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Logo } from "@components/common";
 
 const meta: Meta<typeof Logo> = {
-  title: "common/Logo",
+  title: "components/common/Logo",
   component: Logo,
 };
 
