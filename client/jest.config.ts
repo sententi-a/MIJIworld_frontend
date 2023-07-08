@@ -3,16 +3,14 @@ module.exports = {
   moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
   moduleDirectories: ["node_modules", "bower_components", "shared"],
   moduleNameMapper: {
-    "^@(components|assets|styles|hooks|utils|customTypes|apis|pages|constants)/(.*)$":
-      "<rootDir>/src/$1",
-    // "\\.(jpg|jpeg|png|svg)$": "<rootDir>/__mocks__/fileTransformer.js",
-    "\\.(css|less|png|jpg|svg)$": "identity-obj-proxy",
+    "^@(components|styles|hooks|utils|customTypes|apis|pages|constants)/(.*)$":
+      "<rootDir>/src/$1/$2",
+    "\\.(png|jpg|svg|css|less)$": "identity-obj-proxy",
+  },
+  transformIgnorePatterns: ["/node_modules/", "\\.png$"],
+  transform: {
+    "^.+\\.(js|jsx|ts|tsx)$": "ts-jest",
   },
 };
 
-// "jest": {
-//   "moduleNameMapper": {
-//     "^@(components|assets|styles|contexts|hooks|utils)/(.*)$": "<rootDir>/src/$1/$2",
-//     ".+\\.(css|less|jpg|jpeg|png|svg)$": "identity-obj-proxy"
-//   }
-// },
+export {};
