@@ -12,9 +12,11 @@
 </div>
 <br>
 
-## 🔗 Dev Log
+## 🔗 Links
 
 [🌐 미지의 세계](https://mijiworld.netlify.app/) 
+
+[🎀 스토리북](https://64aed0decab78ed7a0c4a7ea-dqldsyjyug.chromatic.com/)
 
 [📝 작업 기록 보기](https://hyejiyeom.notion.site/b9112274ebc94665959070f0362f8e31?pvs=4)
 
