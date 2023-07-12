@@ -1,0 +1,14 @@
+name: Build & Deploy Storybook
+
+on:
+  push:
+    branches: [main]
+    paths: ["src/stories/**"]
+jobs:
+  Build_and_Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Storybook Deployment to Github Pages
+        run: npm run deploy-storybook -- --ci
+        env:
+          GH_TOKEN: ${{secrets.GH_TOKEN}}
