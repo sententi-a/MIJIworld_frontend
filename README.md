@@ -1,6 +1,6 @@
 <div align='center'>
 
-<img src="./client/src/assets/images/logo/logo.png"/>
+<img src="./src/assets/images/logo/logo.png"/>
 
 <h2 style=" font-size: 24px; font-weight:900; color: #8D8DE5">Eat the World, Meet the World!</h2>
 
@@ -14,7 +14,7 @@
 
 ## 🔗 Dev Log
 
-[🌐 미지의 세계]() - 배포 준비중
+[🌐 미지의 세계](https://mijiworld.netlify.app/) 
 
 [📝 작업 기록 보기](https://hyejiyeom.notion.site/b9112274ebc94665959070f0362f8e31?pvs=4)
 
