@@ -14,11 +14,11 @@
 
 ## 🔗 Links
 
-[🌐 미지의 세계](https://mijiworld.netlify.app/) 
+<a href="https://mijiworld.netlify.app/" target="_blank">🌐 미지의 세계</a>
 
-[🎀 스토리북](https://64aed0decab78ed7a0c4a7ea-dqldsyjyug.chromatic.com/)
+<a href="https://64aed0decab78ed7a0c4a7ea-dqldsyjyug.chromatic.com/" target="_blank">🎀 스토리북</a>
 
-[📝 작업 기록 보기](https://hyejiyeom.notion.site/b9112274ebc94665959070f0362f8e31?pvs=4)
+<a href="https://hyejiyeom.notion.site/b9112274ebc94665959070f0362f8e31?pvs=4" target="_blank">📝 작업 기록 보기</a>
 
 <br>
 
