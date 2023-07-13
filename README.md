@@ -16,7 +16,7 @@
 
 <a href="https://mijiworld.netlify.app/" target="_blank">🌐 미지의 세계</a>
 
-<a href="https://64aed0decab78ed7a0c4a7ea-dqldsyjyug.chromatic.com/" target="_blank">🎀 스토리북</a>
+<a href="https://main--64aed0decab78ed7a0c4a7ea.chromatic.com/" target="_blank">🎀 스토리북</a>
 
 <a href="https://hyejiyeom.notion.site/b9112274ebc94665959070f0362f8e31?pvs=4" target="_blank">📝 작업 기록 보기</a>
 
